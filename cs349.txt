@@ -1,0 +1,1026 @@
+# Windowing systems
+
+* What are the critera the X system tries to satisfy?
+
+- Implementable on a variety of displays
+- Applications are device independent
+- Network Transparent
+- Supports multiple, concurrent displays
+- Supports many interfaces
+- Supports output to overlapping windows
+- Supports a hierarchy of resizable windows
+- High-performance, high-quality text, 2-D graphics, imaging
+- Extensible
+
+* Where does the BWS lay?
+
+Between the hardware/OS and all applications.
+
+* What is the BWS?
+
+The lowest level abstraction for a windowing system.
+
+* What does functionality does the BWS have?
+
+- Routes input to the correct window.
+- Has routines for creating/destory/managing windows
+- Ensures only one application changes frame buffer
+- Creates canvas abstraction
+- Coordinate system
+- Basic drawing routines
+
+* How do you filter out events that you don't want in X?
+
+Masks. XSelectInput( xinfo.display, xinfo.window, Mask1 | Mask2 | Mask3 );
+
+* How does the coordinate system work?
+
+Each window has its own co-ordinates, where (0, 0) is top left.
+BWS translates between window co-ordinates and screen co-ordinates.
+
+* What is the window manager?
+
+A service that provides interactive components for windows.
+
+* Where does the window manager lay?
+
+On top of the Base Window System.
+
+* What is the different between the application window and canvas?
+
+Canvas includes the "border" around main screen (e.g. window buttons)
+Window manager owns the window, application owns the canvas.
+
+* What is X w.r.t the BWS and Window Manager?
+
+X seperates the BWS from the Window Manager.
+
+* What does OS and Windows do w.r.t to the window manager and BWS?
+
+They are combined into one system.
+
+* Why would the BWS and window manager be combined?
+
+- Performance increase.
+- Restricts modification.
+
+* What are the 3 conceptual drawing models?
+
+Pixel, Stroke, Region
+
+* What are some functions for the Pixel drawing model?
+
+SetPixel(x, y, colour);
+DrawImage(x, y, w, h, img);
+
+* What are some functions for the Stroke drawing model?
+
+DrawLine();
+DrawRect();
+
+* What is the graphics context?
+
+A "global" object that is responsible for holding the drawing options.
+
+* Where is the graphics context stored in X?
+
+On the X Server, and it can switch between multiple saved contexts.
+
+* What is the painter's algorithm, how do you implement it?
+
+Drawing back-to-front, layering the image.
+
+Keep ordered list of displayables: back -> front
+Each class has a paint() method.
+On repaint:
+  Clear window
+  Repainting everything in that order
+
+* What is the X Server?
+
+The client that handles rendering output and getting user input.
+
+* What is the X Client?
+
+The server that handles all application logic.
+
+* What are the two event related functions in X?
+
+XNextEvent(Display* display, XEvent* event);
+XPending(Display* display); -> returns an int
+
+# Events
+
+* What is an event?
+
+A message to notify an application that something happened.
+
+* What are some examples of events?
+
+Keyboard presses, pointer events, window crossing, input focus, window events,
+timer events, sensor updates.
+
+* What does the hardware, BWS, and WM do regarding events?
+
+Collect event information, put it in a known structure.
+Order events by time
+Decide which applications should get events.
+Deliver the event
+
+* What model does Java use to register and handle events?
+
+Listener model
+
+* What is animation?
+
+Simulating movement by displaying a series of pictures, or frames.
+
+* What is flickering?
+
+A screen artifact caused by displaying an intermediate image.
+Happens when screen refreshes in the middle of rendering.
+
+* How does double buffering work?
+
+1. Create offscreen buffer
+2. Render to buffer
+3. Copy buffer to screen as quickly as possible
+  Hopefully between refreshes.
+
+* What is GUI toolkit?
+
+A set of widgets that one can use to build applications.
+
+* What is a widget?
+
+An element of interaction in a GUI that have its own behaviour.
+A generic name for parts of an interface that have their own behaviour.
+
+* What is Event-Driven Programming
+
+A paradigm where the flow of the program is determined by events, such as user
+actions.
+
+* What are the 3 steps in the event dispatch stage?
+
+1. Event dispatch: Getting events to correct widget
+2. Event handling: Running code for an event
+3. Notifying view and windowing system: e.g. rendering
+
+* What does X use for event dispatch?
+
+An event loop.
+
+* What is an interactor tree?
+
+A hierachy that the widgets are laid out on.
+
+* What do events do with the interactor tree?
+
+Events traverse the interactor tree to find the correct widget.
+
+* What is a lightweight widget toolkit?
+
+Toolkit that draws its own widgets. e.g. Java Swing
+
+* What is a heavyweight widget toolkit?
+
+Each widget is its own window for eventing purposes.
+Toolkit is a wrapper for OS widgets.
+
+* What is positional dispatch?
+
+Send events to widget that is currently being moused over.
+
+* What is the difference with bottom-up and top-down approaches for positional dispatch?
+
+Bottom-up:
+  Event is routed to leaf node widget.
+  Each widget can choose to act, or pass to parent.
+Top-down:
+  Event is routed to highest-level node.
+  Each widget can choose to act, or pass to child.
+  Used to create policies for events (e.g. disabling all events)
+
+* What is the difference between bubbling and capturing?
+
+Bubbling starts at the leaf node and goes to the root.
+Capturing starts at the root node and goes to the leaf.
+
+* What does each of lightweight and heavyweight toolkits have: bubbling and capturing?
+
+Lightweight: Capturing. Since each event goes to the root node by the BWS.
+Heavyweight: Capturing and bubbling, depending on the BWS.
+
+* What are some limitations of positional dispatch and how do you get around that?
+
+- Send keystrokes to scrollbar if it's moused over?
+- Mouse can go out of the widget's area
+- Mouse press in one button, but release in another button
+
+Need to consider which widget is "in focus". Use focus dispatch.
+
+* What is Focus Dispatch?
+
+Dispatch all events to focused widget, regardless of mouse cursor position.
+
+* How many focuses are there in focus dispatch?
+
+One mouse focus, one keyboard focus.
+
+* What event would a focused widget not receive in focus dispatch?
+
+An event corresponding to an action which switches focus.
+
+* What is Acclerator Key Dispatch?
+
+Sending keyboard events based on which keys are pressed. e.g. For menu items!
+
+* What is difference in event dispatching between heavy- and lightweight toolkits?
+
+Heavyweight:
+  BWS has visiblity into all widgets in the application.
+Lightweight:
+  BWS only has visiblity into the application window.
+  Toolkit dispatches to widget.
+
+* What is an event that's usually dispatched positionally?
+
+Mouse-down events.
+
+* What is an event that's usually dispatched focusly?
+
+Keyboard events.
+
+* What is the inheritance event binding style?
+
+Each OO widget inherits from a base widget class.
+Implements onMousePress, onMouseMove, etc...
+
+* What are some problems with inheritance event binding?
+
+Doesn't scale well, need to implement more methods.
+no seperation between GUI and application logic
+
+* What is the interface event binding style?
+
+Define a interface for event binding. (Each interface for a specific type of action).
+Create classes that implements behaviour for the events.
+
+* What is the listener adapter pattern?
+
+Define listener interfaces. Define adapters which implement all interface
+functions with NOOPs. We can now override the adapters to implement our
+behaviour.
+
+* What is the delegate binding style for events?
+
+Define a delegate. Override the delegate with a method.
+That method is now called when the event is received.
+Can have more than one function be applied on a delegate too!
+
+* What happens when events are generated too quickly?
+
+Not all events are guaranteed to be sent.
+There may be an array of "skipped" events for each event.
+
+# 2D Graphics
+
+* What is 'computer graphics'?
+
+The creation, storage, and manipulation of images and their models.
+
+* What is a 'model' w.r.t computer graphics?
+
+A mathematical representation of an image containing 'important' properties like
+size of color.
+
+* What is 'rendering'?
+
+Using the properties of the model to create an image on the screen
+
+* What is an 'image' w.r.t computer graphics?
+
+A rendered model.
+
+* What data might a "shape model" contain for lightweight GUI components?
+
+Shape, location, and bounds.
+If visible: outline, and interior colour.
+
+* What is an affine transformation?
+
+Using linear algebra to draw elements on screen, relative to their parents.
+
+* What is the difference between vectors and points in 3d-matrix notation?
+
+Vectors have 0 has the last value. Points have 1 as the last value.
+
+* What is the formula for translation? Matrix formula?
+
+x' = x + tx
+y' = y + ty
+
+x + tx     1  0  tx | x
+y + ty =   0  1  ty | y
+1          0  0  1  | 1
+
+* What is the formula for uniform scaling? Matrix formula?
+
+x' = x * sx
+y' = y * sy
+
+x'   sx 0  0 | x
+y' = 0  sy 0 | y
+1    0  0  1 | 1
+
+* What is the formula for rotation? Matrix formula?
+
+x' = xcos(T) - ysin(T)
+y' = xsin(T) + ycos(T)
+
+x'   cos(T) -sin(T) 0 | x
+y' = sin(T)  cos(T) 0 | y
+1      0       0    1 | 1
+
+* What is the order to you should apply affine transformation routines in?
+
+Scale -> Rotate -> Translate; or
+Scale -> Translate -> Rotate
+
+* What is the problem with scaling or rotating an already translated object? How do you fix it?
+
+Rotation and scaling about about the original, so the translation co-ordinates
+may change now. To fix this, translate back to origin before doing other operations.
+
+* What are the two ways of handling mouse inputs with affine transformations?
+
+Transform mouse to model coordinates.
+  Only one transformation.
+  Maintaining the inverse.
+Transform model to mouse coordinates.
+  Many transformations.
+  Manipulations must be transformed back.
+
+* What are the two toolkits in Java for affine transformations?
+
+Graphics2D, AffineTransform.
+
+# MVC
+
+* What is a common characteristic of an app with multiple views?
+
+When one view changes, the other(s) often change as well.
+
+* What are the three parts of MVC?
+
+Model: Manages the data and its manipulation
+View: Manages the presentation of data
+Controller: Managers user interaction
+
+* By who and when was MVC developed?
+
+Trygve Reenskaug, in 1979.
+
+* Does the model, view and controller know about each other in MVC?
+
+Model only knows about the view interface.
+View and Controller know about the model.
+
+* Give a typical declaration of a view interface in MVC.
+
+interface IView {
+  public void updateView();
+}
+
+* What is the difference between MVC in theory and in practice?
+
+Theory:
+  View and Controller both refer to Model directly.
+  Model uses the observer design to inform View of changes.
+Practice:
+  Model is loosely coupled with UI using the observer pattern.
+  View and Controller are lightly coupled, for responsiveness.
+  Controller is an inner class of the View.
+
+* What design pattern is used in MVC?
+
+Observer pattern.
+
+* Give a typical instanitation of an MVC framework.
+
+Model model = new Model();
+Controller controller = new Controller(model);
+View view = new View(model, controller);
+model.setView(view);
+
+* What is a logical input device? Give some examples.
+
+A graphical component, defined by their function.
+e.g. Locator, picker, choice, valuator, string, stroke.
+
+* What is a widget w.r.t a logical input device?
+
+A logical input device with appearance.
+
+* What is the main goal of MVC?
+
+Seperation of concerns. Allowing multiple ways to render the same data.
+
+* What is the advantage of a seperate model?
+
+Makes it easier for different UI components to use the same data.
+
+* What is likely to change more, the model or the UI?
+
+The UI.
+
+* What programming model do widgets use?
+
+Event-driven programming model.
+
+* What are the three main design goals of widget toolkits?
+
+- Complete: GUI designers have everything they need.
+- Consistent: Same look and feel. Same usage paradigms.
+- Customizable: Developer can reasonably extend functionality.
+
+* Other than programming languages, what is another language used to make UIs?
+
+XML.
+
+# Layout
+
+* What are two tasks that layouts handle?
+
+Designing a spatial layout of widgets in a container.
+Adjusting that spatial layout when container is resized.
+
+* What do dynamic layouts want to do when a window is resized?
+
+Maximize the use of available space for displaying widgets.
+Maintiains consistency with spatial layout, and preserves visual quality of
+spatial layout though.
+
+* What must dynamic layouts do when a window is resized?
+
+- re-allocate space of widgets
+- adjust location and size of widgets
+- perhaps even change visibility, look, and/or feel.
+
+* What is a responsive layout?
+
+A layout that adapts to different devices or screen sizes.
+
+* What can change in a flexible widget?
+
+x, y position, width and height.
+
+* What can you do to constrain properties in a flexible widget?
+
+Constrain position (e.g. by anchoring to another widget)
+Give layout a range of sizes.
+  minimum size < preferred size < maximum size
+
+* What does a layout manager provide?
+
+A layout algorithm to size and position child widgets.
+
+* What are some attributes of layout managers?
+
+Does it respect a widget's preferred/min/max size?
+  Always ignored? Always respected? In some dimensions?
+How does it handle extra space?
+  Add extra space? Equally? Unequally?
+Additional constraints?
+  Alignment? Share of additional space?
+
+* What two design patterns does layouting in Java use?
+
+Composite and Strategy patterns.
+
+* What is the composite design pattern?
+
+Composite objects in tree-like structures. Treat the group of objects as one
+uniform object.
+
+* What is the strategy design pattern?
+
+Factors out an algorithm into a seperate object.
+Allows client to dynamically switch algorithms.
+
+* What are some general layout strategies?
+
+- Fixed layout
+- Intrinsic size
+- Variable intrinsic size
+- Struts and springs
+- Constraints
+
+* What is the main property of a fixed layout?
+
+Widgets have a fixed size and fixed position
+
+* What is the main property of an intrinsic size layout?
+
+Query each tiem for its preferred size.
+Grow the widget to perfectly contain each item.
+Top-level widget's size is completely dependent on its contained widgets.
+
+* What are some LayoutManagers in Java that are intrinsic size layouts?
+
+BoxLayout, FlowLayout
+
+* What is the main property of a variable intrinsic size layout?
+
+Same as intrinsic size layout, except that the size and location are influenced
+by the parent component's algorithm now.
+Ask each children how big they want to be.
+Set each child widget's size and location.
+
+* What are some LayoutManagers in Java that are variable intrinsic size layouts?
+
+GridBagLayout, BorderLayout.
+
+* What are struts and springs layout managers?
+
+Specify layout by marking aspects of widgets that are fixed vs those that can
+stretch.
+Strut is a fixed space. Springs stretch to fill space.
+"Widget must be east of another widget"
+
+* What are some struts and springs layouts in Java?
+
+SpringLayout, BoxLayout (restricted form)
+
+* What are common development tools for struts and spring layouts?
+
+GUI editors.
+
+# Design
+
+* What is usefulness and usability?
+
+Usefulness
+  Meeting specific needs and supporting real tasks
+  Quality of being of practical use
+Usability
+  The effectiveness, efficiency, and satisfaction with which users can
+  achieve tasks.
+
+* Give an example of poor usability?
+
+Push doors with handles.
+
+* What is a mental model?
+
+What the user believes about the system
+  If I do ___, the system will do ___.
+  The system is ___.
+
+* What are the three mental models?
+
+Developer's model
+  How the programmer believes system should be used.
+System model
+  How the system behaves
+User's model
+  How the user of a system believes system should be used.
+
+* What is Norman's model of interaction?
+
+Two parts: Execution and evaluation.
+Execution: What we want to do to the system?
+Evaluation: Comparing what happened with our goal.
+
+* What are the execution stages in Norman's model of interaction?
+
+1. Form an intention to act to achieve goal
+2. Plan a sequence of actions to fulfill that intention
+3. Execute planned actions with physical movements.
+
+* What are the evaluation stages in Norman's model of interaction?
+
+1. Physically percieve the current state of the system
+2. Interpret that perception according to experience
+3. Evaluate the interpreted state compared to our goal
+
+* What is the Gulf of Execution?
+
+Difficulty in translating user's intentions into actions allowed by system.
+
+* What is the Gulf of Evaluation?
+
+Difficulty in interpreting the state of the system to determine whether goal has
+been met.
+
+* What are some basic principles to reduce Gulf of Execution and Evaluation?
+
+- Perceived affordance
+- Mapping
+- Constraints
+- Visibility/Feedback
+- Metaphor
+
+* What is perceived affordance?
+
+What people think you can do with an object, based on perceived properties.
+
+* What is an affordance?
+
+Something you can do with an object.
+
+* What is a mapping in the context of design principles?
+
+The relationship between the control movements and the results in the world.
+
+* What are the two 'degrees' in UI mappings?
+
+Degree of integration:
+  Ratio of DOF of device of on-screen actions
+Degree of compatibility:
+  Similarity in action and effect.
+
+* How do constraints work in the context of design principles?
+
+Guide the user by preventing certain actions while enabling/encouraging others.
+
+* According to Norman, what are the four types of contraints?
+
+Physical, Logical, Semantic, Cultural
+
+* How does visiblity apply in the context of design principles?
+
+Make relevant parts visible and convey the correct message.
+
+* How does feedback apply in the context of design principles?
+
+Communicate what action has actually been done; what result has been accomplished.
+Every GUI user action should give feedback.
+
+* What is an example of bad feedback for the user?
+
+Symbolic links in Linux.
+
+* What is an example of good feedback for the user?
+
+Search and replace in Sublime Text.
+
+* How do metaphors apply in the context of design principles?
+
+Make a set of unifying concepts.
+Borrow concepts from one domain and applying them to another.
+e.g. "Desktop", "Shopping Cart"
+
+* What are some common metaphors in computer design today?
+
+Window, Recycle Bin/Trash, Folders, Files.
+
+* What were some inconsistent metaphors in visual design?
+
+Mac trash bin would eject disks from drives.
+
+* What is important to consider when designing a metaphor?
+
+Analyze relationships between features.
+  Too many features => conceptual baggage
+  Too few features => confusion, poor mapping
+
+* What are some guidelines for designing metaphors?
+
+Integration
+  Are metaphors consistent?
+Unpacking
+  Can people determine why each component of the metaphor was included?
+Topology
+  Is there a simliarity in structure between source and target domain?
+Analysis
+  Can users use the metaphor to infer functionality?
+Visual Presentation
+  Can objects and actions be presented to guide user to metaphor's concepts.
+
+* What do design guidelines provide?
+
+Well defined rules to follow, higher-level principles.
+
+* What do design guidelines not provide?
+
+A process.
+
+# Design Process
+
+* What is User Centered Design?
+
+Understanding the people who use your software.
+
+* Who developed User Centered Design?
+
+Apple for the Mac.
+
+* What is the process for User Centered Design?
+
+User studies -> Implementation -> Usability studies
+
+* What are the main problems for User Centered Design?
+
+Adds time to the development cycle.
+No "cutoff" for changes.
+
+* What are the 5 User Centered Design principles?
+
+Understand users' needs: Build a product that meets real needs
+Design the UI first: Then design the architecture to support the UI
+Iterate
+Use it yourself
+Observer others using it
+
+* How does one understand the users' needs?
+
+Observer existing solutions
+List scenarios
+List functions required by scenarios
+Prioritize functions
+List functions by frequency and commonality
+
+* What steps should you follow to design the UI?
+
+Identify and design components
+Design component distributions
+Test the design with users
+Document the design
+
+* What steps should you follow to refine the design?
+
+Refine requirements
+Add new scenarios
+Walk through new scenarios
+Adjust user interface design
+
+* What is a scenario?
+
+Specific use-case, written in a way that the end-user can understand it.
+
+* What are the 3 priorities of functions when designing them?
+
+Critical: Needed by early users to do something useful
+Important: Required before shipping the product
+Nice to Have: Nice, but unnecessary
+
+* What are the 2 dimensions of usage patterns?
+
+Frequency <-> Occasional
+By Many People <-> By Few People
+
+* What is temporal distribution? What is spatial distribution?
+
+Temporal
+  When components appear, do they flow from one interface to another.
+  How to get from one UI element to the next
+Spatial
+  Where components appear on an individual interface section.
+  Where to go to get to the UI element.
+
+* What are interaction sequences? Are they micro or macro structure?
+
+Macro-structure, convey the "big picture" of system interaction.
+Can be drawn like a flow chart.
+
+* What are interface schematics? Are they micro or macro structure?
+
+Micro-structure, convey essential content, and functionality at individual steps
+of interaction.
+Graphic design mockups.
+
+* What is a prototype? What is the goal of prototyping?
+
+A limited representation of a design that allows people to interact with and
+explore its suitablity.
+
+Goal: Maximum feedback for minimum effort.
+
+* What are some examples of prototypes?
+
+Paper sketches, slide show, physical models, mock software.
+
+* What are some objectives of prototyping?
+
+- Aid in discussions with stakeholders
+- Help communication of ideas among team members
+- User evaluation
+- Technical/layout testing and tuning.
+
+* What areas should be prototyped?
+
+Difficult, controversial, and critical areas?
+
+* What is the difference between a low and high fidelity prototype?
+
+Low:
+  Prototype doesn't look like final product. Easy to make. Simulated or slower.
+  More iteratible. Encourages experimentation.
+High:
+  Prototype looks and acts like real product. More creative. Faster.
+  More accurate. May give a false sense of completeness.
+
+* What is paper prototyping?
+
+Users perform realistic tasks by interacting with a paper version of the software.
+Another person is "playing computer".
+
+* What is the Wizard of Oz technique?
+
+Evalute unimplemented technology by using a human to simulate the response.
+
+* When should you use low fidelity prototypes? High fidelity?
+
+Low fidelity prototypes should be used early on in the design phase.
+High fidelity prototypes should be used late in the design phase.
+
+* What is breadth and depth in the context of prototypes?
+
+Depth: Functionality. Amount of interactivity.
+Breadth: Features. Amount of features.
+
+* What are the three dimensions of prototyping?
+
+Functionality, features, fidelity.
+
+# Visual perception
+
+* What is psychophysics?
+
+The relationship between external stimuli and internal sensations.
+
+* What is temporal resolution?
+
+The ability to see images that are changing over time.
+
+* What is the Critical Flicker Frequency, or Flicker Fusion Threshold? Common value?
+
+The frequency at which flickering light is percieved as continuous light.
+
+Usually 45 Hz.
+
+* What can the Critical Flicker Frequency be used for?
+
+Mimicking continuous motion. e.g. 24 FPS film, zoetropes.
+
+* What is spatial resolution?
+
+The ability to see images that are close enough or with a certain size.
+
+* What is visual acuity?
+
+A measure of the spatial resolution of the visual processing system.
+
+* What is the definition of 20/20 vision?
+
+Seperate lines 1 arc minute (1/60 degrees) at 20 feet.
+
+* Are what point are two lines indistinguishable on a monitor?
+
+2 arc minutes (1/30 degrees)
+
+* What determines colour?
+
+The wavelength of light.
+Infrared has lower frequency -> Ultraviolet has higher frequency.
+
+* What are additive colour models? Name some models.
+
+Coloured light is added to produce white.
+RGB, HSV, YUV.
+
+* What are subtractive colour models? Name some models.
+
+Coloured light is absorbed to produce black.
+CMY/CMYK
+
+* What is the HSB colour model?
+
+Hue
+  Determines the colour
+  Going around the circle in HSB
+Saturation
+  Determines how much hue (gray to colour)
+  Vertical stripes in HSB
+Brightness
+  How much light (black to white)
+  Horizontal stripes in HSB
+
+* What sensors does the human eye have to percieve colour?
+
+Cones and rods.
+
+* What are the three types of cones in the human eye? What is their relative quantity?
+
+Blue, green, and red (or yellow)
+Fewer blue cones.
+
+* What affects our ability to discriminate between colours?
+
+Paleness, size, seperation.
+
+* What are the two -chromacity's of colour blindness?
+
+Monochromacity: 2 or 3 types of cones missing
+Dichromacy: 1 type of cone missing.
+
+* What are the 3 types of dichromacy?
+
+Protanopia: Missing red cones.
+Deuteranopia: Missing green cones.
+Trianopia: Missing blue cones.
+
+* What are the 3 functions of peripheral vision?
+
+1. Guides fovea (provides cues to guide eye movement)
+2. Detects motion
+3. Helps us see better in the dark
+
+* What does the weakness of peripheral vision imply in visual design?
+
+People may not notice important information, like error messages.
+
+* What are says to make messages visible to the user?
+
+Place it where users are looking
+Place the error message near the error
+Use an error symbol
+Reserve the colour red for errors
+"Heavy Artillery": Pop-ups, sound, motion.
+
+* What is the common idea behind all display technology?
+
+Each pixel is three sub-pixels: red, green, and blue.
+
+* How many colours are available in 16, 24, and 32 bit RGB colours?
+
+16: 5 red, 5 blue and 6 green bits => 65536 colours
+24: 8 bits per colour => 16777216 colours
+32: 8 bits per colour + 8 bit alpha channel => 16777216 colours + transparency.
+
+* How do CRT monitors work?
+
+Electrons are shot into a phosphor coating, which lights up when hit.
+
+* How do Plamsa displays work?
+
+Make a coloured gas glow.
+
+* How do LCD displays work?
+
+Shine a bright white backlight, use crystals to bend light, and use a colour
+filter to generate RGB pixels.
+
+* What are LED displays?
+
+LCD displays with an LED backlight.
+
+* What are OLED displays?
+
+LED displays with no backlight, and ability to bend.
+Expensive though.
+
+* What are the various LayoutManagers in Java?
+
+NestedLayout: Layouts in a layout
+SpringLayout: Springs and Struts
+BorderLayout: NESW and center
+BoxLayout: Top to bottom, or left to right
+GridLayout: Evenly space things out
+FlowLayout: Put everything at preferred size, make a new row if not enough room.
+
+* What does it mean when we say that "model is very loosely coupled with the
+  UI".
+
+The model is just a generic object that any view can access to render its
+information.
+
+* What is in a typical event loop?
+
+XEvent event;
+
+long lastRepaint = now();
+while (true) {
+  if (XPending() > 0) {
+    XNextEvent(xinfo.display, &event);
+    HandleEvent(event);  // switch statement
+  }
+
+  doNextTick();
+  repaint();
+  sleep(1000 / 30 (now() - lastRepaint()));
+  lastRepaint = now();
+}
+
+
+* How long should the event loop sleep for?
+
+The time per frame - the time it took to compute everything before.
+
+* Why do we use XPending instead of XNextEvent when checking for an event?
+
+XNextEvent blocks until an event is present, so the whole rendering loop would
+stop until an event is received. Also if use the XNextEvent in the while
+condition, we would never actually get out of the event checking.
