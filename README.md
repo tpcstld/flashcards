@@ -1,6 +1,6 @@
 # Flashcards
 
-Flashcards to help with studying for courses. Pull requests are welcome.
+Flashcards to help with studying for courses.
 
 ## Quickstart
 
