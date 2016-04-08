@@ -1,0 +1,1779 @@
+# 1 Computer System Overview
+
+* What is an Operating System?
+
+A program that controls the execution of application programs and acts as a
+standardized interface between applications and hardware.
+
+* What does an Operating System do?
+
+Manages resources, provides a set of services, consumes resources.
+
+* What are the two types of user-visible registers?
+
+Data registers: Stores results from calculations or data.
+Address register: Points to memory locations.
+
+* What are control and status registers?
+
+Invisible to the user, they control the operation of the computer.
+Used by privileged OS routines.
+
+* What are some control and status registers?
+
+Program counter, Instruction register, Program status word
+
+* Why are interrupts useful when communicating with I/O devices?
+
+Because I/O devices are usually slower than the processor, and interrupts allow
+the processor to avoid polling the device.
+
+Improves processor utilization.
+
+* When an interrupt occurs, what steps does the hardware handle?
+
+- Processor finishes execution of current instruction
+- Processor signals acknowledgement of interrupt
+- Processor pushes PSW and PC onto the control stack
+- Processor loads new PC value based on interrupt
+
+* When an interrupt occurs, what steps does the software handle?
+
+- The remainder of the process state information is saved.
+- The interrupt is processed.
+- The process state information is restored.
+- The old PSW and PC is restored.
+
+* What are the two approaches to handling multiple interrupts?
+
+1. Disable interrupts in ISR
+2. Nested interrupts.
+
+* What is the principle of locality w.r.t memory?
+
+Memory references by programs tend to cluster.
+
+# 2 Operating System Overview
+
+* What are the 3 objectives of operating systems?
+
+Convenience, Efficiency, and the Ability to Evolve.
+
+* What is the kernel?
+
+The portion of the OS that is in main memory.
+
+* What are the advantages and disadvantages of Batch Multiprogramming vs Time Sharing?
+
++Batch: Processor use is maximized.
++Time: Response time is minimized.
++Time: Could dynamically enter commands into a terminal.
+
+* Why are most elements of modern OSes split into different services in user-space?
+
+- Security: Prevents unneeded access to privileged instructions
+- Availability: If a service goes down, the whole OS doesn't crash.
+
+# 3 Process Description and Control
+
+* What are the requirements of the OS w.r.t processes?
+
+- Maximize processor utilization while providing reasonable response time.
+- Allocate resources to processes.
+- Support interprocess communication.
+- Support process creation.
+
+* What are the 3 components of processes?
+
+1. An executable program
+2. Associated data
+3. Execution context
+
+* What is the process control block?
+
+A data structure that holds metadata about a process.
+
+* What does the process control block contain?
+
+- Identifiers about the current process
+- User-visible registers
+- Control and status registers
+- Processor state information
+- Stack pointers
+- Process control information
+
+* What are the two modes of execution a modern OS usually has?
+
+User mode and system mode.
+
+* How do you switch from user mode to system mode?
+
+Trigger a specific interrupt.
+
+* When would you want to suspend a process?
+
+Swapping, by user request, time sharing, blocked on I/O or memory.
+
+# 4 Threading
+
+* What is multi-threading?
+
+Operating system supports multiple threads of execution with a process.
+
+* What is the difference between a thread and a process?
+
+Threads share memory and don't have their own PCB.
+
+* What the advantages of threads over processes?
+
+- Takes less time to create threads
+- Takes less time to terminate threads
+- Takes less time to switch between threads
+
+* What happens to threads when you terminate or suspend their process?
+
+All threads in the process get terminated or suspended.
+
+* What is a user-level thread?
+
+A thread managed by the application. The kernel is not aware.
+
+* What is a kernel-level thread?
+
+The kernel is aware about the thread, and scheduling is done on a thread basis.
+
+* What are the advantages and disadvantages of user vs kernel threads?
+
+User:
+  Less switching overhead
+  Can run on any OS
+Kernel:
+  Only the thread is blocked when you call I/O
+  Can schedule multiple threads on multiple processors simultaneously
+
+* What is the microkernel architecture?
+
+Small OS core with many external subsystems.
+
+* What are some advantages of having a microkernel architecture?
+
+Doesn't distinguish between kernel level and user level services.
+More extensible: Can add a new service easily.
+More flexible: Can modify services easily.
+More portable: Only need to change the microkernel between platforms.
+More reliable: If a service goes down, OS is still fine.
+
+# 5 Concurrency
+
+* What is an atomic operation?
+
+A function or action implemented in such a way that it appears to be a "single"
+action.
+
+* What is a critical section?
+
+A section of code within a process that requires access to shared resources and
+that must not be executed while another process is in a corresponding section
+of code.
+
+* What is a race condition?
+
+A situation in which multiple threads or processes read and white a shared data
+item and the final result depends on the relative timing of their execution.
+
+* What are 3 possible levels of interaction among processes?
+
+1. Processes unaware of each other.
+2. Processes indirectly aware of each other.
+3. Processes directly aware of each other.
+
+* What are the 6 requirements for a facility to provide mutual exclusion?
+
+1. Enforcement: Only one process is allowed inside its critical section
+2. A process that halts in its noncritical section must not interfere with other
+   processes
+3. No deadlock or starvation
+4. A process must not be delayed access to a critical section when there are no
+   other processes using it
+5. No assumptions are made about relative process speeds or number of processes
+6. A process remains inside of its critical section for a finite time only.
+
+* What are two ways for the hardware to provide mutual exclusion?
+
+1. Disable interrupts in a uniprocessor system.
+2. Special machine instructions. e.g. Test and Set that operate in one cycle.
+
+* What are the advantages of using special machine instructions for mutual exclusion?
+
+- Applicable to any number of processes and any number of processors as long as
+  main memory is shared.
+- Simple and easy to verify
+- Can support multiple critical sections.
+
+* What are the disadvantages of using special machine instructions for mutual exclusion?
+
+- Need to busy-wait, since consumes processor time.
+- Possible to starve a process.
+- Possible to cause a deadlock. (e.g. Low priority process has critical section,
+and high priority process is busy-waiting. Forever.)
+- Pipeline stalls.
+
+* What is a semaphore?
+
+A special variable (that has an integer value) for concurrency control.
+
+* What are the operations for a semaphore?
+
+semWait(): decrements the semaphore. And maybe blocks the process.
+semSignal(): increments the semaphore. And maybe unblocks a process.
+
+* What do we need to implement semaphores?
+
+Special machine instructions like Test and Set.
+
+* When do semaphores block?
+
+When their value is negative.
+
+* What does the initial value of a semaphore control?
+
+The number of processes that can be admitted simultaneously.
+
+* What does the current value in a semaphore indicate?
+
+The number of processes waiting for the critical section.
+
+* What is the producer-consumer problem?
+
+Multiple producers are generating data and filling up a buffer.
+A single consumer is taking data out of the buffer.
+Only one entity may access the buffer at once.
+
+* What is a monitor?
+
+Similar to the semaphore, except that it uses condition variables for signaling,
+and unused signals are lost.
+
+* What is message passing useful for?
+
+- Mutual exclusion
+- Exchanging information between processes.
+
+* What is direct addressing w.r.t message passing?
+
+send() primitive includes a specific id referring to the destination process.
+
+* What is indirect addressing w.r.t message passing?
+
+A mailbox is created and shared among processes.
+Processes send and receive messages to and from the mailbox.
+
+# 6 Deadlock and Starvation
+
+* What is a deadlock?
+
+A situation in which two or more processes are unable to proceed because each is
+waiting for one of the others to do something.
+
+* What is a livelock?
+
+A situation in which two or more processes continuously change their states in
+response to changes in the other process(es) without doing any useful work.
+
+* What is mutual exclusion?
+
+The requirement that when one process is in a critical section that accesses
+shared resources, no other process may be in a critical section that accesses
+any of those shared resources.
+
+* What is starvation?
+
+A situation in which a runnable process is overlooked indefinitely by the
+scheduler; although it is able to proceed, it is never chosen.
+
+* What are the two types of resources?
+
+Consumable and reusable.
+
+* How can reusable resources cause a deadlock?
+
+Each process holds one resource and requests the other.
+
+* How can consumable resources cause a deadlock?
+
+All processes are blocked from a receive() function.
+
+* What are the conditions for a deadlock?
+
+- Mutual exclusion: Only one process may use a resource at a time
+- Hold-and-wait: A process may hold onto allocated resources while waiting for
+  more resources.
+- No preemption (w.r.t resources): No resource can be forcibly removed from a
+  process holding it.
+- Circular wait: A chain of processes exists, such that each process hold a
+  resource needed by the next process in the chain.
+
+* What are two approaches to deadlock avoidance at execution time?
+
+1. Do not start a process if its demands might lead to deadlock.
+2. Do not grant an incremental resource request if this allocation might lead
+   to a deadlock.
+
+* What is the Banker's Algorithm?
+
+Only run a process if you can find at least one sequence that does not result
+in a deadlock.
+
+* What are the conditions for deadlock avoidance to be possible?
+
+- Maximum resource requirements are stated in advance.
+- Processes under consideration are independent.
+- There must be a fixed number of resources to allocate.
+- No process may exit while holding resources.
+
+* What can you do when a deadlock is detected?
+
+1. Abort all deadlocked processes
+2. Back up each deadlocked process to some previously defined checkpoint.
+3. Keep doing this until deadlock no longer exists.
+4. If it's still deadlocking, keep preempting resources until deadlock no longer
+   exists.
+
+# 7 Memory Management
+
+* What is the "relocation" requirement of memory management?
+
+Programmer does not know where the program will be placed in memory until its
+executed.
+
+* What is the "protection" requirement of memory management?
+
+Processes should not be able to reference memory locations for another process.
+
+* What is the "sharing" requirement of memory management?
+
+Several processes should be allowed to reference the same portion of memory.
+
+* What is the "logical organization" requirement of memory management?
+
+You should be able to share "modules" of code among processes.
+Each module can be written and compiled separately, and have different degrees
+of protection.
+
+* What is the "physical organization" requirement of memory management?
+
+Programmer does not know how much space will be available.
+
+* What is the fixed partitioning approach to memory management?
+
+Divide the memory to partitions. Each process is loaded into an available
+partition.
+
+* What are the problems with the fixed partitioning approach to memory management?
+
+- A program may not always fit inside a partition.
+- There is a lot of internal fragmentation.
+
+* What is internal fragmentation?
+
+Unused, but allocated memory.
+
+* What is external fragmentation?
+
+Unallocatable memory.
+
+* What is the placement algorithm for unequal-size partitions in the fixed-size partitioning approach to memory management?
+
+Assign each process to the smallest available partition that will fit it.
+
+* What is the dynamic partitioning approach to memory management?
+
+Partitions are of variable length and number. Map processes to partitions.
+
+* What is a problem of the dynamic partitioning approach to memory management?
+
+We may get "holes" in the memory, causing external fragmentation. Must use
+compaction to remove the holes.
+
+* What are some algorithms for placing partitions in the dynamic partitioning approach to memory management?
+
+Best-fit, first-fit, next-fit.
+
+* Why is the best-fit algorithm the worst performer for placing partitions into memory?
+
+Since smallest block is found for partition, the smallest amount of fragmentation
+is left. Therefore, memory compaction must be done more often.
+
+* What is the buddy system approach to memory management?
+
+Entire space available is treated as a single block.
+When a request comes, the block is broken into halves until we have got the
+smallest half that will satisfy the request.
+
+* What is a logical address?
+
+Reference to a memory location independent of the current assignment of data to
+memory.
+
+* What is a relative address?
+
+Address expressed as a location relative to some known point.
+
+* What is a physical address?
+
+The actual location in main memory.
+
+* What are the two registers used when translating addresses for relocation?
+
+- Base register: Starting address for the process
+- Bounds register: Ending address of the process
+
+These values are set whenever the process is loaded in.
+
+* What is paging?
+
+Loading "pages" of memory from disk to main memory when needed.
+
+Dividing memory into equal-sized chunks and dividing each process into the same
+fixed-size chunks.
+
+* What is a page vs what is a frame?
+
+Page: Chunks of a process.
+Frame: Chunks of memory.
+
+* Does paging have internal or external fragmentation?
+
+No internal fragmentation, except for final page of process.
+No external fragmentation.
+
+* What is segmentation?
+
+Program is divided into segments.
+
+* How is segmentation different from paging?
+
+Segmentation doesn't divide up main memory.
+Programmers can control and can be aware of segmentation.
+
+# 8 Virtual Memory
+
+* What are the requirements for virtual memory?
+
+- We only use relative, logical address that are translated at runtime.
+- We are using paging or segmentation.
+
+* What is the main breakthrough of virtual memory?
+
+We do not need to keep all pages/segments of a program in main memory during
+execution.
+
+* What is the resident set of a process?
+
+The portion of a process that is currently in main memory.
+
+* What happens when the processor tries to reference a logical address not yet located in main memory?
+
+A page fault (memory access fault) occurs.
+
+* What are the two implications of virtual memory?
+
+1. More processes may be maintained in main memory.
+2. A process may be larger than all of main memory.
+
+* What is thrashing?
+
+Continuously getting and throwing away pages from main memory.
+
+When the system spends most of its time swapping pieces rather than executing
+instructions.
+
+* What is the modify bit used for in virtual memory?
+
+If the modify bit is not set, it means that the memory page has not been
+modified since it was loaded. This means that it doesn't have to be written back
+to disk when it is unloaded.
+
+* What is the inverted page table?
+
+- A hash map that maps the page number to a frame number.
+- Only keeps track of the pages currently in main memory.
+- Uses a chaining mechanism to deal with hash collisions.
+
+* What is the translation lookaside buffer and why is it useful?
+
+A special hardware location which stores recently accessed pages -> frames.
+This means that you don't need to query the page table (which requires an
+additional memory lookup).
+
+* What is the correlation between page size and page fault rate?
+
+Increased page size => smaller resident set => More page faults.
+Until a point where you load enough memory into a page that the whole process
+is going to be loaded, then 0 page faults.
+
+* What are the advantages of segmentation over not using it?
+
+1. Simplifies handling of growing data structures. A growing data structure can
+   be assigned to its own segment!
+2. Allows programs to be altered and recompiled independently, without requiring
+   the entire set of programs to be relinked and reloaded.
+3. Lends itself to sharing among processes. A segment can be allocated to be
+   accessed by multiple programs.
+4. Lends itself to protection, as the segments can be assigned specific
+   privileges.
+
+* What is the metadata needed for a segment table entry + virtual memory?
+
+- Whether or not the segment is in main memory.
+- Whether or not the segment has been altered.
+- Possible bits for protection and sharing.
+
+* Can the segment table be stored in registers? (like you can with pages)
+
+No, since you can have a variable number of segments.
+
+* How does paging + segmentation work?
+
+Memory is broken up into segments, as specified by the programmer.
+Each segment is broken up into pages.
+
+* What are the different types of access permissions for a segment across processes?
+
+- No access allowed
+- Branching not allowed
+- Referencing data allowed
+- Referencing data not allowed
+
+* What are rings, w.r.t. protection systems?
+
+Programs are assigned to a ring number.
+1. A program may access only data that reside of the same ring or a less
+privileged ring.
+2. A program may call services residing on the same or more privileged ring.
+
+# 8.2 Operating System Software
+
+* What are the 3 decisions one must make when designing an OS w.r.t memory?
+
+1. Whether or not to use virtual memory techniques
+2. Whether or not to use paging or segmentation or both
+3. Which algorithm to use for managing memory
+
+* What is the fetch policy w.r.t. virtual memory?
+
+The policy which determines when a page should be brought into main memory.
+
+* What is demand paging w.r.t virtual memory?
+
+A page is brought into main memory only when a reference is made to a location
+on that page.
+
+* What is prepaging w.r.t virtual memory?
+
+Pages other than the one demanded by a page fault are also brought in.
+Exploits secondary memory characteristics, like seeking.
+
+* What is the placement policy w.r.t virtual memory?
+
+The policy which determines where in real memory a process piece is to reside.
+
+This is usually a non-issue since pages can be "freely" moved in and out of
+main memory, and there is no external fragmentation.
+
+* What is the replacement policy w.r.t virtual memory?
+
+The policy which determines which page in main memory to swap out when needed.
+
+* What is frame locking w.r.t virtual memory?
+
+- Some frames in memory are locked, meaning that they should not be replaced.
+- Achieved by using a lock bit.
+
+* What is the optimal policy w.r.t replacement algorithms and virtual memory?
+
+Replace the page who's time to next reference is the longest.
+
+* What is the least recently used policy w.r.t replacement and virtual memory?
+
+Replace the page that has not been referenced in the longest time.
+
+* What is the First-In-First-Out policy w.r.t replacement and virtual memory?
+
+Go in a circular order, and replace the page that has been in main memory the
+longest.
+
+* What is the clock policy w.r.t replacement and virtual memory?
+
+Each frame has a bit, which is reset to 0 when the circular pointer passes over
+it. It is set to 1 when the frame is accessed or loaded. The first page that
+the circular pointer sees with a 0 bit is replaced.
+
+* How can the clock policy be augmented to be more powerful?
+
+Use more bits, like a not-modified bit.
+
+* What is page buffering?
+
+There are two lists, a free list and a modified list. The free list keeps track
+of the frames that can be assigned a page. The modified list keeps track of pages
+that have yet to be written back into secondary memory.
+
+The OS tries to keep a certain amount of frames in the free list at all times.
+
+* How does page buffering help efficiency?
+
+The number of I/O operations needed is reduced, as the page writes can be
+batched together.
+
+* Why is resident set management important?
+
+- The smaller the amount of memory allocated to a process, the more process
+  can reside in main memory at one time.
+- In a relatively small number of pages of a process are in main memory, page
+  faults are going to be high.
+- Beyond a certain size, additional allocation of main memory to a process is
+  not going to have a noticeable effect on the page fault rate.
+
+* What are the characteristics of a fixed-allocation policy w.r.t resident set management?
+
+Each process gets a fixed number of frames in main memory within which to
+execute. The number is decided at initial load time and may be determined based
+on the type of process.
+
+* What are the characteristics of a variable-allocation policy w.r.t resident set management?
+
+Each process can keep a variable number of frames in main memory at a time.
+A process that is consistently page fault may get more frames.
+
+* What are the characteristics of a local replacement policy w.r.t resident set management?
+
+Only resident pages of the process that generated the page fault are candidates
+for replacement.
+
+* What are the characteristics of a global replacement policy w.r.t resident set management?
+
+All unlocked pages in main memory are candidates for replacement.
+
+* What are some of the drawbacks with fixed allocation, local scope w.r.t resident set management?
+
+1. If allocations are too small, then there will be a high page fault rate.
+2. If allocations are too big, then there are too few programs in main memory.
+
+* What is the drawback of variable allocation, global scope w.r.t resident set management?
+
+The process which suffers the reduction in resident set size may not be optimum.
+
+This is partially mitigated by page buffering, which allows the replaced page
+to possibly be reclaimed.
+
+* What is variable allocation, local scope w.r.t resident set management?
+
+1. When a new process is loaded into main memory, determine the number of frames
+   in its resident set.
+2. When a page fault occurs, select a page in its resident set to be replaced.
+3. From time to time, reevaluate the allocation provided to the process.
+   Increase or decrease the resident set size to improve overall performance.
+
+* What is the working set?
+
+The set of pages of a process that have been referenced in the last x time units
+at time t.
+
+* What is the pattern of working set size over time?
+
+Stable periods followed by peaks of transient periods.
+
+Transient periods are caused when the process switches to a new locality.
+
+* How can we use the working set to guide resident set size?
+
+1. Monitor the working set of each process
+2. Periodically remove from the resident set pages that are not in the working
+   set.
+3. A process may execute only if its working set is in main memory.
+
+* What are the problems with using the working set to guide resident set size?
+
+1. The past does not always predict the future. (Size and membership of the
+   working set will change over time.)
+2. A true measurement of the working set for each process is impractical.
+3. The optimal value of x is unknown, and would vary.
+
+* What is the page fault frequency algorithm w.r.t resident set management?
+
+1. A threshold F is defined
+2. If the amount of time since the last page fault is less than F, a page is
+   added to the resident set of the process.
+3. Otherwise, discard all pages with a use bit of 0.
+
+* What is the major flaw of the page fault frequency algorithm w.r.t resident set management?
+
+It does not perform well when there is a shift to a new locality. No page
+drops out of the resident set until F time units have elapsed since it was
+referenced.
+
+* What is the variable-interval sample working set policy w.r.t resident set management?
+
+Define:
+  M: The minimum duration of the sampling interval
+  L: The maximum duration of the sampling interval
+  Q: The number of page faults that are allowed to occur between sampling instances.
+
+1. If the virtual time since the last sampling instance reaches L, then suspend
+   the process and scan the use bits.
+2. If, prior to an elapsed virtual time of L, Q page faults occur.
+    a. If the virtual time since the last sampling instance is less than M, then
+       wait until the elapsed virtual time reaches M to suspend the process and
+       scan use bits.
+    b. If the virtual time since the last sampling instance is greater than or
+       equal to M, suspend the process and scan the use bits.
+
+* What is the cleaning policy w.r.t virtual memory?
+
+The policy that determines when a modified page should be written out to
+secondary memory.
+
+* What is demand cleaning w.r.t cleaning policies?
+
+A page is written out to secondary memory only when it is selected for
+replacement.
+
+* What is precleaning w.r.t cleaning policies?
+
+Modified pages are written out before their pages frames are needed. This means
+that they can be written out in batches.
+
+* How can you use page buffering with cleaning policies w.r.t virtual memory?
+
+Clean pages periodically in the modified list, then move them to the unmodified
+list.
+
+* What is load control responsible for w.r.t virtual memory?
+
+Load control is responsible for determining the number of processes that will be
+resident in main memory.
+
+* What is a main problem of multiprogramming w.r.t virtual memory?
+
+If the number of processes are high, then there is an increased chance of
+thrashing due to decreased resident set size.
+
+* What is the L = S criterion w.r.t virtual memory?
+
+Adjust the multiprogramming level so that the mean time between faults equals
+the mean time required to process a page fault.
+
+* What is the 50% criterion w.r.t virtual memory?
+
+Adjust the multiprogramming rate until the utilization of the paging device is
+at approximately 50%.
+
+* How can to augment the clock algorithm to control multiprogramming levels?
+
+You can safely increased the multiprogramming level if
+
+1. If few page faults are occurring, then there few requests to advance the
+   pointer; or
+2. For each request, the average number of frames scanned by the pointer is
+   small, which means that there are not many resident pages being referenced.
+
+* What are some of the possibilities for choosing a process to suspend when decreasing the multiprogramming level?
+
+- Lowest-priority process: This implements a scheduling policy decision and is
+  unrelated to performance issues.
+- Faulting process: The reasoning is that there is a greater probability that
+  faulting task does not have its working set resident. You will also block a
+  process that will be blocked anyways.
+- Last process activated: This is process least likely to have its working set
+  resident
+- Process with the smallest resident set: Least effort to reload in the future.
+  However, it penalizes processes with strong locality.
+- Largest process: Obtains the most free frames in an overcommitted memory.
+- Process with the largest remaining execution window: Approximates
+  shortest-processing-time-first scheduling discipline.
+
+* What page replacement algorithm does Linux use?
+
+Clock policy.
+
+# 9 Uniprocessor Scheduling
+
+* What is long-term scheduling?
+
+The decision to add to the pool of processes to be executed.
+
+* What is medium-term scheduling?
+
+The decision to add to the number of processes that are partially or fully in
+main memory.
+
+* What is short-term scheduling?
+
+The decision as to which available process will be executed by the processor.
+
+* What is I/O scheduling?
+
+The decision as to which process's pending I/O request shall be handled by an
+available I/O device.
+
+* Which process state transitions is long-term scheduling responsible for?
+
+New -> Ready/Suspend and New -> Ready
+
+* Which process state transitions is medium-term scheduling responsible for?
+
+Ready/Suspend -> Ready and Blocked/Suspend -> Blocked
+
+* Which process state transitions is short-term scheduling responsible for?
+
+Ready -> Running
+
+* What is the aim of processor scheduling?
+
+To assign processes to be executed by the processor or processors over time, in
+a way that meets system objectives.
+
+* What are some of the system objectives for processor scheduling?
+
+Response time, throughput, processor efficiency.
+
+* What are some of the strategies that long-term scheduling will use to admit new processes?
+
+First-come-first-served. Highest priority. Expected execution time. I/O requirements.
+
+* What are some examples of when short-term scheduling is performed?
+
+Clock interrupts, I/O interrupts, operating system calls, signals.
+
+* What is turnaround time?
+
+The interval of time between the submission of a process and its completion.
+
+* What is response time?
+
+The time from the submission of a request until the response begins to be recieved.
+
+* What are deadlines w.r.t scheduling criteria?
+
+When deadlines are set, the scheduler should try to hit as many as possible.
+
+* What is predictability w.r.t scheduling criteria?
+
+A given job should run at the same time and with the same cost regardless of
+the load on the system.
+
+* What is throughput w.r.t scheduling criteria?
+
+The scheduling policy should try to maximize the number of processes completed
+per unit of time.
+
+* What is fairness w.r.t scheduling criteria?
+
+All processes should be the same, disregarding priorities. No process should be
+starved.
+
+* How are priorities implemented w.r.t uniprocessor scheduling?
+
+Each priority has its own separate queue. The queues are queried in the order of
+priority for a process to run.
+
+* What is the first-come-first-served scheduling policy?
+
+The first process to enter is fully executed, then the next process to enter
+is fully executed, and so on.
+
+* What are some of the problems with the first-come-first-served scheduling policy?
+
+- Long processes are favoured over short processes.
+- Processor bound processes are favoured over I/O bound processes.
+
+* What is the round-robin scheduling policy?
+
+The processor time is divided up into equal-sized time slices. Each process
+gets one time slice at a time, and is then queued up again.
+
+* What are some of the problems with round-robin scheduling policy?
+
+- If the quanta (time slice) is too short, then there is a lot of overhead.
+- Processor bound processes are favoured over I/O bound processes.
+  - This is because an I/O call will use up the rest of the time slice.
+
+* What is virtual round robin w.r.t scheduling policy?
+
+I/O queues are added, which have higher priority than the normal process queues.
+This means that the system will no longer favour processor-bound processes more.
+
+* What is the shortest process next scheduling policy?
+
+The process with the shortest service is run to completion.
+
+* What is the shortest remaining time scheduling policy?
+
+The process with the shortest service time left - time already spent is chosen
+to run immediately. May be preempted if a shorter program arrives.
+
+* What is the highest response ratio next scheduling policy?
+
+The process which maximizes ((waiting time + total service time) / total service
+time) is run to completion.
+
+* What is turnaround time w.r.t process scheduling?
+
+The total time that the process spends in the system (waiting + service time).
+
+* When can policies SPN, SRT, and HRRN not be used w.r.t process scheduling?
+
+When we have no indication of the relative length of various processes.
+
+* What is the feedback scheduling policy?
+
+Multiple queues are used. Every process starts at the highest priority queue.
+When a process is preempted, it is pushed into the queue one priority lower.
+And so forth, until you're at the very bottom, in which case you stay there.
+
+* Why does the feedback scheduling policy favour shorter processes?
+
+Shorter processes are less likely to be preempted, and therefore won't navigate
+as far down the priority queues.
+
+* What is a problem with the feedback scheduling policy, and how can be alleviate it?
+
+Longer processes may have really bad turnaround time, due to their low priority.
+
+We can alleviate this problem by having variable preemption times for each level
+in the priority (e.g. p0 has 1 time unit, p1 has 2, p2 has 4, etc...).
+
+A better remedy is to increase the priority if the process has been waiting for
+a long time.
+
+* What is fair-share scheduling?
+
+In a multi-user system, you may want to group processes together and have them
+share resources.
+
+You can do this by having a "group" utilization counter in addition to a normal
+per-process utilization counter.
+
+# 10 Multiprocessor Scheduling
+
+* What is independent parallelism?
+
+Each process is a separate application. e.g. time sharing system.
+This has properties similar to the uniprocessor system.
+
+* What is coarse and very-coarse grained parallelism?
+
+A level where there is some synchronization among processes.
+Distributing computation among separate processes or network nodes.
+
+* What is medium-grained parallelism?
+
+Parallel processing within the application level.
+e.g. Threads that interact a lot with each other.
+
+* What is fine-grained parallelism?
+
+High parallel applications, e.g. graphics rendering.
+
+* What are the three scheduling issues on multiprocessor systems?
+
+1. Assignment of processes to processors.
+2. Use of multiprogramming on individual processors.
+3. Actual dispatching of a process.
+
+* What is static processor assignment w.r.t multiprocessor scheduling?
+
+Each process is permanently assigned to one processor.
+
+* What is a disadvantage of static processor assignment w.r.t multiprocessor scheduling?
+
+One processor could be idle while another has a backlog.
+
+* What is the master/slave architecture w.r.t multiprocessor assignment?
+
+- Key kernel functions always run on a particular processor. (Master)
+- Other processors only run user-level processes.
+- Master is responsible for scheduling.
+
+* What are the advantages and disadvantages of the master/slave architecture w.r.t multiprocessor assignment?
+
+Advantages: Simple, similar to uniprocessor design.
+Disadvantages: Failure of master brings down whole system. Master could be
+               a performance bottleneck.
+
+* What is the peer architecture w.r.t multiprocessor assignment?
+
+- Kernel can execute on any processor.
+- Each processor does self scheduling.
+
+* Why could multiprogramming be not necessary in a multiprocessor environment?
+
+When we have a lot of cores, it might not be worth the overhead to implement.
+
+* What is an advantage of threading on a multiprocessor environment?
+
+We can have true parallelism.
+
+* What is the load sharing proposal for multiprocessor thread scheduling?
+
+Processes are not assigned to a particular processor. Each processor selects
+a ready thread from a global queue when idle.
+
+* What is the gang scheduling proposal for multiprocessor thread scheduling?
+
+A set of related threads is scheduled to run on a set of processors at the same
+time, on a 1:1 basis.
+
+* What is the dedicated processor assignment proposal for multiprocessor thread scheduling?
+
+Threads are assigned to a specific processor.
+
+* What is the dynamic scheduling proposal for multiprocessor thread scheduling?
+
+The number of threads in a process can be altered during the course of execution.
+
+* What are the advantages of load sharing w.r.t multiprocessor thread scheduling?
+
+- No processor is left idle while processes are queued up
+- No centralized scheduler required.
+- Transparent of the developer.
+
+* What are the disadvantages of load sharing w.r.t multiprocessor thread scheduling?
+
+- Central queue needs mutual exclusion
+- Preempted threads are unlikely to resume execution on the same processor,
+  causing cache misses
+- If all threads are in the global queue, then all threads of a program will not
+  gain access to the processors at the same time.
+
+* When is gang-scheduling useful w.r.t multiprocessor thread scheduling?
+
+When application performance severely degrades when any part of the app is not
+running.
+
+* What is a problem with gang-scheduling, and how can it be solved?
+
+If group 2 has less threads than group 1, some processors may be idle.
+This leads to inefficient use of the multiprocessor.
+
+The solution is to weigh many-threads processes greater so they will run more.
+
+* What is an apparent problem of dedicated processor assignment, and why isn't it so bad?
+
+The lack of multiprogramming leads to a waste of processor cycles, but it isn't
+so bad since if you have 10000 processors, processor utilization is no longer a
+good metric, and you can avoid the overhead of process switching.
+
+* What happens when you have more threads than processors?
+
+Threads may keep getting preempted and switched in and out of execution. This
+leads to a decrease in performance.
+
+* What is the main principle of real-time scheduling?
+
+A correct value at the wrong time is a fault.
+
+* What is a soft real-time system?
+
+The response time is normally specified as an average value.
+i.e. Make sure that you don't have many lates.
+
+* What is a hard real-time system?
+
+The response time is specified as an absolute value.
+i.e. Make sure that you don't have any lates.
+
+* What is a firm real-time system?
+
+Constraints are combination of hard and soft constraints.
+
+* What is determinism w.r.t real-time systems?
+
+Operations are performed at fixed, predetermined times (or time intervals).
+
+* What is responsiveness w.r.t real-time systems?
+
+How long, after acknowledgement, does it the OS to service the interrupt?
+
+* What is user control w.r.t real-time systems?
+
+The user has a lot of control over priority, importance, timing.
+The user usually performs manually memory management.
+The user usually manually controls I/O algorithms.
+
+* What is reliability w.r.t real-time systems?
+
+Degradation of performance may have catastrophic consequences.
+
+* What is fail-soft operation w.r.t real-time systems?
+
+The ability of the system to fail in such a way as to preserve as much
+capability and data as possible.
+
+* What are some features of real-time operations systems?
+
+- Fast process or thread switching
+- Small size
+- Ability to respond to external interrupts quickly.
+- Multitasking with semaphores, signals, events.
+- Using special sequential files that can accumulate data quickly.
+- Preemptive scheduling based on priority
+- Ability to delay tasks for a fixed amount of time
+- Special alarms and timeouts.
+
+* Why are most traditional scheduling approaches not feasible for real-time systems?
+
+Because either they don't preempt fast enough, or because their scheduling
+is too slow.
+
+* What is the static table-driven approach to real-time scheduling?
+
+Determines at run-time when a task begins execution.
+
+* What is the static table-driven preemptive approach to real-time scheduling?
+
+Static analysis assigns priorities to tasks for a traditional scheduler to use.
+
+* What is the dynamic planning-based approach to real-time scheduling?
+
+The feasibility of meeting deadlines is determined at run time.
+
+* What is the dynamic best effort approach to real-time scheduling?
+
+No feasibility analysis is performed.
+
+* What are real-time systems most concerned with?
+
+Complete as many tasks within deadlines as possible. Not speed.
+
+* What are some of the information used in deadline scheduling?
+
+Ready time, starting deadline, completion deadline, processing time,
+resource requirements, priority, subtask scheduler.
+
+* What is the most optimal deadline scheduling algorithm?
+
+Run the process with the earliest deadline first.
+(If the system supports preemption)
+
+* What is rate monotonic scheduling?
+
+- Assigns priorities to tasks on the basis of their periods.
+- Highest-priority task is the one with the shortest period.
+- Lower bound on schedulable utilization is 0.693
+
+* Why does the industry prefer rate monotonic scheduling over earliest deadline first for real-time systems?
+
+- 30% CPU gain doesn't actually make a big difference.
+- Only some parts are time critical.
+- Rate monotonic systems are more predictable in overload situations.
+  - If you miss a deadline not everything is screwed.
+- And often you don't even have deadlines.
+
+* What is priority inversion?
+
+When a high priority task has to wait for a lower priority task.
+Can always happen in any priority-based preemptive scheduling scheme.
+
+* What happens when you have unbounded priority inversion?
+
+A high priority task can wait forever, blocked by a lower priority task.
+
+* How can you solve the problem of priority inversion?
+
+Make lower priority tasks inherit their blocked higher priority tasks'
+priorities as long as they are blocking them.
+
+# 11 I/O Scheduling
+
+* What are some of the differences in application of I/O devices?
+
+The management software for the device is going to be different.
+e.g. Terminal vs Disk
+
+* What is programmed I/O?
+
+The process is goes into a while-loop waiting for the operation to complete.
+
+* What is interrupt-driven I/O?
+
+The process sends a request, and the processor executes another task.
+
+* What is direct memory access w.r.t I/O?
+
+The DMA module controls the exchange of data between main memory and I/O device.
+The processor is only interrupted after the entire block of data has been
+transferred.
+
+* How did the I/O function evolve?
+
+1. Processor directly controls I/O device.
+2. Controller or I/O module is added, and the processor queries the module
+   using programmed I/O (no interrupts).
+3. Interrupts are added.
+4. Direct memory access is implemented.
+
+* What is the I/O or DMA module?
+
+- A separate processor with its own local memory.
+- It transfers data directly to and from memory.
+- When the transfer is complete, an interrupt is sent to the processor.
+
+* What is the design issue of efficiency, w.r.t I/O?
+
+- Most I/O devices are much slower than main memory.
+- Multiprogramming allows one to interleave I/O and processing though.
+- I/O will never keep up with processor throughputs though.
+- Swapping is an I/O operation.
+
+* What is the design issue of generality, w.r.t I/O?
+
+- We want to be able to handle all I/O devices in a uniform manner.
+- We want to hide most of the details of I/O in lower-level routines.
+
+* What are the parts of the filesystem model of I/O operation?
+
+Logical I/O: provides open, close, read, write
+Device I/O: converts operations and data into I/O instructions
+Scheduling and control: Queuing and scheduling of operations
+Directory management: Organizes files.
+File system: open, close, read, write
+Physical organization: Convert file address into locations on disk
+
+* What does logical I/O do?
+
+Treats devices as a logical resources without concerns of details of control.
+Manages I/O on behalf of the user processes
+
+* What does device I/O do?
+
+Converts the requested operations into I/O instructions.
+
+* What does scheduling and control do w.r.t I/O?
+
+Queues and schedules I/O operations.
+Handles interrupts and checks I/O status.
+
+* What does directory management do for filesystem I/O?
+
+Convert symbolic names to actual files references.
+Manage add, delete, and reorganize operations.
+
+* What does the filesystem do for filesystem I/O?
+
+Provides a logical structure of files and operations that can be specified
+by the user.
+
+* What does the physical organization do for filesystem I/O?
+
+Converts logical references to files/records to physical storage addresses.
+
+* Why do we want I/O buffering?
+
+Processes must wait for I/O to complete before proceeding, causing certain
+pages to be forced to remain in memory during I/O. This can cause a deadlock.
+
+* What is the risk of deadlock without I/O buffering?
+
+1. Process calls I/O routine and blocks.
+2. Process is swapped out.
+3. I/O routine needs to process to be loaded back to copy data, but process is
+   waiting on I/O.
+4. Deadlock!
+
+* What is a block-oriented I/O device?
+
+- Information is stored in fixed sized blocks.
+- Transfers are made one block at a time.
+- e.g. USB, disks.
+
+* What is a stream-oriented I/O device?
+
+- Information is transferred as a stream of bytes.
+- e.g. Terminals, printers, mouse.
+
+* How does single buffering work w.r.t block-oriented devices?
+
+1. Block is transferred to the buffer
+2. Block is moved to user space from buffer when ready/needed
+3. Another block is moved to the buffer
+
+User processes can process data one block at a time. This also allows swapping
+to occur, since the buffer is in system memory. The OS keeps track of the
+mapping of buffers to processes.
+
+* How does single buffering work w.r.t stream-oriented devices?
+
+Read one "line" at a time, and treat that as a "block".
+
+* How does double buffering work w.r.t I/O?
+
+The system has two buffers at a time. This allows the I/O device to transfer
+data to the other buffer while the first is being read.
+
+* How do circular buffers work w.r.t I/O? What are they good for?
+
+Use a number of buffers at a time and rotate between them similar to double
+buffering. This is good for bursty I/O.
+
+* What is seek time as a disk performance parameter?
+
+The time it takes to position the head at the desired track.
+
+* What is rotational latency as a disk performance parameter?
+
+The time it takes for the beginning of the sector to reach the head.
+
+* What is access time as a disk performance parameter?
+
+The sum of seek time and rotational delay.
+
+* Why is the specific disk scheduling policy important w.r.t I/O?
+
+It determines the average seek time, which is the reason for differences in
+performance.
+
+* What is the first-in-first-out disk scheduling policy?
+
+The first I/O request is processed first.
+This approaches random scheduling in terms of performance if there are
+many processes.
+
+* When is the priority-based disk scheduling policy used?
+
+When the goal is not to optimize disk use, but to meet some other objective.
+
+* What are the advantages and disadvantages of the last-in-first-out disk scheduling policy?
+
+Advantage: Good for transaction processing systems, as the device is given to
+           the most recent user, possibly reducing arm movement
+Disadvantage: First job may be starved.
+
+* What is the shortest-seek-time-first disk scheduling policy?
+
+Select the disk I/O operation that requires the least movement of the arm from
+its current position.
+
+* What are the advantages and disadvantages of the shortest-seek-time-first disk scheduling policy?
+
+Advantage: Minimizes seek time.
+Disadvantage: Requires knowledge of track position. Starvation still possible.
+
+* What is the SCAN disk scheduling policy?
+
+1. The arm moves in one direction only.
+2. All outstanding requests are satisfied when the disk spins there.
+3. The direction is reversed.
+
+* What are the advantages and disadvantages of the SCAN disk scheduling policy?
+
+Advantages: Good performance, similar to shortest-seek-time-first. Deterministic.
+Disadvantages: Biased against area most recently traversed.
+
+* What is the C-SCAN disk scheduling policy?
+
+Like SCAN, but the direction is never reversed. Instead the arm is moved to the
+very beginning.
+
+* What is the N-step-SCAN disk scheduling policy?
+
+1. The disk is segmented into subqueues of length N
+2. Subqueues are processed one at a time, using SCAN.
+3. New requests are added to some other queue when the queue is processed.
+
+* What is RAID?
+
+Redundant Array of Independent Disks.
+- Organize data in a way in which redundancy can be used to improve reliability.
+- Set of physical disk drives are viewed by the OS as a single logical drive.
+- Data is distributed across the all the physical drives of the array.
+- Redundant disk capacity is used to store parity information, to make recovery
+  possible if one disk fails.
+
+* What is RAID 0?
+
+- Data is striped across all the different physical drives.
+- Not actually redundant.
+
+* What is RAID 1?
+
+- Data is striped across "half" of all physical drives.
+- Data is mirrored onto the second half.
+
+* What are the advantages and disadvantages of RAID 1?
+
++ Redundancy achieved by simple data duplication
++ Read requests can be serviced by either disk
++ Write requests are still quick as they can be both in both disks in parallel.
++ Recovery from a single drive failure is possible.
+
+- Twice the cost of disk space required.
+
+* What is RAID 2?
+
+Using Hamming codes to duplicate and shard data across physical drives.
+
+- All disks participate in disk transfers.
+    - Spindles synced so each disk head is in the same position of each disk
+- Single bit errors are recognized and corrected immediately
+- On single write, all data and parity disks must be accessed.
+- Generally an overkill solution though.
+
+* What is RAID 3?
+
+Only one redundant disk is used.
+Data is stripped across all other disks, and a simple parity bit is computed.
+
+* What is RAID 4?
+
+- One redundant disk is used.
+- Data is divided into blocks.
+- Data along the same "block line" across the disks have a parity block computed
+  and stored.
+
+Because of this, there is a penalty to small size writes, as you need to update
+the whole parity block either way.
+
+* What is RAID 5?
+
+The parity strips in RAID 4 are not stored inside one disk.
+Instead they are distributed across all disks.
+
+However, there is a performance decrease when many incoming write requests hit
+the same parity stripe.
+
+* What is RAID 6?
+
+Same as RAID 5 except...
+Instead of storing only one parity strip for each "line", store two instead.
+
+Need N+2 disks if you need N disks.
+Possible to regenerate data even if two disks fail.
+Extremely high availability, at the cost of a substantial write penalty.
+
+* What is a disk cache?
+
+A cache in main memory for some disk sectors. This increases the performance of
+common disk accesses.
+
+* What are the common algorithms for replacement in a disk cache?
+
+- Least recently used
+- Least frequently used
+- Frequency based replacement
+
+* What is a problem with replacing the least frequently used sector in a disk cache?
+
+Some sectors may have a short burst of a high number of reads, but a low
+number of reads otherwise. You want to evict these after the burst, but you
+might not due to their high counts.
+
+* What is frequency-based-replacement w.r.t disk cache replacement policies?
+
+Similar to least frequently used, except that you don't increment the reference
+counter if it has been referenced only a very short time ago.
+
+A stack is used, references move the sector to the top of the stack. A certain
+number of "top elements" are deemed to be "new". You don't update the reference
+count on a "new" element.
+
+* Why is frequency-based replacement not that much better than least frequently used w.r.t disk cache replacement? How can this be fixed?
+
+Blocks just coming out of the new section have a count of only 1, and are
+therefore very likely to be replaced.
+
+This can be fixed by declaring an "old" section at the bottom of the stack.
+Only elements in the old section can be replaced. Elements in the middle will
+freely be able to increment their references!
+
+# 14 Computer Security Threats
+
+* What is the confidentiality aspect of computer security?
+
+Data confidentiality: Assures that only authorized people are able to access
+                      information
+Privacy: Assures that individuals can control how their information can be
+         accessed
+
+Preserving authorized restrictions on information access and disclosure.
+
+* What is the integrity aspect of computer security?
+
+Data Integrity: Assures that information and programs are changed only in a
+                controlled and authorized manner
+System Integrity: Assures that a system can perform its intended function in
+                  an unimpaired manner. Protected from unauthorized manipulation
+
+Guarding against improper information modification or destruction.
+
+* What is the availability aspect of computer security?
+
+Assures that systems work promptly and service is not denied to users.
+
+Ensuring timely and reliable access to and use of information.
+
+* What is part of the CIA triad?
+
+Confidentiality, Integrity, and Availability.
+
+* What is authenticity w.r.t computer security?
+
+The property of being genuine and being able to be verified and trusted.
+
+* What is accountability w.r.t computer security?
+
+Actions of an entity are able to be traced uniquely.
+
+* What does unauthorized disclosure threaten?
+
+Confidentiality.
+
+* What is an exposure attack?
+
+When an insider intentionally releases sensitive information.
+
+* What is an interception attack?
+
+When information is copied over to an unauthorized source during transmission.
+
+* What is an inference attack?
+
+When information is gained from observing external patterns, e.g. network traffic.
+
+* What is an intrusion?
+
+An adversary gaining unauthorized access to sensitive data.
+
+* What does deception threaten?
+
+System or data integrity.
+
+* What is a masquerade attack?
+
+An unauthorized user posing as an authorized user.
+
+* What is a falsification attack?
+
+Altering or replacing valid data, or introducing false data into a file or database.
+
+* What is a repudiation attack?
+
+A user denies sending or receiving/possessing some data.
+
+* What does disruption threaten?
+
+Availability or system integrity.
+
+* What is an incapacitation attack?
+
+An attack on system availability.
+Trying to damage physical hardware.
+e.g. viruses or worms
+
+* What is an corruption attack?
+
+An attack on system integrity.
+Make system resources or services function in an unintended manner.
+e.g. backdoors
+
+* What is an obstruction attack?
+
+Interfere with services to disable communications.
+e.g. DDOS attacks.
+
+* What does usurpation threaten?
+
+System integrity.
+
+* What is a misappropriation attack?
+
+Making a service or system do something unintended.
+e.g. viruses to make machines DDOS.
+
+* What is a misuse attack?
+
+Attacker has gained unauthorized access to a system.
+
+* What are the major threats to the hardware asset?
+
+Availability: Theft, damage, and destruction will all bring it down.
+
+* What are the major threats to the software asset?
+
+Availability: Software can be deleted.
+Confidentiality: Software can be copied.
+Integrity: Software can be modified.
+
+* What are the major threats to the data asset?
+
+Availability: Files can be deleted.
+Confidentiality: Files can be read. Statistics can reveal underlying data.
+Integrity: Files can be modified or fabricated.
+
+* What are the major threats to the communication lines asset?
+
+Availability: Messages can be destroyed or deleted.
+Confidentiality: Messages can be read. Traffic patterns can be observed.
+Integrity: Messages can be modified or fabricated.
+
+* What is a hacker w.r.t computer intruders?
+
+An outside attacker motivated by thrill or profit.
+
+* What is a criminal w.r.t computer intruders?
+
+A group or person with specific targets.
+
+* What is an insider attacker w.r.t computer intruders?
+
+A group or person with existing knowledge or privilege.
+
+* What are some ways to deal with intruders?
+
+- Enforce least privilege.
+- Set logs.
+- Protect sensitive data with strong authentication.
+
+* What is a backdoor?
+
+A secret entry point into a program.
+
+* What is a logic bomb?
+
+Code embedded in a legitimate program that is set of execute when certain
+conditions are met.
+
+* What is a trojan horse?
+
+An apparently useful program which contains hidden malicious code.
+Used to accomplish tasks that an unauthorized user could not accomplish.
+
+* What is mobile code w.r.t malicious software?
+
+Programs which can be shipped unchanged to a collection of platforms.
+e.g. JavaScript exploits.
+
+# Virtualization
+
+* What is the goal of virtualization?
+
+To abstract the hardware of a single computer into several execution
+environments.
+
+* What are the layers of virtualization?
+
+Host -> Virtual machine manager -> guests
+
+* What are the advantages of virtualization?
+
+- Ability to run other OSes other than host OS.
+- Ability to pause execution of guest.
+- Isolation and security between host and each guest.
+- Ability to consolidate resources, have two "machines" running on one real machine.
+
+* What is the trap and emulate method of virtualization?
+
+If the guest attempts a privileged instruction, it generates a trap.
+The VMM should detect the trap and emulate the requested action.
+
+* What is the performance of trap and emulate w.r.t virtualization?
+
+Non-privileged instructions have the same performance.
+Privileged instructions have extra overhead.
+  They could be faster or slower.
+
+* Why can't you always use the trap and emulate method of virtualization?
+
+Some CPU architectures (e.g. x86) don't have clear definitions of privileged vs
+non-privileged instructions.
+
+* Why is the POPF x86 instruction special w.r.t virtualization?
+
+If CPU is in kernel mode, all flags are replaced from the stack.
+Else, only some flags are replaced.
+
+* What is the binary translation method of virtualization?
+
+For each segment of code, check to seee if it can be run "safely".
+If it can't, then translate the code to be make it "safe".
+
+* What is the performance of binary translation w.r.t virtualization?
+
+Performance decrease from having to examine and replace some of the
+instructions.
+
+It's ok now, since competition has increased the speed.
+
+* Why is it fine for the number of vCPUS = number of physical CPUs?
+
+The VMM doesn't need to run too much, so it can just steal cycles.
+
+* What happens when the number of vCPUS > number of physical CPUs?
+
+"Time" slows down for the guests. And there needs to be a scheduling algorithm
+for the vCPUs.
+
+* What is the token bucket scheme w.r.t virtualization?
+
+Each VM bucket receives R/T tokens per second it doesn't run.
+Each bucket can hold max S tokens.
+While it's running, it consumes 1 token per timer tick.
+A VM cannot run until its bucket has at least M tokens.
+
+* What is the main advantage of the token bucket scheme?
+
+VMs can have a burst of activity, and no VM will become starved.
+
+* What are shadow page tables w.r.t virtualization?
+
+The guest OS control its own memory and page table management.
+The VMM "gives" the guest a shadow page table, and retranslates the shadow table
+to the read table.
+The VMM can provide double-paging, where it tries to "help" the guest.
+
+* What is a problem with the shadow page table strategy w.r.t virtualization?
+
+The VMM knows less about the guest's memory patterns. So its double-paging is
+not the most efficient.
+
+* What is the device driver method of allocating memory w.r.t virtualization?
+
+- VMM installs a device driver onto the guest.
+- The "balloon" device driver requests a bunch of empty memory and asks the
+  guest to pin the pages into "physical" memory.
+- Now the guest will think it's going to go OOM, and frees memory.
+- The VMM knows that the "balloons" are not real, and can allocates those
+  sections of memory to another guest.
+- If memory pressure goes down, then some balloon pages can be
+  deflated/deallocated.
+
+* What is the duplicate detection strategy for virtualization and memory allocation?
+
+- The same page is likely to be loaded more than once if the guests are on the
+  same OS.
+- Pages can be hashed, and then compared. If they are the same page, then you
+  don't need to load it again.
+- However, shared pages must be copied before they can be modified.
+
+* What is a strategy to allocate I/O devices to guests?
+
+- Dedicate the I/O device to a particular guest.
+- VMM provides drivers that translate commands to actual device commands.
+
+* What is a strategy for managing disk for guests?
+
+- Create a disk image, that contains the contents of the root disk.
+- The guest treats the disk image has its entire disk.
+
+* What are the steps for live migration of virtual machines?
+
+1. Source VMM connects to destination VMM.
+2. Destination VMM creates a configuration for a new guest
+3. Source sends all read-only pages to destination.
+4. Source sends all read-write pages to destination.
+5. Any pages that were modified in previous step needs to be resent
+6. If there are sufficently few dirty pages in step 5, source guest is frozen,
+   and final state is sent.
+7. The destination acknowledges receipt and begin execution of the guest.
+8. The source terminates the guest.
