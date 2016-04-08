@@ -31,9 +31,6 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-def create_flashcards_map(data):
-    flashcards = []
-
 def gen_cards(data):
     flashcards = []
     question = ""
