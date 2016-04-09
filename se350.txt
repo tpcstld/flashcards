@@ -147,9 +147,11 @@ The kernel is aware about the thread, and scheduling is done on a thread basis.
 User:
   Less switching overhead
   Can run on any OS
+  Custom scheduling
 Kernel:
   Only the thread is blocked when you call I/O
   Can schedule multiple threads on multiple processors simultaneously
+  Don't need to import library.
 
 * What is the microkernel architecture?
 
@@ -1314,7 +1316,7 @@ data to the other buffer while the first is being read.
 
 * How do circular buffers work w.r.t I/O? What are they good for?
 
-Use a number of buffers at a time and rotate between them similar to double
+Use more than two buffers at a time and rotate between them similar to double
 buffering. This is good for bursty I/O.
 
 * What is seek time as a disk performance parameter?
@@ -1777,3 +1779,103 @@ not the most efficient.
    and final state is sent.
 7. The destination acknowledges receipt and begin execution of the guest.
 8. The source terminates the guest.
+
+# Exam final-00.pdf
+
+* Are both of the following two context-switch routines useful for hard real-time systems? Justify your answer clearly or provide a counter example. Switch routine 1 always uses exactly 13us to complete the context switch. Switch routine 2 on average requires 666ms, sometimes only needs 422ms, but never uses more than 672ms.
+
+Both routines are useful, because they have a maximum bound on the time it takes
+for them to execute. (However, routine 1 is better.)
+
+* Draw the seven state diagram for process state transitions.
+
+- 7 states:
+    New, Ready, Running, Done, Blocked, Ready/Suspend, and Blocked/Suspend.
+- Transitions:
+    New -> Ready: The process is admitted for execution.
+    Ready -> Running: The process is scheduled.
+    Running -> Blocked: The process needs to wait for something.
+    Running -> Ready: The process is pre-empted.
+    Running -> Done: The process has exited.
+    Blocked -> Blocked/Suspend: The process has been swapped out.
+    Blocked -> Ready: The blocking thing is resolved.
+    Blocked/Suspend -> Blocked: The process is swapped in.
+    Blocked/Suspend -> Ready/Suspend: The blocking thing is resolved.
+    Ready/Suspend -> Ready: The process is swapped in.
+
+* Give a pseudo code example of a race condition.
+
+Process A and B:
+
+1. int x = 0; // Assume x is shared.
+2. x = x + 1;
+3. print x;
+
+If both line 2s runs on both processes before any line 3s, then the two
+processes will print out '2' instead of '1'.
+
+* Specify a set of tasks with their periods and execution times, so the task set is not schedulable with rate-monotonic scheduling but it is schedulable with earliest deadline first scheduling.
+
+Process A:
+  Execution time: 5.
+  Period: 10
+Process B:
+  Execution time: 2
+  Period: 4
+
+* What is a buffer overflow attack?
+
+When an attacker is able to put more information than there is space allocated
+for it.
+
+* What are some static defenses against buffer overflow?
+
+Static Analysis. In general, undecidable though.
+
+* What are some runtime defenses against buffer overflow?
+
+Canaries. Address-randomization. Runtime range checks.
+
+* What is the use of buffers when communicating when I/O devices?
+
+It allows the requesting process to be suspended while the request is in flight.
+
+* It should be clear that disk striping can improve the data transfer rate when strip size is small compared to the I/O request size. It should also be clear that RAID 0 provides improved performance relative to a single large disk, because multiple I/O requests can be handled in parallel. However, in this latter case, is disk striping necessary? That is, does disk striping improve I/O request rate performance compared to a comparable disk array without striping?
+
+If the many I/O requests are distributed evenly across all disks, then stripping
+is not necessary because the requests will still be balanced.
+
+* The disk just served the requests: 94, 100. The read buffer in the disk has requests listed in this chronological order: 184, 38, 150, 160, 90, 18, 39, 58, 55. Describe the order in which the disk executes these requests for last-in-first-out, shortest-service-time-first, and SCAN algorithms:
+
+Last-in-first-out:           55, 58, 39, 18, 90, 160, 150, 38, 184
+Shortest-service-time-first: 90, 58, 55, 39, 38, 18, 150, 160, 184
+SCAN:                        150, 160, 184, 90, 58, 55, 39, 38, 18
+
+* SCAN typically performs as well as shortest service time first. Describe a scenario when SCAN performs poorly compared to shortest service time first.
+
+Previous inputs: 1, 2
+Queued: 0, 100
+
+In this, case, SCAN will go all the way to 100 and back. While SSTF, will only
+go one full scan, taking half the time.
+
+* Assume a clock page replacement algorithm with a 1 bit use flag and the OS monitors the movement of the pointer in [increments per ms]. If the rate is below a given lower threshold, what does this mean? If the rate is below this threshold, should the OS increase or decrease the
+multiprogramming level?
+
+If the rate is below a given threshold, then the system is underutilized.
+This is because either (1) not enough page requests are happening; or (2) not
+many frames are being accessed.
+
+We should increase the multiprogramming level.
+
+* How are the working set size and the principle of locality linked together?
+
+We have periods of transient and stable working set sizes.
+Stable: Due to the principle of locality, we like to access the same pages over
+and over again.
+Transient: We are moving to a new locality.
+
+* What is the main problem with a global replacement, fixed allocation strategy for virtual memory management?
+
+It's impossible. It would have to be the same as local replacement, fixed
+allocation.
