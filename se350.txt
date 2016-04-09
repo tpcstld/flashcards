@@ -1712,7 +1712,154 @@ You have a master directory. Each directory can have sub-directories.
 
 You follow a path from the root directory to its various branches.
 
-# TODO
+* What is the working directory?
+
+The current directory in a tree-based file structure.
+
+* What are some of the access rights a file may have?
+
+None: User does not know existence of file, and cannot read the user directory
+      that includes the file.
+Execution: User can load and execute the program, but not copy it.
+Reading: User can read the file for any purpose, including copy and executing.
+Appending: User can add data to the file, but not modify or delete existing
+           contents
+Updating: User can modify, delete, or add data to the file.
+Changing protection: User can change access rights to the file.
+Deletion: User can delete the file.
+
+* What is an owner w.r.t files?
+
+The person who has all rights to the file.
+
+* How is simultaneous access of files handled?
+
+Users can lock entire files or a specific record when it is needed to be updated.
+Shares problems with mutual exclusion and deadlock.
+
+* What is record blocking?
+
+Organizing records in blocks on the I/O device.
+
+* What are some design questions about record blocking?
+
+- Variable or fixed block size
+- Relative block size to average record size
+
+* What is fixed record blocking?
+
+Each block has a fixed length.
+
+* What are the problems with fixed record blocking?
+
+- There is a lot of external fragmentation, since blocks will not fit perfectly
+  onto the track.
+- You cannot store records that are bigger than a block.
+
+* What is spanned variable record blocking?
+
+Each block has a variable length, usually the size of the record. If the block
+cannot fit into the remainder of a single track, it will "span" across tracks.
+
+* What is the pointer that links two spanned variable record blocks called?
+
+Continuation pointer.
+
+* What is a problem with spanned variable record blocking?
+
+It may take multiple I/O requests to read a record.
+
+* What is unspanned variable record blocking?
+
+Same as spanned variable record blocking, except that spans are no longer allowed.
+
+* What does secondary storage management concern itself with?
+
+Keeping track of the space available for allocation.
+
+* What is preallocation of a file?
+
+Allocating a space of size X before the contents of the file is determined.
+
+* What are the advantages of preallocating a file?
+
+The OS can keep the entire contents of the file in one contiguous location.
+This improves performance.
+
+* What are the disadvantages of preallocating a file?
+
+You tend to overestimate the maximum file size to avoid running out of space.
+
+* What is the contiguous allocation strategy for files?
+
+A single set of blocks is allocated to the file at time of creation.
+File allocation table contains:
+    Starting block and length of the file (in blocks).
+
+* What are the advantages of the contiguous allocation strategy for files?
+
+Fast reading, since the blocks are close together.
+Simple to scan through all the blocks.
+If one block is damaged, you can still retrieve data in all other blocks.
+
+* What is the main disadvantage of the contiguous allocation strategy for files?
+
+There will be external fragmentation, so you will need to perform compaction.
+
+* What is the chained allocation strategy for files?
+
+Each block has a pointer to the next block in the chain.
+File allocation table contains:
+    Starting block and length of the file (in blocks).
+
+* What are the advantages of the chained allocation strategy for files?
+
+There is no external fragmentation.
+Very good at reading sequential files, just follow the chain.
+
+* What are the disadvantages of the chained allocation strategy for files?
+
+Blocks may be far apart, no principle of locality.
+Bad at reading hashed or indexed files, need to follow the chain every time.
+If one block in the chain is damaged, all succeeding blocks are lost.
+
+* What is the indexed allocation strategy for files?
+
+Each file has an "index" block. That contains the location of each data block
+(and maybe length of the chain for each data block, if multiple data blocks are
+being allocated contiguously or in a chain).
+The file allocation table contains only the location of the index block.
+
+* What are the advantages of the indexed allocation strategy for files?
+
+If a non-index block gets damaged, the entire file isn't lost.
+Good at reading indexed or hashed files.
+
+* What are the disadvantages of the indexed allocation strategy for files?
+
+Blocks may be far apart, no principle of locality.
+If index block gets damaged then the entire file is lost.
+
+* What is an access matrix w.r.t files?
+
+A matrix of every user and every file. Contains the access permissions of each
+file w.r.t each user.
+
+* What is the major disadvantage of using an access matrix to manage file permissions?
+
+There is a large space requirement of the matrix, since it is #users * #files.
+
+* What is an access control list w.r.t files?
+
+Each file has a list of users and their permissions w.r.t the file.
+
+* What is an advantage of access control lists?
+
+More space efficient.
+
+* What is a capability list w.r.t files?
+
+Each user contains a list of files and their permissions.
 
 # 14 Computer Security Threats
 
