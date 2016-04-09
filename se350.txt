@@ -2264,3 +2264,40 @@ Aka: Has no race conditions.
 * If you're using the clock algorithm, and the frame being pointed has just been used, do you increment the pointer?
 
 No. That frame has its use bit set to 0 on the next page fault.
+
+# 2012 Final
+
+* What is a stack frame?
+
+A frame of data that gets pushed onto the stack. Usually contains function
+arguments, a return address, and the program counter.
+
+* What happens during a nested procedure call w.r.t stack frames?
+
+Stack frames are pushed onto the stack in the order that the procedures are
+called in. They are then pushed out one by one as they resolve with their return
+values being passed to the calling procedures.
+
+* How do logical address with a page number get translated to physical addresses?
+
+1. The page number is taken and converted into a real number.
+2. The index of the real number is looked up in the process page table.
+3. The lookup gets the physical address prefix.
+4. The physical address is now prefix + (logical address removing the page number)
+
+* What is an inode?
+
+Index node, which stores the key information about a file.
+
+* What is the challenge with developing on non-symmetric multiprocessor systems?
+
+Since not all processors are the same, you may need to consider which processor
+a process should run on.
+
+* What is a type 1 virtualizer?
+
+VMM sits directly on top of the hardware.
+
+* What is a type 2 virtualizer?
+
+VMM sits on top of the OS.
