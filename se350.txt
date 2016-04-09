@@ -153,6 +153,11 @@ Kernel:
   Can schedule multiple threads on multiple processors simultaneously
   Don't need to import library.
 
+* Why do user-level threads have less switching overhead than kernel-level threads?
+
+They do not require system calls to switch, which means that they do not
+incur the cost of having to fire an interrupt to switch to kernel mode first.
+
 * What is the microkernel architecture?
 
 Small OS core with many external subsystems.
@@ -1489,6 +1494,226 @@ This can be fixed by declaring an "old" section at the bottom of the stack.
 Only elements in the old section can be replaced. Elements in the middle will
 freely be able to increment their references!
 
+# 12 File Management
+
+* Why do we want to have a file system?
+
+- Long-term storage
+- Share data between processes
+- Structured relationship among files/data
+
+* What are some typical file operations?
+
+Create, Delete, Open, Close, Read, Write, Seek
+
+* What is a field w.r.t filesystems?
+
+The basic element of data, it contains a single value.
+Characterized by length and data type
+
+* What is a record w.r.t filesystem?
+
+A collection of related fields. Treated as a single unit.
+
+* What is a file?
+
+A collection of similar records. Treated as a single entity.
+Can have names and access restrictions.
+
+* What is a database?
+
+A collection of related data. Relationships exist among its elements.
+
+* What are some typical operations on records?
+
+Retrieve All, Retrieve One, Retrieve Next, Retrieve Previous, Insert One,
+Delete One, Update One, Retrieve Few
+
+* What is a file management system?
+
+A set of system software that provides services to users and applications
+in the use of files.
+
+It is the sole interface for dealing with files.
+
+* What are the objectives of a file management system?
+
+- Meet the data management needs and requirements of the user
+- Guarantee that the data in the file is valid
+- Optimize performance
+- Provide I/O support for a variety of storage device types
+- Minimize or eliminate the potential for lost or destroyed data
+- Provide I/O support for multiple users
+
+* What is the minimal set of requirements for a file management system?
+
+- Authorized users can
+  - create, delete, read, write, and modify files
+  - have controlled access to other users files
+  - can control access permissions for own files
+  - restructure their files
+  - move data between files
+  - back up and recover files (in case of damage)
+  - access files via symbolic names
+
+* What are device drivers w.r.t filesystems?
+
+The lowest level of the file architecture. It communicates directly with devices
+and is responsible for starting and completing I/O requests on a device.
+
+* What is the Basic File System?
+
+(Also called physical I/O)
+Built on top of the device drivers, it's responsible for exchanging and placing
+blocks of data between I/O devices and main memory.
+
+It does not understand data, only handles it, concerned with buffering blocks
+in main memory.
+
+* What is the Basic I/O Supervisor?
+
+Handles the scheduling of I/O requests. Optimizes access to device I/O and
+buffers. Maintains the control structure for device I/O, scheduling, and file
+status.
+
+* What is the Logical I/O?
+
+API for users and applications to access files.
+Maintains basic data about files, and provides general-purpose record I/O
+support.
+
+* What are some of the different ways to access a file?
+
+Sequential access: One record after the other.
+Direct access: Access a memory address (pointing to a record) directly.
+Indexed access: Use an id to find a record.
+
+* What are some functions of the file management system?
+
+- Identify and locate a file.
+- List files in a directory.
+- User access control.
+
+* What are the criteria for file organization?
+
+- Short access time: Needed when accessing a single record
+- Ease of update: Sometimes not necessary (e.g. CD-ROMs)
+- Economy of storage: Minimum redundancy in the data
+- Simple maintence
+- Reliability
+
+* What is the pile file?
+
+A set of variable-length records, each with a variable set of fields.
+Chronologically ordered.
+
+There is no structure in this file, it's just data concatenated upon existing
+data.
+
+* How do you access a record in a pile file?
+
+Exhaustive search.
+
+* When is a pile file useful?
+
+For collecting and storing data prior to processing.
+
+* What is the sequential file?
+
+A set of fixed-length records, each with the same set of fields in fixed order.
+Ordered based on the key
+
+e.g. A table.
+
+* What is the key field in a sequential file?
+
+The data that uniquely identifies the record. Data is ordered by the key.
+
+* How do you find a record in a sequential file?
+
+Exhaustive search.
+
+* Why are updates painful for a sequential file? What is a solution?
+
+Because physical organization matches logical organization.
+
+We can use a "overflow" pile that logs "pending" transactions to the file.
+The file is recomputed periodically.
+
+* What is an Indexed Sequential File?
+
+Same as sequential files, but we have an index that lets us look up the vicinity
+of a desired record given a key.
+
+* How do you find a record in a indexed sequential file?
+
+Index contains key field and pointer to main file.
+Index is searched to find highest key value that is <= the key desired key value.
+Search continues in the main file at the location indicated by the pointer.
+
+* How are new records added to the indexed sequential file?
+
+New records are added to an overflow file, just like normal sequential files.
+Main file is updated to be aware of an overflow entry.
+Overflow is merged with main file in a batch update.
+
+* How can the query efficiency for a indexed sequential file be improved?
+
+Add multiple levels of indexes on the same key field.
+
+* What is an indexed file?
+
+Has multiple indexes for different key fields.
+Can also contain an exhaustive index that contains one entry for every record
+in the main file.
+Can also contain only partial indexes.
+
+* What is a hashed or direct file?
+
+You are able to access a block at a known address.
+A key record is required for each field.
+
+* What information does a file directory contain?
+
+Attributes, location, and ownership of files within.
+Provides mapping between file names and files themselves.
+
+* How is a file directory usually implemented?
+
+It's a file itself that is specially handled and accessed.
+
+* What is a single list directory?
+
+We have only one single directory, which is a list of files.
+Key = name of the file.
+
+* What are some problems with the single list directory?
+
+- Cannot organize files (no sub-directories)
+- No two files can have the same name!
+
+* What is the one-list-per-user implementation of directories?
+
+One directory for each user, and one master directory.
+Master directory has an entry per user
+
+* What is an advantage of the one-list-per-user directory implementation vs the single list directory? What didn't change?
+
++ We can have access control now.
++ No global file name collisions.
+
+- Still no organization help.
+
+* What is the tree structure for file directories?
+
+You have a master directory. Each directory can have sub-directories.
+
+* How are files located in the tree structure?
+
+You follow a path from the root directory to its various branches.
+
+# TODO
+
 # 14 Computer Security Threats
 
 * What is the confidentiality aspect of computer security?
@@ -1879,3 +2104,16 @@ Transient: We are moving to a new locality.
 
 It's impossible. It would have to be the same as local replacement, fixed
 allocation.
+
+# Final-01.pdf
+
+* What is a reentrant procedure?
+
+A procedure that may be again entered before its previous execution has
+finished, but will still execute correctly.
+
+Aka: Has no race conditions.
+
+* If you're using the clock algorithm, and the frame being pointed has just been used, do you increment the pointer?
+
+No. That frame has its use bit set to 0 on the next page fault.
