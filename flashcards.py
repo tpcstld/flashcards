@@ -78,8 +78,11 @@ def main():
         else:
             choice = random.randrange(0, len(cards))
 
-        questions_left = \
+        if UNIQUE:
+            questions_left = \
                 "(" + str(len(cards) - len(left)) + "/" + str(len(cards)) + ")"
+        else:
+            questions_left = ""
         print add_color("---------- " + questions_left, bcolors.FAIL)
         print cards[choice][0].strip()
         raw_input() # Wait for user to press enter.

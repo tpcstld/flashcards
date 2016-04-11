@@ -1,6 +1,6 @@
 # Windowing systems
 
-* What are the critera the X system tries to satisfy?
+* What are the criteria the X system tries to satisfy?
 
 - Implementable on a variety of displays
 - Applications are device independent
@@ -1024,3 +1024,447 @@ The time per frame - the time it took to compute everything before.
 XNextEvent blocks until an event is present, so the whole rendering loop would
 stop until an event is received. Also if use the XNextEvent in the while
 condition, we would never actually get out of the event checking.
+
+# Visual design
+
+* What are some things that the user needs to know when seeing a UI?
+
+- What can I do?
+- Where is foo?
+- What is expected of me?
+- What is related to what?
+
+* What does good visual design strive for?
+
+Want to impose as little thinking as possible on the user.
+Allow them to concentrate on their task, not the interface.
+
+* What is the higher level goals of visual design?
+
+Create desired relationships and avoid undesired relationships.
+
+* What should a presentation try to be and not be?
+
++ Attractive look
++ Easy to understand
++ Has a distinctive look across many windows
+
+- Not cluttered or hard to organize
+- Not hard to perceive clearly
+- Doesn't contain excessive idiosyncrasy
+- Doesn't make the user stop and think to avoid errors
+
+* How do you make a good visual design?
+
+Keep the human brain's conscious and unconscious capabilities in mind.
+  - Keep things simple
+  - Leverage pre-attentive processes (i.e. subconscious responses)
+
+* What is simplicity?
+
+Presenting the minimum amount of information to achieve maximum effect.
+
+* What does simplicity lead to?
+
+Quickly recognized and understood functionality.
+- Less information = less time to process
+- Can more quickly produce correct mental models
+
+Easier ability to recall information
+- Less to remember
+
+* What are some examples of simplifying things?
+
+TV remotes, subway maps.
+
+* How do you achieve simplicity?
+
+Reduce, reduce, reduce! ... And reduce.
+
+* What are Gestalt principles?
+
+Theories of visual perception that describe how people tend to organize visual
+elements into groups or unified wholes, when certain principles are applied.
+
+Clues about how the brain groups raw visual impact.
+
+* What are the 7 (8) Gestalt principles?
+
+Proximity, similarity, good continuation, closure, figure/ground, law of
+Pragnanz, uniform connectedness, (alignment)
+
+* What is the Gestalt principle of proximity?
+
+Individual elements are associated more strongly with nearby elements than with
+those further away.
+
+* What is the Gestalt principle of similarity?
+
+Elements are more strongly associated with each other when they share basic
+visual characteristics, such as: shape, size, color, texture, orientation.
+
+* What is the Gestalt principle of good continuation?
+
+Our visual system is biased to perceive continuous forms rather than
+disconnected segments.
+Elements arranged in a straight line or a smooth curve are perceived as being
+more related than elements not on the line or curve.
+
+* What do proximity, similarity, and good continuation describe?
+
+How we group objects.
+
+* What do closure, figure/ground, law of pragnanz, uniform connectedness, and alignment describe?
+
+How we deal with ambiguity and fill in missing data.
+
+* What is the Gestalt principle of closure?
+
+We tend to see a complete figure even when parts of the information is missing.
+We tend to perceive a set of individual elements as a single, recognizable
+pattern, rather than multiple individual elements.
+
+* What is the Gestalt principle of figure/ground?
+
+Our mind separates the visual field into the figure and the ground.
+- Figure is the visual element that is interpreted as being the object of interest.
+- Ground is the area on which the figure rests (and everything else).
+
+* What are the properties of the figure and ground w.r.t Gestalt principles?
+
+The figure has a definitive shape, the ground is shapeless.
+The ground continues behind the figure.
+The figure seems closer with a clear location in space.
+Elements below the horizon are more likely to be perceived as figures.
+
+* What is the Gestalt principle of the Law of Pragnanz?
+
+We tend to interpret ambiguous images as simple and complete, rather than
+complex and incomplete.
+
+Images recalled from memory are simplified.
+
+* What does the Law of Pragnanz advise you to do?
+
+- Minimize the number of elements.
+- Symmetrical composition is perceived as simpler.
+
+* What is the Gestalt principle of uniform connectedness?
+
+Elements connected to one another by uniform visual properties are perceived to
+be more related than elements that are not connected.
+
+* What are two typical strategies for achieving uniform connectedness?
+
+Connecting lines, and common regions.
+
+* What is the "Gestalt principle" of alignment?
+
+Keep text/content aligned.
+
+* What are the 4 techniques for creating organization and structure?
+
+Grouping, Hierarchy, Relationship, Balance.
+
+* What is the grouping technique for creating organization and structure?
+
+Group elements into higher order units. Use the Gestalt principles to create groups.
+Proximity, Similarity, Alignment, Uniform connectedness.
+
+Reserve powerful techniques such as colour and uniform connectedness for
+explicitly telling the user something.
+
+* What is the hierarchy technique for creating organization and structure?
+
+A visual hierarchy guides and allows information scanning.
+- Create the hierarchy to support intended reading sequence.
+- Useful techniques: Size, position, spacing, white space, color
+- Build on usual reading direction for the culture
+
+e.g. Structure data with separators.
+
+* What is the relationship technique for creating organization and structure?
+
+Establish relationships between elements to communicate that they are connected.
+- Alignment is very effective at creating relationships.
+- Similarity (size, color, shape, etc) is also very effective.
+
+* What is the balance technique for creating organization and structure?
+
+Try to create a stable composition by balancing elements
+- Stability can be achieved by manipulating properties such as position, size
+- Symmetric layouts naturally achieve balance.
+
+* What are the 4 principles to make pleasing layouts?
+
+Contrast, Repetition, Alignment, Proximity.
+
+* What is the proximity principle for making pleasing layouts?
+
+Items relating to each other should be grouped close together.
+When several items are in close proximity to each other, they become one visual
+unit rather than several separate units. This helps organize information and
+reduces clutter.
+
+* What is the alignment principle for making pleasing layouts?
+
+Nothing should be placed on the page arbitrarily.
+Every element should have some visual connection with another element on the
+page. This creates a clean, sophisticated, fresh look.
+
+* What is the repetition principle for making pleasing layouts?
+
+Repeat visual elements of the design throughout the piece.
+You can repeat color, shape, texture, spatial relationships, line thicknesses,
+sizes, etc. This helps develop the organization and strengthens the unity.
+
+* What is the contrast principle for making pleasing layouts?
+
+Avoid elements on the page that are mearly similar.
+If the elements (type, color, size, etc) are not the same, then make them
+very different. Contrast is often the most important visual attraction on the
+page.
+
+* What are some common mistakes in visual design?
+
+Haphazard layout. Aligning labels, not controls. Bounding boxes creating clutter
+and competing for attention.
+
+* What is the squint test?
+
+Squinting at your visual design to get a broad impression of it.
+
+# Responsiveness
+
+* What are the two ways to achieve responsiveness?
+
+1. Designing the UI to meet human deadline requirements
+2. Loading data efficiently so that it's available quickly
+
+* What factors affect user's perception of responsiveness?
+
+The system's ability to:
+  1. Keep up with the user
+  2. Keep them informed about its status
+  3. Not make them wait unexpectedly
+
+* What do researchers find to be the most important factor in determining user satisfaction?
+
+Responsiveness
+
+* What is the difference between responsiveness and performance?
+
+Performance = computation per unit of time
+Responsiveness = compliance with human deadline requirements
+
+* How can low performance systems still be responsive?
+
+- By providing feedback about what the user has done.
+- By keeping users informed if they cannot fulfill the requests immediately.
+- By providing feedback about what is happening (e.g. loading bar)
+- By allowing the user to do other things while waiting
+
+* What are some things that make applications appear unresponsive?
+
+- Delayed feedback for button press, scrolling, etc.
+- Ignoring user input completely. (e.g. wait-cursor)
+- Providing no clues on how long the operation will take
+- Jerky or hard to follow animations
+- Ignoring user input while performing time-consuming operations
+
+* What is the shortest gap of silence with can detect in a sound?
+
+0.001s
+
+* What is the shortest time a visual stimulus can be shown and still affect us?
+
+0.005s
+
+* What is the duration of saccade during which vision is suppressed?
+
+0.1s
+
+* What is the maximum interval between cause-effect events?
+
+0.14s
+
+* What is the time for a skilled reader's brain to comprehend a printed word?
+
+0.15s
+
+* What is the visual-motor reaction time to inspected times?
+
+1s
+
+* What is the duration of unbroken attention to a single task?
+
+6-30s
+
+* What are some human deadlines at 0.001 seconds?
+
+- Minimum Detectable Silent Audio Gap
+
+* What are some human deadlines at 0.01 seconds?
+
+- Shortest noticeable pen-ink lag
+- Preconscious perception: Can induce unconscious familiarity of images by
+  making them disappear within 0.01s of appearing.
+
+* What are some human deadlines at 0.1 seconds? What are the implications?
+
+- Perceiving the number of 1-4 items
+- Involuntary eye movement
+- Audiovisual "lock" threshold
+- Perception of cause and effect
+- Perceptual-motor feedback
+- Object identification
+- Perceptual moment
+
+If software waits longer than 0.1 second to show a response. The perception of
+cause and effect is broken. The software's reaction will not seem to be a 
+result of the user's action. Therefore you should display a busy indicator.
+
+* What are some human deadlines at 1 second? What are the implications?
+
+- Max conversation gaps
+- Visual-motor reaction time for unexpected events
+- Attentional blink
+
+Necessary to display progress indicators for long operations.
+Humans will take at least a second to react to an on-screen object.
+
+* What are some best practices for progress indicators?
+
+- Show work remaining, not work completed
+- Show total progress, not progress on current step
+- Show percentage of an operation that is complete
+- Start at 1%, not 0%
+- Display 100% only very briefly at the end of the operation
+- Show smooth, linear progress, not erratic bursts of progress
+- Use human-scale percision (e.g. "about 4 minutes" > "240 seconds")
+
+* What are some UI tricks to improve responsiveness?
+
+- Busy indicators
+- Progress indicators
+- Render/Display important information first
+- Fake heavyweight computations during hand-eye coordination tasks
+    e.g. Scrolling, dragging, resizing windows
+- Working ahead, pre-compute responses to high probability requests.
+
+* What are the goals w.r.t responsiveness for long tasks?
+
+- Keep UI responsive
+- Provide progress feedback
+- Allow long task to be paused or cancelled.
+
+* What should you do when a task will take significant time?
+
+Run the task in another thread.
+
+* What is the "run in the UI thread" strategy for handling a long task?
+
+1. Task object keeps track of current task progress
+2. Task object adds a short running subtask to the UI event queue
+3. At the end of the subtask, check if there is more work. If so, add another
+   short-running subtask to the end of the UI event queue
+4. Handle any events that accumulated while the subtask was running.
+
+* What are the advantages and disadvantages of the "run in the UI thread" strategy for handling a long task?
+
++ More natually handles "pausing" the task since it maintains information on
+  progress of overall task.
++ Can be run in Swing event thread or separate thread.
++ Useful in single-threaded platforms.
+
+- Tricky to predict length of time for subtasks
+- Not all tasks can easily break down into subtasks (e.g. blocking I/O)
+
+* What is the "separate thread" strategy for handling a long task?
+
+1. Long method runs in a separate thread (e.g. Runnable object)
+2. Method regularly checks if task should be cancelled and reports back to UI
+about progress (by updating views)
+
+Use the synchronized keyword to protect critical sections.
+
+* What's the problem with Swing and separate threads?
+
+Swing is not thread-safe, so you need to use invokeLater instead of calling
+Swing methods directly.
+
+Don't call Swing methods or access Swing components from outside the Event
+Dispatch thread.
+
+* Why aren't GUI toolkits thread-safe?
+
+We have two sets of abstractions that flow in opposite directions:
+  1. User-initated threads that travel "down" to the hardware.
+     (e.g. start a thread to calculate primes)
+  2. Events that travel from hardware to higher-level abstractions.
+     (e.g. button clicks to cancel finding primes)
+
+Any locking protocol for these two kinds of abstractions will conflict.
+
+* What are the advantages and disadvantages of the "separate thread" strategy for handling a long task?
+
++ Conceptually, the easiest to implement.
++ Takes advantage of multi-core architectures.
+
+- Extra code required to be able to pause/restart method
+- All the usual threading problems (e.g. race conditions and deadlocks)
+
+* What are the 3 types of threads in Swing?
+
+1. Initial Thread
+2. Event Dispatch Thread (i.e. UI Thread)
+3. Worker Threads (i.e. Background Threads)
+
+* How do you schedule code to run on the UI thread in Swing?
+
+Use invokeAndWait() or invokeLater().
+
+* What is the standard way to create worker threads in Java Swing and Android?
+
+Java Swing: SwingWorker
+Android: AsyncTask
+
+* What is the complication for MVC when there are long tasks?
+
+Long tasks start to break clean separation of MVC:
+  - Model's methods need to be designed to allow user to stop the tasks.
+  - May need methods to inquire about length of task completion.
+    - Not part of "model", part of interaction.
+
+Usability concerns are directly influencing design of model to accommodate user
+interaction.
+
+* What is the "classic", static web architecture?
+
+- Thin client, fat server.
+- Requests to the server are synchronous HTTP requests. (GET and POST)
+
+* What are the disadvantages of the "classic", static web applications?
+
+- Poor distribution of processing
+- High user response latency
+- Difficulty programming user interfaces
+- Increased security risk (from mixing UI and application code)
+- Heavy state management on servers
+- Offline difficulties
+- Reduced opportunities for interoperability
+
+* What is the dynamic web architecture?
+
+- Use AJAX to issue calls to web servers.
+- Server handles requests and returns a data feed asynchronously.
+- Client receives the feed and updates the UI via Javascript.
+
+* What are the advantages of the dynamic web architecture?
+
+- Minimized bandwidth
+- Requests are faster (since they are asynchronous)
+- Separation of concerns:
+  - UI on browser, data on server
+
+# Undo
