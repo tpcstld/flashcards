@@ -1468,3 +1468,1014 @@ interaction.
   - UI on browser, data on server
 
 # Undo
+
+* What are the benefits of undo?
+
+- Enables exploratory learning
+- Lets you recover from errors
+- Lets you evaluate modifications
+
+* What are some design choices w.r.t undo?
+
+- What can't/isn't undone?
+- What part of UI is restored after undo?
+- How much should be undone at a time?
+- Is undo/redo global in scope, local, or someplace in between?
+
+* What actions should be undoable?
+
+- All changes to the document (i.e. the model).
+- Changes to the view, if they are extremely tedious or require a lot of effort
+
+* What should you do if you have an undoable action?
+
+Ask for confirmation.
+
+* What should should happen with the UI after an undo?
+
+UI state should be meaningful after undo/redo.
+- Change selection to object(s) changed as a result of undo/redo
+- Scroll to show selection, if necessary
+- Give focus to the control that is hosting the changed state
+
+* What defines one undoable "chunk"?
+
+The conceptual change from one document state to another state
+
+* What are some suggestions regarding the granularity of undo?
+
+- Ignore intermediate states when under continuous interactive control
+    - e.g. resizing an object
+- Chunk all changes resulting from an interface event
+    - e.g. Dialog settings, find and replace all
+- Delimit on discrete input breaks
+    - e.g. Words, or pauses in typing
+
+* What are some possible levels of undo scope?
+
+System, Application, Document, Widget
+
+* What is forward undo?
+
+1. Save complete baseline document state at some past point
+2. Save change records to transform baseline document state into current state
+3. To undo last action, apply all the change records except the last one
+
+* What is reverse undo?
+
+1. Save complete current document state
+2. Save reverse change records to return to previous value
+3. To undo last action, apply last reverse change record.
+
+* What is the memento pattern w.r.t change record implementation?
+
+- Save snapshots of each document state
+- Could be complete state or difference from last state
+
+* What is the command pattern w.r.t change record implementation?
+
+Save commands to execute (or "un-execute") to change state.
+
+* How does undo/redo work with the reverse undo command pattern?
+
+- User issues command
+  1. Execute command to create new current document state
+  2. Push command onto undo stack
+  3. Clear redo stack
+- Undo
+  1. Pop command from undo stack and un-execute it to create new current state
+  2. Push command on redo stack
+- Redo
+  1. Pop command off redo stack and execute it to create new current state
+  2. Push command on undo stack
+
+* What does Java Swing use for undo and redo?
+
+Interfaces:
+  UndoableEdit: Implemented by command objects. Key methods: redo() and undo()
+  StateEditable: Implemented by methods that can save/restore their state.
+                 Key methods: storeState(), restoreState()
+Classes:
+  AbstractUndoableEdit: Convenience class for UndoableEdit
+  StateEdit: Convenience class for StateEditable
+  UndoManager: Container for UndoableEdit objects (using the command pattern)
+               Key methods: addEdit, canUndo, canRedo, undo, redo
+  CompoundEdit: Concrete subclass for AbstractUndoableEdit, to assemble
+                little UndoableEdits to big ones.
+
+* How do you handle undoing destructive commands?
+
+Option 1: Use forward command undo.
+Option 2: Use reverse command undo, but store the previous state for destructive
+          commands.
+
+# Cut, Paste, Drag-and-Drop
+
+* Why do we want to support cut and paste and drag-and-drop?
+
+Easy data transfer between within and between applications.
+It's expected behaviour of any application.
+
+* What is the clipboard?
+
+A ubiquitous data transfer method.
+- Copy information (or pointer to info) to clipboard
+- Other applications can read data from the clipboard
+
+* What is a potential security risk of using the clipboard?
+
+Any application can read clipboard information.
+
+Therefore, browsers make the clipboard inaccessible to web apps.
+
+* What is a requirement for clipboards to work seamlessly?
+
+Requires common data formats.
+
+* What should the application do when it places data on the clipboard?
+
+Indicate the formats in which it can provide the data.
+
+* What do the Mac Human Interface Guidelines indicate?
+
+- Put either plaintext or an image on the clipboard
+- Accept both plaintext and images from the clipboard
+- Should always be able to cut/paste something
+
+* Why is data not always copied to the clipboard immediately? What are the implications?
+
+Why not always copied:
+- Data may be available in many formats, wasteful to put all formats on
+  clipboard at once
+- Data may never be pasted, therefore it could be wasteful
+
+If data is not immediately placed on clipboard:
+- App must create a copy if user changes data locally.
+- Must put it on the clipboard if application exits
+
+* What is the relevant package and the relevant classes for clipboards in Java?
+
+Package: java.awt.datatransfer
+Classes:
+- Clipboard
+- DataFlavor
+- Transferable
+- Toolkit
+
+* What is the difference between a local and system clipboard?
+
+Local clipboard are named clipboards holding data only accessible by current
+application. e.g. new Clipboard("My clipboard") in Java
+
+System clipboard is the OS-wide clipboard.
+e.g. Toolkit.getDefaultToolkit().getSystemClipboard()
+
+* How do you copy data to a clipboard in Java?
+
+1. Get clipboard
+2. Create a Transferable object
+  a. Defines methods for responding to queries about what DataFlavors are available.
+  b. Defines method for getting data of specified type
+3. Set clipboard contents to new Transferable object
+
+* What is a Transferable object in Java?
+
+Encapsulates all data to copy in an object.
+Similar to UndoableEdit
+Important methods:
+  DataFlavor[] getTransferDataFlavors()
+  boolean isDataFlavorSupported(DataFlavor flavor)
+  Object getTransferData(DataFlavor flavor)
+
+* How do you paste data from a clipboard in Java?
+
+1. Get the clipboard
+2. See if it supports the desired DataFlavor
+3. Get the data, casting it to the proper Java object.
+
+* What does the TransferHandler class do in Java?
+
+Used for handling drag-and-drop.
+
+* How do you support dragging in Java?
+
+1. Set a transfer handler for each component that supports dragging
+2. In the source of the drag, define a mouse listener that knows when a drag
+   has started
+3. When a drag has started, get the component's transfer handler and call its
+   exportAsDrag method
+4. Override createTransferable and exportDone to do the right things
+
+* How do you support dropping in Java?
+
+1. Set a transfer handler for each component that supports dropping
+2. Override the importData method.
+
+# 8 History
+
+* What is an interface?
+
+What the system presents to the user.
+It's what you can manipulate and what the system uses to present feedback
+
+* What is an interaction?
+
+The sequence of actions a person expresses and the corresponding system responses.
+
+* What is the history of interaction about?
+
+Making the input and output languages of the machine closer to the input and
+output language of the user and their tasks.
+
+* How have the forms interaction evolved?
+
+Interaction has evolved from forms that favoured the machine (since machine time
+was more valuable) to those that favour the user (hardware is cheap, people
+are expensive).
+
+* What are batch interfaces? Who were the users?
+
+- Set of instructions prepared, and fed to computer via punch cards, tape, etc.
+- Response typically received via a paper cutout.
+- No real interaction possible as system executes instructions
+- Responses received in hours or days
+
+Users were only highly trained individuals.
+
+* What are conversational/command-line interfaces?
+
+- User types command, waits for resonse
+- Programs usually run to completion before response, but
+- Feedback can be given during execution
+- User is guided through heavily scripted/structured interactions
+
+* What are the advantages and disadvantages of command-line interfaces?
+
++ High flexible: Can combine commands to create sophisticated sets of commands.
+
+- Users need to understand the computer
+- I/O is in system language, not task language
+- Requires recall rather than recognition
+
+* What's with problem with both batch and command-line interfaces?
+
+They require an interaction language closer to the system than the task
+
+* What did Ivan Sutherland do?
+
+Early direct manipulation, light pen, graphics.
+
+* What did Douglas Englebart do?
+
+Mouse, cut/paste
+
+* What did Alan Kay do?
+
+Smalltalk (OO), windowing GUIs
+
+* What is Vannevar Bush's "memex"?
+
+A device in which an individual stores all his books, records, etc.
+An enlarged imtimate supplement to his memory.
+
+* What is the Xerox Star Information System?
+
+The first commercial computer with a GUI.
+
+* What are modern GUIs like?
+
+Windows, Icons, Menus, and Pointers
+
+* What is the modern GUI interaction style?
+
+User in control: System waits for input, then responds
+Recognition over recall: Enables discovery of options and experimentation
+Metaphors: "desktop", "folders"
+
+# 8.2 Touch Interfaces
+
+* What is the look and feel?
+
+Look: How manipulatable objects are presented in the interface
+Feel: How user expression of these objects is translated into commands to
+manipulate underlying data
+
+* What is an interaction model?
+
+A set of principles, rules, and properties that guide the design of an interface.
+
+* What is an interface composed of?
+
+Domain objects: The things of interest, e.g. data
+Interaction instrument: A necessary mediator between the user and domain objects.
+
+Domain objects are manipulated using interaction instruments.
+
+* What are the two ways to activate WIMP objects?
+
+Spatially: Caused by moving mouse into a control area
+Temporally: Caused by a former action.
+
+* What are the costs of having spatial and temporal activations?
+
+Spatial: Cost of the space occupied
+Temporal: Time to activate
+
+* What is the degree of indirection?
+
+Spatial/temporal offset between instrument and action on object
+
+* What is the degree of integration?
+
+Ratio of degree of freedom of instrument / degree of freedom of input device
+
+* What is the degree of compatibility?
+
+Similarity of action on control device/instrument to action on object
+
+* What are some examples of low and high degrees of spatial indirection?
+
+Low: Drag to translate, handles to size rectangles
+High: Scrollbars, dialog boxes
+
+* What are some examples of low and high degrees of temporal indirection?
+
+Low: Direct dragging
+High: Waiting until exiting dialog
+
+* What are some examples of low/high degrees compatibility?
+
+Dragging (high), scrolling (medium), dialog (low)
+
+* What is a NUI?
+
+A natural user interface, term for promoting direct manipulation techniques like
+touch.
+
+* What is a resistive touch interface?
+
+1. Two transparent, conductive layers are separated by a gap.
+2. When pressure is applied the two layers are pressed together.
+
+* What is a capacitive touch interface?
+
+1. Senses the conductive properties of an object (e.g. finger)
+2. Location of touch is determined indirected from sensors in the four corners.
+
+* What is a mutual capacitance touch interface?
+
+1. Capacitors are arranged in a grid.
+2. Touch location is determined by measuring capacitance change at every point
+  on the grid.
+
+* What is the advantage of a mutual capacitance touch interface?
+
+Allows detection of simultaneous touches in multiple locations.
+
+* What is an inductive touch interface?
+
+Uses a magnetized stylus to induce an EM field in a sensing layer on the display
+
+* What is an optical touch interface?
+
+Cameras watch the surface.
+
+* What is an indirect input device?
+
+Device is moved on one surface to indicate a point on another
+
+* What is a direct input device?
+
+Unified input and display surface.
+
+* What are some of the differences between a stylus vs touch?
+
+Stylus:
+  - Can only have 1 point
+  - Doesn't occlude the screen very much
+  - High precision
+  - Can only use one (preferred) hand
+  - Elementary inputs: Tap, Drag, Draw Path
+  - Requires a mechanical intermediary
+  - High acquisition time, since you have to get the pen out
+  - Can have physical buttons
+  - Needs non-zero pressure to activate
+  - Needs to detect palm.
+
+Touch:
+  - Can have up to 10 inputs
+  - Occludes the screen a lot
+  - Moderate precision
+  - Can use any/both hands
+  - Elementary inputs: Tap, Hold, Drag Finger, Pinch
+  - No intermediary needed
+  - Low acquisition time
+  - No buttons
+  - Can have zero pressure to activate
+  - Needs to account for accidental presses
+  - Needs to account for phantom presses
+
+* What are some design questions to ask about touch inputs?
+
+- How many points of contact?
+- Is the touch reported as an (x, y) position, or is the contact area/pressure
+  reported?
+- Is a stylus required?
+- Can pen contacts be distinguished from touch contacts?
+- Can pen contacts and touch contacts be sensed at the same time?
+
+* What is the difference w.r.t input device states between touch and mouse?
+
+Touch interfaces have no hover state. (or at least, no co-ordinates for it).
+It's all just touch or no touch.
+
+* What are the challenges of allowing touch input?
+
+- Reduced precision
+- Finger occlusion
+- Touch feedback ambiguity problem
+
+* What is the fat finger challenge w.r.t touch interfaces?
+
+Occlusion: The user's finger occludes the target before touching the display.
+           You can display the cursor at a fixed offset, but that breaks the
+           direct manipulation paradigm.
+
+Imprecision: The touch area of a finger is bigger than a pixel.
+
+* What is the ambiguous feedback challenge w.r.t touch interfaces?
+
+Users feel a physical click when they press the mouse.
+No such feedback on touch devices.
+
+* What is the "lack of hover state" challenge w.r.t touch interfaces?
+
+Hover state allows the user to preview an action.
+This is not possible with touch devices.
+
+* What is the multi-touch capture challenge w.r.t touch interfaces?
+
+Multiple fingers may capture a control at the same time, leading to ambiguity.
+This is resolved differently depending on the OS.
+Over-capture is possible.
+
+* What is over-capture?
+
+Multi-touch controls are captured by more than 1 contact at the same time.
+
+* What is the physical constraints challenge w.r.t touch interfaces? What are some solutions?
+
+Direct touch breaks when movement is constrained. (e.g. moving beyond bounds)
+
+Solutions: Elastic effects, snapping, "catch-up" zones.
+
+* What is WIMP?
+
+Windows, Icons, Menus, and Pointers.
+
+- Applications objects are displayed in document windows
+- Objects can be selected and sometimes dragged and dropped between windows
+- Commands are invoked through menus or toolbars.
+
+* What does a direct manipulation allow?
+
+The user can act directly on a set of objects in an interface.
+e.g. dragging and dropping to the trash bin.
+
+* What is an affordance?
+
+A quality of an object or environment that suggests its use.
+
+* What does direct manipulation try to do with affordances?
+
+DM tries to make affordances in the interface like affordances for the same
+actions in the real world.
+
+* Do WIMP GUIs leverage direct manipulation consistently? Why or why not?
+
+No.
+
+Many commands are invoked indirectly. e.g. menus, dialogs, toolbars.
+Lots of objects in the interfaces are not objects of interest, e.g. containers
+
+* What are the principles of direct manipulation?
+
+There should be clear affordances. The interaction should be intuitive and obvious.
+The task objects are manipulated by physical actions e.g. clicking or dragging.
+Almost all actions are reversible, users can explore without severe consequences.
+
+* What are the benefits of direct manipulation?
+
+Users focus more on the task than on the technology.
+Feeling of direct involvement with the world of task objects.
+Can learn the interface via exploration.
+
+* What are the challenges of direct manipulation?
+
+- Accessibility issues. (especially blind people)
+- Switching between keyboard and pointer is time consuming.
+- Analogies may not be clear
+- Not all interactions are valid.
+
+* What are some things to consider about gestural interactions?
+
+- How should gesture map to system functions?
+- Should gestures map to common or complex functions?
+- Does each command require it's own gesture?
+- How many commands can we expect users to learn?
+- How can hand gestures co-exist with pointer interactions?
+
+* What are some problems with direct manipulation a tabletop?
+
+- The fat "body part" probelm
+- Content orientation
+- Multiple multi-touch input
+
+* What are some things you have to consider when designing for touch devices?
+
+- Displays are smaller
+- Large variety of sizes and resolutions.
+- Orientation changes
+- Only one app in the foreground, others are suspended. Fills entire screen.
+- Variable bandwidth (for CPU, memory)
+- No hints via hover
+- UI needs to be intuitive
+
+* What are some things you can do to make your touch device UI better?
+
+- Help users enter data quickly (e.g. choosing the right keyboard)
+- Help users find correct actions (e.g. easier access to frequent actions)
+  (make actions obvious)
+- Utilize real estate and avoid clutter (e.g. find metadata)
+
+* What does the each javascript touch event contain?
+
+3 lists of touches:
+  touches: a list of touches currently on the screen
+  targetTouches: a list of fingers on the current DOM element
+  changedTouches: a list of fingure involved in the current event
+
+* What are the 3 event types in the javascript Touch Event API?
+
+touchstart, touchmove, and touchend.
+
+# 9.1 Touchless interfaces
+
+* What are touchless interfaces?
+
+Using sensors as the interface.
+
+* What is the main challenge with using touchless interfaces?
+
+Hard to implement.
+
+* What are some things we might want to sense in a touchless interface?
+
+Occupancy and motion, Range, Position, Movement and Orientation, Gaze,
+Speech, Brain-wave Activity
+
+* What are some things we can do with sensed data in a touchless interface?
+
+- Support in-air gestures: e.g. Hand poses
+- Identify objects or people: e.g. Face recognition
+- Determine context: e.g. "The user is in the car"
+- Determine affect: e.g. Detect emotions
+
+* What are some design considerations for touchless interfaces?
+
+- High computation cost of processing data from sensors
+- Use traditional or non-traditional interfaces?
+
+* How do you implement a signal to command touchless system?
+
+1. Preprocess data
+2. Selection relevant features
+3. Classify
+
+* What is explicit interaction w.r.t touchless systems?
+
+User takes action and expects a timely response.
+
+* What is implicit interaction w.r.t touchless systems?
+
+Based on users' existing pattern of behaviour.
+
+* What are some challenges of implementing touchless systems w.r.t errors? What are some ways to reduce this problem?
+
+- Need to balance false positive/false negative errors
+- Users want to be able to correct errors.
+- Users are intolerant of errors
+
+Solutions:
+- Graceful degradiation
+- Seek deliberation confirmation from users
+- Give control: revert to manual mode
+
+* How do you solve the problem that touchless devices are always-on?
+
+Reserved actions: Make a set of actions that are always used for commands.
+Reserved clutch: Make an action that starts and stops gesture recognition.
+Multi-modal input: Other form of input for controlling device.
+
+* What are some challenges of speech recognition systems?
+
+- Users want to speak their natual language.
+- When to ask for confirmation? What if they did not say yes or no?
+- High rate of recognition errors.
+- Lack of visual feedback
+- Speech is easy to produce, but hard to absorb
+- Silence can be ambiguous
+
+* What are the 3 types of recognition errors w.r.t speech?
+
+Rejection error: No idea about what the user said
+Substitution error: Substituting one word for another
+Insertion error: Recognize noise as a word
+
+# 9.2 Perception and Cognition
+
+* What is cognition?
+
+The faculty for processing information.
+Attention, memory, learning, reasoning.
+
+* What are the two types of memory?
+
+Short-term, long-term.
+
+* How are memories formed?
+
+Via long-lasting/permanent changes to neurons.
+
+* What is short-term memory?
+
+A combination of perception (makes it available) and attention (focuses on it).
+
+* What are the characteristics of short-term memory?
+
+Low capacity, volatile.
+
+* What are the implications of short-term memory for UI?
+
+UI should help people remember information from one moment to the next.
+
+e.g. Keep search terms on the screen. Keep instructions on the screen.
+
+* What are the characteristics of long-term memory?
+
+Error-prone, weighted by emotions, retroactively alterable
+
+* What are the implications of long-term memory for UI?
+
+Don't burden long-term memory more than you have to.
+
+* What biases perception?
+
+Your expectations, your experiences, your current context, your goals.
+
+* What are the two states of cognitive processes?
+
+Unconscious: Processes we're not aware of.
+Conscious: Prcesses we are aware of.
+
+* What is the Locus of Attention?
+
+The feature, object, or idea you're currently thinking about.
+
+We cannot completely control where our locus will be.
+
+* How long does it take for humans to context switch?
+
+10 seconds.
+
+* What is change blindness?
+
+When a change in stimuli is unnoticed.
+
+* What is absorption w.r.t locuses of attention?
+
+You can be more or less absorbed in your locus of attention.
+More absorbed = more difficult to transition to another locus.
+
+* What is an automatic action?
+
+Any activity done without conscious thought.
+
+* How do automatic actions affect humans?
+
+We cannot avoid developing automatic actions.
+We cannot interrupt a sequence of actions of less than 1-2 seconds.
+
+* How do automatic actions affect UI?
+
+If we make consistent UI, we can build automatic actions on it.
+However, we don't want to make some things (e.g. file deletion) be an
+automatic action.
+
+# 10 Android
+
+* What are some design considerations when developing for Android?
+
+- Limited battery, processing power
+- OS aggressively flushes memory
+- Limited background computation
+- Small screen
+- Multiple orientations and layout
+- Single window running at a time
+- Multi-touch input
+
+* What are the 3 main invokable components of an Android app?
+
+- Activity: A single screen in an application
+- Service: Something that runs in a separate background thread.
+- Intent: A way for a component to start another component.
+
+* What is an Android Activity?
+
+Represents a single screen, the application class.
+They have an explicit lifecycle and manage their own state.
+There have 3 states: Running, paused, stopped.
+It's common to switch between activities.
+
+* What is an Android Intent?
+
+Data passers between activities.
+
+* What are the main UI components in Android?
+
+ViewGroups (i.e. layout managers) and Views.
+They are typically described in XML.
+
+* What are Android fragments?
+
+Portions of a UI. An activity can contain multiple fragments.
+
+# 10.2 Accessibility
+
+* What is there to said about the concept of an "average person"?
+
+Just a statistical ideal.
+
+* What is there to be said about temporary or situational disabilities?
+
+We all have them.
+
+* What are some examples of temporary or situational disabilities?
+
+Sick, injured, driving a car, underwater diving, texting.
+
+* What are some impairments on you while walking?
+
+- Reduced reading speed
+- Reduced reading comprehension
+- Higher cognitive load
+- Fragmented attention
+- Impaired dexterity
+
+* How can you make your UI accommodate the impairments caused by walking?
+
+Varied saliency (e.g. font sizes) helps address limited attention.
+Larger visual cues helps address reduced reading ability
+Larger inter actors helps address reduced dexterity
+
+
+* What are the effects of aging?
+
+- Reduced motor coordination
+- Visual impairments
+- Hearing impairments
+- Loss of memory
+
+* How many people have a disability?
+
+10-20% of population. 2-6 million Canadians, 30-60 million Americans
+
+* How many people have a visual disability?
+
+1 in 100.
+1 in 475 are legally blind.
+1 in 2000 are totally blind.
+
+* How many people have a hearing disability?
+
+1 in 10 have significant hearing impairment
+1 in 125 are deaf
+
+* How many people are wheelchair users?
+
+1 in 250
+
+* How does the OS make things accessible?
+
+Have many options, such as:
+- Control cursor with keyboard
+- Magnify portions of the screen
+- Captions and subtitles
+- Screen readers
+
+* What is the curb-cut phenomenon? What are some more examples?
+
+Helping a disabled person do one thing may help many others too.
+
+e.g. Cassette tapes, close-captioning, screen-readers
+
+* What are some legal obligations w.r.t accessibilty?
+
+All U.S. government software must be accessible.
+
+* What are some tools for implementing web accessibility?
+
+Alt-text, accessibility-testing tools.
+
+* What are 4 reasons why we should make things accessible?
+
+1. We all have temporary or situational disabilities.
+2. Designing technologies to be inclusive benefits everyone.
+3. It's the law.
+4. Web accessiblity is essential for equal opportunity.
+
+# 11 Input
+
+* How can you classify computer inputs?
+
+Sensing method, continuous vs discrete, degrees of freedom.
+
+* What are the 4 classifications of computer input based on sensing methods?
+
+Mechanical: e.g. Switches
+Motion: e.g. Accelerometer
+Contact: e.g. Touchscreen
+Signal processing: e.g. computer vision
+
+* What are specific and general input devices? What are the advantages and disadvantages?
+
+Specific: Optimized for specific tasks
+  e.g. Hand tracking glove
+  Good for specific purpose, but fails horribly at others.
+General: Adapted for many tasks
+  e.g. Mouse
+  Good for general purposes, but poor in edges cases (e.g. high DOFs needed)
+
+* What two tasks is input based on now?
+
+Text input and spatial input.
+
+* What is QWERTY designed for?
+
+Space "typebars" to reduce jams in typewriters.
+
+* What are the principles of Dvorak?
+
+- Letters should be typed by alternating between hands.
+- Most common letters and digraphs should be the easiest to type.
+- The least common letters should be on the bottom row.
+- The right hand should do more typing.
+
+* Outside of key layout, what are other problems to consider with keyboards?
+
+Size of keyboard. The smaller the size the harder it is to type on it.
+Virtual keyboards have ergonomic problems and size problems too.
+
+* What are some drasticly different keyboard layouts?
+
+Thumb keyboards, one-handed keyboards, Englebart's NLS keyboard, Twiddler.
+
+* Other than a keyboard, what other ways are there to enter text?
+
+Natural handwriting recognition/graffiti gestures.
+Predictive text.
+Gestural text input, e.g. Swipe and 8 key
+
+* What are some properties of positional input devices?
+
+Force (e.g. joystick) vs displacement (mouse) sensing
+Position (e.g. mouse) vs Rate (e.g. joystick) control
+Absolute (e.g. touchscreen) vs relative (e.g. mouse) positioning
+Direct (e.g. touchscreen) vs indirect (e.g. mouse) contact
+Dimensions sensed e.g. 1 = dial, 2 = mouse, 3 = wiimote
+
+* What is the relationship between force/displacement sensing and position/rate control?
+
+Force (isometric) sensing should map to rate control.
+Displacement (isotonic) sensing should map to position control.
+
+* What do you need to make relative positioning work?
+
+You need a "clutch".
+
+* What is the relationship between absolute/relative positioning and direct/indirect contact?
+
+Direct contact is usually paired with absolute positioning.
+Indirect contact is usually paired with relative positioning.
+
+* What is the Control-Display (CD) Gain?
+
+A scale factor when mapping the control device to the display.
+A ratio of display movement to control movement, often in terms of input device
+velocity, so it can work with both rate and position controls.
+
+CDgain = V_pointer / V_device
+
+* What is pointer acceleration?
+
+For relative pointing, changing the CD Gain based on current velocity.
+
+* What are gestural inputs?
+
+Mapping movements to commands.
+
+# Input performance
+
+* What is the Keystroke Level Model (KLM)?
+
+1. Describe each task with a sequence of operators.
+2. Sum up times to estimate how long the task takes.
+Operator types:
+- K Keystroke = 0.08 - 1.2s
+- P Pointing = 1.10s
+- B Button press on mouse = 0.1s
+- H Hand move from mouse to/from keyboard = 0.4s
+- M Mental preparation = 1.2s
+
+* When should you insert an M operation in KLM?
+
+When you need to:
+- Initiate a task
+- Make a strategy decision
+- Retrieve a chunk from memory
+- Find something on the display
+- Think of a task parameter
+- Verify that a specification/action is correct
+- Do any action if they're a novice.
+
+* What are the benefits and drawbacks of doing KLM analysis?
+
+Benefits:
+- Pretty easy to model
+- Can be done from just pictures and ideas
+
+Drawbacks:
+- Some time estimates are out of date (due to different input types)
+- Some time estimates are inherently variable (e.g. typing speed)
+- Doesn't model errors or learning time
+
+* Why doesn't KLM model pointing very well?
+
+- Some pointing devices are faster than others
+- Intuitively, it should take longer to move the mouse a long distance, or point
+  at a small button
+
+* What is Fitts' Law?
+
+A predictive model for pointing time considering device, distance, and target size.
+
+Main concepts:
+- The larger the distance, the longer the time
+- The smaller the target size, the longer the time
+
+MT = a + blog_2(D/W + 1)
+
+MT = movement time
+D = distance between starting and center of target
+W = constraining (e.g. minimum of width or height) of target.
+a, b = characteristics of input device.
+
+* What is the index of performance in Fitts' law?
+
+1/b
+
+* What is the index of difficulty (ID) in Fitts' law?
+
+log_2(D/W + 1)
+
+* What is the advantage of Pie Menus over Context Menus w.r.t Fitts' Law?
+
+Both Context Menus and Pie Menus are near the mouse, so they lower D.
+However each element has variable D for a context menu.
+Each element has the same D for a pie menu.
+
+* What does Fitts' Law say about OSX's dock expansion?
+
+The target space is not increased, so it's not easier to press.
+
+* What is the difference between motor space and screen space?
+
+If you make a button move slower when mousing over a button, you increase
+the motor space while taking up the same screen space.
+
+* What is Steering Law?
+
+An adaptation of Fitts' Law for constrained paths.
+We represent a fixed path as a series of minor goals of Fitts' Law.
+Instead of D, we have A = the distance/length of the constrained path.
+After solving a limit, we get
+
+Index of Difficulty (T) = b * A / W
+
+And we sum the parts of the path to find the total cost.
+
+* In general, what does Fitts' Law tell us about UI design?
+
+- Keep things close.
+- Make things larger.
+- Manipulate motor space to make intended targets sticker.
