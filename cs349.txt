@@ -55,7 +55,7 @@ Window manager owns the window, application owns the canvas.
 
 X seperates the BWS from the Window Manager.
 
-* What does OS and Windows do w.r.t to the window manager and BWS?
+* What does OSX and Windows do w.r.t to the window manager and BWS?
 
 They are combined into one system.
 
@@ -156,7 +156,7 @@ A set of widgets that one can use to build applications.
 An element of interaction in a GUI that have its own behaviour.
 A generic name for parts of an interface that have their own behaviour.
 
-* What is Event-Driven Programming
+* What is Event-Driven programming?
 
 A paradigm where the flow of the program is determined by events, such as user
 actions.
@@ -728,33 +728,33 @@ No "cutoff" for changes.
 
 * What are the 5 User Centered Design principles?
 
-Understand users' needs: Build a product that meets real needs
-Design the UI first: Then design the architecture to support the UI
-Iterate
-Use it yourself
-Observer others using it
+1. Understand users' needs: Build a product that meets real needs
+2. Design the UI first: Then design the architecture to support the UI
+3. Iterate
+4. Use it yourself
+5. Observer others using it
 
 * How does one understand the users' needs?
 
-Observer existing solutions
-List scenarios
-List functions required by scenarios
-Prioritize functions
-List functions by frequency and commonality
+1. Observer existing solutions
+2. List scenarios
+3. List functions required by scenarios
+4. Prioritize functions
+5. List functions by frequency and commonality
 
-* What steps should you follow to design the UI?
+* What steps should you follow to design the UI according to User Centered Design?
 
-Identify and design components
-Design component distributions
-Test the design with users
-Document the design
+1. Identify and design components
+2. Design component distributions
+3. Test the design with users
+4. Document the design
 
-* What steps should you follow to refine the design?
+* What steps should you follow to refine the design according to User Centered Design?
 
-Refine requirements
-Add new scenarios
-Walk through new scenarios
-Adjust user interface design
+1. Refine requirements
+2. Add new scenarios
+3. Walk through new scenarios
+4. Adjust user interface design
 
 * What is a scenario?
 
@@ -942,7 +942,7 @@ Trianopia: Missing blue cones.
 
 People may not notice important information, like error messages.
 
-* What are says to make messages visible to the user?
+* What are ways to make messages visible to the user?
 
 Place it where users are looking
 Place the error message near the error
@@ -991,8 +991,7 @@ BoxLayout: Top to bottom, or left to right
 GridLayout: Evenly space things out
 FlowLayout: Put everything at preferred size, make a new row if not enough room.
 
-* What does it mean when we say that "model is very loosely coupled with the
-  UI".
+* What does it mean when we say that "model is very loosely coupled with the UI"?
 
 The model is just a generic object that any view can access to render its
 information.
@@ -1272,7 +1271,7 @@ Responsiveness = compliance with human deadline requirements
 - Jerky or hard to follow animations
 - Ignoring user input while performing time-consuming operations
 
-* What is the shortest gap of silence with can detect in a sound?
+* What is the shortest gap of silence we can detect in a sound?
 
 0.001s
 
@@ -1292,7 +1291,7 @@ Responsiveness = compliance with human deadline requirements
 
 0.15s
 
-* What is the visual-motor reaction time to inspected times?
+* What is the visual-motor reaction time to inspected events?
 
 1s
 
@@ -1491,7 +1490,7 @@ interaction.
 
 Ask for confirmation.
 
-* What should should happen with the UI after an undo?
+* What should happen with the UI after an undo?
 
 UI state should be meaningful after undo/redo.
 - Change selection to object(s) changed as a result of undo/redo
@@ -1687,7 +1686,7 @@ The sequence of actions a person expresses and the corresponding system response
 Making the input and output languages of the machine closer to the input and
 output language of the user and their tasks.
 
-* How have the forms interaction evolved?
+* How have the forms of interaction evolved?
 
 Interaction has evolved from forms that favoured the machine (since machine time
 was more valuable) to those that favour the user (hardware is cheap, people
@@ -1937,9 +1936,9 @@ Windows, Icons, Menus, and Pointers.
 - Objects can be selected and sometimes dragged and dropped between windows
 - Commands are invoked through menus or toolbars.
 
-* What does a direct manipulation allow?
+* What is direct manipulation?
 
-The user can act directly on a set of objects in an interface.
+Acting directly on a set of objects in an interface.
 e.g. dragging and dropping to the trash bin.
 
 * What is an affordance?
@@ -2025,7 +2024,7 @@ touchstart, touchmove, and touchend.
 
 Using sensors as the interface.
 
-* What is the main challenge with using touchless interfaces?
+* What is the main challenge with implementing touchless interfaces?
 
 Hard to implement.
 
@@ -2054,7 +2053,7 @@ Speech, Brain-wave Activity
 
 * What is explicit interaction w.r.t touchless systems?
 
-User takes action and expects a timely response.
+User takes an action and expects a timely response.
 
 * What is implicit interaction w.r.t touchless systems?
 
@@ -2382,7 +2381,7 @@ For relative pointing, changing the CD Gain based on current velocity.
 
 * What are gestural inputs?
 
-Mapping movements to commands.
+Movements that are mapped to commands.
 
 # Input performance
 
