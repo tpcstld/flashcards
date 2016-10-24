@@ -1,0 +1,1449 @@
+* What is the Software Architecture?
+
+The set of principal design decisions about the system.
+
+* Generally, what is architecture?
+
+The parts of a system that would be difficult to change once the system is
+built.
+
+* What are the 3 primary dimensions that architectures capture?
+
+- Structure
+- Communication
+- Nonfunctional requirements
+
+* What is Software Architecture about?
+
+- Communication
+- "What parts are there?"
+- "How the parts fit together."
+
+* What is Software Architecture not about?
+
+- Development
+- Algorithms
+- Data structures
+
+* What are the 5 steps of the design process?
+
+1. Ideation
+2. Analysis
+  a. Determine Criteria
+  b. Apply Criteria
+3. Selection
+4. Elaboration/Refinement
+5. Iteration
+
+* Why is building software hard?
+
+- Young field
+- High user expectations
+- Software cannot execute independently
+
+* What are the two types of difficulties?
+
+Incidential and essential.
+
+* What are incidental difficulties?
+
+Problems that can be overcome.
+
+* What are essential difficulties?
+
+Problems that cannot be easily overcome.
+
+* What are some examples of essential difficulties?
+
+- Complexity: Grows non-linearly with program size.
+- Conformity: System is dependent on its environment
+- Changeability: Perception that software is easily modified.
+- Intangibility: Not constrained by physical laws.
+
+* What are some of the ways to tackle the problem of complexity?
+
+- High-level languages
+- Development tools and environments
+- Component-based reuse
+- Development strategies
+- Emphasizing design
+
+# Properties
+
+* What are "principal" design decisions?
+
+Decisions so important that they are granted "architectural status".
+
+* What is a prescriptive architecture?
+
+The design decisions made prior to the system's construction.
+(As-conceived or as-intended architecture.)
+
+* What is descriptive architecture?
+
+Describes how the system has been built.
+The "as-implemented" or "as-realized" architecture.
+
+* What are some reasons why a system's descriptive architecture is directly modified?
+
+- Developer sloppiness.
+- Perception of short deadlines which prevent thinking through and documenting.
+- Lack of documented prescriptive architecture.
+- Need or desire for code optimizations.
+- Inadequate techniques or tool support.
+
+* What are the two ways that architectural degradation can occur?
+
+- Architectural drift
+- Architectural erosion
+
+* What is architectural drift?
+
+Introduction of principal design decisions into a system's descriptive
+architecture that:
+  - Are not included in, encompassed by, or implied by the prescriptive
+    architecture.
+  - But which do not violate any of the prescriptive architecture's design
+    decisions.
+
+* What is architectural erosion?
+
+Introduction of principal design decisions into a system's descriptive
+architecture that violate its prescriptive architecture.
+
+* What is architectural recovery?
+
+The process of determining a software system's architecture from its
+implementation-level artifacts.
+
+* What are some examples of implementation-level artifacts w.r.t architectural recovery?
+
+- Source code
+- Executable files
+- Java .class files
+
+* What 3 elements should a software system's architecture be composed of?
+
+- Processing
+- Data, aka state
+- Interaction
+
+* What are software components?
+
+Elements that encapsulate processing and data in a system's architecture.
+
+* What is the definition of a software component?
+
+An architectural entity that:
+  - Encapsulates a subset of the system's functionality and/or data.
+  - Restricts access to that subset via an explicitly defined interface.
+  - Has explicitly defined dependencies on its required execution context.
+
+* What do software components usually provide?
+
+Application-specific services.
+
+* What, in complex systems, can become more important and challenging?
+
+Interaction
+
+* What is a software connector?
+
+An architectural building block tasked with effecting and regulating
+interactions among components.
+
+* What do software connectors typically provide?
+
+Application-independent interaction facilities.
+
+* What are some examples of connectors?
+
+- Procedure call
+- Shared memory
+- Message passing
+- Streaming
+- Distribution
+- Wrapper/adaptor
+
+* What are software configurations?
+
+A set of specific associations between the components and connectors of a
+software system's architecture.
+
+Also called topology.
+
+* What are possible assessment dimensions for the deployment view of a system?
+
+- Available memory
+- Power consumption
+- Required network bandwidth
+
+* What are the two main topological goals?
+
+- Minimize coupling between components.
+  - The less components know about each other, the better.
+- Maximize cohesion within each component.
+  - Components should be responsible for a single, logical service.
+
+* What is abstraction?
+
+Focusing on key details while eliding extraneous detail.
+
+* What are some ways abstraction is used in software?
+
+- Control abstraction (e.g. structured programming)
+- Data abstraction (e.g. abstract data types)
+
+* What is decomposition?
+
+- Break problem into independent components
+- Describe each component
+
+Top-down abstraction.
+
+* What are some criteria for decomposition?
+
+- Implementing teams
+- Application domains
+- Parallelization
+
+* What is Conway's Law?
+
+The structure of a software system reflects the structure of the organization
+that built it.
+
+* What is software architecture fundamentally about?
+
+Facilitating technical communication between stakeholders.
+
+* What are the 3 properties of architectural representations?
+
+- Ambiguity: Open to more than one interpretation?
+- Accuracy: Correct with tolerances
+- Precision: Consistent but not necessarily correct
+
+* What is an architecture model?
+
+An artifact documenting some or all of the architectural design decisions
+about a system.
+
+* What is an architecture visualization?
+
+A way of depicting some or all of the architectural design decisions about a
+system to a stakeholder.
+
+* What is an architecture view?
+
+A subset of related architectural design decisions.
+
+* What does a component diagram capture or record?
+
+Components and relationships.
+Required and provided APIs.
+
+* What does a sequence diagram focus on or capture?
+
+Inter-component collaboration.
+Behaviour of specific runtime scenarios.
+
+* What does a deployment diagram provide?
+
+Mapping between components and physical devices.
+
+* What is a statechart diagram?
+
+More formal description of system behaviour.
+Poor mapping between states and components.
+
+# F and NF properties
+
+* What are functional properties?
+
+What the system is supposed to do. ("The system shall do X")
+
+* What are non-functional properties?
+
+What the system is supposed to be ("The system shall be X");
+
+* What are some examples of non-functional properties?
+
+- Efficiency
+- Scalability
+- Adaptability
+- Complexity
+- Heterogeneity
+- Dependability
+
+* What is the relation between FPs and NFP w.r.t success of a product?
+
+Engineering products are generally sold based on their FPs.
+The system's success ultimately rests on its NFPs.
+
+* What are the challenges of designing NFPs?
+
+- Only partially understood in many domains.
+- Qualitative vs quantitative.
+- Frequently multi-dimensional
+- Non-technical pressures
+
+* What are the 5 design guidelines for ensuring NFPs?
+
+- Only guidelines, not laws or rules.
+- Promise but do not guarantee a given NFP.
+- Necessary but not sufficient for a given NFP.
+- Have many caveats and exceptions.
+- Many trade-offs are involved.
+
+* What is efficiency w.r.t NFPs?
+
+A quality that reflects a system's ability to meet its performance requirements.
+
+* How can one design components to be efficent?
+
+- Keep them "small"
+- Simple and compact interfaces.
+- Allow multiple interfaces to the same functionality
+- Separate data from processing components.
+- Separate data from metadata.
+
+* How can one design connectors to be efficient?
+
+- Carefully select connectors.
+- Be careful of broadcast connectors
+- Encourage asynchronous interaction.
+- Be way of location/distribution transparency.
+
+* How can one design the topology to be efficient?
+
+Keep frequent collaborators "close".
+Consider the efficiency impact of selected styles.
+
+* What is scalability?
+
+The capacity of a system to be adapted to meet new size/scope requirements.
+
+* What is heterogeneity?
+
+The system's ability to be composed of, or execute within, disparate parts.
+
+* What is portability?
+
+The ability of a system to execute on multiple platforms while retaining
+their functional and non-functional properties.
+
+* How can one design components to be scalable/heterogenic?
+
+- Keep components focused.
+- Simplify interfaces.
+- Avoid unnecessary heterogeneity
+- Distribute data sources
+- Replicate data
+
+* How can one design components to be scalable/heterogenic?
+
+- Use explicit connectors
+- Choose the simplest connectors
+- Direct vs. indirect connectors
+
+* How can one design the topology to be scalable/heterogenic?
+
+- Avoid bottlenecks
+- Place data close to consumer
+- Location transparency
+
+* What is evolvability?
+
+The ability to change to satisfy new requirements and environments.
+
+* How can one design components for evolvability?
+
+- Same as for complexity
+- Reduce risks by isolating modifications
+
+* How can one design connectors for evolvability?
+
+- Clearly define responsibilities
+- Make connectors flexible
+
+* How can one design the topology for evolvability?
+
+- Avoid implicit connectors
+- Encourage location transparency
+
+* What are the three parts of dependability?
+
+- Reliability: The probability a system will perform within its design limits
+  without failure over time.
+- Availability: The probability the system is available at a particular instant
+  in time
+- Robustness: The ability of a system to respond adequately to unanticipated
+  runtime conditions.
+
+* What is fault-tolerance?
+
+The ability of a system to respond gracefully to failures at runtime.
+
+* Where can faults arise from at runtime?
+
+- Environment
+- Components
+- Connectors
+- Component-connector mismatches
+
+* What is survivability?
+
+The ability to resist, recover, and adapt to threats.
+
+* What are sources of threats w.r.t survivability?
+
+- Attacks
+- Failures
+- Accidents
+
+* What are the steps for combatting threats?
+
+Resist, recognize, recover, adapt.
+
+* What is safety w.r.t dependability?
+
+The ability to avoid failures that will cause loss of life, injury, or loss
+to property.
+
+* How can one design components for dependability?
+
+- Control external component dependencies
+- Support reflection
+- Support exception handling
+
+* How can one design connectors for dependability?
+
+- Use explicit connectors
+- Provide integration guarantees
+
+* How can one design the topology for dependability?
+
+- Avoid single points of failure
+- Enable back-ups
+- Support system health monitoring
+- Support dynamic adaptation
+
+* FP or NFP: "Clicking the approve button moves the request to the Approval Workflow"
+
+FP
+
+* FP or NFP: "Field 2 only accepts dates before the current date."
+
+FP
+
+* FP or NFP: "The system must handle 1,000 transactions per second."
+
+NFP
+
+* FP or NFP: "Screen 1 can print on-screen data to the printer."
+
+FP
+
+* FP or NFP: "The system must have less than 1hr downtime per 3 months."
+
+NFP
+
+* FP or NFP: "Source code should contain no more than X bugs per 10K LOC."
+
+NFP
+
+
+
+# Architectural Styles
+
+* What is an architectural pattern?
+
+A set of architectural design decisions that are applicable to a recurring
+design problem, and parameterized to account for different software development
+contexts in which that problem appears.
+
+* What is the three-tiered architectural pattern?
+
+Composed of three tiers:
+  - Front tier: Contains the user interface functionality to access the system's
+    services
+  - Middle tier: Contains the application's major functionality
+  - Back tier: Contains the application's data access and storage functionality.
+
+* What is the Model-View-Controller architectural pattern?
+
+Model: Encapsulation of information.
+View: Encapsulation of display choices.
+Controller: Encapsulation of interaction semantics.
+
+* What is the Sense-Compute-Control architectural pattern?
+
+1. Read all sensor values
+2. Compute control outputs
+3. Send controls to all actuators
+
+* What is an architectural style?
+
+A named collections of architectural design choices that:
+- Are applicable in a gven development context.
+- Constrain architectural design decisions that are specific to a particular
+  system with that context.
+- Elicit beneficial qualities in each resulting system.
+
+* What are 4 good properties of an architecture?
+
+- Result in a consistent set of principled techniques.
+- Resilient in the face of (inevitable) changes.
+- Source of guidance through product lifetime.
+- Reuse of established engineering knowledge.
+
+* What is the difference between "pure" architectural styles and their use in practice?
+
+Pure architectural styles are rarely used. Instead, systems in practice:
+- Regularly deviate from pure styles
+- Typically feature many architectural styles.
+
+* What are the benefits of using architectural styles?
+
+- Design reuse
+- Code reuse
+- Understandability of system organization
+- Interoperability
+- Style-specific analyses
+- Visualizations
+
+* What are some architectural style analysis dimensions?
+
+- What is the design vocabulary? (Component and connector types)
+- What are the allowable structural properties?
+- What is the underlying computational model?
+- What are the essential invariants of the style?
+- What are common examples of its use?
+- What are (dis)advantages of using the style?
+- What are the style's specializations?
+
+* What are 4 architectural styles?
+
+- Language based
+- Layered
+- Dataflow
+- Peer-to-Peer
+- Shared Memory
+- Interpreter
+- Implicit Invocation
+
+* What is the Layered architectural style?
+
+- Hierarchical system organization
+  - Each layer exposes an API to the above layers.
+- Each layer is a:
+  - Client to layers below.
+  - Server to layers above.
+
+* What are the connectors in the layered architectural style?
+
+Protocols of layer interaction.
+
+* What is an example of a system that uses the layered architectural style?
+
+Operating systems.
+
+* What are the advantages of the layered architectural style?
+
+- Increasing abstraction levels
+- Evolvability
+- Changes in a layer affect at most the adjacent two layers -> Reuse
+- Different implementations of layers
+- Standardized layer interfaces
+
+* What are the disadvantages of the layered architectural style?
+
+- Not universally applicable
+- Performance
+
+* What is the Client-Server architectural style?
+
+- Components are clients and serves.
+- Servers do not know number or identities of clients.
+- Clients know servers' identities.
+
+* What are the connectors in the client-server architectural style?
+
+RPC-based network interaction protocols.
+
+* What is an example of a system that uses the client-server architectural style?
+
+Games.
+
+* What are 2 types of data-flow architectural styles?
+
+- Batch Sequential
+- Pipe and Filter
+
+* What is the batch sequential data-flow architectural style?
+
+Separate programs are executed in order; data is passed as an aggregate from
+one program to the next.
+
+* What are the connectors in the batch sequential data-flow architectural style?
+
+The mechanisms that carry information between each program.
+
+* What are data elements in the batch sequential data-flow architectural style?
+
+Explicit, aggregate elements passed from one component to the next upon
+completions of the producing program's execution.
+
+* What is an example of system that uses the batch sequential data-flow architectural style?
+
+Transaction processing in financial systems.
+
+* What is the pipe and filter data-flow architectural style?
+
+Components are filters that transform input data streams into output data
+streams.
+
+Allows for incremental production of output and feedback loops.
+
+* What are connectors in the pipe and filter data-flow architectural style?
+
+Conduits for data streams.
+
+* What are the invariants in the pipe and filter data-flow architectural style?
+
+Filters are independent (no shared state)
+Filter has no knowledge of up- or down-stream filters.
+
+* What are some examples of systems that use the pipe and filter data-flow architectural style?
+
+- UNIX shell
+- Distributed systems
+- Signal processing
+- Parallel programming
+
+* What is a common shared-memory architectural style?
+
+Blackboard.
+
+* What is the blackboard architectural style?
+
+2 components:
+- Central data structure (i.e. blackboard)
+- Components operating on the blackboard
+
+System control is entirely driven by the blackboard state.
+
+* What are some examples of systems that use the blackboard architectural style?
+
+- AI systems
+- Integrated software environments
+- Compiler architecture
+
+* What is the rule-based architectural style?
+
+- Inference engine parses user input and determines if it is a fact/rule or a
+query.
+- If it is a rule, it adds the entry to its knowledge base.
+- Otherwise, if queries the knowledge base to try to resolve the query.
+
+* What is the interpreter architectural style?
+
+Interpreter parses and excutes input commands, updating the state maintained by
+the interpreter.
+
+* What are the typical components in the interpreter architectural style?
+
+- Command interpreter
+- Program/interpreter state
+- User interface
+
+* What is the implicit invocation architectural style?
+
+Use event announcement instead of method invocation.
+
+- Listeners register interest in and associate methods with events.
+- System invokes all registered methods implicitly.
+
+* What are the invariants in the implicit invocation architectural style?
+
+- Announcers are unaware of their events' effects.
+- No assumption about processing in response to events.
+
+* What is the peer-to-peer architectural style?
+
+State and behaviour are distributed among peers which can act as either clients
+or servers.
+
+* What are peers, connectors, and data elements w.r.t the peer-to-peer architectural style?
+
+Peers: Independent components, having their own state and control thread.
+Connectors: Network protocols.
+Data Element: Network messages.
+
+# Design Recovery
+
+* What is the task of design recovery?
+
+- Examining the existing code base.
+- Determining what the system's components, connectors, and overall topology
+  are.
+
+* What is a common approach to design recovery?
+
+Clustering of the implementation-level entities into architectural elements.
+
+* What are the two types of clustering w.r.t design recovery?
+
+Syntactic clustering, or semantic clustering.
+
+* What is syntactic clustering?
+
+- Focusing exclusively on the static relationships in code.
+- Can be performed without executing the system
+- Embodies inter-component (coupling) and intra-component (cohesion) connectivity
+
+* What is a problem of syntactic clustering?
+
+May ignore or misinterpret subtle relationships, because dynamic information is
+missing.
+
+* What is semantic clustering?
+
+- Includes all aspects of a system's domain knowledge and information about the
+behavioural similarity of its entities.
+
+* What are some problems of semantic clustering?
+
+- Requires interpreting the system entities, meaning that one many need to
+execute the system.
+- Difficult to automate
+- May also be difficult to avail oneself of it.
+
+* How does one tackle greenfield design?
+
+- Analogy searching
+- Brainstorming
+- "Literature" searching
+- Morphological charts
+- Removing mental blocks
+
+# Back to NFPs
+
+* What are the 3 parts of security?
+
+- Confidentiality: Preventing unauthorized parties from accessing the information.
+- Integrity: Preventing unauthorized parties to manipulate the information.
+- Availability: Allowing authorized parties to view the information.
+
+* What are some design principles for security?
+
+- Least privilege
+- Fail-safe defaults
+- Economy of mechanism
+- Complete mediation
+- Open Design
+- Separation of Privilege
+- Least Common Mechanism
+- Psychological Acceptability
+- Defense in Depth
+
+* What is the least privilege design principle w.r.t security?
+
+Give each component only the privileges it requires.
+
+* What is the fail-safe defaults design principle w.r.t security?
+
+Deny access if explicit permission is absent.
+
+* What is the economy of mechanism design principle w.r.t security?
+
+Adopt simple security mechanisms.
+
+* What is the complete mediation design principle w.r.t security?
+
+Ensure every access is permitted.
+
+* What is the open design design principle w.r.t security?
+
+Do not rely on secrecy for security.
+
+* What is the separation of privilege design principle w.r.t security?
+
+Introduce multiple parties to avoid exploitation of privileges.
+
+* What is the least common mechanism design principle w.r.t security?
+
+Limit critical resource sharing to only a few mechanisms.
+
+* What is the psychological acceptability design principle w.r.t security?
+
+Make security mechanisms usable.
+
+* What is the defense in depth design principle w.r.t security?
+
+Have multiple layers of countermeasures.
+
+* What are architectural access control models?
+
+Models for deciding whether access to a protected resource should be granted
+or denied.
+
+* What are the two types of architectural access control models?
+
+Discretionary and mandatory.
+
+* What is the discretionary access control model?
+
+Restricting access based on the identity of the user.
+Users can define access for their own resources.
+
+* What is the mandatory access control model?
+
+The operating system or service determines whether the access is granted.
+
+* What are some problems that affect security?
+
+- Impersonation
+- Fraudulent actions
+- Misrepresentation
+- Collusion
+- Addition of unknowns
+
+* What is impersonation w.r.t security?
+
+Pretending to be someone else.
+
+* What is an example of a fraudulent action w.r.t security?
+
+Buyer pays for an item but seller does not ship anything.
+
+* What is misrepresentation w.r.t security?
+
+Lying about the facts around someone else.
+
+* What is collusion w.r.t security?
+
+Multiple people spreading false information.
+
+* What is an example of addition of unknowns w.r.t security?
+
+A new user joins the system.
+
+* What is trust?
+
+A particular level of the subjective probability with which an agent assesses
+that another agent will perform a particular action.
+
+* What is reputation?
+
+The expectation about an entity's behaviour based on past behaviour.
+
+* What are the 2 types of trust management systems?
+
+- Credential or policy-based
+- Reputation-based
+
+* What can online content compromise w.r.t security?
+
+Confidentiality: Leak user data.
+Integrity: Read/write data to disk.
+Availability: Crash host.
+
+* What 3 main security design principles does Chrome rely on?
+
+- Least privilege
+- Separation of privilege
+- Defence in depth
+
+# Architecture modelling
+
+* What is architectural modelling?
+
+The reification and documentation of architectural models.
+
+* What is an architectural modelling notation?
+
+A language or means of capturing design decisions.
+
+* What basic architectural elements should be modelled?
+
+- Components
+- Connectors
+- Interfaces
+- Configurations
+- Rationale
+
+* What elements of the architectural style should be modelled?
+
+- Inclusion of specific basic elements (e.g. components, connectors)
+- Component, connector, and interface types
+- Constraints and interactions
+- Behavioural constraints
+- Concurrency constraints
+
+* What are the different aspects w.r.t architectural modelling?
+
+Static and Dynamic.
+Function and Non-functional.
+
+* What are static aspects w.r.t architectural modeling?
+
+Aspects of a system that do not change as a system runs.
+
+* What are examples of static aspects w.r.t architectural modeling?
+
+Topologies, assignment of components/connectors to hosts.
+
+* What are dynamic aspects w.r.t architectural modeling?
+
+Aspects that change as a system runs.
+
+* What are examples of dynamic aspects w.r.t architectural modeling?
+
+State of individual components or connectors.
+State of dataflow.
+
+* What are the 3 important characteristic of architectural models?
+
+- Ambiguity
+- Accuracy
+- Precision
+
+* What is ambiguity w.r.t architectural models?
+
+The model is open to more than one interpretation.
+
+* What is accuracy w.r.t architectural models?
+
+The model is accurate if it is correct, conforms to fact, or deviates from
+correctness within acceptable limits.
+
+* What is precision w.r.t architectural models?
+
+The model is precise if it is sharply exact or delimited.
+
+* What are views and viewpoints w.r.t architectural models?
+
+Since it is not feasible to documentation everything at once, you define
+several models that each capture a subset of the design decisions.
+
+The subset model is a "view" and the concern is a "viewpoint".
+
+* What are 5 commonly-used viewpoints?
+
+- Logical
+- Physical
+- Deployment
+- Concurrency
+- Behavioural
+
+* What is consistency w.r.t architectural models?
+
+Views are consistent if the design decisions they contain are compatible.
+
+* When are views inconsistent w.r.t architectural models?
+
+When two views assert design decisions that cannot simultaneously be true.
+
+* What are direct inconsistencies w.r.t architectural models?
+
+Direct contradictions, such as the number of hosts a system runs on.
+
+* What are refinement inconsistencies w.r.t architectural models?
+
+Conflicts between the high-level and low-level views.
+
+* What are some common types of inconsistencies?
+
+- Dynamic vs dynamic aspect inconsistencies
+- Functional vs non-functional inconsistencies.
+
+* What are the various ways to evaluate modeling approaches?
+
+- Scope and purpose
+- Basic elements
+- Style
+- Static and dynamic aspects
+- Dynamic modeling
+- Non-functional aspects
+- Ambiguity
+- Accuracy
+- Precision
+- Viewpoints
+- Viewpoint consistency
+
+* What is UML?
+
+Unified Modelling Language. 13 loosely-interconnected notations that capture
+static and dynamic aspects of software-intensive systems.
+
+* What are the advantages of using UML to model?
+
+- Supports diverse array of viewpoints.
+- Ubiquitous.
+- Extensive documentation and tool support.
+
+* What are the disadvantages of using UML to model?
+
+- Needs customization through profiles to reduce ambiguity.
+- Difficult to access consistency among views.
+- Difficult to capture foreign concepts or views.
+
+* How are static structures modelled in UML?
+
+- Component diagrams
+- Deployment diagrams
+- Class diagrams
+
+* How is dynamic behaviour modelled in UML?
+
+- Sequence diagrams
+- Use-case diagrams
+- State machine diagrams
+
+# Design
+
+* What is analysis?
+
+- Domain-level modelling of "real world" objects
+- Addresses functional challenges
+- Captures what a system does
+- Provides implementation guidance
+
+* What is design?
+
+- Modelling of implementation objects
+- Address implementation challenges
+- Captures how the system realizes its OOA
+- Assigning responsibilities to objects.
+
+* What are the 3 steps of the design process?
+
+Build, Measure, Learn.
+
+* Why is design-level reuse valuable?
+
+- Matches problems to design experience.
+- Avoid previously-encountered problems.
+
+* What are the 4 main aspects that good design tries to promote?
+
+- Abstraction
+- Flexibility
+- Modularity
+- Elegance
+
+* Why is abstraction important?
+
+Prevents designers from being distracted by implementation details.
+
+* What are the STUPID principles?
+
+- Singleton
+- Tight Coupling
+- Untestable
+- Premature optimization
+- Indescriptive Naming
+- Duplication
+
+* What are the SOLID principles?
+
+- Single Responsibility
+- Open/Closed
+- Liskov Substitution
+- Interface Segregation
+- Dependency Inversion
+
+* What is the single responsibility SOLID principle?
+
+Classes should have only one major task.
+
+* What is the advantage of the single responsibility SOLID principle?
+
+Classes are insulated from one another.
+
+* What is the open/close SOLID principle?
+
+Classes should be open for extension, but closed to modification.
+
+* How would does one extend classes, following the open/close SOLID principle?
+
+Use subclassing to minimize impact on existing clients.
+
+* What is the Liskov substitution SOLID principle?
+
+Subtypes should behave as their parent types.
+
+* What is the interface segregation SOLID principle?
+
+Only place key methods in interfaces.
+
+* What is a disadvantage of the interface segregation SOLID principle?
+
+There may be a larger number of smaller interfaces to maintain.
+
+* What is the dependency inversion SOLID principle?
+
+High-level methods should not depend on lower-level modules.
+
+* What does the dependency inversion SOLID principle try to do?
+
+Minimize direct coupling between concrete classes.
+
+* What are some lower-level design principles?
+
+- Encapsulate what varies.
+- Program to abstractions, not implementations
+- Favour composition over inheritance
+- Strive for loose coupling
+
+* What are the 3 quality attributes of design?
+
+- Simplicity
+- Coupling
+- Cohesion
+
+* How can one strive for the simplicity quality attribute?
+
+- Meet goals without extraneous embellishment
+- Don't repeat yourself (DRY)
+- Keep It Simple, Stupid (KISS)
+
+* What are the 6 types of coupling?
+
+- Content
+- Global
+- Control
+- Data
+- Message
+- None
+
+* What is content coupling?
+
+When one depends on the content of the implementation. (e.g. reflection.)
+
+* What is global coupling?
+
+When one depends on global variables.
+
+* What is control coupling?
+
+When the control flow of (e.g. a function) depends on the parameters passed.
+
+* What is data coupling?
+
+When one shares raw data. (e.g. passing integer parameters)
+
+* What is message coupling?
+
+When one passes around objects/messages to only communicate.
+
+* What are the 6 types of cohesion?
+
+- Coincidental
+- Logical
+- Temporal
+- Communication
+- Sequential
+- Functional
+
+* What is coincidental cohesion?
+
+Parts randomly grouped.
+
+* What is logical cohesion?
+
+Parts grouped by logical categories. (e.g. input handling)
+
+* What is temporal cohesion?
+
+Parts grouped by when they are processed.
+
+* What is communication cohesion?
+
+Parts grouped by what data they operate on.
+
+* What is sequential cohesion?
+
+Parts grouped close to their inputs and outputs.
+
+* What is functional cohesion?
+
+Parts grouped by their task.
+
+* What are 2 ways of spotting incoherency?
+
+- An operation's description is full of 'and' clauses.
+  - Indicates temporal cohesion, logical cohesion.
+- An operation's description is full of 'if..then..else' clauses.
+  - Indicates control coupling, coincidental cohesion, logical cohesion.
+
+* What are the 4 cognitive dimensions?
+
+- Premature commitment
+- Hidden dependencies
+- Secondary notation
+- Viscosity
+
+* What is premature commitment?
+
+Decisions made with insufficient data that constrains future choices.
+
+* What are hidden dependencies?
+
+Latent (e.g. temporal) dependencies.
+
+* What is secondary notation w.r.t cognitive dimensions?
+
+Non-obvious relationships that may be meaningful.
+
+* What is viscosity w.r.t cognitive dimensions?
+
+Resistance to change.
+
+* What are 4 reasons to use design patterns?
+
+- Ease communication by using a shared vocabulary.
+- Leverage existing design knowledge.
+- Enhance flexibility for future change.
+- Increase reusability of developed code.
+
+* What are design patterns?
+
+- Common solutions to recurring design problems.
+- Abstract recurring structures.
+
+* What are design patterns comprised of?
+
+Class and/or object:
+- Dependencies
+- Structures
+- Interactions
+- Conventions
+
+* What 4 main parts do design patterns have?
+
+1. Name
+2. Problem
+3. Solution
+4. Consequences / trade-offs
+
+* What is composition?
+
+Creating objects with other objects as members.
+
+* When should composition be used?
+
+When a has-a relationship applies.
+
+* What is inheritance?
+
+The concept of classes automatically containing the variables and methods
+defined in their supertypes.
+
+* What is counter-variance and co-variance?
+
+Co-variant: The type of variable changes in the same direction as the type of
+the class.
+Counter-variant: Opposite directions.
+
+* What is co-variant or counter-variant w.r.t the Liskov substitution principle?
+
+The return value is co-variant, as it can be more specific.
+The parameters are counter-variant, as it can only be less specific.
+
+* What are the 3 "by purpose" categories in the Gang of Four design patterns?
+
+- Creational
+- Structural
+- Behavioural
+
+* What are the 2 "by scope" categories in the Gang of Four design patterns?
+
+- Class
+- Object
+
+* What are the creational class design patterns?
+
+- Factory method
+
+* What are the creational object design patterns?
+
+- Abstract Factory
+- Builder
+- Prototype
+- Singleton
+
+* What are the structural class design patterns?
+
+- Adapter (class)
+
+* What are the structural object design patterns?
+
+- Adapter (object)
+- Bridge
+- Composite
+- Decorator
+- Facade
+- Flyweight
+- Proxy
+
+* What are the behavioural class design patterns?
+
+- Interpreter
+- Template Method
+
+* What are the behavioural object design patterns?
+
+- Chain of Responsibility
+- Command
+- Iterator
+- Mediator
+- Memento
+- Observer
+- State
+- Strategy
+- Visitor
+
+* What are creational design patterns used for?
+
+- Adding indirection to object creation.
+- Defering decisions about class instantiations until runtime.
+- Encapsulating logic of construction.
+
+* What is the singleton design pattern?
+
+There is only one instance of the object, that you get from the singleton.
+
+* What is the factory method design pattern?
+
+- Creator and Product interface.
+- Creator interface has a "create object" method.
+- Concete creator class implements the abstract class.
+- Calling the concrete "create object" methods returns a new object.
+
+* What is the abstract factory design pattern?
+
+Abstract factories produce abstract products.
+Concrete implementations produce subtypes of abstract products.
+
+* What is the builder pattern?
+
+Two different function calls to get a new object.
+
+BuildPart(), which builds a bit needed to get the final result.
+GetResult(), which returns the finished, new object.
+
+* What is the prototype pattern?
+
+Objects have Clone() methods, which return copies of itself.
+
+* What is refactoring?
+
+The process of restructing existing computer code without changing its external
+behaviour.
+
+* What can refactoring improve?
+
+- Abstraction
+- Code reuse
+- Cohesion
+- Coupling
+- Naming
+- Usage of design patterns
+
+* What are some code smells?
+
+- Large classes and methods
+- Deep nesting of control structures
+- Duplicate code
+- Static state
+- No information hiding, bad encapsulation
+- Many parameters
+- Casts to implementation classes
+
+* What are structural design patterns used for?
+
+Making relationships/structure of code more flexible.
+
+* What is the class adapter pattern?
+
+Adaptor class that extends all adaptees.
+Calling an Adaptor method may call methods that the Adaptor class inherits from.
+
+* What is the object adapter pattern?
+
+Adapter class holds an instance of the adaptee.
+Calling an Adaptor method may call methods of the adaptee instance.
+
+* What is the bridge pattern?
+
+The implementation is held in a separate class.
+An instance of the implementation class is held by the main abstraction.
+
+* What is the decorator pattern?
+
+A decorator wraps a component so it can extend the component without modifying
+the component directly.
+
+* What is the facade pattern?
+
+A Facade object interfaces with other packages/libraries instead of the
+clients.
+
+* What is the proxy pattern?
+
+A Proxy class functions as a delegate to something else.
+The Proxy class will usually have the same type as its delegate.
+A wrapper that serves as an agent to a real object.
+
+* What is the composite pattern?
+
+Treating a group of objects in the same way as a single instance.
+
+* What is the flyweight pattern?
+
+A flyweight object tries to share as much data as possible with similar objects.
+
+* What are behavioural patterns used for?
+
+Identifying common patterns between objects to increase flexibility.
+
+* What is the interpreter pattern?
+
+Implementing a specialize language to rapidly solve a specific set of problems.
+
+* What is the template method pattern?
+
+Defining a program skeleton of an algorithm.
+Calling subclasses that could redefine certain steps of an algorithm.
+
+* What is the visitor pattern?
+
+Visitor class has methods which take an object and run new operations.
+Add new operations without needed to actually modify the original classes.
+
+* What is the observer pattern?
+
+Observers can register themselves to a subject.
+The subject will periodically notify all registered observers.
+
+# Things from midterm review
+
+* Layered architectures are designed to reduce coupling. Why is reduced coupling useful?
+
+- Modifability: Changes can be made to one layer without affecting others.
+- Reusability: Layers can be reused in similar systems.
+- Understandabiity: Easier to understand how the software works.
+
+* What are the basic characters of using client/server architecture?
+
+- Scalability: Can scale horizonally and vertically.
+- Clients are typically heterogeneous and multi-vendor.
+
+* What design pattern is useful for a file system?
+
+Composite.
+
+* What design pattern is useful for extending utility without modifying the original interface?
+
+Visitor.
