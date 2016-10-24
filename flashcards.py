@@ -7,7 +7,7 @@ Each line starting with a '#' symbol is treated as a comment.
 Otherwise, the line is treated as part of the answer to the previous question.
 
 If the UNIQUE constant is truthy, no question will be repeated.
-If the ENABLE_COLORS constants is truthy, terminal colors will be used.
+If the ENABLE_COLORS constant is truthy, terminal colors will be used.
 
 Caveats:
 
@@ -89,4 +89,7 @@ def main():
         print add_color(cards[choice][1].strip(), bcolors.HEADER)
 
 if __name__ == '__main__':
-    main();
+    try:
+        main();
+    except KeyboardInterrupt:
+        pass
