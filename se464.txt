@@ -311,7 +311,7 @@ A quality that reflects a system's ability to meet its performance requirements.
 - Carefully select connectors.
 - Be careful of broadcast connectors
 - Encourage asynchronous interaction.
-- Be way of location/distribution transparency.
+- Be wary of location/distribution transparency.
 
 * How can one design the topology to be efficient?
 
@@ -339,7 +339,7 @@ their functional and non-functional properties.
 - Distribute data sources
 - Replicate data
 
-* How can one design components to be scalable/heterogenic?
+* How can one design connectors to be scalable/heterogenic?
 
 - Use explicit connectors
 - Choose the simplest connectors
@@ -483,8 +483,8 @@ Controller: Encapsulation of interaction semantics.
 
 * What is an architectural style?
 
-A named collections of architectural design choices that:
-- Are applicable in a gven development context.
+A named collection of architectural design choices that:
+- Are applicable in a given development context.
 - Constrain architectural design decisions that are specific to a particular
   system with that context.
 - Elicit beneficial qualities in each resulting system.
@@ -695,23 +695,23 @@ Clustering of the implementation-level entities into architectural elements.
 
 Syntactic clustering, or semantic clustering.
 
-* What is syntactic clustering?
+* What is syntactic clustering w.r.t design recovery?
 
 - Focusing exclusively on the static relationships in code.
 - Can be performed without executing the system
 - Embodies inter-component (coupling) and intra-component (cohesion) connectivity
 
-* What is a problem of syntactic clustering?
+* What is a problem of syntactic clustering w.r.t design recovery?
 
 May ignore or misinterpret subtle relationships, because dynamic information is
 missing.
 
-* What is semantic clustering?
+* What is semantic clustering w.r.t design recovery?
 
 - Includes all aspects of a system's domain knowledge and information about the
 behavioural similarity of its entities.
 
-* What are some problems of semantic clustering?
+* What are some problems of semantic clustering w.r.t design recovery?
 
 - Requires interpreting the system entities, meaning that one many need to
 execute the system.
@@ -798,7 +798,8 @@ Users can define access for their own resources.
 
 * What is the mandatory access control model?
 
-The operating system or service determines whether the access is granted.
+There is a higher-level service that determines whether the access is granted.
+(e.g. Operating systems)
 
 * What are some problems that affect security?
 
@@ -1240,16 +1241,16 @@ When a has-a relationship applies.
 The concept of classes automatically containing the variables and methods
 defined in their supertypes.
 
-* What is counter-variance and co-variance?
+* What is contra-variance and co-variance?
 
 Co-variant: The type of variable changes in the same direction as the type of
 the class.
-Counter-variant: Opposite directions.
+contra-variant: Opposite directions.
 
-* What is co-variant or counter-variant w.r.t the Liskov substitution principle?
+* What is co-variant or contra-variant w.r.t the Liskov substitution principle?
 
 The return value is co-variant, as it can be more specific.
-The parameters are counter-variant, as it can only be less specific.
+The parameters are contra-variant, as it can only be less specific.
 
 * What are the 3 "by purpose" categories in the Gang of Four design patterns?
 
@@ -1262,22 +1263,22 @@ The parameters are counter-variant, as it can only be less specific.
 - Class
 - Object
 
-* What are the creational class design patterns?
+* What are the creational class design patterns in the Gang of Four?
 
 - Factory method
 
-* What are the creational object design patterns?
+* What are the creational object design patterns in the Gang of Four?
 
 - Abstract Factory
 - Builder
 - Prototype
 - Singleton
 
-* What are the structural class design patterns?
+* What are the structural class design patterns in the Gang of Four?
 
 - Adapter (class)
 
-* What are the structural object design patterns?
+* What are the structural object design patterns in Gang of Four?
 
 - Adapter (object)
 - Bridge
@@ -1287,12 +1288,12 @@ The parameters are counter-variant, as it can only be less specific.
 - Flyweight
 - Proxy
 
-* What are the behavioural class design patterns?
+* What are the behavioural class design patterns in the Gang of Four?
 
 - Interpreter
 - Template Method
 
-* What are the behavioural object design patterns?
+* What are the behavioural object design patterns in the Gang of Four?
 
 - Chain of Responsibility
 - Command
