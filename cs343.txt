@@ -1,0 +1,411 @@
+* What is a multi-exit loop?
+
+A loop that has one or more exit locations occurring within the body of the loop.
+
+* What is a flag variable?
+
+A variable used solely to affect control flow.
+
+* What are flag variables equivalent to?
+
+Goto statements.
+
+* What is static multi-level exit?
+
+Exiting multiple control structures, while the exit points are known at
+compile time.
+
+* How can dynamic multi-level exit be used to handle exceptional events?
+
+Since dynamic multi-level exit allows you to return from any statement to
+anywhere, you can return to an "exception handler" following an
+exceptional event.
+
+* What are the traditional approaches to handling exceptional events?
+
+- Return code: returns value indicating normal or exceptional execution.
+- Status flag: set global variable indicating normal or exceptional execution.
+- Fix-up routine: routine called for an exceptional event to return
+                  a corrective result.
+
+* What are the drawbacks of the traditional approaches to handling exceptional events?
+
+- Checking return code or status flag is optional.
+- Return code mixes exceptional and normal values.
+
+* What is a source execution w.r.t exception handling?
+
+The execution raising an exception.
+
+* What is a faulting execution w.r.t exception handling?
+
+The execution changing control flow due to an exception.
+
+* What is the static/dynamic call/return table?
+
+                       call/raise
+return/handled|   static        dynamic
+----------------------------------------------------
+static        |   sequel        termination exception
+dynamic       |   routine       virtual routine
+
+* Why is starting a full-coroutine cycle difficult?
+
+Because it requires every coroutine to know at least one other coroutine,
+causing a dependency cycle that must be addressed.
+
+# 5 Concurrency
+
+* What is a thread?
+
+An independent sequential execution path through a program.
+
+* What is a process?
+
+A program component that has its own thread and has the same state information
+as a coroutine.
+
+* What is a task?
+
+Process that is reduced along some particular dimension. Does "only one thing".
+
+* What is parallel execution?
+
+When 2 or more operations occur at the same time.
+Can only occur when multiple processors are present.
+
+* What is concurrent execution?
+
+Any situation in which execution of multiple threads appears to be
+performed in parallel.
+
+* What is Amdahl's law?
+
+S_c = 1 / ((1 - P) + P/C)
+
+* What bounds the speedup of concurrent sections?
+
+The critical path of computation.
+
+* What are the three mechanisms required for concurrency?
+
+1. Creation: Can cause another thread to be created.
+2. Synchronization: Establish timing relationships among threads.
+3. Communication: Transmit data among threads.
+
+* What are the 5 rules of the mutual exclusion game?
+
+1. Only one thread can be in a critical section at a time with respect to a
+   particular object. (Safety)
+2. Threads may run at arbitrary speed and in arbitrary order, while the
+   underlying system guarantees a thread makes progress.
+3. If a thread is not in the entry or exit code controlling access to the
+   critical section, it may not prevent other threads from entering the
+   critical section.
+4. In selecting a thread for entry to a critical section, a selection cannot
+   be postponed indefinitely (liveness).
+5. After a thread starts entry into the critical section, it must eventually
+   enter.
+
+* What is starvation?
+
+A thread never being able to enter the critical section.
+
+* What is livelock?
+
+No one being picked to enter the critical section indefinitely.
+
+* What can cause unfairness?
+
+Threads not being serviced in first-come first-served order.
+
+* What causes barging?
+
+Waiting threads are overtaken by a thread arriving later.
+
+# Exam questions
+
+* After raising a nonlocal exception between coroutines in uC++, what are two additional actions that must be performed to make it work?
+
+1. The faulting coroutine must have called _Enable.
+2. The source coroutine must resume the faulting coroutine so the nonlocal
+   exception can propagate.
+
+* How does Dekker's algorithm work without atomic assignment?
+
+No simultaneous assignments on the three shared variables.
+
+Last will never be assigned at the same time by both you and me, because
+the assignment happens only in the critical section, where only one task can
+be in at the same time.
+
+Me and you are only written to by one task and read by the other task.
+
+* Given only N bits to construct an N-task software solution for mutual
+exclusion, what rule of the mutual-exclusion game is always broken?
+
+Rule 5: Starvation.
+
+This is because you can only set boolean flags, so there is no way to keep
+track of who came first!
+
+* For the N-task bakery algorithm, how many bits are used?
+
+NM bits, where N is the number of tasks, and M is the maximum size of the
+ticket.
+
+* Does the Bakery algorithm solve all 5 rules of the critical-section game
+perfectly?
+
+No, it is only probablistically correct because the ticket number can
+overflow.
+
+* Given an atomic compare/assignment instruction, implement an atomic increment routine.
+
+int inc(int& val) {
+  while (true) {
+    int old = val;
+    if (CAssn(val, old, old + 1)) {
+      return old;
+    }
+  }
+}
+
+* How can you write a spinning counting semaphore using a binary semaphore?
+
+class cSem {
+  private:
+    int counter;
+    bSem sem;
+  public:
+    cSem(int initial) : counter(initial) {}
+    void P() {
+      while (true) {
+        sem.P();
+        if (counter > 0) {
+          counter = counter - 1;
+          sem.V();
+          return;
+        } else {
+          sem.V();
+        }
+      }
+    }
+    void V() {
+      sem.P();
+      counter = counter + 1;
+      sem.V();
+    }
+};
+
+* Why, in C++, is A || B and B || A not identical?
+
+The || operator "short-circuits" if the left-hand side is truthy. This means
+that the expression on the right-hand side may not be evaluated, and any
+side effects that it could cause are not executed.
+
+* What is the key restriction with labelled exits that make them acceptable control transfers?
+
+Labelled exits should not be used to create a loop, and should only be used to
+transfer out of control structures.
+
+* What execution context is saved when making a routine call?
+
+The current stack of the caller. This includes all statically allocated
+variables, and the current execution state (the program counter).
+
+* Does the compiler know where a routine's return statement transfer control to?
+
+No. The return statement transfers control to the routine's first resumer. This
+cannot be statically inferred.
+
+The return address is found on the coroutine's stack.
+
+* How can a callback routine be implemented in C++?
+
+A function is passed in as a parameter (routine pointer).
+
+* What is the problem with using longjmp/setjmp in C++ programs?
+
+No destructors are executed while unwinding the stack.
+
+* What are two reasons why derived exception-types are a useful feature to have in an EHM?
+
+1. Allows the faulting execution only worry about categories of exceptions,
+   instead of specific ones.
+2. Allows new exception, specific exceptions to be declared without needing to
+   add new checks.
+3. Allows a handler to match multiple exception types.
+
+* What is the difficulty of accessing local variables in an resumption handler?
+
+You don't know exactly where on the stack the local variables are. There is
+an arbitrary number of stack frames between the handler and the source.
+
+* Why does a coroutine need its own stack?
+
+So that it can save its execution state in between suspend and resumes.
+
+* What is the difference between a coroutine and a task?
+
+Only one coroutine can be executing instructions at the same time.
+Tasks each have their own thread of control.
+
+* What is the difference between the suspend and resume operations of a coroutine?
+
+suspend suspends the current coroutine and resumes the coroutine that last
+resumed it.
+resume suspends the current coroutine and resumes "this" coroutine.
+
+* Does a program with coroutines, but without tasks, ever need synchronization locks?
+
+No, because only one coroutine can be executing at the same time, and the
+program will invoke the coroutines deterministically.
+
+* How can concurrency improve the efficiency of programs executed on a single CPU?
+
+The programs can be waiting on external resources (e.g. file IO). This is case,
+it is possible to proceed with the rest of the program instead of blocking it.
+
+* Does a concurrent program on a single CPU system without preemption ever need mutual exclusion?
+
+No, because only one thread is active at a single time and the program can make
+deterministic choices on how to invoke them.
+
+* What makes the retract-intent solution better than the declare-intent solution even though they both violate rule 4 (infinite postponement)?
+
+The declare-intent solution will fail when a problematic solution happens once.
+(i.e. They both declare intent at the same time.)
+The retract-intent solution will only keep failing when its problematic solution
+constantly occurs.
+(i.e. Both tasks keep declaring and retracting intent at the same time.)
+
+* What is the disadvantage of only providing COBEGIN and COEND operations for concurrency?
+
+Interleaving dependencies cannot be expressed.
+
+For example:
+
+START T1
+S1
+START T2
+S2
+WAIT T1
+S3
+WAIT T2
+S4
+
+* What are the problems that result from encapsulating a thread library into the C++ OO model?
+
+When starting the thread in the base-class constructor, it cannot be guaranteed
+that all constructors in the inheritance hierarchy are executed before 
+invocation of the thread's routine.
+
+When waiting for the thread in the base-class destructor, it cannot be
+guaranteed that the thread's routine has finished when executing destructors
+in the inheritance hierarchy.
+
+* What is the swap instruction in pseudocode?
+
+void swap(int& a, int& b) {
+  int temp = a;
+  a = b
+  b = temp;
+}
+
+* How can the swap instruction be used to solve the N-task mutex problem for rules 1-4?
+
+int lock = 0
+void run() {
+  int closed = 1;
+  while (true) {
+    swap(lock, closed);
+    if (closed == 0) {
+      break;
+    }
+  }
+  /* critical section */
+  lock = 0;
+}
+
+* What is the primary benefit of using an exit in the middle of a loop?
+
+You can avoid duplicating priming code.
+
+* Why should a loop exit NOT have an else clause?
+
+It is redundant since the loop will only continue if the loop exit condition
+was false.
+
+* What does multi-level exits allow the elimination of?
+
+Flag variables.
+
+* How does Sequel provide simple exception handling?
+
+The block's stack is unwound after the end of the block.
+
+* Why does C longjmp execute faster than C++ throw?
+
+Because it doesn't call destructors, so it can be a direct stack transfer.
+
+* What happens when a resumption exception is not handled?
+
+It is rethrown as a termination exception.
+
+* What class of problems does a coroutine handle better than the basic control-flow constructs?
+
+Problems that can be simplified to traversing a DFA or state-machine.
+
+* Why does coroutine main termination resume the start coroutine work for 80% of all coroutines?
+
+For semi-coroutines, the starter is often the only resumer.
+For full-coroutines, starters almost always lead to uMain, which can delete
+unterminated coroutines.
+
+* What actions occur in uC++ if a coroutine does not handle an exception?
+
+Raises the non-local exception UnhandledException to the last resumer.
+
+* What is the relationship between a user and a kernel thread?
+
+User threads run on kernel threads.
+User threads are scheduled by a library, while kernel threads are scheduled by
+the OS.
+
+* What does unbounded overtaking mean?
+
+A low-priority thread can reenter the critical section any number of times
+until the high-priority thread declares its intent.
+
+* What is the property of a hardware atomic instruction that allows it to solve mutual exclusion?
+
+Nothing can preempt in the middle of the instruction.
+
+* What rule do hardware atomic instructions violate?
+
+Variable order and speed of execution. (Rule 2)
+
+* How is barging prevented when implementing a mutex lock?
+
+Hold onto the internal lock between releasing and unblocking tasks.
+
+* Can spin locks be used for synchronization and mutual exclusion?
+
+Both.
+
+* Can owner locks be used for synchronization and mutual exclusion?
+
+Only mutual exclusion.
+
+* Can condition locks be used for synchronization and mutual exclusion?
+
+Only synchronization.
+
+* Can barriers be used for synchronization and mutual exclusion?
+
+Only synchronization.
+
+* Can semaphores be used for synchronization and mutual exclusion?
+
+Both.
