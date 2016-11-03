@@ -602,8 +602,6 @@ instance.
 2. Condition: Test performed by the trigger.
 3. Action: Procedure executed if condition is met.
 
-# -----------------
-
 # 7-SQL APP - Xiaofei Zhang.pdf
 
 * How do SQL client programs typically interact with a SQL server?
