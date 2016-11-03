@@ -123,6 +123,129 @@ Threads not being serviced in first-come first-served order.
 
 Waiting threads are overtaken by a thread arriving later.
 
+* What are the 5 conditions to get into a dead-lock?
+
+1. There exists more than one shared resource requiring mutual exclusion.
+2. A process holds a resource while waiting for access to a resource held
+   by another process. (Hold-and-wait)
+3. Once a process has gained access to a resource, the runtime system cannot
+   get it back. (no preemption)
+4. There exists a circular wait of processes on resources.
+5. These conditions must occur simultaneously.
+
+* What is a synchronization dead-lock?
+
+Failure in co-operation. A blocked task is never unblocked.
+
+# 7.3 Deadlock prevention
+
+* How does deadlock prevention work?
+
+Eliminate one or more of the conditions required for a deadlock.
+
+* What is synchronization prevention?
+
+Eliminating all synchronization from a program.
+Therefore, there is no communication between the threads, and all tasks
+run completely independently.
+
+* What is the problem with disallowing hold and wait?
+
+There is poor resource utilization, and some possible starvation.
+This is because all resources have to be held from the start of the program,
+even if they may not be used!
+
+* Why is there poor resource utilization when disallowing hold and wait?
+
+All resources that the task could use have to be reserved at the same time,
+including resources that may never be used.
+
+* Why is starvation possible when disallowing hold and wait?
+
+All resources required by a task may never be available at the same time.
+
+* What is the problem with allowing preemption w.r.t deadlock prevention?
+
+Preemption is dynamic, and cannot be applied statically.
+
+* How can one prevent a circular wait for resources?
+
+Using an ordered resource policy.
+
+* What is the ordered resource policy?
+
+1. Divide all resources into classes. (R1, R2, R3, ...)
+2. Rule: Can only request a resource from class Ri if holding no resources
+   from any class Rj, j >= i.
+
+* What is the general principle of banker's algorithm?
+
+Generate a safe sequence of allocations that result in no deadlock.
+
+* What information does the oracle need to know in the banker's algorithm?
+
+1. The number of resources available of each type.
+2. The resource allocation needed for each task in the worst case.
+
+* What is the banker's algorithm?
+
+1. Given the state of execution, ask "is there a task that can run to
+   completion such that its maximum requirements is less than the available
+   resources"?
+2. Execute that task to completion, all resources that it held should be
+   free now.
+3. Repeat until all tasks are finished.
+
+* What is an allocation graph?
+
+Create a graph of processes and resource usage at each moment a resource is
+allocated.
+
+* How can you use an allocation graph to check for deadlocks?
+
+If a graph contains no cycles, then no process in the system is deadlocked.
+However, if a resource has several instances, cycles are not always deadlocks.
+
+* What can you do with resources with several instances in an allocation graph?
+
+Break them up into multiple nodes.
+Now if there is a cycle, we know that the system is deadlocked.
+
+* How can you avoid deadlocks using an allocation graph?
+
+1. Assign resources to tasks such that there is no cycle.
+2. Complete the task, reducing the graph.
+3. Repeating until all tasks are finished.
+
+# 7.5 Detection and Recovery
+
+* What is the alternative to deadlock prevention?
+
+Let the deadlock happen and recover from it.
+
+* What does deadlock recovery involve?
+
+Preemption of one or more processes in a cycle.
+
+* What in preempting a task for deadlock recovery?
+
+1. The decider of the task must prevent starvation.
+2. Preemption victim must be killed and restarted to its last checkpoint state.
+3. Even that might not work since the victim may have made changes before the
+   preemption.
+
+* What happens when Windows deadlocks?
+
+Blue screen!
+
+# 7.6 Which method to choose?
+
+* What is the only deadlock prevention policy to have practical value?
+
+Ordered resource policy.
+
+# 8 Indirect communication
+
 # Exam questions
 
 * After raising a nonlocal exception between coroutines in uC++, what are two additional actions that must be performed to make it work?
@@ -409,3 +532,98 @@ Only synchronization.
 * Can semaphores be used for synchronization and mutual exclusion?
 
 Both.
+
+* Why does modularization cause problems with multi-level exit?
+
+Labels are known only in a routine's scope, so the modules may no longer know
+about them.
+
+* When a resumption handler completes, does it perform a static or dynamic return?
+
+Dynamic. Because you don't know where it's going to resume.
+
+* When a termination handler completes, does it perform a static or dynamic return?
+
+Static. Because you know that the statements right after the catch will be
+executed.
+
+* What's an advantage of restricting the placement of resume to within a coroutine's members?
+
+The coroutine programmer is able to fully control how the coroutine is resumed.
+
+* What is the advantage of a stackful coroutine vs a stackless one?
+
+A stackful coroutine can modularize code containing a suspend into a helper function.
+It can also support recursion.
+
+* What does RW safe mean?
+
+RW-safe means that an algorithm works even if simultaneous writes to the same
+location scramble the bits or simulataneous read during a write to the same
+location sees the bits flicker.
+
+* What does ABA mean in the ABA problem w.r.t lock-free data structures?
+
+A is removed.
+Before A can be removed fully, the thread is preempted and
+A then B is removed and A is put back.
+When the thread is restarted its view of A is now incorrect.
+
+* Why are condition locks weaker than semaphores?
+
+Condition locks contain no state and cannot remember previous actions performed
+on the lock, like a previous signal.
+
+* Why is synchronization more complex for blocking locks than spinning locks?
+
+Blocking locks get only one change to test lock state.
+Therefore, you must ensure that the blocking and acquiring is atomic w.r.t to
+the releaser.
+
+* When is a loop in a concurrent program a busy-wait and when is it not a busy-wait?
+
+A loop needs a bound or else its a busy wait.
+
+* What can fat atomic instructions eliminate completely?
+
+Busy waiting.
+
+* What is the advantage of using fat atomic instructions?
+
+You can perform a critical section atomically without expensive solutions.
+
+* What is the disadvantage of using fat atomic instructions?
+
+It blocks interrupts during that time.
+
+* What is a race condition?
+
+When there is missing synchronization or mutual exclusion.
+At least two threads race along assuming that it exists.
+
+* What is a live-lock?
+
+When at least two threads are stuck waiting for another to go first.
+
+* What is starvation?
+
+When a task tries to acquire a lock, but never does.
+
+* What is a deadlock?
+
+When one or more tasks are waiting for an event that will never occur.
+
+* Construct a synchronization deadlock with a semaphore.
+
+sem = 0;
+sem.P();
+
+* Construct a mutual-exclusion deadlock with a semaphore.
+
+sem = 1;
+sem.P();
+
+other task:
+
+sem.P();
+
