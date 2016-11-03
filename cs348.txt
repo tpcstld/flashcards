@@ -1,0 +1,369 @@
+# Introduction to database management
+
+* What does a database management system provide?
+
+Reliable, efficient, convenient, and safe multi-user storage of and access to
+massive amounts of persistent data.
+
+# Overview of Database Management
+
+* What is the ANSI definition of data?
+
+A representation of facts, concepts, or instructions in a formalized
+manner suitable for communication, interpretation, or processing by humans
+or by automatic means.
+
+* How was data stored during the early beginnings of computers?
+
+One data set per program, inputted as part of the program.
+
+* What is a database?
+
+A large and persistent collection of pieces of information organized in a way
+that facilitates efficient retrieval and modification.
+
+* What is a database management system?
+
+A program that manages details related to storage and access for a database.
+
+* What are some examples of a database?
+
+- WWW
+- Spreadsheets
+
+* What is a data model?
+
+A formalism that defines the schema.
+
+* What is a schema?
+
+A description of the data interface to the database.
+
+* What is a database instance?
+
+A database that conforms to a given schema.
+
+* What were some of the original applications of databases?
+
+- Inventory control
+- Payroll
+- Banking and financial systems
+- Reservation systems
+
+* What are the common circumstances that databases are applied in?
+
+- Lots of data
+- Data is formatted
+- Requires persistence and reliability
+- Requires efficient and concurrent access
+
+* What are some of the issues that indicate one should use database?
+
+- Too many files with different structure.
+- Shared files or replicated data.
+- Need to exchange data.
+
+When the data maintained by the system outscales the system itself.
+
+* Why should one invest in database technology?
+
+- Less redundancy
+- Less inconsistencies
+- Data integrity
+- Shareability
+- Security
+
+* How does database technology improve programmer productivity?
+
+They do not need to deal with data organization.
+
+* What are some of the issues with just using files to store data?
+
+- Redundancy: multiple copies of files
+- Inconsistency: independent updates
+- Inaccuracy: concurrent updates
+- Incompatibility: multiple formats
+- Insecurity: proliferation
+- In-auditability: poor chain of responsibility
+- Inflexibility: changes are difficult to apply
+
+* What are the 5 parts of a database management system?
+
+1. Data model
+2. Access control
+3. Concurrency control
+4. Database recovery
+5. Database maintenance
+
+* What are the parts of the three-level schema architecture?
+
+1. External schema
+2. Conceptual schema
+3. Physical schema
+
+* What is the external schema w.r.t the three-level schema architecture?
+
+What the application programs and users see.
+
+* What is the conceptual schema w.r.t the three-level schema architecture?
+
+The description of the logical structure of all data in the database.
+
+* What is the physical schema w.r.t the three-level schema architecture?
+
+The description of physical aspects, such as files, devices, and storage
+algorithms.
+
+* How does a DBMS commonly follow the 3-level schema architecture?
+
+- Different applications can see different sets of tables.
+- The physical design can be controlled with different implementations.
+
+* What are the advantages of the 3-level schema architecture?
+
+There needs to be only one repository of information.
+This avoids redundancy and inconsistency, and allows one to manage access
+control and performance.
+
+* What is data independence?
+
+Applications do not access data directly, but rather through an abstract
+data model provided by the DBMS.
+
+* What are the two types of data independence?
+
+Physical and logical.
+
+* What is physical data independence?
+
+Applications are immune to changes in storage structures.
+
+* What is logical data independence?
+
+Applications are immune to changes in data organization.
+
+* What is a data definition language used for?
+
+For specifying schemas.
+
+* Where is the information specified by a data definition language stored?
+
+The data dictionary, or catalog.
+
+* What is a data manipulation language used for?
+
+For specifying queries and updates.
+
+* What are the two kinds of data manipulation languages?
+
+- Navigational (procedural)
+- Non-navigational (declarative)
+
+* What are the 3 types of database users?
+
+- End user
+- Application developer
+- Database administrator
+
+* What is an end user's involvement with the database?
+
+- Using forms or query-generating applications.
+- Generating ad-hoc queries specified in the data manipulation language.
+
+* What is an application developer's involvement with the database?
+
+Designing applications or services that accesses the database.
+
+* What is a database administrator's involvement with the database?
+
+- Manages conceptual schema
+- Assists with application view integration
+- Monitors and tunes DBMS performance
+- Defines the internal schema
+- Loads and reformats the database
+- Responsible for security and reliability
+
+* What is the core idea that transactions try to achieve?
+
+Every application may think that it is the sole application accessing the
+data.
+
+* What is a transaction?
+
+An application-specified atomic and durable unit of work.
+
+* What properties of transactions does the DBMS ensure?
+
+The ACID properties.
+
+* What is ACID?
+
+Atomic: A transaction occurs entirely, or not at all.
+Consistency: Each transaction preserves the consistency of the database.
+Isolated: Concurrent transactions do not interfere with each other.
+Durablece completed, a transaction's changes are permanent.
+
+# Relational model
+
+* What is the main idea of the relational model?
+
+All information is organized in flat relations.
+
+* What are the features of the relational model?
+
+- Simple and clean data model
+- Powerful and declarative query/update languages
+- Semantic integrity constraints
+- Data independence
+
+* What is a database in the relational model?
+
+A set of named relations/tables.
+
+* What is a relation in the relational model?
+
+A set of named attributes/columns.
+
+* What is an attribute in the relational model?
+
+A type or domain.
+
+* What does a tuple or row have in the relational model?
+
+A value for each attribute.
+
+* What are the 4 properties of the relational model?
+
+1. Based on set theory. Therefore no ordering or duplicates.
+2. All attribute values are atomic
+3. degree(arity) = # of attributes in schema
+4. cardinality = # of tuples in instance.
+
+* What is the degree of a schema?
+
+The number of attributes in the schema.
+
+* What is the cardinality of an instance?
+
+The number of tuples in the instance.
+
+* What is the difference between relational models and SQL w.r.t semantics of instances?
+
+Relations and sets of tuples, while tables are multisets of tuples.
+
+* What is the difference between relational models and SQL w.r.t unknown values?
+
+There is no concept of unknown values in the relational model, but SQL defines
+the NULL value.
+
+* What is the main idea of integrity constraints?
+
+Extend schema with rules called "constraints".
+An instance is only valid if it satisfies all schema constraints.
+
+* What are two reasons for using constraints?
+
+1. Ensure data modification respects database design.
+2. Protect data from bugs in applications.
+
+* What are the three levels of database constraints?
+
+1. Tuple-level
+2. Relation-level
+3. Database-level
+
+* What are the two types of tuple-level database constraints?
+
+1. Domain restrictions
+2. Attribute comparisons
+
+* What is a domain restriction constraint?
+
+Values can only be of a certain range.
+
+* What is an attribute comparison constraint?
+
+The relationship between two values is enforced.
+
+* What are two types of relation-level constraints?
+
+1. Key constraints
+2. Functional dependencies
+
+* What is a superkey?
+
+A set of attributes for which no two tuples will have the same value.
+
+* What is a candidate key?
+
+A minimal superkey.
+
+* What is a primary key?
+
+A designated candidate key.
+
+* What are functional dependencies?
+
+A constraint between two sets of attributes.
+
+* What are two types of database-level constraints?
+
+1. Referential integrity
+2. Inclusion dependencies
+
+* What is referential integrity?
+
+All instances of foreign keys must exist as a primary key instance.
+
+* What is a foreign key?
+
+A primary key of one relation appearing as attributes of another relation.
+
+* What are inclusion dependencies?
+
+If it exists in one table, it must exist in another.
+e.g. "Every manager is an employee."
+
+# -----------------
+
+# Practice questions
+
+* What does the term "conceptual level" mean?
+
+With respect to the 3-level abstraction architecture,
+
+External
+Logical
+Physical
+
+The conceptual level is one of the 3 layers of the abstraction architecture.
+It describes the logical relationship between relations and data.
+
+* What does the term "atomicity" mean?
+
+An operation that can be done "all at once", or not done at all.
+
+* What is the term "relational division operator" mean?
+
+R / S = \pi_x(R) - \pi_x(\pi_x(R) \times S - R)
+
+* What are 4 tasks that are the responsibility of database admins?
+
+1. Schema design and refinement.
+2. Configurations and roles.
+3. Backups.
+4. Troubleshooting performance.
+
+* What is the minimal set of operators to make a relationally complete language?
+
+A set of operators is relationally complete if it covers all of the following:
+- Rename
+- Selection
+- Projection
+- Product
+- Set union
+- Set difference
+
+* Can "group by" be expressed using relational algebra?
+
+No.
