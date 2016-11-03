@@ -659,6 +659,57 @@ Java/Open Database Connectivity (Java or Microsoft).
 CLI: call-level interface
 They allow a single application to access multiple DBMS without recompiling.
 
+# 6-views - Xiaofei Zhang.pdf
+
+* What are the levels in the 3-level schema architecture?
+
+1. External schema: views
+2. Conceptual schema: tables
+3. Physical schema: internal DBMS layout
+
+* What is a view?
+
+A view is a relation in the external schema whose instance is
+determined by the instances of the relations in the conceptual schema.
+
+* What is a virtual view?
+
+A view defined as a query, not executed until the view itself is queried.
+
+* What is a materialized view?
+
+A view defined as a table which remembers the query that created it.
+
+* What do views and base relations in the conceptual schema have in common?
+
+- their schema information appears in the database schema
+- access controls can be applied to them
+- other views can be defined in terms of them
+
+* What is the difference between virtual and materialized views?
+
+- Virtual: Views are used only for querying; they are not stored in
+the database
+- Materialized: The query that makes up the view is executed, the
+view constructed and stored in the database.
+
+* What happens when you query a virtual view?
+
+The view definition is subbed into the query before optimizing/executing.
+
+* What 5 conditions are necessary for updatable views, according to SQL-92?
+
+1. The query references exactly one table
+2. The query only outputs simple attributes (no expressions)
+3. There is no grouping/aggregation/distinct
+4. There are no nested queries
+5. There are no set operations
+
+* What is the primary downside of materialized views?
+
+When the base table changes, the materialized view may also change.
+Must periodically reconstruct or incrementally update the materialized view.
+
 # Practice questions
 
 * What does the term "conceptual level" mean?
