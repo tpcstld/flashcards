@@ -324,6 +324,284 @@ A primary key of one relation appearing as attributes of another relation.
 If it exists in one table, it must exist in another.
 e.g. "Every manager is an employee."
 
+# Relational algebra
+
+* What is the selection operator?
+
+\sigma_{condition}(E)
+
+Returns the subset of E's tuples that satisfy the condition.
+
+* What is the projection operator?
+
+\pi_{attributes}(E)
+
+Returns all the tuples in E with only the attributes specified.
+Eliminates duplicates.
+
+* What is the rename operator?
+
+\rho(R(F), E)
+R = new relation name
+F = list of attributes -> new attribute names
+E = old relation name
+
+Renames relation names or attributes.
+
+* What is the product operator?
+
+E1 \times E2
+
+The result schema contains all the attributes of E1 and E2.
+The result instance contains one tuple for every pair of tuples in E1 and E2.
+Renaming might be needed if E1 and E2 share attribute names.
+
+* What is the conditional join operator?
+
+E1 \Join_{condition} E2
+
+The result schema contains all the attributes of E1 and E2.
+The result instance contains one tuple for every pair of tuples in E1 and E2
+that meets the condition.
+Renaming might be needed if E1 and E2 share attribute names.
+
+* What is the conditional join operator equivalent to?
+
+\sigma_{condition}(E1 \times E2)
+
+* What is the natural join operator?
+
+E1 \Join E2
+
+Joins the two relations on the common attributes.
+
+* What are the steps for performing a natural join?
+
+1. Rename duplicate attributes (on the right relation)
+2. Form the cross-product of the two relations.
+3. Eliminate any tuples that do not have matching values for all common attributes.
+4. Project out the duplicate attributes (keeping the left relation's names)
+
+* What is the natural join operator equivalent to?
+
+\pi_{remove duplicate attributes}(\sigma_{common attributes are equal}(E1 \times E2))
+
+* What happens when you natural join two relations that have no common attribute?
+
+Equivalent to the cross product.
+
+* What is union compatibility?
+
+Two relations share the exact same attributes and in the same order.
+
+* What is the union operator?
+
+R \cup S
+
+Returns all tuples that appear in R or S or both.
+R and S must be union compatible.
+
+* What is the difference operator?
+
+R - S
+
+Returns all tuples that appear in R and not S.
+R and S must be union compatible.
+
+* What is the intersection operator?
+
+R \cap S
+
+Returns all tuples that appear in R and S.
+R and S must be union compatible.
+
+* What is set intersection equivalent to?
+
+R \cap S = R \cup S - (R - S) - (S - R)
+
+* What is set union equivalent to?
+
+R \cup S = R \cap S + (R - S) + (S - R)
+
+* What is relational division equivalent to?
+
+X / S = \pi_{A}(X) - \pi_{A}((\pi_{A}(X) \times S) - X)
+
+where A = set of attributes in X but not in S.
+
+* Are cross product and division inverse operators?
+
+Not perfectly, because
+
+(R \times S) / S = R; but
+(R / S) \times S != R
+
+for all appropriate R, S.
+
+* When is a language relational completeness?
+
+A language is relationally complete when it is at least as expressive as
+relational algebra.
+
+* What are 3 languages that are relationally complete?
+
+1. Safe relational calculus
+2. Relational algebra
+3. SQL
+
+# Relational calculus and query by example
+
+* What is the main idea of relational calculus?
+
+Use first-order-logic formulae to specify properties of the query answer.
+
+* What is in the vocabulary of relational calculus?
+
+- Set of constants
+- Set of variables
+- Set of comparison predicates (e.g. =, <)
+- Set of n-ary predicates
+- Set of n-ary functions
+- Logical connectives (and, or, not, if)
+- Quantifiers (exists, for all)
+- Parentheses
+
+* What is a valuation w.r.t relational calculus?
+
+A mapping from variable names to values in the universe.
+
+* What are the two types of relational calculus?
+
+1. Tuple relational calculus
+2. Domain relational calculus
+
+The only difference is really the primitive variable used in specifying the
+queries.
+
+* What is query safety?
+
+A query is safe if, for all database instances conforming to the schema,
+the query result can be computed using only constants appearing in the 
+database instance or in the query itself.
+
+* What is query by example?
+
+A graphical language heavily influenced by domain relational calculus.
+
+# SQL Introduction
+
+* Where was SQL first developed?
+
+At IBM
+
+* When was SQL first standardized?
+
+During the 1980s.
+
+* What are the major version names of SQL?
+
+SQL-86, SQL-89, SQL-92, SQL:1999, SQL:2003, SQL:2006, SQL:2008, SQL:2011.
+
+* What did SQL-86 offer?
+
+A basic relationally-complete language.
+Had bag semantics, NULLs, ordering, grouping/aggregations, and outer joins.
+
+* What did SQL-92 offer?
+
+- CASE and nesting.
+- New syntax for OUTER JOIN
+
+* What did SQL:1999 offer?
+
+- Divided language into CoreSQL + packages
+- CoreSQL = SQL-92 with recursion
+- Packages include stored procedures, OO, triggers.
+
+* Are indexes part of the SQL standard?
+
+No, they are instead vendor-specific physical structures.
+
+* What can you use to eliminate duplicates from a query in SQL?
+
+SELECT DISTINCT
+
+* What is the SQL basic query block?
+
+SELECT attribute-expression-list
+FROM relation-list
+[WHERE condition]
+
+* How can you perform multi-set set operations in SQL?
+
+UNION ALL, INTERSECT ALL, EXCEPT ALL
+
+* What is the 3-valued logic table for the AND operator?
+
+and   | TRUE  FALSE NULL
+-----------------------
+TRUE  | TRUE  FALSE NULL
+FALSE | FALSE FALSE FALSE
+NULL  | NULL  FALSE NULL
+
+* What is the 3-valued logic table for the OR operator?
+
+or    | TRUE  FALSE NULL
+-----------------------
+TRUE  | TRUE  TRUE  TRUE
+FALSE | TRUE  FALSE NULL
+NULL  | TRUE  NULL  NULL
+
+* What is the 3-valued logic table for the NOT operator?
+
+not   | TRUE  FALSE NULL
+-----------------------
+      | FALSE TRUE  NULL
+
+* What does the WHERE statement filter out w.r.t 3-valued logic?
+
+Any tuple for which the condition evaluates to FALSE or NULL.
+
+* What condition makes two rows be considered equal?
+
+Each corresponding field value is not NULL and equal, or both NULL.
+
+* What is a correlated subquery?
+
+A subquery that references an attribute from the outer query.
+
+* What is a scalar subquery?
+
+A subquery that returns an atomic value. One row and one column.
+
+* When can you assume ordering in the results of SQL queries?
+
+Only the result of a query with an ORDER BY clause.
+Otherwise, you cannot assume ordering.
+
+* How is the result of a query containing grouping and aggregation determined?
+
+1. Cross product all relations in from clause
+2. Filter tuples using the where clause.
+3. Form groups based on the group clause.
+4. Filter groups using the having clause.
+5. Generate one tuple per group.
+
+* What does the HAVING clause do?
+
+Allows one to filter on groups, instead of just tuples.
+
+* What is a trigger?
+
+A procedure executed by the database in response to a change to the database
+instance.
+
+* What are the 3 basic components of a trigger description?
+
+1. Event: Type of change that should cause trigger to fire
+2. Condition: Test performed by the trigger.
+3. Action: Procedure executed if condition is met.
+
 # -----------------
 
 # Practice questions
