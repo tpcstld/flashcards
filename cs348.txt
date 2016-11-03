@@ -604,6 +604,61 @@ instance.
 
 # -----------------
 
+# 7-SQL APP - Xiaofei Zhang.pdf
+
+* How do SQL client programs typically interact with a SQL server?
+
+By using "bindings", available in various programming languages.
+
+* What is the main problem with SQL bindings?
+
+Mismatch between SQL data types and the applications'.
+
+* What are the 3 levels of SQL interfaces?
+
+Statement-level (Embedded SQL)
+Library-level (JDBC)
+Application inside the DBMS (stored procedures)
+
+* What is embedded SQL and how does it work?
+
+Embedded SQL is a language extension to make SQL queries directly with host
+  variables (write host variables using "INTO var1, ...").
+It uses a preprocessor to translate the statements to C.
+
+* What is a cursor?
+
+A cursor is like a pointer that refers to some row of the result.
+The cursor can point:
+- BEFORE FIRST TUPLE
+- on a tuple
+- AFTER LAST TUPLE
+
+* How do you use a cursor? (4 steps) (WRT embedded SQL)
+
+1. Declare the cursor (associates with query).
+2. Open the cursor (evaluates the query, conceptually).
+3. Fetch tuple(s) using the cursor.
+4. Close the cursor.
+
+* How to use dynamic embedded SQL? (embedded SQL with dynamic queries)
+
+Prepare with PREPARE, then EXECUTE (possibly multiple times).
+
+* What is a placeholder?
+
+A place in a query that will be replaced by a literal.
+
+* What is the equivalent of metadata in embedded SQL?
+
+SQLDA (descriptor area)
+
+* What are JDBC, ODBC, and CLI?
+
+Java/Open Database Connectivity (Java or Microsoft).
+CLI: call-level interface
+They allow a single application to access multiple DBMS without recompiling.
+
 # Practice questions
 
 * What does the term "conceptual level" mean?
