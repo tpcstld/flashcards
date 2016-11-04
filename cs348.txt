@@ -624,6 +624,30 @@ Embedded SQL is a language extension to make SQL queries directly with host
   variables (write host variables using "INTO var1, ...").
 It uses a preprocessor to translate the statements to C.
 
+* How can SQL DML and DLL be embedded inside a C program?
+
+Prefixing statements with EXEC SQL and suffixing with ;.
+
+* What are host variables with respect to static embedded SQL?
+
+Variables used to send and receive values from the database system.
+
+* How can you send data with host variables in embedded SQL?
+
+Using the host variables in place of constants.
+
+* How can you receive data with host variables in embedded SQL?
+
+Writing an INTO clause to load the data into the variable.
+
+* What is an indicator variable w.r.t embedded SQL?
+
+A variable that signals if its respect host variable is NULL.
+
+* What is the type of an indicator variable in C/C++ w.r.t embedded SQL?
+
+short int
+
 * What is a cursor?
 
 A cursor is like a pointer that refers to some row of the result.
@@ -651,11 +675,47 @@ A place in a query that will be replaced by a literal.
 
 SQLDA (descriptor area)
 
+* What are SQL descriptors used for w.r.t embedded SQL?
+
+Determine count and types of input and output variables at runtime.
+
+* What is SQLJ?
+
+A framework that allows embedding of SQL into Java.
+
+* What are the similiarities and differences between SQLJ and Embedded SQL?
+
+They both use a preprocessing step.
+However, SQLJ uses JDBC to establish the connection.
+
 * What are JDBC, ODBC, and CLI?
 
 Java/Open Database Connectivity (Java or Microsoft).
 CLI: call-level interface
 They allow a single application to access multiple DBMS without recompiling.
+
+* What are the 3 main ideas of both dynamic SQL and CLI/ODBC/JDBC?
+
+1. Queries are represented as strings in the application.
+2. Queries are prepared, then executed.
+3. Generally, applications will not know the number and type of input or
+   output parameters.
+
+* What is the architecture of JDBC?
+
+There is a common JDBC API that the application talks to.
+The API interfaces with a JDBC Driver manager, which picks the appropriate
+JDBC driver to use.
+
+* What do stored procedures do?
+
+Execute application logic directly inside the DBMS process.
+
+* What are 3 possible advantages of stored procedures?
+
+1. Minimize data transfer costs
+2. Centralize application code
+3. Logical independence
 
 # 6-views - Xiaofei Zhang.pdf
 
