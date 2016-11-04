@@ -57,7 +57,7 @@ A database that conforms to a given schema.
 - Requires persistence and reliability
 - Requires efficient and concurrent access
 
-* What are some of the issues that indicate one should use database?
+* What are some of the issues that indicate one should use a database?
 
 - Too many files with different structure.
 - Shared files or replicated data.
@@ -438,7 +438,7 @@ Not perfectly, because
 
 for all appropriate R, S.
 
-* When is a language relational completeness?
+* When is a language relationally complete?
 
 A language is relationally complete when it is at least as expressive as
 relational algebra.
@@ -659,12 +659,6 @@ They allow a single application to access multiple DBMS without recompiling.
 
 # 6-views - Xiaofei Zhang.pdf
 
-* What are the levels in the 3-level schema architecture?
-
-1. External schema: views
-2. Conceptual schema: tables
-3. Physical schema: internal DBMS layout
-
 * What is a view?
 
 A view is a relation in the external schema whose instance is
@@ -724,10 +718,6 @@ It describes the logical relationship between relations and data.
 * What does the term "atomicity" mean?
 
 An operation that can be done "all at once", or not done at all.
-
-* What is the term "relational division operator" mean?
-
-R / S = \pi_x(R) - \pi_x(\pi_x(R) \times S - R)
 
 * What are 4 tasks that are the responsibility of database admins?
 
