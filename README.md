@@ -10,6 +10,11 @@ Flashcards to help with studying for courses.
 
 Press `<Enter>` to get the next flashcard.
 
+## Online
+
+An online version of the flashcards program can be found at [tpcstld.me/fc](tpcstld.me/fc).
+However, support is not guaranteed.
+
 ## Contributions
 
 If you're taking a course with me, pull requests are welcome!
