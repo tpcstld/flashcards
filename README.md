@@ -12,7 +12,7 @@ Press `<Enter>` to get the next flashcard.
 
 ## Online
 
-An online version of the flashcards program can be found at [tpcstld.me/fc](tpcstld.me/fc).
+An online version of the flashcards program can be found at [tpcstld.me/fc](http://tpcstld.me/fc).
 However, support is not guaranteed.
 
 ## Contributions
