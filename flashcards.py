@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-How it works:
+==== How it works ==============================================================
 
 Each line starting with a '*' symbol is treated as the start of a new question.
 Each line starting with a '#' symbol is treated as a comment.
@@ -9,10 +9,40 @@ Otherwise, the line is treated as part of the answer to the previous question.
 If the UNIQUE constant is truthy, no question will be repeated.
 If the ENABLE_COLORS constant is truthy, terminal colors will be used.
 
-Caveats:
+==== Caveats ===================================================================
 
 Questions cannot be multilined.
 No line in an answer can start with '*' or '#'.
+
+==== Style guide ===============================================================
+
+- Keep your questions short. Try to test general knowledge, avoid specific
+  examples or application problems.
+
+- All questions should end in '?'
+    BAD:  List 3 organs in the human body.
+    GOOD: What are 3 organs in the human body?
+
+- When the question could be ambiguous, use with-respect-to (w.r.t).
+    BAD:  What is the role of blood?
+    GOOD: What is the role of blood w.r.t the immune system?
+
+- Keep all lines in answers within an 80 character limit.
+
+- Use numbering (1., 2., ...) when the question poses a "steps" question, or a
+  "list" question.
+    e.g. What are 3 organs in the human body?
+         1. Heart
+         2. Brain
+         3. Liver
+    e.g. What are the 3 steps for typing on a keyboard?
+         1. Press the key.
+         2. Watch the character appear.
+         3. Release the key.
+
+- End all sentences with more than 2 words with a punctuation.
+    BAD:  This is an answer
+    GOOD: This is an answer.
 """
 import random
 import sys
