@@ -324,6 +324,10 @@ A primary key of one relation appearing as attributes of another relation.
 If it exists in one table, it must exist in another.
 e.g. "Every manager is an employee."
 
+* What is an invariant?
+
+A condition that must always be held true.
+
 # Relational algebra
 
 * What is the selection operator?
@@ -651,10 +655,15 @@ short int
 * What is a cursor?
 
 A cursor is like a pointer that refers to some row of the result.
-The cursor can point:
-- BEFORE FIRST TUPLE
+
+* When do we want to use cursors?
+
+When a query could return more than one row.
+
+* What are the three places that a cursor can be in?
+- before first tuple
 - on a tuple
-- AFTER LAST TUPLE
+- after last tuple
 
 * How do you use a cursor? (4 steps) (WRT embedded SQL)
 
