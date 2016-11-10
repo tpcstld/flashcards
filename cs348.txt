@@ -771,6 +771,44 @@ The view definition is subbed into the query before optimizing/executing.
 When the base table changes, the materialized view may also change.
 Must periodically reconstruct or incrementally update the materialized view.
 
+# Transactions
+
+* Why do we need transactions?
+
+Databases are shared resources, and not managing concurrent access will cause
+problems.
+
+* What are the two causes of problems that transactions try to solve?
+
+Concurrency. Concurrent access and updating of information.
+Failure. Updates crashing halfway through.
+
+* What is an active transaction?
+
+A transaction that has been started but not yet aborted or committed.
+
+* What does the COMMIT command do w.r.t transactions?
+
+Any updates that a transaction has made become permanent.
+Other transactions can see the updates.
+
+* What does the ABORT command do w.r.t transactions?
+
+Any updates that the transaction may have made are erased.
+
+* How do DBMSs guarantee isolation?
+
+Via concurrency control algorithms.
+
+* How do DBMSs guarantee atomicity and durability?
+
+Every action is logged securely so that it can be consulted later to determine
+what to do.
+
+* What is an operating set?
+
+A union of operations.
+
 # Practice questions
 
 * What does the term "conceptual level" mean?
