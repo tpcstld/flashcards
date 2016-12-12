@@ -647,7 +647,7 @@ query.
 
 * What is the interpreter architectural style?
 
-Interpreter parses and excutes input commands, updating the state maintained by
+Interpreter parses and executes input commands, updating the state maintained by
 the interpreter.
 
 * What are the typical components in the interpreter architectural style?
@@ -1319,7 +1319,7 @@ There is only one instance of the object, that you get from the singleton.
 
 - Creator and Product interface.
 - Creator interface has a "create object" method.
-- Concete creator class implements the abstract class.
+- Concrete creator class implements the abstract class.
 - Calling the concrete "create object" methods returns a new object.
 
 * What is the abstract factory design pattern?
