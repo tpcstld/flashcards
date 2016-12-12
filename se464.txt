@@ -1448,3 +1448,357 @@ Composite.
 * What design pattern is useful for extending utility without modifying the original interface?
 
 Visitor.
+
+# Behavioural design patterns
+
+* What do behavioural design patterns do?
+
+Identify common communication patterns between objects and realize these patterns.
+
+* What are 2 class-scoped behavioural design patterns?
+
+1. Interpreter pattern.
+2. Template method pattern.
+
+* What are the 4 main motivations of MVC?
+
+1. UI changes more frequently than business requirements.
+2. The same data is often displayed in different ways.
+3. Designers and developers are often different people.
+4. Testing UI code is difficult and expensive.
+
+* What are the 3 main goals of MVC?
+
+1. Decouple models and views.
+2. Increase maintainability/testability of the system.
+3. Permit new views to be developed.
+
+* What are some properties of the "model" in MVC?
+
+- Container of application data.
+- Does not know how to present itself.
+- Domain independent.
+
+* What are models called in the observer pattern?
+
+Subjects.
+
+* What are some properties of the "view" in MVC?
+
+- Presents the model to the user.
+- Allows the user to manipulate the data.
+- Does not store data.
+- Configurable to display different data.
+
+* What are some properties of the "controller" in MVC?
+
+- Glues the model and view together.
+- Updates the view when the model changes.
+- Updates the model when the user interacts with the view.
+- Houses the application logic.
+- Loose coupling between model and others.
+- Tightly coupled with the views.
+
+* What are the interaction mechanisms w.r.t MVC?
+
+- User interacts with the view.
+- View notifies controller of changes.
+- Controller performs actions on the model.
+- Model fires change events.
+- View responds to the change events.
+
+* What are the benefits of MVC?
+
+- Decoupled view and model.
+  - Multiple views.
+  - Maintainability.
+  - Split teams.
+- Testability
+
+* What are the drawbacks of MVC?
+
+- Complexity
+- Efficiency
+
+* What basic design patterns are used in MVC?
+
+- Strategy pattern (view/controller)
+- Composite pattern (view)
+- Observer pattern (view/model)
+
+* What is the difference with the model between MVC and MVP?
+
+The model fires events into an event bus, instead of using the observer pattern.
+
+* What are the characteristics of the view in MVP?
+
+- Thin UI front-end for controller.
+- Can be interchanged easily.
+- Does not ever see or manipulate model objects.
+- Interacts only with primitives.
+
+* What are the characteristics of the presenter in MVP?
+
+- Glues the model and view together.
+- Updates the view when the model changes.
+- Updates the model when the user manipulates the view.
+- Houses the application logic.
+
+* What are the improvements of MVP over MVC?
+
+- Decoupling of views from the model.
+- Increase testability.
+- A little less complex than MVC.
+
+# Dependency Injection
+
+* What is dependency inversion also known as?
+
+"Hollywood principle" or "inversion of control".
+
+* What is the principle of dependency inversion?
+
+High-level methods should not depend on lower-level methods.
+
+* What are the benefits of dependency inversion?
+
+Minimizes direct coupling between concrete classes.
+
+* How does direct coupling between concrete classes usually manifest?
+
+Object creation.
+
+* What is the dependency inversion principle?
+
+Program to interfaces not to implementations.
+
+* What is a key separation when using ghe dependency inversion principle?
+
+Separate objects from their assemblers.
+
+* What are the goals of dependency injection?
+
+To eliminate initialization statements.
+
+* What are the 4 tasks of dependency injection?
+
+1. Takes a set of components
+2. Adds a set of configuration metadata
+3. Provides the metadata to an injection framework.
+4. Bootstraps object creation with a configured injector.
+
+* What is Google Guice?
+
+An inversion of control framework for alleviating some of the boilerplate code.
+
+* What does the @Inject statement do in Google Guice?
+
+Tells Google Guice to automatically instantiate the correct objects.
+
+* What determines what gets injected in Google Guice?
+
+The module.
+
+# Cloud/REST architectures
+
+* What is grid computing?
+
+Combining computing resources from multiple domains to do a single task.
+
+* What is grid computing usually used for?
+
+Creating "supercomputers" to work on specific parallel computation tasks.
+
+* What is cloud computing?
+
+A model of enabling convenient, on-demand network access to a shared pool of
+configurable computing resources.
+
+These resources can be rapidly provisioned and released with minimal management
+effort or service provider interaction.
+
+* What does the cloud model promote?
+
+Availability.
+
+* What are the 5 essential characteristics of cloud computing?
+
+1. On-demand self-service.
+2. Broad network access.
+3. Resource pooling.
+4. Rapid elasticity.
+5. Measured service.
+
+* What is the on-demand self-service characteristic of cloud computing?
+
+Provisioning is possible without human interaction.
+
+* What is the "broad network access" characteristic of cloud computing?
+
+Capabilities are available over the network through standard mechanisms.
+
+* What is the "resource pooling" characteristic of cloud computing?
+
+Computing resources are pooled to serve multiple consumers.
+Location independence.
+
+* What is the "rapid elasticity" characteristic of cloud computing?
+
+Resources can be easily added or removed.
+
+* What is the "measured service" characteristic of cloud computing?
+
+Metering of storage, processing, bandwidth.
+
+* What are some benefits of cloud computing?
+
+- Agility. One can quickly respond to changes.
+- Scalability. Resources can be quickly added.
+- Cost.
+- Reliability.
+- Security.
+
+* What technologies are used to make cloud computing possible?
+
+- Thick and thin clients.
+- Broadband internet.
+- Large, global datacenters
+- APIs for administration, development, and resource migration.
+
+* What is the goal of virtualization?
+
+Decoupling of physical and computing resources.
+
+* What are the various cloud layers?
+
+- Software as a Service
+- Platform as a Service
+- Infrastructure as a Service
+
+* What are SaaSes?
+
+Vendor-controlled remote applications.
+
+* What is an example of a SaaS?
+
+Google Docs.
+
+* What are some concerns one may have about using SaaSes?
+
+Control, performance, security, privacy.
+
+* What are PaaSes?
+
+Vendor-controlled environments.
+
+* What is an example of a PaaS?
+
+Google AppEngine.
+
+* What are some concerns one may have about using PaaSes?
+
+Control, performance, security, privacy, and limited technology choices.
+
+* What are IaaSes?
+
+Vendor-provided resources.
+
+* What is an example of a IaaS?
+
+Amazon EC2.
+
+* What are some concerns one may have about using IaaSes?
+
+More expertise needed to leverage flexibility.
+
+* What are the NFPs w.r.t cloud security?
+
+- Confidentiality
+- Integrity
+- Authenticity
+- Anonymity
+- Privacy
+
+* What is a key concern about cloud security?
+
+Data remanence. How can you purge data from the cloud?
+
+* What does REST stand for?
+
+Representational state transfer.
+
+* What are the key constraints of REST?
+
+- Client-server architecture.
+- Servers do not maintain session state.
+- Clients must not depend on direct server access.
+- Clients communicate using a uniform interface.
+
+* What are the four REST operations?
+
+GET, POST, PUT, DELETE.
+
+* What does a GET REST command usually do?
+
+List or retrieve a resource.
+
+* What does a POST REST command usually do?
+
+Append a resource.
+
+* What does a PUT REST command usually do?
+
+Replace a resource.
+
+* What does a DELETE REST command usually do?
+
+Delete a resource.
+
+* What is a common property of REST URIs?
+
+They are usually versioned.
+
+* What are some problems of Java's type system?
+
+Does not prevent enough errors, such as runtime exceptions.
+Some of these errors can also be silent.
+
+* How does one use a pluggable type system?
+
+1. Design a custom type system to solve a specific problem.
+2. Writing type qualifiers in code.
+3. Using the type checker to warn about violations.
+
+* What is the benefit of type systems?
+
+- Finds bugs in programs.
+- Guarantees the absence of errors.
+- Improvements documentation.
+- Aids compilers and static analysis tools.
+
+* What is the CLIMB-to-top defaulting rule of type systems?
+
+Top type is the default for:
+- Casts
+- Local variables
+- Instanceof
+- Implicit Bounds
+
+* What are the 4 steps for defining a type system?
+
+1. Qualifier hierarchy.
+2. Type introduction rules.
+3. Type rules.
+4. Flow-refinement.
+
+* What is the "qualifier hierarchy" step of defining a type system?
+
+Using @SubtypeOf and other stuff.
+
+* What is the "type introduction rules" step of defining a type system?
+
+Defining whether a type is for expressions, declarations, or something else.
+
+* What is the "type rules" step of defining a type system?
+
+Defining methods to check types.
