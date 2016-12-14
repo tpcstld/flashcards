@@ -466,3 +466,100 @@ I(a, b) = -alog2(a) - blog2(b)
 Gain = I(p / (p + n), n / (p + n))
        - sum(i = 1->k){(p_i + n_i)/(p + n) * I(p_i/(p_i+n_i),n_i/(p_i+n_i))}
 
+# Groupwork 14
+
+* How are data instances represented in machine learning?
+
+Feature vectors.
+
+* What are the inputs and outputs in the training phase for classification w.r.t machine learning?
+
+Input: data instances and their correct labels
+Output: The classification model
+
+* What are the inputs and outputs in the testing phase for classification w.r.t machine learning?
+
+Input: a data instance
+Output: Its label
+
+* How might classification be used in machine learning to analyze news articles?
+
+Classify news articles in relation to their topic.
+
+* How does clustering differ from classification?
+
+Clustering needs to infer the groups that are present in the data.
+
+* How does regression differ from classification and clustering?
+
+Regression works on continuous data sets.
+
+* What does the maximum margin classifer do when given two sets of differently laballed data instances?
+
+Draws a line that is the maximum distance away from each set of instances.
+
+* When would we choose to use an SVM classifier?
+
+- High-dimensionality data.
+- Little training data.
+- Data has a geometric interpretation.
+- High precision is critical.
+
+* When would we prefer clustering over classification?
+
+Very sparse high dimensional data.
+
+* What type of learning would we use to recommend a book?
+
+Supervised or unsupervised learning.
+
+* What type of learning would we use to play tic-tac-toe?
+
+Reinforcement learning.
+
+* What type of learning would we use to learning to play music?
+
+Reinforcement learning.
+
+* What type of learning would we use to decide on a credit limit?
+
+Supervised learning.
+
+# Groupwork 16
+
+* What is ensemble learning?
+
+"Real-life committee structure".
+Building different experts and letting them vote.
+
+* What are two characteristics of bagging w.r.t ensemble learning?
+
+- Several training sets of the same size.
+  - Produce by sampling original set with replacement
+- Build variations on model for the same type of classifier
+- Combine predictions by voting
+
+* What is a type of classifier that is well suited for bagging?
+
+J48.
+Any learning scheme where small changes in input can cause a big change in the
+model.
+
+* What is a type of classifier that is not well suited for bagging?
+
+Naive Bayes.
+
+* What is the key difference between random forests and bagging?
+
+Random forests randomize the algorithm, not the training data.
+
+* What are 2 characteristics of boosting w.r.t ensemble learning?
+
+- Iterative: New models influenced by previous models.
+- Extra weight for instances that are misclassified.
+- Encourages new model to be an expert for instances misclassified
+- Weights votes according to performance.
+
+* What are 2 characteristics of stacking w.r.t ensemble learning?
+
+- Combine predictions of past learning using a "meta learner".
