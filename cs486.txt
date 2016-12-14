@@ -1,0 +1,468 @@
+* How do goal-based agents decide what to do?
+
+By finding sequences of actions that lead to desirable status.
+
+* What are the two different types of solutions we commonly want to find w.r.t goal states?
+
+1. Find a goal state, don't care about how.
+2. Find a sequence of actions that lead to the goal state.
+
+* How do you perform problem solving as search on a graph?
+
+1. Represent the problem as a graph of nodes.
+2. Define initial and goal states/node.
+3. Define rules/operators as arcs in the graph.
+    May want to also specify a cost.
+4. Search the graph to solve the problem.
+
+* What are the 4 ways to handle repeated states?
+
+1. Do nothing.
+2. Don't return to a state you just came from.
+3. Don't create paths with cycles.
+4. Don't generate any state that was already generated before.
+
+* What is uninformed search?
+
+Searching using no knowledge about a particular pattern.
+
+i.e. brute force search.
+
+* What is completeness w.r.t search algorithms?
+
+Whether or not the search algorithm is guaranteed to find a solution.
+
+* What is optimality w.r.t search algorithms?
+
+Whether the first path found will be the most optimal one?
+
+* Is breath-first search complete?
+
+Yes.
+
+* Is depth-first search complete?
+
+No.
+
+* Is breath-first search optimal?
+
+Yes.
+
+* Is depth-first search optimal? Why?
+
+No. Because there may be an infinite number of branches.
+
+* What is the time and space complexity of breadth-first search?
+
+Time: O(b^d).
+Space: (O(b^d)).
+
+b = branching factor d = depth of solution
+
+* What is the time and space complexity of depth-first search?
+
+Time: O(b^m)
+Space: O(bm)
+
+b = branching factor. m = max depth of tree
+
+* What is the iterative deepening dfs?
+
+Each "iteration" is DFS with a cut off depth.
+
+* What is an informed (heuristic) search?
+
+1. Assign a cost to each action/rule/arc.
+2. Define a heuristic function h(n).
+
+* What is the heuristic function meant to represent?
+
+The estimated cost of the optimal path from some state to a goal state.
+
+* How do we choose the next node in the A* algorithm?
+
+The node with the lowest f(n) = g(n) + h(n).
+
+g(n) = cost from initial state to n
+h(n) = estimate from n to goal
+
+* What is an admissible heuristic?
+
+The heuristic never gives an estimate cost greater than the optimal cost of
+the path.
+
+* What does it mean to say that heuristic function h_1(n) dominates h_2(n)?
+
+h_1 will always return greater or equal values for any node. (And will return
+a greater value for at least one node).
+
+* What is the advantage a dominant heuristic has over a lesser one?
+
+The dominant heuristic is guaranteed to search less than or equal number of
+nodes.
+
+* What is the time complexity of A*?
+
+O(b^ed)
+
+b = branching factor
+e = maximum relative error (h*(n) - h(n)) / h*(n)
+d = depth of goal node
+
+* What is iterative deepening A*?
+
+A* with a certain f(n) cutoff which is enlarged every iteration.
+
+# Lecture 5
+
+* How do we define a constraint satisfaction problem?
+
+- Set of variables.
+- Domain of values for each variable.
+- Set of constraints between variables.
+
+* What is a solution to a constraint satisfaction problem?
+
+A complete assignment of a value to each variable that satisfies the constraints.
+
+* What is an assignment w.r.t CSPs?
+
+x = a, where a is in the domain of x
+
+* What is a tuple w.r.t CSPs?
+
+An ordered list of variables that corresponds to a set of assignments.
+
+* What is the scope of a constraint?
+
+The set of variables in the constraint.
+
+* What is the arity of a constraint?
+
+The number of variables in the constraint.
+
+* How does backtracking search work?
+
+1. Guess a value (choose the most constrained variable).
+2. Eliminate possible values for other nodes.
+3. Be prepared to backtrack if there is a contradiction.
+
+* What is a local inconsistency?
+
+An instantiation of some of the variables that satisfies the relevant
+constraints, but cannot be extended to one or more additional variables.
+
+* What is domain support?
+
+A value for a variable has a domain support if there exist possible values for
+each of the other variables.
+
+* What is arc consistency w.r.t constraints?
+
+Each value for each variable in the constraint has a domain support in C.
+
+* What is the forward checking backtracking algorithm?
+
+Maintains arc consistency on all constraints will exactly one uninstantiated
+variable while backtracking.
+
+i.e. If any domain of a variable becomes empty => backtrack.
+
+* What is the maintaining arc consistency backtracking algorithm?
+
+Maintains arc consistency on all constraints while backtracking.
+
+* What are the two heuristics for backtracking algorithms?
+
+- Variable ordering
+- Value ordering
+
+* What is the basic idea of variable ordering in backtracking algorithms?
+
+Choose the variable most likely to fail first.
+
+* What is the basic idea of value ordering in backtracking algorithms?
+
+Choose the value most likely to succeed first.
+
+# Propositional logic
+
+* How do knowledge-based agents work?
+
+The agent uses logical reasoning to deduce a course of action that will
+achieve its goals.
+
+* What is formal logic comprised of?
+
+Syntax, semantics, proof theory.
+
+* What is a proof procedure?
+
+A set of inference rules and an algorithm for how they are applied.
+
+* What is a proof?
+
+A sequence of sentences where:
+- Each sentence is a logical axiom; or
+- Is derivable using an inference rule.
+
+* What are propositional connectives?
+
+Words that join prime propositions.
+
+* What is an interpretation w.r.t logic?
+
+Defining true or false for each symbol.
+
+* What is a tautology?
+
+A sentence that is valid under all possible interpretations.
+
+* When is a sentence satisfiable w.r.t logic?
+
+When there is some interpretation in which the sentence is true.
+
+That interpretation is called a model.
+
+* When does sentence "a" logically imply sentence "b"?
+
+When every interpretation that satisfies a also satisfies b.
+
+* What is model logic?
+
+The necessity or possibly is related to a modal verb.
+
+e.g. It might rain today.
+
+* What is temporal logic?
+
+The truth of a statement varies with time.
+
+e.g. The sun is shining.
+
+* What is an ontoloogy?
+
+Abstract concepts underlying the knowledge needed to represent a domain.
+
+* What is knowledge engineering concerned about?
+
+- The set of entities and activates that describe a domian.
+- Using formal processes to build an ontology
+
+* What are classes in an ontology?
+
+Concepts in the domain.
+
+* What are relations in the ontology?
+
+Associations between classes.
+
+* What are formal axioms in an ontology?
+
+Knowledge about the domain.
+
+* What are instances in an ontology?
+
+Actual real-world entities.
+
+* What is the bottom-up strategy for making an ontology?
+
+1. Identify most specific concepts.
+2. Generalize to more abstract concepts.
+
+* What is the top-down strategy for making an ontology?
+
+1. Identify most abstract concepts.
+2. Specialize into more specific concepts.
+
+* What is the middle-out strategy for making an ontology?
+
+1. Identify core of basic domain concepts.
+2. Specialize and generalize as necessary.
+
+# Reasoning under uncertainity
+
+* Why might AIs need to handle uncertainity?
+
+* Partial observe ability. Agent may not have complete knowledge of the world.
+* Nondeterminism. Actions do not always have intended consequences.
+
+* What are the key ideas of reasoning under uncertainity?
+
+- Use logic to represent domain knowledge.
+- Use probabilities to capture uncertainity.
+- Use probabilistic inference to reason about that knowledge.
+
+* What are random variables?
+
+A property/event whose value is not yet known with certainty.
+
+* What do random variables have?
+
+- A domain of possible values.
+- A probability distribution for those values.
+
+* What is an atomic event?
+
+An assignment of a value to each random variable in the model.
+
+* What is a joint probability distribution?
+
+Assignment of a probability to each atomic event.
+
+* When are two events A and B independent of each other?
+
+P(A | B) = P(A).
+
+* What is conditional independence?
+
+If P(A | B and C) = P(A | C)
+
+* What is a belief network?
+
+A directed acyclic graph where:
+  Nodes are the set of random variables
+  Directed arcs connect pairs of nodes.
+
+Each arc means "x directly affects y"
+
+* What are possible nodes in in a Bayesian (belief) network?
+
+- Output variables.
+- Evidence variables.
+- Hidden variables.
+
+* How does one construct a belief network?
+
+Label nodes in an order consistent with cause and effect.
+
+* What is the important of independence in a belief network?
+
+A joint probablity distribution can be re written in terms of conditional
+probabilities. Independence can simplify those conditional probabilities.
+
+* What is diagnostic inference?
+
+P(Cause | Effect)
+
+* What is casual inference?
+
+P(Effect | Cause)
+
+* What is intercausal inference?
+
+P(Cause1 | Effect, Cause2)
+
+"Explaining away"
+
+* What is mixed inference?
+
+Combining multiple types of inference.
+
+# Decision networks
+
+* What does a utility function do?
+
+- Captures agent preferences between world states
+- Evaluates goodness of a state to agent
+
+* What are the three types of nodes in a decision network?
+
+1. Chance nodes - ovals - random variables
+2. Decision nodes - rectangles - decision variables
+3. Utility node - diamonds - utility function on states
+
+* What is the maximized expected utility principle?
+
+A rational agent chooses the action that maximizes expected utility.
+
+* What is expected utility?
+
+Sum of
+  all results of an action given the evidence * the utility of the result.
+
+* Generally, what is the value of information?
+
+Expected utility of the best action chosen with new information
+- expected utility of the best action chosen without new information
+
+# Machine learning
+
+* What is machine learning?
+
+- Agents solve some class of tasks
+- Agents learn from past experiences
+- Agents have some performance measure
+- Agents learn to improve over time
+
+* What are the 3 types of machine learning methods?
+
+1. Supervised learning
+2. Unsupervised learning
+3. Reinforcement learning
+
+* What is supervised learning?
+
+Given sample input, compute correct output.
+Training input is labelled with correct output.
+
+* What is unsupervised learning?
+
+Training input is not labelled with correct output.
+
+* What is reinforcement learning?
+
+Grade output with a grade of "goodness".
+
+* What are the 3 types of machine learning tasks?
+
+1. Classification
+2. Clustering
+3. Regression
+
+* What is classification w.r.t machine learning?
+
+Classify new data instances according to existing data
+
+* What is clustering w.r.t machine learning?
+
+Group data instances by similarity of features
+
+* What is regression w.r.t machine learning?
+
+Fit data to the best line.
+
+* What is inductive learning?
+
+Given a training set of examples (x, f(x)), return a function that approximates
+f.
+
+* What is Ockham's razer?
+
+Prefer simplest hypothesis consistent with the data.
+
+* What are some issues with learning a classifier?
+
+- Past training data representative of all data?
+- Which features/attributes are most useful?
+- Which type of classifier?
+- Which particular classifier model?
+- How to evaluate classifier performance?
+
+* What is a naive bayes classifier?
+
+Input features are conditionally independent of each other.
+
+* What is the goal of a decision tree?
+
+Given a vector of input features, classify a boolean output variable.
+
+* What is the formula for information content?
+
+I(a, b) = -alog2(a) - blog2(b)
+
+* What is the formula for information gain?
+
+Gain = I(p / (p + n), n / (p + n))
+       - sum(i = 1->k){(p_i + n_i)/(p + n) * I(p_i/(p_i+n_i),n_i/(p_i+n_i))}
+
