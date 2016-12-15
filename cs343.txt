@@ -107,10 +107,6 @@ The critical path of computation.
 5. After a thread starts entry into the critical section, it must eventually
    enter.
 
-* What is starvation?
-
-A thread never being able to enter the critical section.
-
 * What is livelock?
 
 No one being picked to enter the critical section indefinitely.
@@ -243,8 +239,6 @@ Blue screen!
 * What is the only deadlock prevention policy to have practical value?
 
 Ordered resource policy.
-
-# 8 Indirect communication
 
 # Exam questions
 
@@ -596,23 +590,6 @@ You can perform a critical section atomically without expensive solutions.
 
 It blocks interrupts during that time.
 
-* What is a race condition?
-
-When there is missing synchronization or mutual exclusion.
-At least two threads race along assuming that it exists.
-
-* What is a live-lock?
-
-When at least two threads are stuck waiting for another to go first.
-
-* What is starvation?
-
-When a task tries to acquire a lock, but never does.
-
-* What is a deadlock?
-
-When one or more tasks are waiting for an event that will never occur.
-
 * Construct a synchronization deadlock with a semaphore.
 
 sem = 0;
@@ -627,3 +604,566 @@ other task:
 
 sem.P();
 
+# Lock Programming
+
+* How does buffering work?
+
+- Tasks communicate unidirectionally through a queue.
+- Producer adds items to the back of the queue.
+- Consumer removes items from the front of the queue.
+
+* What is a split binary semaphore?
+
+A collection of semaphores where at most one of the collection has the value 1.
+
+* When are split binary semaphores used?
+
+When different kinds of tasks have to block separately.
+
+* What technique do split binary semaphores use to solve mutual-exclusion problems?
+
+Baton passing.
+
+* What are the rules of baton passing?
+
+- There is exactly one baton.
+- Nobody moves in the entry/exit code unless they have the baton.
+- Once the baton is released, one cannot read/write variables in the entry/exit.
+
+* Can mutex/condition locks perform baton passing to prevent barging?
+
+Only if the signalled task does not need to re-acquire the lock before continuing.
+
+* What is the readers and writers problem?
+
+- Multiple tasks share a resource. Some read, some write.
+- Allow multiple concurrent readers, but serialize writer access.
+
+* How can we use split-binary semaphores to segregate tasks in the readers and writers problem?
+
+Separate tasks into 3 categories:
+- Arrivers
+- Readers
+- Writers
+
+* What is a shadow queue?
+
+A queue that stores additional information about tasks blocked in a semaphore.
+
+# 7 Concurrent Errors
+
+* What is a race condition?
+
+When there is missing synchronization or mutual exclusion.
+At least two threads race along assuming that it exists.
+
+* What is a live-lock?
+
+When at least two threads are stuck waiting for another to go first.
+
+* What is a property of live-locks?
+
+There always exits some mechanism to break ties on simultaneous arrival that
+deals effectively with the live-lock.
+
+* What is starvation?
+
+A selection algorithm ignores one or more tasks so they are never executed.
+
+* What is a deadlock?
+
+When one or more tasks are waiting for an event that will never occur.
+
+* What is starvation?
+
+When a task tries to acquire a lock, but never does.
+
+# Indirect communication
+
+* What is the idea of "critical regions" w.r.t concurrency APIs?
+
+- Declare which variables are to be shared.
+- Access to shared variables are restricted to within a REGION statement.
+- Mutual exclusion within that statement.
+
+* What are some problems of the "critial regions" idea of concurrency?
+
+- Nesting these critical regions can cause a deadlock.
+- Simultaneous reads are impossible.
+
+* What are conditional critical regions?
+
+Introduce a condition that must be true as well as having mutual exclusion
+before you can enter the critical region.
+
+* What is a monitor?
+
+An abstract data type that combines shared data with serialization of its
+modification.
+
+* What is a mutex member?
+
+A member function that does not begin execution if there is another active
+mutex member.
+
+* What are the two types of synchronization scheduling?
+
+External and internal.
+
+* What is external scheduling? How does one do it in uC++?
+
+Tasks are scheduled outside the monitor. _Accept statement.
+
+* What is internal scheduling? How does one do it in uC++?
+
+Tasks are scheduled inside the monitor. uCondition variables.
+
+* What is the advantage of external scheduling over internal scheduling?
+
+External scheduling is easier to specify and explain over internal scheduling.
+
+* When is external scheduling unusable?
+
+- Scheduling depends on member parameter values.
+- Scheduling must block in the monitor, but cannot guarantee that the next call
+fulfils cooperation.
+
+* What is the nested monitor problem?
+
+Acquire monitor X, call to monitor Y, wait on condition in Y.
+
+Now monitor Y's mutex is released, but monitor X's mutex is not.
+
+* When does explicit scheduling occur?
+
+- An accept statement blocks the active task on the acceptor stack and makes
+a task ready from the specified mutex member queue.
+- A signal moves a task from the specified condition to the signalled stack.
+
+* When does implicit scheduling occur?
+
+When a task waits in or exits from a mutex member and a new task is selected.
+
+* What are the possible orderings of relative priority between task queues in a monitor?
+
+Calling queue has to be lowest priority (or equal or lower), anything else is fine.
+
+* What is a disadvantage of implicit (automatic) signal monitors?
+
+Poor performance.
+
+* What is a coroutine monitor?
+
+A coroutine with implicit mutual exclusion on calls to specified member routines.
+
+* What is a Java monitor?
+
+- A monitor with a single implicit condition variable.
+- Internal scheduling is no-priority nonblocking.
+- Barging can occur.
+
+# Direct communication
+
+* What is a task?
+
+A class with a distinguished member (main) that has its own execution state.
+
+* How is a task similar to a monitor?
+
+Tasks provide mutual exclusion and synchronization so only one thread is active
+in that object.
+
+* What does _Else do in uC++?
+
+It is executed if there is no caller waiting on one of the functions specified
+in the previous _Accept statements.
+
+* What happens after a task's destructor is called?
+
+The task behaves like a monitor.
+
+* How can an internal buffer increase concurrency?
+
+One can process and put multiple results into the buffer concurrency, rather
+than running the process inside the mutex member itself.
+
+* What are some issues with the internal buffer method to increase concurrency?
+
+- Unless the average time for production and consumption is almost equal, the
+  buffer is either always full or empty.
+- Since tasks are monitor-like, no calls can occur while the server is working.
+
+* What is a worker task?
+
+An additional (private) task that is used to offload the work to another thread.
+
+* What is an administrator?
+
+A server managing multiple clients and worker tasks.
+Does little real work, just manages.
+
+* Why does the administrator not make calls to other tasks?
+
+Because those calls may block the administrator, but we want the administrator
+to always keep accepting calls.
+
+* How does an administrator work?
+
+Maintains a list of work to pass to worker tasks.
+
+* What are some typical worker types?
+
+- Timer
+- Notifier
+- Simple worker
+- Complex worker
+- Courier
+
+* What is a timer worker?
+
+A task that prompts the administrator at specified time intervals.
+
+* What is a notifier worker?
+
+A task that performs a potentially blocking wait for an external event.
+
+* What is a simple worker?
+
+A task that does work and returns the result to the administrator.
+
+* What is a complex worker?
+
+A task that does work and interacts directly with client of the work.
+
+* What is a courier worker?
+
+A task that performs a potentially blocking call on behalf of the administrator.
+
+* How can clients increase concurrency with servers?
+
+Perform server calls asynchronously.
+
+* Does uC++ provide asynchronous calls out of the box?
+
+No.
+
+* How do tickets work w.r.t asynchronous calls?
+
+- Tickets are matched with results and given to the client.
+- Clients retrieve their result by passing the ticket to the server.
+
+* What is a disadvantage of using tickets for managing asynchronous calls?
+
+Protocols are error-prone because the caller may not obey the protocol.
+
+* How do call-back routines work w.r.t asynchronous calls?
+
+- A routine is passed to the server on the initial call.
+- Routine is called when the result is ready.
+
+* What is the advantage of using call-back routines for managing asynchronous calls?
+
+The server does not need to store any results, it can drop it off immediately.
+
+* What are futures?
+
+A future provides asynchronous communcation but without an explicit protocol.
+
+* What is the difference between Future_ESM and Future_ISM?
+
+Future_ESM must be explicitly deleted.
+Future_ISM has garbage collection.
+
+* What is the _Select clause w.r.t futures?
+
+The _Select statement waits for one or more heterogeneous futures based on the
+logical clause passed inside it.
+
+The selector is blocked until future.available() is true.
+
+* What is the difference between future() and _Select(future)?
+
+future() gets the value, which also means that it can throw an exception.
+
+* What is something important to consider when you have e.g. _Select(f1 || f2)?
+
+When the statement finishes, you don't know which future is available so you
+have to check.
+
+# 10 Optimization
+
+* Why is optimization useful or necessary?
+
+To conserve resources and for good performance.
+
+* What are the 3 general forms of optimization?
+
+1. Reordering.
+2. Eliding.
+3. Replication.
+
+* What is reordering w.r.t optimization?
+
+Data and code are reordered to increase performance in certain contexts.
+
+* What is eliding w.r.t optimization?
+
+Removal of unnecessary data, data accesses, and computation.
+
+* What is replication w.r.t optimization?
+
+Processors, memory, data, code are duplicated because of limitations in
+processing or communication.
+
+* How can the compile/hardware optimize sequential programs?
+
+- Reorder disjoint operations.
+- Elide unnecessary operations.
+- Execute in parallel if multiple functional-minutes.
+
+* How are caches loaded?
+
+In cache lines of 32/64/128 bytes.
+
+* Why is the necessary to eagerly move reads up the memory hierarchy?
+
+So that the next read will be cached.
+
+* Why is it advantageous to lazily move writes down the memory hierarchy?
+
+Because writing is expensive so we don't want to block on it very often.
+
+* What is cache coherence?
+
+A hardware protocol for ensuring update of duplicate data.
+
+* What are the advantages and drawbacks of eager cache consistency?
+
++ Data changes appear instantaneously.
+- Slow and expensive.
+
+* What are the advantages and drawbacks of lazy cache consistency?
+
++ Faster
+- Concurrent programs can read stale data.
+
+* What is cache thrashing?
+
+When threads continuously read/write the same memory locations, causing the
+excessive cache updates.
+
+* What is false sharing?
+
+Since cache lines can contain multiple variables, cache thrashing can through
+different variables.
+
+* How can sequential optimizations cause problems for concurrent programs?
+
+Concurrent sections accessing shared variables can become corrupted by
+sequential optimizations.
+
+* How can reordering optimizations cause problems for concurrent programs?
+
+- Flag variable reads might be done in a different order than intended.
+- Locks can have their function calls be reordered.
+
+* How can eliding optimizations cause problems for concurrent programs?
+
+- Flag variables can be copied to a register, and thus never being updated.
+- "Meaningless" sleep statements may be removed causing delays to be skipped.
+
+* How can replication optimizations cause problems for concurrent programs?
+
+- Modern processors execute multiple instructions in parallel.
+- Sometimes the order of instructions matters however.
+- e.g. A variable cannot be visible before being initialized.
+
+* What are the sources of all optimization problems?
+
+Races on shared variables.
+
+* How can you prevent optimization problems?
+
+Protect all shared data with locks.
+
+* What is a race free program?
+
+No variables in the program has races.
+
+* Is a race free program free of all races?
+
+No. There can still be races internal to locks.
+
+* What are the two approaches lock programmers can take to eliminate races in locks?
+
+1. Ad hoc
+2. Formal
+
+* What is the ad hoc approach to dealing with races as a lock programmer?
+
+Augment all data races with pragmas to restrict compiler and hardware
+optimizations.
+
+* What are the advantages and disadvantages of the ad hoc approach to dealing with races?
+
++ Optimal
+- Not portable
+
+* What is the formal approach to dealing with races as a lock programmer?
+
+Language has a memory model and mechanisms to define races in programs.
+
+* What are the advantages and disadvantages of the formal approach to dealing with races?
+
++ Portable
+- Not optimal
+
+* What utilities does C++ have to deal with data races?
+
+The volatile qualifier, which forces variable updates to occur quickly.
+The atomic qualifier, which prevents eliding and disjoint reordering.
+
+# 11 Other approaches
+
+* What is a lock free data structure?
+
+A data structure where operations that are critical sections can be performed
+without a lock.
+
+* What does "wait free" mean?
+
+Operations also guarantees progress.
+
+* How can compare and assign be used to implement a lock-free stack?
+
+void Stack::push( Node &n ) {
+  for ( ;; ) {
+    n.next = top;
+    if ( CAA( top, n.next, &n ) ) break;
+  }
+}
+
+Node *Stack::pop() {
+  Node *t;
+  for ( ;; ) {
+    t = top;
+    if ( t == NULL ) break;
+    // busy wait
+    // copy current top // empty list ?
+    if ( CAA( top, t, t->next ) ) break; // attempt to update top nod
+  }
+  return t;
+}
+
+* What is the ABA problem w.r.t lock free stack?
+
+top -> x -> y -> z
+
+1. pop() called, x is read and y is chosen as the next top of the stack.
+2. Preemption!
+3. x and y are both popped, x is pushed back.
+
+top -> x -> z
+
+4. Unpreemption!
+5. Compare and assign sees that x is still at the top.
+
+top -> y -> ???
+
+Stack is now corrupted.
+
+* What is a hardware fix for the ABA problem?
+
+Use a double-wide compare and assign instruction.
+Pass in both the pointer and a ticket number.
+The ticket number would change (and fail the comparison) if the stack has been
+modified.
+
+* What do the LL and SC instruction do in MIPS?
+
+LL: Loads a value from memory to a register, and sets a hardware reservation
+on the memory location.
+
+SC: Stores a new value back to the memory location. This store is conditional
+and only occurs if no interrupt, exception or write has occurred at the 
+LL reservation.
+
+* What happens when the SC instruction fails?
+
+The value at the memory location it tried to write at is set to 0.
+
+* What does the language "Ada 95" offer for concurrency?
+
+- The "when" clause, which is external scheduling similar to the _Accept statement.
+- No internal scheduling.
+- Instead, the "requeue" statement allows one to make a blocking call to
+  another mutex member of the object.
+
+* What does SR and concurrent C++ offer for concurrency?
+
+- External scheduling with an accept statement.
+- In addition, it has "when" and "by" clauses to let the accept statement run
+  depending on a variable or condition.
+
+* What is the equivalent of Task in Java?
+
+Thread class.
+
+* Why does Java need the start function to start its threads?
+
+Since there can be inheritance, there is no way to start the thread in the
+constructor.
+
+* What does Go offer for concurrency?
+
+- Non-object-oriented, light-weight threads called goroutines.
+- Started with the go statement.
+- No direct communication with goroutines.
+- Channels (bounded buffers) are used to communicate.
+
+* What does C++11 offer for concurrency?
+
+- There is a thread object.
+- Any callable entity can be started by a thread.
+- Parameters passed in via the variadic template feature.
+
+- There are also mutex and condition locks.
+- Scheduling no-priority nonblocking. Which means that barging is possible.
+
+- There are also futures and atomic types and operations.
+
+* When do C++11 thread's start?
+
+At the point of declaration.
+
+* What do you have to be careful about when using C++11 threads?
+
+Dangling pointers to local variables.
+
+* What is an error in C++11's threading model?
+
+Deallocating the thread object before calling join() or detach().
+
+* What is the actor concurrency model?
+
+- An administrator accepts messages that a group of workers will process.
+- Communication is done through an untyped queue of messages.
+
+* What does Linda offer for concurrency?
+
+- There is a tuple space that is known to all threads.
+- Threads communicate by adding, reading, and removing tuples from the space.
+- read( ... ) reads a tuple that matches the parameters. Blocking call.
+- in( ... ) is like read( ... ) but removes the tuple.
+- out( ... ) writes a tuple to the space.
+
+* What does OpenMP offer for concurrency?
+
+- Uses pragma statements to do concurrency.
+- There are fork/join statements to create parallel threads.
+- Offers COFOR COEND features via #pragma omp parallel for
+
+* What is an Executor in Java?
+
+A server with one or more worker tasks.
+You can submit() work to the executor.
