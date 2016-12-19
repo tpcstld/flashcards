@@ -485,7 +485,7 @@ queries.
 * What is query safety?
 
 A query is safe if, for all database instances conforming to the schema,
-the query result can be computed using only constants appearing in the 
+the query result can be computed using only constants appearing in the
 database instance or in the query itself.
 
 * What is query by example?
@@ -771,7 +771,101 @@ The view definition is subbed into the query before optimizing/executing.
 When the base table changes, the materialized view may also change.
 Must periodically reconstruct or incrementally update the materialized view.
 
-# Transactions
+# 8 ER Model ###################################################################
+
+* What is an entity and entity set?
+
+A distinguishable object, and group of entities of the same type.
+
+# 10 Schema Refinement #########################################################
+
+* What are the relational design principles?
+
+- Relations should have semantic unity.
+- Information should not be repeated.
+- Null values should be avoided.
+- Spurious joins should be avoided.
+
+* What is a functional dependency?
+
+If you know the values for the attributes on the left side, then you know the
+values of the tuples on the right side.
+
+* What is the closure of a set of functional dependencies?
+
+The set of all functional dependencies that are satisfied by every
+relational instance that satisfies a given (sub)set of functional dependencies.
+
+* What are the properties of a good schema decomposition?
+
+- Does not lose information.
+- Does not complicate checking of constraints.
+- Does not contain anomalies. (Or fewer).
+
+* How can we determine if two relations are a lossless decomposition?
+
+Iff the common attributes of two relations form a superkey for either schema.
+
+* What is a interrelational dependency?
+
+A dependency that can only be tested by joining tables.
+
+* What is a dependency preserving decomposition?
+
+A decomposition where no original functional dependencies are interrelational.
+
+* When is a relation schema in Boyce-Codd Normal Form?
+
+For all functional dependencies (e.g the closure):
+  Either the dependency is trivial (e.g. the RHS is a subset of the LHS); or
+  the LHS is a superkey of the relation schema.
+
+* How does BCNF help reduce redundancy?
+
+- Each LHS value of a FD only appears in one row; and
+- All values determined by the FDs are not repeated.
+
+* What is the algorithm for performing a lossless-join BCNF decomposition?
+
+1. Select a relation which currently violates the BCNF rules.
+2. Split that relation into two, based on a FD:
+  a. One that has all the attributes in the FD.
+  b. One that has all the attributes in the original relation except for ones on
+     the RHS of the FD.
+3. Repeat until all relations satisfy the BCNF rules.
+
+* When is a relation schema in Third Normal Form?
+
+All function dependencies (e.g. the closure) are either:
+  Trivial (e.g. the RHS is a subset of the LHS); or
+  The LHS is a superkey of the relation schema; or
+  Each attribute in RHS - LHS is contained in a candidate key of the relation.
+
+* When are two sets of functional dependencies equivalent?
+
+When they have the same closures.
+
+* When is a set of functional dependencies minimal?
+
+When:
+  Every RHS of a dependency is a single attribute; and
+  No X -> A is the set F - {X -> A} equivalent to F; and
+  No X -> A and Z (a proper subset of X) is the set F - {X -> A} U {Z -> A}
+  equivalent to F.
+
+* What are the three steps for finding a minimal cover?
+
+1. Replace X -> YZ with X -> Y and X -> Z.
+2. Remove A from the LHS of X -> B if A is not needed to determine B.
+3. Remove X -> A from F in A can be determine without this FD.
+
+* What are the steps for making a lossless-join and dependency preserving 3NF decomposition?
+
+1. Find a minimal cover of functional dependencies.
+2. For each functional dependency, add that relation to the result.
+3. Add relations for candidate keys, if no relation always covers them.
+
+# Transactions #################################################################
 
 * Why do we need transactions?
 
@@ -782,6 +876,10 @@ problems.
 
 Concurrency. Concurrent access and updating of information.
 Failure. Updates crashing halfway through.
+
+* What is a transaction?
+
+An application-specified atomic and durable unit of work.
 
 * What is an active transaction?
 
@@ -808,6 +906,161 @@ what to do.
 * What is an operating set?
 
 A union of operations.
+
+* What are the three "transaction modes"?
+
+1. Diagnostic size.
+2. Access mode.
+3. Isolation level.
+
+* What does the diagnostic size of a transaction determine?
+
+How many error conditions can be recorded.
+
+* What is the access mode of a transaction?
+
+An indicator about whether the transaction is read only, or it can write.
+
+* What does the isolation level of transaction determine?
+
+How the interactions of transactions are to be managed.
+
+* What are the 4 possible isolation levels of a transaction?
+
+0 (Read Uncommitted): Transactions may see uncommitted updates.
+1 (Read Committed): Transactions see only committed changes, but non-repeatable
+                    reads are possible.
+2 (Repeatable Read): Reads are repeatable, but "phantoms" are possible.
+3 (Serializability): Transactions are serialized.
+
+* What is the serializability isolation level? Can it always work?
+
+Concurrent transactions must appear to have been executed sequentially.
+
+Note that not all transactions can be serialized, as in the case of
+w1[x] r2[x] r2[y] w1[y].
+
+* When do two operations conflict w.r.t transactions?
+
+When:
+  They belong to different transactions; and
+  They operate on the same object; and
+  At least one of the operations is a write.
+
+* What are the two types of conflicts w.r.t transactions?
+
+1. Read-Write
+2. Write-Write
+
+* What is an execution history w.r.t transactions?
+
+An interleaving of the operations in a set of transactions in which the
+operation imposed by each transaction is preserved.
+
+* What are the two assumptions we make when dealing with an execution history?
+
+1. Transactions interact only with reads and writes.
+2. A database is a fixed set of independent objects.
+
+* When are two histories conflict equivalent?
+
+When:
+  They are over the same set of transactions; and
+  The ordering of each pair of conflicting operations is the same in each history.
+
+* When is a history conflict serializable?
+
+If there exists some serial history that is conflict equivalent to it.
+
+* What is a serialization graph?
+
+A graph of the transactions, which edges point from T1 to T2 if T1 must
+run before T2.
+
+* When is a history serializable w.r.t serialization graphs?
+
+When its serialization graph is acyclic.
+
+* What is a dirty read? What's a problem that could occur?
+
+When a transaction (may) read the update of another uncommitted transaction.
+If the other transaction is aborted, the value read is incorrect.
+
+* What is an example of a non-repeatable read?
+
+T1 reads value 1. T2 updates and commits value 1 to 2. T1 reads value 2 now.
+
+* What is an example of a phantom tuple?
+
+T1 reads a row from a table, based on a where clause.
+T2 inserts new rows into the table.
+T1 does the same read, and gets more rows than before.
+
+* What is the concept of snapshot isolation?
+
+A transaction will see a consistent snapshot of the database when it started
+executing.
+
+1. Transaction reads the committed database values when it starts.
+2. If it makes non-conflicting updates, it can commit.
+3. If it makes conflicting updates, it must rollback.
+
+* What is the effect of snapshot isolation?
+
+Read-write conflicts are avoided. Write-write conflicts are managed.
+
+# 13 Security ##################################################################
+
+* What are the three objects of security?
+
+Secrecy: Information should only be shown to people who are allowed to see it.
+Integrity: Can only be changed by authorized people.
+Availability: Can be seen by authorized people.
+
+* What does a security policy define?
+
+Who should be allowed to see and/or modify specific data in the system.
+
+* What are the two types of access control?
+
+Discretionary and mandatory.
+
+* What is the idea of discretionary access control?
+
+Achieve security by specifying which schema objects a user may access.
+
+- Users are granted privileges to access specific tables, views, etc...
+- Users can grant privileges to other users at their own discretion.
+
+* What are the two SQL statements for discretionary access control?
+
+GRANT and REVOKE.
+
+* What changed beyond SQL:1999 w.r.t discretionary access control?
+
+Previously, privileges were assigned to users, now privileges are assigned to
+roles which are granted to users.
+
+* What is the idea of mandatory access control?
+
+Achieve security by specifying which data (i.e. instance) objects a user
+may access.
+
+* What is a problem with discretionary access control?
+
+It is susceptible to trojan horse attacks, where a person tricks a privileged
+user to copy the data to another table.
+
+* What is the Bell-LaPadula model?
+
+Objects (tables, view, rows, columns) are assigned security classes.
+Subjects (users, roles, programs) are assigned security clearances.
+
+- The goal is that information should never flow from a higher class to a lower
+class.
+- Individual tuples or columns can be assigned security classes, as part of
+its key.
+- This means that users with different clearances see different tables.
 
 # Practice questions
 
@@ -846,3 +1099,160 @@ A set of operators is relationally complete if it covers all of the following:
 * Can "group by" be expressed using relational algebra?
 
 No.
+
+# Physical Design and Tuning
+
+* What is Physical Design?
+
+The process of selecting a physical schema to implement the conceptual schema.
+
+* What is tuning?
+
+Adjusting the physical/conceptual schema of a working system to adapt to
+changing requirements or performance characteristics.
+
+* What does a workload description contain?
+
+- The most important queries and their frequency.
+- The most important updates and their frequency.
+- The desired performance goal for each query or update.
+
+* What are some possible storage options for a relation?
+
+- Unsorted (heap) file.
+- Sorted file
+- Hash file.
+
+* How do you create an index in SQL?
+
+CREATE INDEX name
+ON table(column) [cluster]
+
+* How do you delete an index in SQL?
+
+DROP INDEX name
+
+* What are the primary effects of an index?
+
+- Reduces execution time for selections that specify conditions involving the columns.
+- Increases execution time for insertions.
+- Affects execution time for updates or deletions.
+- Increases space requirements.
+
+* What is a clustering index?
+
+An index on attribute A where similar values of A are stored together in the
+same block.
+
+* How many clustering and non-clustering indices can a relation have?
+
+Only 1 clustering index. Any number of non-clustering indices.
+
+* What is co-clustering?
+
+Two relations are co-clustered if their tuples are interleaved within the same
+file.
+
+* When is co-clustering useful?
+
+For storing hierarchical (1:N) data.
+
+* How does co-clustering affect performance?
+
+- Speeds up joins (especially foreign key joins)
+- Slows down sequential scans of a single relation.
+
+* What type of queries do B-trees help with?
+
+Range queries. One can find tuples that equal a value, and then use the
+forward pointers to find values less than or greater than that value.
+
+* Why does order matter when declaring an index with more than more attribute?
+
+The tuples are organized first by the first attribute, then by the second
+attribute if they share the same first attribute.
+
+* When are multi-attribute indices useful?
+
+- When we commonly query those multiple columns.
+- When we get values from column2 that match column1.
+
+* When are multi-attribute indices not useful?
+
+When we are matching any column that is not the first column specified.
+
+* When should we consider using an index?
+
+When the performance increase outweighs the update overhead.
+
+* What are candidates for index search keys?
+
+The attributes most commonly found in WHERE clauses.
+
+* When should multi-attribute search keys be considered?
+
+- When a WHERE clause contains several conditions.
+- When it enables index-only plans.
+
+* How should we choose indices?
+
+Choose ones that benefit as many queries as possible.
+
+* What are the ways to adjust the conceptual schema?
+
+- Re-normalization.
+- Denormalization.
+- Partitioning.
+
+* What is normalization?
+
+The process of decomposing schemas to reduce redundancy.
+
+* What is denormalization?
+
+The process of merging schemas to intentionally increase redundancy.
+
+* What is partitioning?
+
+Splitting a table into multiple tables for the purpose of reducing IO cost or
+lock contention.
+
+* What are the two types of partitioning?
+
+1. Horizontal partitioning
+2. Vertical partitioning
+
+* What is horizontal partitioning?
+
+Each partition has all columns and subset of original rows.
+
+* What is horizontal partitioning commonly used for?
+
+Separating operational from archival data.
+
+* What is vertical partitioning?
+
+Each partition has a subset of the columns and all the rows.
+
+* What is vertical partitioning commonly used for?
+
+Separating frequently-used columns from each other.
+Separating frequently-used columns from rarer ones.
+
+* What are some of the guidelines for tuning queries?
+
+- Sorting is expensive. Try to avoid ORDER BY, DISTINCT, and GROUP BY.
+- Replace subqueries with joins.
+- Avoid correlated subqueries.
+- Use tools to examine generated plan.
+
+* What are some of the guidelines for tuning applications?
+
+- Return fewest columns and rows as possible.
+- Update multiple rows with a WHERE rather than with a cursor.
+
+- Delay updates.
+- Delay operations on hot-spots.
+- Shorten transactions.
+- Perform write commands in batches.
+- Consider lower isolation levels.
