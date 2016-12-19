@@ -686,7 +686,7 @@ When a task tries to acquire a lock, but never does.
 - Access to shared variables are restricted to within a REGION statement.
 - Mutual exclusion within that statement.
 
-* What are some problems of the "critial regions" idea of concurrency?
+* What are some problems of the "critical regions" idea of concurrency?
 
 - Nesting these critical regions can cause a deadlock.
 - Simultaneous reads are impossible.
@@ -784,7 +784,7 @@ The task behaves like a monitor.
 
 * How can an internal buffer increase concurrency?
 
-One can process and put multiple results into the buffer concurrency, rather
+One can process and put multiple results into the buffer concurrently, rather
 than running the process inside the mutex member itself.
 
 * What are some issues with the internal buffer method to increase concurrency?
