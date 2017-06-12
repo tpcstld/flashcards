@@ -1,0 +1,102 @@
+# Chapter 1
+
+* What are the two network core functions?
+
+Routing and forwarding
+
+* What is routing?
+
+Determining source-destination route taken by packets.
+
+* What is forwarding?
+
+Moving packets from router's input to appropriate router output.
+
+* What is packet switching?
+
+Hosts break application-layer messages into packets.
+
+* What is store and forward?
+
+The entire packet must arrive at a router before it can be transmitted on the
+next link.
+
+* When does queuing occur w.r.t packets?
+
+When packets arrive at the link faster than they can be transmitted.
+
+* What happens when the packet queue fills up?
+
+Packets may be dropped.
+
+* What is circuit switching?
+
+End-to-end resources are allocated for transmission between a specific source
+and destination. These resources are dedicated and not shared.
+
+* What are the advantages of packet switching over circuit switching?
+
+1. More users can use the network, because the chance that they are using it at
+the same time is low.
+2. It is simpler, since it does not require much setup.
+
+* What is a disadvantage of packet switching?
+
+Excessive congestion is possible.
+
+* What are the four sources of packet delay?
+
+Processing, queuing, transmission, propagation.
+
+* What is processing delay?
+
+The delay for checking the packet and determining the output link.
+
+* What is queuing delay?
+
+The time that a packet is waiting at a link for transmission.
+In a store-and-forward setup, this starts counting when the incoming packet is
+fully received.
+
+* What is transmission delay?
+
+The time it takes for the packet to be fully transmitted onto the link.
+Packet length / link bandwidth.
+
+* What is propagation delay?
+
+The time it takes for a bit to arrive between the two nodes.
+Length of physical link / propagation speed (200,000,000 m/s)
+
+* What are the 3 situations for queueing delay, with respect to link bandwidth, packet length, and average packet arrival rate?
+
+If La / R is small, then the average queuing delay is small.
+If La / R is close to 1, then the average queuing delay is large.
+If La / R is greater than 1, then the average queuing delay is infinite.
+
+* How does packet loss occur?
+
+Because the queue in a link has finite capacity, some packets arriving may be
+dropped.
+
+* What is throughput?
+
+The rate (in bits/time) at which bits are transferred between the sender
+and receiver.
+
+* What are the two kinds of throughput?
+
+Instantaneous: Rate at a given point in time.
+Average: Rate over a long period of time.
+
+* What is a bottleneck link?
+
+The link in the end-to-end path that constrains the end-to-end throughput.
+
+* How do bottleneck links affect throughput?
+
+The end-to-end throughput can only be as high as the bottleneck link.
+
+* What are the 5 layers in the internet protocol stack?
+
+Application, transport, network, link, physical.
