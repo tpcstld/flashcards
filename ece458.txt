@@ -1,0 +1,257 @@
+# Introduction
+
+* What is confidentiality?
+
+Concealment of information or resources.
+
+* What is integrity?
+
+Trustworthiness of data or resources.
+
+* What is availability?
+
+Ability for authorized parties to use the information or resources.
+
+* What the definition of a threat?
+
+A potential violation of security.
+
+* What the definition of an attack?
+
+# Basic Control Hijacking
+
+* What is the attacker's goal in a control hijacking attack?
+
+To take over target machine. (i.e. execute arbitrary code)
+
+* How do buffer overflow attacks work?
+
+Overwrite parts of the stack by writing beyond the limit of a buffer. If
+you are able to overwrite the return pointer, then when the stack pop's,
+the address of the return pointer will be executed!
+
+* What are the some addresses that you care about and their relative positions w.r.t buffer overflows?
+
+Buffer -> Stack frame pointer (inserted by calling function) ->
+return pointer -> arguments.
+
+* What is the stack frame pointer?
+
+The pointer used to reference local variables or arguments.
+
+* What is the return pointer?
+
+The pointer returned to when the current stack pops.
+
+* How is a NOP slide used?
+
+Since you won't always be able to figure out the exact addresses that you can
+overwrite, you can write a long chain of NOPs so that you increase the surface
+area that you can point the return address to.
+
+* What are some unsafe libc functions?
+
+strcpy, strcat, gets, scanf
+
+* What are some buffer overflow opportunities?
+
+- Overwriting the address of exception handlers.
+- Overwriting the address of function pointers.
+- Overwriting the address of longjmp buffers.
+
+* How can integer overflows be exploited?
+
+You can bypass some length checks (e.g. len1 + len2) if the lengths are
+long enough.
+
+* How can one dump arbitrary memory using printf?
+
+print("%08x.%08x.%08x.%08x.|%s|")
+
+* How can printf be used to write to a memory address?
+
+%n allows you to write the length of the string (before %n) to the first
+argument.
+
+* What is the NX-bit defense?
+
+A bit sets a page of memory to be non-executable if 1. This prevents shellcode
+placed via buffer overflow to be executed.
+
+* What are the limitations of the NX-bit defense?
+
+- Some applications need executable heap (such as JIT compilers).
+- Does not defend against return-to-libc exploits.
+
+* What is ASLR?
+
+Address Space Layout Randomization. Mapping shared libraries to random
+addresses so that the attacker cannot hardcode address of functions.
+
+* What are other forms of randomization to protect against buffer overflow attacks other than ASLR?
+
+- Sys-call randomization, where you randomize sys-call ids.
+- Instruction set randomization.
+
+* What is JIT spraying?
+
+1. Force JIT to fill heap with executable shellcode.
+2. Point return pointer to sprayed area.
+
+* What is StackGuard?
+
+A runtime test for stack integrity. A canary is embedded into stack frames and
+their integrity is verified before the function is returned.
+
+* What are some types of stack canaries?
+
+Random: random string chosen at program startup, inserted into every stack frame.
+Terminator: Since string functions will not copy beyond a terminator, it'll
+stop string functions from overflowing.
+
+* What are the disadvantages of using StackGuard?
+
+- Program must be recompiled.
+- Performance: (8% for Apache)
+- Some stack smashing attacks leave canaries untouched.
+
+* What is PointGuard?
+
+StackGuard for the heap. Protects function pointers and setjmp buffers by
+encrypting them.
+
+* How does ProPolice protect against stack smashing attacks?
+
+It re-orders the stack (variables to highest part of stack frame.) Making
+it harder to corrupt stuff on the stack.
+
+* What is libsafe?
+
+A dynamically loaded library that intercepts calls to string functions and
+verifies that there is sufficient space in the stack frame. However,
+functions can still overwrite variables in between the buffer and the
+stack frame pointer.
+
+# Concolic Testing
+
+* What is soundness and completeness w.r.t error analysis?
+
+Soundness: If analysis reports an error: the program will contain an error.
+Completeness: If program contains error: analysis will report a warning.
+
+* How does an information-flow based fuzzer work?
+
+1. Tracks how input regions affect the state of the program.
+2. Fuzz input to test all program states.
+
+* How does symbolic analysis work?
+
+1. Run the program on "symbolic" inputs, and then convert the run into contraints.
+2. Use constraint solvers to generate concrete test inputs.
+
+* What is the architecture of modern SAT solvers?
+
+1. Propagate inferences due to unit clauses.
+2. Detect conflicts in assignment
+    1. Choose a variable and assign a value.
+    2. Keep doing until you're done or you get a conflict
+3. Compute assignments that lead to conflict and narrow search field.
+4. Go back to a non-conflicting assignment, repeat.
+
+* What makes SAT solvers "efficient"
+
+- Conflict-driven clause learning
+- Variable selection heuristics
+- Backjumping
+- Restarts
+
+* How can one break a substitution cipher?
+
+Analyze the frequency of letters and compare them to the frequency used in
+English text.
+
+* What is the formal definition of a symmetric cipher?
+
+A pair of efficient functions E and D over (K,M,C) such that
+
+E: K x M -> C
+D: K x C -> M
+
+and D(k, E(k, m)) = m
+
+* What is the definition of perfect secrecy?
+
+Pr[E(k, m0) = c] = Pr[Ek(k, m1) = c]
+
+Therefore, you can't tell what the plaintext is given only the ciphertext.
+
+* What is the downside of perfect secrecy?
+
+Any cipher that has perfect secrecy must have the key be as long as the
+message.
+
+* What is the main idea behind stream ciphers?
+
+Use a PRNG to generate the key for OTP.
+
+* What is the definition of predictability w.r.t PRNGs?
+
+A PRNG G is predictable if there is an efficient algorithm A such that if
+A is given i < n bits from G, it can guess the next bit output of G with
+non-negligibly higher than 50% chance.
+
+Pr[A(G(k))|1..i = G(k)|i+1] = 1/2 + e
+
+where e is non-negligible.
+
+* What is the definition of non-negligible?
+
+e is non-neglibible if there exists d such that e >= 1/(x^d) for infinitely
+many x.
+
+* What is the definition of advantage?
+
+An attacker guesses 1 if it thinks that the bits passed in are not random.
+
+The advantage, with respect to an attacker A and PRNG G, the probability that
+A guesses that G(k) is not random, versus the probability that A guesses that
+a random input is not random.
+
+|Pr[A(G(k)) = 1] - Pr[A(r) = 1]|
+
+This is a number between 0 and 1.
+
+* What is the definition of a secure PRNG?
+
+A PRNG is secure if for any efficient attacker, the advantage with respect to
+the attacker and the PRNG is negligible.
+
+* What is the definition of computationally indistinguishablity?
+
+Attackers guess 1 if they think the input came from P1.
+
+P1 and P2 are computationally indistinguishable if for all efficient attackers
+A
+
+|Pr[A(x from P1) = 1] - Pr[A(x from P2) = 1]| < negligible
+
+* What is the definition of semantic security?
+
+Send two messages, get back cipher text for one message.
+
+A cipher is semantically secure if for all efficient attackers A, the attacker
+cannot non-negligibly determine which message was encrypted and sent back.
+
+AdvSS(A, E) = negligible
+
+* What is the definition of the advantage function w.r.t semantic security?
+
+Let E be an encryption function from a cipher, let A be an attacker.
+
+Play a "game" where attacker sends two messages, and one of them is chosen
+to be encrypted by E and sent back.
+
+W0 = actual message 0, chosen 1. Pr[A(E(k, m0)) = 1]
+W0 = actual message 1, chosen 1. Pr[A(E(k, m1)) = 1]
+
+AdvSS(A, E) = | Pr[W0] - Pr[W1] |
