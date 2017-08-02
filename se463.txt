@@ -1,0 +1,584 @@
+# Misc
+
+* How does the practice of Software Engineering differ from Software Development?
+
+Software Engineering is about applying engineering principles to create software.
+Software Development is just about creating software.
+
+* What is the difference between a requirement and its corresponding specification?
+
+A requirement is just a condition or capability to be met, but a specification
+is a precise and verifiable expression of that requirement.
+
+Requirements come from the environment, but specifications come from the
+environment and system combination.
+
+# Requirements
+
+* What is some of the pain caused by bad requirements?
+
+1. Needing to rework code.
+2. Having unstable and changing requirements.
+3. Having not well-understood requirements, keeping team from focusing on
+most important features.
+
+* What is the value of having better requirements?
+
+1. Helps the team focus on the most critical features.
+2. Enables better project planning.
+3. Enables better testing.
+4. Improves team communication.
+5. Accelerates software development.
+
+* What is a software requirement?
+
+A capability, property, or constraint that must be met by a solution, for the
+solution to be acceptable.
+
+* What are 3 aides for changing requirements?
+
+1. Have a requirements baseline.
+2. Understand your business requirements.
+3. Keeping the project scope in focus.
+
+* What is the purpose of business requirements?
+
+To identify the primary benefits that a new system is expected to provide.
+
+* What are some examples of business requirements?
+
+Business opportunities, business objectives, success metrics, vision statement.
+
+* How does Agile keep scope creep in check?
+
+Prioritized requirements are kept in the backlog, and only a few requirements
+are worked on for a release.
+
+* What is a context diagram?
+
+A graphical representation of:
+
+- The boundary between the Work and external entities.
+- Information flows between them
+
+* What are business use cases?
+
+A decomposition of The Work into vertical slices to reduce complexity.
+
+- Represents some end-to-end functionality.
+- Triggered by some external event.
+- Captures a complete response to a triggering event.
+- (Ideally) orthogonal to each other.
+
+* When should you use actor generalization in a use-case diagram?
+
+When actors have a common interesting behaviour, you can factor out the
+common behaviour as an abstract actor.
+
+* What is <<include>> used for w.r.t use-case diagrams?
+
+To illustrate a sub use case that is used within multiple other use cases.
+To avoid repetition of the same steps in multiple use cases.
+
+* What is <<extend>> used for w.r.t use-case diagrams?
+
+For a sub use case to extend or replace the end of an existing use case.
+
+# Elicitation
+
+* What are some sources of requirements?
+
+Stakeholders, Execution environment, Current situation/problems, Requirements
+checklists, Previous systems, Similar systems, Existing documents.
+
+* What is a greenfield system? What is a brownfield system?
+
+Greenfield is a new product, while brownfield is an improvement on an existing
+product.
+
+* What is the idea behind artifact-based elicitation?
+
+To learn by studying documentation, systems, artifacts before asking for
+stakeholders' time.
+
+* What are some examples of artifact-based elicitation?
+
+- Document studies
+- Similar companies
+- Norms
+- Domain analysis
+- Requirements taxonomies
+
+* What is a requirements taxonomy? Give an example.
+
+A classification of requirements.
+
+e.g. PIECES: Performance, Information, Economy, Control, Efficiency, Services
+
+* What is the idea behind stakeholder-based elicitation?
+
+To acquire detailed information about the system-to-be that is problem specific
+or stakeholder specific.
+
+* What are some examples of artifact-based elicitation?
+
+- Stakeholder analysis
+- Questionnaires
+- Interviews
+- Observation
+- Task Demo
+- Ask suppliers
+- Domain workshop
+- Personas
+
+* What are interviews useful for?
+
+Asking targeted, stakeholder-specific questions.
+
+* Why are group interviews encouraged?
+
+- You get diverse views from different people.
+- Responses are richer because of synergy.
+- Can reveal conflicts between different groups of stakeholders
+- Reduces the spotlight on individuals.
+
+* When are questionnaires useful?
+
+When information has to be gathered from a large number of people, like users.
+
+* What is ethnographic analysis?
+
+Direct first-hand observation of user behaviour, "in the wild".
+
+* When are personas useful?
+
+When real users are not available or are too numerous to interview them all.
+
+* What is the idea behind model-based elicitation?
+
+To re-express the requirements in a different language, which can raise new
+questions.
+
+* What are some examples of model-based elicitation?
+
+- Modelling
+- Analysis patterns
+- Mockups and prototyping
+- Pilot experiments
+
+* What are two strategies for creating effective models?
+
+1. Restrict the amount of details we include.
+2. Do not restrict the scope of the work being modelled.
+
+* What is the idea behind creativity-based elicitation?
+
+To invent undreamed-of requirements that bring about innovative change and
+gives competitive advantage.
+
+* What are some examples of creativity-based eliciation?
+
+- Systemic Thinking
+- Brainstorming
+- Creativity workshop
+- Constraint relaxation
+
+# Conflict
+
+* What is a data conflict?
+
+Multiple conflicting understandings of an issue.
+
+* What is an interest conflict?
+
+Stakeholders have different goals or interests.
+
+* What is a value conflict?
+
+Stakeholders express different preferences.
+
+# Domain model
+
+* What is the mapping criterion w.r.t domain models?
+
+There is an original phenomenon that is mapped to the model.
+
+* What is the reduction criterion w.r.t domain models?
+
+The model reflects only a (relevant) selection of the original's properties.
+
+* What is pragmatic criterion w.r.t domain models?
+
+The model is usable in place of the original, for some purpose.
+
+* What is a domain model?
+
+A model of the operating environment of the Work under study.
+A graphical data dictionary of relevant terms and vocabulary used to describe
+the Work.
+
+* What are Larman's canonical conceptual classes?
+
+1. Descriptions of tings
+2. Catalogs
+3. Containers of things
+4. Things in a container
+5. Other collaborating systems
+6. Records of finance, work, contracts
+7. Financial instruments
+8. Schedules, documents, manuals
+
+* What are the three approaches that Larman recommends for finding domain entities?
+
+1. Refine an existing domain model
+2. Use a conceptual class category list
+3. Identify noun phrases in use cases and other docs
+
+* What is an attribute w.r.t domain models?
+
+A simple sub-part of an object.
+
+* What is an association w.r.t domain models?
+
+A representation of important relationships between two conceptual classes.
+
+* What is a role w.r.t domain models?
+
+One end of an association.
+
+* When should an association class if used w.r.t domain models?
+
+When a relationship has interesting attributes of its own.
+
+* What is an association qualifier w.r.t domain models?
+
+A special association attribute used at one end of an association to
+distinguish among the set of objects at the other end of the association.
+
+* How do you model temporal objects w.r.t domain models?
+
+Create a field that numbers the object (like an id).
+
+* What is a class scope attribute?
+
+An attribute whose value is changeable, but shared by all of the class's object
+instances. Denoted by an underline.
+
+# Workflow models
+
+* What is a workflow?
+
+A series of tasks that are organized to accomplish some business use case.
+
+* What is a scenario?
+
+One full execution path through a use case, listing only observable actions.
+
+* What is an alternative path w.r.t scenarios?
+
+A sub use case that achieves the main goal of a use case through a different
+intended sequence of actions.
+
+* What is an exception w.r.t scenarios?
+
+A sub use case that captures an unwanted but possible deviation.
+
+* What is an activity diagram?
+
+A UML model for expression the flow of control from one activity to another.
+
+* What is a dataflow diagram?
+
+A functional decomposition of the work, and the data dependencies between
+functions.
+
+# Prioritization
+
+* How do most companies prioritize their requirements?
+
+By value (the potential contribution to customer satisfaction) and cost.
+
+* What is the purpose of the Kano model?
+
+It is a method for grouping requirements based on customer perception.
+Allows one to select the requirements that deliver the greatest customer
+satisfaction.
+
+* What is the 100-Dollar test?
+
+Give stakeholders "100 dollars" to distribute among requirements.
+
+* What is the Analytic Hierarchy Process?
+
+A requirement prioritization technique that does pairwise comparisons of
+requirements to produce a relative ranking of requirements.
+
+# Risk Management
+
+* What is risk?
+
+An uncertain factor whose occurrence may result in some loss of satisfaction for
+some corresponding objective.
+
+* What is risk exposure?
+
+An expression of the degree of risk.
+
+RE = probability of occurrence * the cost of consequences.
+
+* What is Defect Detection and Prevention?
+
+1. Identify most critical requirements
+2. Identify potential risk
+3. Estimate the impact of each risk on each requirement
+4. Identify possible countermeasures
+5. Identify the most effective countermeasures.
+
+# Functional requirements
+
+* What is a user story?
+
+A short simple description of one thing that the user wants to be able to do.
+
+* What are the three C's of user stories?
+
+Card: Stories are written in the syntax "As a <role>, I want <something>, so
+that <benefit is achieved>".
+Conversation: Discussions with the product owner reveal details of the requiremetns
+Confirmations: Acceptance criteria.
+
+* Why are user stories good?
+
+- Easy for stakeholders to understand and remember.
+- Shifts the focus from written documentation to discussion
+- Encourages iterative development
+- Delays elicitation of requirements until just before development
+- Supports participatory elicitation
+
+* What is the EARS template?
+
+Easy Approach to Requirements Syntax
+A template for structuring the syntax of the one-sentence description of an
+atomic requirement.
+
+<optional precondition> <optional trigger> the <system name> shall
+<system response>
+
+* What is a ubiquitous EARS requirement?
+
+An invariant behaviour that should always hold.
+"The <system name> shall <system response>."
+
+* What is an EARS event-driven requirement?
+
+A requirement that applies when a triggering event is detected at the system
+boundary.
+"when <trigger> the <system name> shall <system response>."
+
+* What is an EARS state-driven requirement?
+
+A requirement that applies as long as the system is in a particular state.
+"while <state> the <system name> shall <system response>."
+
+* What is an EARS option requirement?
+
+A requirement when system behaviour is dependent on the presence of a particular
+feature.
+"where <feature is included> the <system name> shall <system response>."
+
+* What is an EARS unwanted event?
+
+"if <trigger>", then the <system name> shall <system response>."
+
+# State machines
+
+* What are the three parts of a state machine transition?
+
+1. event(args) - the input event/message that triggers the transition
+2. [condition] - a guard condition (no transition if guard is not true)
+3. /action - a simple action (e.g. variable assignment)
+
+* How does priority work in a state machine?
+
+The state machine smaller in the hierarchy gets the event.
+
+* What is history w.r.t state machines?
+
+A special state that designates the state that execution was in before it was
+last exited.
+
+* What is the difference between history and deep history w.r.t state machines?
+
+Deep history can go down multiple hierarchies. History would just restart the
+embedded state machines again.
+
+* What are some good style guides for state machines?
+
+- Use states to model modes of operation.
+- Use variables to model other information that affects the flow of control.
+- Fewer transitions are better.
+- Use concurrency to recognize the orthogonal aspects of the problem.
+
+# Specifications
+
+* What is a specification?
+
+A complete, precise, verifiable expression of requirements of a software or
+system solution
+
+* What is domain knowledge w.r.t specifications?
+
+Because we often cannot show that the specifications imply the requirements,
+we often need to assume some things about the environment (domain).
+
+* How do you derive specifications?
+
+1. Determine how the system will monitor the environment.
+2. Determine whether the requirement constrains environmentally controlled
+phenomena.
+
+# Quality requirements
+
+* What is a quality requirement?
+
+A description of extra constraints on what a constitutes an acceptable
+solution.
+
+* What are some types of quality requirements?
+
+- Performance
+- Reliability
+- Robustness
+- Adaptability
+- Security
+- Usability
+- Scalability
+- Efficiency
+- Accuracy/precision
+
+* What is a motherhood requirement?
+
+Expressions such as "reliable" where no one would explicitly ask of their
+opposite.
+
+* What is a fit criterion?
+
+A qualification of the extent to which a quality requirement must be met.
+e.g. "99% uptime".
+
+* What is the difference between richer fit criteria and the normal kind?
+
+The richer kind divides everything into "outstanding", "target" and "minimum".
+
+* What should you do if you cannot test the fit criteria before delivery?
+
+- Measure the attributes of a prototype.
+- Measure secondary indicators
+- Estimate a system's quality attributes
+- Deliver system and pay penalty if requirements are not met.
+
+* What is a Monte Carlo technique?
+
+Estimating an unknown quantity using a known quantity.
+
+# Prototyping
+
+* What is a prototype?
+
+A partial implementation constructor to enable customers/users/developers to
+learn more about a problem or its solution.
+
+* What does User Experience encompass?
+
+All aspects of a user's interaction with the company, its services and its
+products.
+
+* What is wireframing?
+
+A visual representation of a user interface, using only simple shapes.
+
+* What is a mockup?
+
+A sketch of the essence of a solution, in terms of screen contents and
+navigation among screens.
+
+# Validation
+
+* What is validation?
+
+"Are we building the right product?"
+
+* What is verification?
+
+"Are we building the product right?"
+
+* What are the goals of validation?
+
+Ensure that:
+- The specification captures the stakeholders' requirements
+- The customer/user is satisfied with the system
+- The developers understand the specification.
+
+* What should a validation criteria be?
+
+- Well-formed. (unambiguous, consistent, modifiable, verifiable)
+- Valid. (correct and complete)
+
+* How can you perform validation or verification?
+
+- Reviews
+- User Feedback
+- User Interviews
+- Walkthroughs
+- Formal Inspections
+- Simulation
+- Model checking
+- Safety Analysis
+
+# Estimation
+
+* What is an estimation?
+
+A prediction of how long a project will take or how much it will cost.
+
+* What is a target w.r.t estimation?
+
+A statement of a desirable business objective.
+
+* What is a commitment w.r.t estimation?
+
+A promise to deliver.
+
+* What can we do to meet our estimates?
+
+Control the project to meet the target.
+
+- Remove noncritical requirements
+- Redefine requirements
+- Upgrading staff.
+
+* What are some sources of estimation error?
+
+- Uncertainty about numerous details and decisions.
+- Omitted activities.
+- Optimism
+- Bias
+- Subjectivity
+
+* What are the biggest influences on estimates?
+
+- Project size
+- Kind of software
+- Personnel factors
+
+* What is Function Point Analysis?
+
+Generating more precise estimates based on product complexities.
+
+1. Estimate number of function points from the requirements
+2. Estimate code size from function points
+3. Estimate resources required.
+
+* What is a function point?
+
+The number of "things" needed in the project.
