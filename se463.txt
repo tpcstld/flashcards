@@ -582,3 +582,29 @@ Generating more precise estimates based on product complexities.
 * What is a function point?
 
 The number of "things" needed in the project.
+
+# Stakeholders
+
+* Who is a stakeholder?
+
+Anyone who has a stake in the ultimate success of our project.
+
+* What is the champion stakeholder?
+
+The person paying for the software to be built.
+
+* What is the customer stakeholder?
+
+A person who buys the software after its developed.
+
+* What is the user stakeholder?
+
+Experts on the Work being performed.
+
+* What is a domain expert?
+
+A person that knows the problem domain well.
+
+* What is a software engineer stakeholder?
+
+A technology expert. Estimates cost.
