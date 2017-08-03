@@ -294,3 +294,559 @@ key.
 
 Let F be a secure PRF.
 G(k) = F(k, 0) || F(k, 1) || F(k, 2) || ... is a secure PRNG.
+
+* What is the core idea behind DES?
+
+Use a series of PRFs in a Feistel network to create a PRP. DES is a 16-round
+Feistel network chain.
+
+* What are some of the rules for choosing S-boxes?
+
+- No output bit should be close to a linear function of the input bits.
+- S-boxes should be 4-to-1 maps
+
+* What is a problem with using only one input-output pair to perform exhaustive search for the DES key?
+
+Assuming that DES is an ideal cipher (2^56 random invertible functions), then
+there is only a 99.5% chance that there is at most 1 key that corresponds to the
+input-output pair.
+
+* What is a common strategy for strengthening DES against exhaustive search?
+
+Doing DES 3 times with different keys. (3DES)
+
+* Why does double DES not provide any benefit?
+
+Because one can do a meet-in-the-middle attack to narrow the search surface to
+2^56.
+
+* What is the meet-in-the-middle attack for DES?
+
+1. Build a table mapping keys to their encryption.
+2. For each key, see if the decryption matches any decryption values.
+
+If there is a match, then there is a high chance the two keys are the two
+used in the double DES.
+
+* What are two ways of attacking security primitive implementations?
+
+1. Side channel attacks, such as looking at the power usage of the CPU.
+2. Exploiting bugs in the implementation.
+
+* What is the architecture of AES?
+
+Each round of AES is using a Substitution-Permutation network.
+
+* What is the best related key attack on AES-256?
+
+Given 2^99 input/output pairs from 4 related keys, you can recover the keys
+in 2^99 time.
+
+* How can you transform a PRNG into a PRF?
+
+Given a PRNG G: K -> K^2, you can create F(k) = G(G(k)[0]) || G(G(k)[1]) which
+gives you K^4 output values. You can recursively do this to get an arbitrary
+number of output values.
+
+* What is the GGM PRF?
+
+Given an input x and a PRNG G: K -> K^2. You can create a PRF F: K x 01^n -> K
+via rounds of G(output of last round)[x_i] for the i-th round.
+
+* What is the Luby-Rackoff theorem?
+
+Given a secure PRF: K x 01^n -> 01^n, a 3 round Feistel network using that PRF
+is a secure PRP F: K^3 x 01^2n -> 01^2n.
+
+# Block ciphers: Modes of operations
+
+* What is the game we play to prove that a PRF is secure?
+
+1. Challenger chooses a key for the PRF.
+2. Attacker sends in any number of messages to be encrypted.
+3. The messages are encrypted either by a random function, or by the PRF.
+4. The attacker guesses which function encrypted the messages.
+
+Advantage is defined as the absolute difference in probability between the
+attacker guessing 1 (random function) when the actual value was 0 (PRF) and 1.
+
+Adv[A,F] = |Pr[EXP(0) = 1] - Pr[EXP(1) = 1]|
+
+The PRF is secure if the advantage is negligible.
+
+* What is the game we play to prove that a PRP is secure?
+
+A similar game to what we play to prove a PRF is secure, just instead we
+choose a random permutation to use, or the PRP.
+
+* Is a secure PRP always a secure PRF?
+
+No, since the domain of Funs is bigger than Perms[X, X].
+
+* What is the PRF switching lemma?
+
+Let E be a PRP over (K, X). For any q-query adversary A:
+
+|AdvPRF[A, E] - AdvPRP[A, E]| < (q^2)/(2|X|)
+
+* Why is the Electronic Code Book method an incorrect use of a PRP?
+
+Because two blocks with identical content will result in an identical output.
+This means that ECB mode is not semantically secure.
+
+* What is the deterministic counter mode? What is its advantage bound?
+
+Encrypt the first block with xor F(k, 0), the second with xor F(k, 1), and so
+on...
+
+AdvSS[A, E] = 2 AdvPRF[B, F]
+
+* What is the definition of semantic security for many-time key?
+
+Play the same game in the one-time key case, except that the attacker is now
+able to play the game multiple times (while the key remains the same). The
+cipher is semantically secure if the attacker can never get a non-negligible
+advantage.
+
+* How does randomized encryption allow for key reuse?
+
+The ciphertext will be different given two instances of the same plaintext.
+This only works if the selection of random bits never repeats.
+
+* How does nonce-based encryption allow for key reuse?
+
+A secret nonce is used to mutate the ciphertext in each encryption, so that the
+ciphertext is different for the same plaintext.
+
+* What are two ways to choose a nonce?
+
+1. Use a counter. This has the advantage that only the starting state needs to
+be sent.
+2. Random.
+
+* What is the definition of the CPA security for nonce-based encryption?
+
+Play the same game as many-key, except the attacker also sends a nonce along
+with the two messages. However, the nonce has to be different everytime.
+
+* How does Cipher Block Chaining work?
+
+You start out with an Initialization Vector, which is sent along with the
+message. For each block, the ciphertext is the encryption of (the message block
+xor IV). The ciphertext is reused as the IV for the next block.
+
+* What is the CPA advantage of CBC mode?
+
+For the input domain X, for any L (length) > 0, for a q-query adversary
+
+AdvCPA[A, E] <= 2 * AdvPRP[B, E] + 2q^2L^2/ |X|
+
+* Why do we have to change the key every so often in CBC mode?
+
+Because q^2L^2 is starting to approach |X|, which means that it will eventually
+be insecure if we keep using the same key.
+
+* What happens when the attacker can predict the IV in CBC mode?
+
+The scheme is insecure due to the following attack:
+
+1. Previously attacker gives a message of all 0s, and gets back
+(IV1, E(K, IV1)), since 0 xor IV1 = IV1.
+2. Attacker can predict the IV for the new round of the game.
+3. Attacker gives message IV xor IV1.
+
+Now, the attacker can check if the ciphertext was the same as E(k, IV1), since
+IV xor IV xor IV1 = IV1. This gives the attacker a non-negligible advantage!
+
+* In CBC, what happens if the last block is not long enough?
+
+You pad the end of the block. If no padding is required, you add a dummy block.
+
+* How does the Counter Mode work w.r.t block ciphers?
+
+1. Choose a IV (random or nonce).
+2. For each block, the ciphertext = F(k, IV + i) xor message block.
+
+* What is the advantage of the counter mode over CBC?
+
+The counter mode can be parallelized.
+
+* What are the two ways of choosing the IV for the counter mode?
+
+1. Random.
+2. Nonce, but you want to choose only the upper half of the nonce to prevent
+reuse. The lower half starts at 0 everytime.
+
+* What is the CPA advantage of randomized counter mode?
+
+For the input domain X, for any L (length) > 0, for a q-query adversary
+
+AdvCPA[A, E] <= 2 * AdvPRP[B, E] + 2q^2L/ |X|
+
+This is better than CBC!
+
+# Side channel attacks
+
+* What is the basic idea of side-channel analysis?
+
+Bypass the mathematical security of the cryptosystem by observing artifacts from
+its implementation. The hope is that the artifacts are correlated with the
+secret data.
+
+* When are side-channel attacks usually suitable?
+
+When the attacker has physical access to the target's computer.
+
+* What are some typical side-channels?
+
+- Timing
+- Power consumption
+- Electromagnetic emanations
+- Sound
+- Heat
+- Cache
+
+* What causes timing attacks to be possible?
+
+Sometimes, the function runtime depends on the data inputted, this can causes
+leaks. (e.g. string comparisons may finish early)
+
+# Message integrity
+
+* What is the mathematical definition of a Message Authentication Code?
+
+A pair of functions (S, V) defined over (K, M, T) such that:
+
+- S(k, m) outputs t in T
+- V(k, m, t) outputs yes or no.
+
+* What is a chosen message existential forgery attack w.r.t MACs?
+
+Given previous valid message-tag pairs, construct a new valid message-tag pair.
+
+* What is the game we play to analyze secure MACs? How is advantage defined?
+
+1. Attacker gives a list of messages.
+2. Challenger responds with a list of corresponding tags.
+3. Attacker gives a new message-tag pair.
+
+AdvMAC[A, I] = Probability that the new message-tag pair passes validation.
+
+* How can you use a secure PRF as a secure MAC?
+
+Given PRF F: K x X -> Y.
+
+S(k, m) = F(k, m)
+V(k, m, t) = yes iff t = F(k, m)
+
+If 1/|Y| is negligible, then this is a secure MAC.
+
+AdvMAC[A, (S, V)] <= AdvPRF[B, F] + 1/|Y|
+
+* What happens if the tag is too short w.r.t MACs?
+
+Its not secure, since an attacker can have a non-negligible change at guessing
+the tag.
+
+* How does CBC-MAC work?
+
+1. Get two keys, k and k1.
+2. Set the IV to all zeros.
+3. Run the message through CBC (with key k), discarding all but the last
+ciphertext block.
+4. Output F(k1, ciphertext block)
+
+* How does NMAC work?
+
+1. Get two keys, k and k1.
+2. For the first message block, compute F(k, m)
+3. Use F(k, m) as the key for the second block, repeat through all message
+blocks.
+4. Pad the final key to the same size as the message block, and return
+F(k1, k||pad)
+
+* Why do we need a last encryption step for CBC-MAC and NMAC?
+
+To prevent existential forgery attacks.
+
+* What is AdvPRF for CBC-MAC?
+
+AdvPRF[A, F] <= AdvPRP[B, F] + 2q^2 / |X|
+
+* What is AdvPRF for NMAC?
+
+AdvPRF[A, F] <= q * L * AdvPRP[B, F] + q^2 / 2|K|
+
+* Why can't you padding the end of a message with all zeros w.r.t MACs?
+
+Because then if the attacker has the tag for the message m, then the attacker
+would also have a tag for the message m||0.
+
+* How does PMAC work?
+
+1. Get two keys k, k1.
+2. Select P(k, i) to be an easy to compute function w.r.t i.
+3. For each message block, calculate F(k1, P(k, 0) xor message)
+4. xor all the results.
+5. Return F(k1, result) as the tag
+
+* What is the AdvPRF of PMAC?
+
+AdvPRF[A, F] <= AdvPRF[B, F] + 2q^2L^2/ |X|
+
+* What is the one-time MAC game (and advantage definition)?
+
+1. Attacker sends a message.
+2. Challenger gives the tag of the message
+3. Attacker sends a new message-tag pair.
+
+Adv1MAC[A, I] = Pr(message-tag pair is valid)
+
+* What is the Carter-Wegman MAC?
+
+Given (S, V), a secure one-time MAC and F to be a secure PRF.
+
+CW((k1, k2), m) = (r, F(k1, r) xor S(k2, m))
+
+There is a theorem that states that CW is secure in this situation.
+
+# Hash functions
+
+* When is a hash function collision resistant?
+
+For all efficient algorithms, the chance that an attacker can output a
+collision for the hash function is negligible.
+
+* How can you create a secure MAC from a collision resistant hash?
+
+Given a secure MAC for short messages S and a collision resistant hash
+function H.
+
+S1(k, m) = S(k, H(m))
+V1(k, m, t) = V(k, H(m), t)
+
+* What is a generic attack on collision resistant hash functions?
+
+By leveraging the birthday paradox, you're likely to find a collision for an
+n-bit hash by checking 2^(n/2) random messages.
+
+* What is the concept of the Merkle-Damgard iterated construction?
+
+Hash a large message with a compression function h: T x X -> T by having an
+initial IV and then using the hash of each message block and IV as the IV for
+the next round.
+
+If the compression function is collision resistant then so is the construction.
+
+* How do you create a compression function from a block cipher?
+
+Let (E, D) be a block cipher.
+
+Use the Davies-Meyer construction:
+
+h(H, m) = E(m, H) xor H
+
+* Why is hashing the key and message not secure enough to be a MAC?
+
+Since you can do a length extension attack:
+
+Given m and H(k || m), you can compute H(k || m || PB || w) for any w.
+
+* What is HMAC?
+
+Choose opad, k and ipad randomly. Let H be a hash function.
+
+S(k, m) = H(k xor opad || H(k xor ipad || m))
+
+* What is a possible timing attack on verifying MACs?
+
+If "equals" is implemented as byte-by-byte comparision, then:
+
+1. Query server with random tag.
+2. Loop over all possible first bytes and query server.
+3. Stop when verification takes a bit longer than the random tag.
+
+At this point, you have found the first few bytes of the MAC.
+
+4. Repeat until all byte are found.
+
+# Diffie-Hellman
+
+* What is a problem with key management?
+
+When there are a lot of people in a network, it becomes difficult to manage
+keys between every two people in the network.
+
+* How does a trusted third party mitigate the problem with key managment?
+
+Each person in the network only has a key with the third-party. When two people
+want to communicate, we can securely get a temporary key for the conversation.
+
+* What attacks do trusted third parties not protect against?
+
+Replay attacks. An eavesdropper can save and replay previously sent messages.
+
+* How do Merkle puzzles work?
+
+1. Alice generates n puzzles that take ~ O(n) to complete. Each puzzles gives
+the output of (x_i, k_i). Alice sends all puzzles to Bob.
+2. Bob chooses a random puzzle to solve, gets (x_i, k_i). Bob sends x_i back to
+Alice.
+3. Alice finds corresponding k_i, the key.
+
+Any eavesdropper would need O(n^2) operations to find the key.
+
+* How does Diffie-Hellman work?
+
+1. Fix a large prime p
+2. Fix an integer g in {1..p}
+3. Alice chooses a random a in {1..p-1}
+4. Alice sends Bob g^a mod p
+5. Bob chooses a random b in {1..p-1}.
+6. Bob sends Alice g^b mod p
+
+The key is g^ab mod p. This is hard to obtain from just looking at g^a and g^b.
+
+* How is Diffie-Hellman vulnerable to man-in-the-middle attacks?
+
+The attacker is able to replace a and b with values they created. However, the
+attacker must now be responsible for relaying all messages between each other.
+
+* What is the mathematical definition for a public key encryption scheme?
+
+(G, E, D) such that:
+
+G is a randomized algorithm that outputs a key pair (pk, sk).
+E(pk, m) is a randomized algorithm that takes m and outputs c.
+D(sk, c) is a deterministic algorithm that takes c and outputs m.
+
+D(sk, E(pk, m)) = m
+
+* What is the semantic security game (and advantage definition) for public key encryption?
+
+1. Challenger sends public key to attacker.
+2. Attacker sends two messages.
+3. Challenger encrypts one message and sends it back.
+
+AdvSS[A, E] = |Pr[EXP(0)=1] - Pr[EXP(1)=1]|
+
+* What's a naive key exchange algorithm using public key encryption?
+
+1. Alice sends pk to Bob
+2. Bob chooses a random secret x, and sends E(pk, x) to Alice
+3. Alice can decrypt D(sk, E(pk, x)) = x, to get the secret.
+
+* How is the naive public key exchange algorithm vulnerable to man-in-the-middle?
+
+Attacker can substitute Alice's pk message with another pk.
+Attacker can then decode the secret and reencrypt when sending it back to Alice.
+
+# Number Theory
+
+* How can the GCD of two numbers be found efficiently?
+
+Using the extended Euclidean algorithm.
+
+* Which elements have an inverse in Z_N?
+
+The elements i which satisfy gcd(N, i) = 1.
+
+* How can the inverse of a number (assuming it exists) in Z_N be found efficiently?
+
+Using the extend Euclidean algorithm.
+
+* What is a lemma of the chinese remainder theorem?
+
+a = b mod pq iff a = b mod p and a = b mod q
+
+# RSA
+
+* How does RSA work?
+
+1. Pick two large primes p and q.
+2. Calculate (p-1)(q-1)
+3. Find prime pk from [3, (p-1)(q-1)] that has gcd(pk, (p-1)(q-1)) = 1
+4. Find inverse of pk mod (p-1)(q-1) via EEA.
+
+E(pk, m) = m^pk mod pq
+D(sk, c) = c^sk mod pq
+
+* Why is RSA not that efficiently?
+
+Because exponentiation of large numbers takes a long time.
+
+* How do digital signatures work?
+
+Alice encrypts a message with her secret key to prove that she endorses the
+message.
+
+* What are the comparisons of Diffie-Hellman vs RSA for key exchange?
+
+- DH is better for perfect forward secrecy because it's more efficient for
+producing transient keys quickly so that more connections can be established
+in the same amount of time.
+
+- DH is used for ephemeral keys, while RSA is used for long-term keys in SSL.
+
+# Advanced RSA
+
+* What is the game w.r.t. Chosen Ciphertext Attacks (CCA1) in pk encryption?
+
+1. Challenger sends pk to attacker.
+2. Attacker can send any amount of ciphertext, and the challenger will decrypt it.
+3. Attacker sends two messages (cannot be already seen)
+4. Challenger encrypts one of them and sends it back.
+
+AdvCCA[A, E] = |Pr[EXP(0) = 1] - Pr[EXP(1) = 1]|
+
+* What the mathematical definition of a trapdoor function?
+
+G(): Randomized algorithm that outputs pk and sk
+F(pk, .): Deterministic algorithm that defines a function X -> Y
+F-1(sk, .): Defines a function Y -> X that inverts F.
+
+* What is a secure trapdoor function?
+
+(G, F, F-1) is secure if F(pk, .) is a "one-way" function. That is F(pk, .) can
+be evaluated easily, but cannot be inverted easily without the secret key.
+
+* How can you get public key encryption from trapdoor functions?
+
+Let F be a one-way function, (E_s, D_s) be a symmetric encryption.
+
+E(pk, m):
+
+1. Randomly choose x from X
+2. Compute hash(x)
+3. Return (F(pk, x), E_s(hash(x), m))
+
+D(sk, (y, c)):
+
+x = F-1(sk, y)
+m = D_s(H(x), c)
+
+* What is an incorrect use of a trapdoor function?
+
+Encrypting by applying the trapdoor function directly to the plaintext.
+
+* What is PKCS1 v1.5?
+
+Message is prepended with 02, then random bits, then FF before encryption.
+
+* Why is PKCS1 v1.5 insecure?
+
+Because the Baby Bleichenbacher attacker can be used to get the plaintext from
+the ciphertext in a chosen ciphertext attack.
+
+* What is currently the best approach for inverting the RSA function?
+
+1. Factor N
+2. Compute e-th roots modulo p and q.
+
+* What happens if you use a small private key in RSA?
+
+RSA becomes insecure since you can extract from (N, e) easily (easier).
+
+* How can you speed up RSA?
+
+Use a low public exponent.
