@@ -255,3 +255,42 @@ W0 = actual message 0, chosen 1. Pr[A(E(k, m0)) = 1]
 W0 = actual message 1, chosen 1. Pr[A(E(k, m1)) = 1]
 
 AdvSS(A, E) = | Pr[W0] - Pr[W1] |
+
+# Block ciphers
+
+* What is a block cipher?
+
+A pair of functions E and D that take n bits of input and a k-bit key to output
+n bits of ciphertext.
+
+* What are two block ciphers and their input and key sizes?
+
+3DES: n=64 bits, k=168 bits
+AES:  n=128 bits, k=128, 192, 256 bits
+
+* What is the architecture of any block cipher?
+
+The plaintext is passed into a series of (identical) rounds that mutate the
+data. The ciphertext is the output of the final round.
+
+* What is a Pseudo Random Function?
+
+A function K x X -> Y that can be evaluated efficiently.
+
+* What is a Pseudo Random Permutation?
+
+A pseudo random function that
+
+1. Can be evaluated by an efficient deterministic algorithm
+2. One-to-one
+3. Can be efficiently inverted.
+
+* When is a PRF secure?
+
+If a random function from X to Y is indistinguishable from the PRF with a random
+key.
+
+* How can a secure PRF be used as a secure PRNG?
+
+Let F be a secure PRF.
+G(k) = F(k, 0) || F(k, 1) || F(k, 2) || ... is a secure PRNG.
