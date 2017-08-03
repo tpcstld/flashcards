@@ -18,6 +18,8 @@ A potential violation of security.
 
 * What the definition of an attack?
 
+idk
+
 # Basic Control Hijacking
 
 * What is the attacker's goal in a control hijacking attack?
@@ -123,7 +125,8 @@ encrypting them.
 * How does ProPolice protect against stack smashing attacks?
 
 It re-orders the stack (variables to highest part of stack frame.) Making
-it harder to corrupt stuff on the stack.
+it harder to corrupt local pointers.
+Also, it implements stack canaries.
 
 * What is libsafe?
 
@@ -136,8 +139,8 @@ stack frame pointer.
 
 * What is soundness and completeness w.r.t error analysis?
 
-Soundness: If analysis reports an error: the program will contain an error.
-Completeness: If program contains error: analysis will report a warning.
+Soundness: If program contains error: analysis will report a warning.
+Completeness: If analysis reports an error: the program will contain an error.
 
 * How does an information-flow based fuzzer work?
 
