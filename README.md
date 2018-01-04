@@ -15,6 +15,13 @@ Press `<Enter>` to get the next flashcard.
 An online version of the flashcards program can be found at [tpcstld.me/fc](http://tpcstld.me/fc).
 However, support is not guaranteed.
 
+## Vim Syntax Highlighting
+
+`quiz.vim` contains some basic VIM syntax highlighting for the `.quiz` files.
+
+You can install it by copying `quiz.vim` to your `.vim/syntax` folder and
+running `:set syntax=quiz` after loading the quiz file.
+
 ## Contributions
 
 If you're taking a course with me, pull requests are welcome!
