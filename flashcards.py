@@ -6,8 +6,10 @@ Each line starting with a '*' symbol is treated as the start of a new question.
 Each line starting with a '#' symbol is treated as a comment.
 Otherwise, the line is treated as part of the answer to the previous question.
 
-If the UNIQUE constant is truthy, no question will be repeated.
-If the ENABLE_COLORS constant is truthy, terminal colors will be used.
+If the "unique" option is enabled, no question will be repeated.
+If the "colors" option is enabled, terminal colors will be used.
+If the "jeopardy" proportion is given, a specified proportion of questions will
+be given answer-first.
 
 ==== Caveats ===================================================================
 
@@ -46,10 +48,7 @@ No line in an answer can start with '*' or '#'.
 """
 import random
 import sys
-
-# Options
-UNIQUE = True
-ENABLE_COLORS = True
+import argparse
 
 class bcolors:
     HEADER = '\033[95m' # Only this really works.
@@ -85,38 +84,62 @@ def gen_cards(data):
 
     return flashcards
 
-def add_color(text, color):
-    if not ENABLE_COLORS:
+def add_color(text, color, args):
+    if not args.colors:
         return text
 
     return color + text + bcolors.ENDC
 
-def main():
-    if len(sys.argv) < 2:
-        print "Usage:", sys.argv[0], "flashcards_file.txt"
-        return
+def parse_args():
+    parser = argparse.ArgumentParser(description="Flashcards")
+    parser.add_argument("--no-unique", dest="unique", action="store_false",
+            help="Repeat questions")
+    parser.add_argument("--no-colors", dest="colors", action="store_false",
+            help="Disable terminal colors")
+    parser.add_argument("--jeopardy", type=str, default="0",
+            help="Proportion of questions to be read answer-first.")
 
-    file_name = sys.argv[1]
+    parser.add_argument("file", type=str, help="Path to flashcards file")
+    parser.set_defaults(unique=True, colors=True)
+    return parser.parse_args()
+
+def is_jeopardy(args):
+    threshold = float(args.jeopardy)
+    return random.random() <= threshold
+
+def main():
+    args = parse_args()
+
+    file_name = args.file
     with open(file_name, "r") as data:
         cards = gen_cards(data)
 
     left = [x for x in xrange(0, len(cards))]
     random.shuffle(left);
     while left:
-        if UNIQUE:
+        if args.unique:
             choice = left.pop()
         else:
             choice = random.randrange(0, len(cards))
 
-        if UNIQUE:
+        if args.unique:
             questions_left = \
                 "(" + str(len(cards) - len(left)) + "/" + str(len(cards)) + ")"
         else:
             questions_left = ""
-        print add_color("---------- " + questions_left, bcolors.FAIL)
-        print cards[choice][0].strip()
-        raw_input() # Wait for user to press enter.
-        print add_color(cards[choice][1].strip(), bcolors.HEADER)
+
+        if is_jeopardy(args):
+            question_text = cards[choice][1].strip()
+            answer_text = cards[choice][0].strip()
+        else:
+            question_text = cards[choice][0].strip()
+            answer_text = cards[choice][1].strip()
+
+        print add_color("---------- " + questions_left, bcolors.FAIL, args)
+        print question_text
+        # Wait for user to press enter.
+        raw_input()
+        print add_color(answer_text, bcolors.HEADER, args)
 
 if __name__ == '__main__':
     try:
