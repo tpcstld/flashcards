@@ -14,3 +14,225 @@ personality.
 
 A way of learning about the world through collecting observations, developing
 theories to explain them, and using theories to make predictions.
+
+* What is a hypothesis?
+
+A testable prediction about processes that can be observed and measured.
+
+* What is a pseudoscience?
+
+An idea that is present as science but does not actually utilize basic
+principles of scientific thinking of procedure.
+
+* What is a theory?
+
+An explanation for a broad range of observations that also generates new
+hypotheses and integrates numerous findings into a coherent whole.
+
+* What is the biopsychosocial model?
+
+A means of explaining behaviour as a product of biological, psychological, and
+sociocultural factors.
+
+* What are some biological influences?
+
+Brain structures, drugs.
+
+* What are some psychological influences?
+
+Memories, emotions, personalities.
+
+* What are some socialcultural influences?
+
+Family, peers, culture.
+
+* What is scientific literacy?
+
+The ability to understand, analyze, and apply scientific information.
+
+* What are the 6 ways to develop critical thinking?
+
+1. Be curious.
+2. Examine the nature and source of the evidence.
+3. Examine assumptions and biases.
+4. Avoid overly emotional thinking.
+5. Tolerate ambiguity.
+6. Consider alternative viewpoints and interpretations.
+
+* What is the principle of parsimony?
+
+The simplest of all competing explanations should be the one we accept.
+
+* What is empricism?
+
+A philosophical tenet that knowledge comes through experience.
+
+* What is determinism?
+
+The belief that all events are governed by lawful, cause-and-effect
+relationships.
+
+* What were the Greek's four temperaments:
+
+Sanguine (blood): Impulsive, pleasure-seeking, charismatic
+Choleric (yellow bile): Ambitious, energetic, aggressive
+Melancholic (black bile): Independent, perfectionistic, introverted
+Phlegmatic (phlegm): Quiet, relaxed, content with life
+
+* What does zeitgeist refer to?
+
+A general set of beliefs of a particular culture at a specific time in history.
+
+* What is materialism?
+
+The belief that humans are composed exclusively of physical matter.
+
+* What is dualism?
+
+The belief that there are properties of humans that are not material.
+
+* What is psychophysics?
+
+The study of the relationship between the physical world and the mental
+representation of that world.
+
+* What is clinical psychology?
+
+The field that concentrates on the diagnosis and treatment of psychological
+disorders.
+
+* What is the idea of brain localization?
+
+That certain parts of the brain control specific mental abilities and
+personalities.
+
+* What is psychoanalysis?
+
+The approach that attempts to explain how behaviour and personality and
+influenced by unconscious processes.
+
+* What is the nature/nurture relationship?
+
+The inquiry into how heredity and environment influence behaviour and mental
+processes
+
+* What is empiricism?
+
+The belief that all knowledge is based on experience derived from the senses.
+
+* What is functionalism?
+
+The study of the purpose and function of behaviour and conscious experience.
+
+* What is evolutionary psychology?
+
+The approach that interprets and explains modern human behaviour in terms of
+forces acting upon our distant ancestors.
+
+* What is structualism?
+
+The attempt to analyize conscious experience by breaking it down to basic
+elements, and understand how those elements work together.
+
+* What is behaviourism?
+
+The approach that studied only observable behaviour, with little reference to
+mental events or instincts.
+
+* What is humanistic psychology?
+
+The approach that focuses on each person's freedom to act and rational thought.
+
+* What is Hebb's Law?
+
+The idea that memory is related to cellular activity.
+
+* What is gestalt psychology?
+
+The approach where psychologists need to focus on the whole of perception and
+experience, rather than its parts.
+
+* What is cognitive psychology?
+
+An approach that focuses on memory, thinking, and language.
+
+* What is social psychology?
+
+The study of the influence of other people on our behaviour.
+
+* What is personality psychology?
+
+The study of how different personality characteristics can influence how we
+think and act.
+
+* What is cross-cultural psychology?
+
+The field that draws comparisons about individual and group behaviour among
+cultures.
+
+* What are the 5 characteristics of quality scientific research?
+
+1. It is based on measurements that are objective, valid, and reliable.
+2. It can be generalized
+3. It tried to reduce bias.
+4. It is made public.
+5. It can be replicated.
+
+* When is a measurement objective?
+
+When it is the same across instruments and observers.
+
+* What is a variable?
+
+An objective, concept, or event being measured.
+
+* What is an operational definition?
+
+A statement that describes the procedures and specific measures used to record
+observations.
+
+* What does validity refer to w.r.t measurements?
+
+The degree to which an instrument or procedure actually measures what it claims
+to measure.
+
+* When is a measurement reliable?
+
+When it provides consistent and stable answers across multiple observations
+and points in time.
+
+* What is test-retest reliability?
+
+Whether scores are consistent between test sessions.
+
+* What is alternate-forms reliability?
+
+Whether different forms of the same test produce the same results.
+
+* What is inter-rater reliability?
+
+Whether different raters agree on the measurements.
+
+* What is generalizability?
+
+The degree to which one set of results can be applied to other situations.
+
+* What is the population w.r.t research?
+
+The group that researchers want to generalize about.
+
+* What is a sample w.r.t research?
+
+A select group of population members.
+
+* What is a random sample?
+
+Every individual in the population has an equal chance of being included.
+
+* What is a convenience sample?
+
+Samples of individuals who are the most readily available.
+
+* What is ecological validity?
+
+Results of a study can be applied to/repeated in the natural environment.
