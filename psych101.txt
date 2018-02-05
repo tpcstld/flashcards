@@ -236,3 +236,286 @@ Samples of individuals who are the most readily available.
 * What is ecological validity?
 
 Results of a study can be applied to/repeated in the natural environment.
+
+* What is the Hawthorne effect?
+
+Behaviours sometimes change as a result of being observed.
+
+* What are demand characteristics?
+
+Inadvertent cues given off that provide information about how participants are
+expected to behave.
+
+* What is a placebo effect?
+
+A measurable and experienced improvement in health that cannot be attributed to
+medication or treatment.
+
+* What is anonymity w.r.t research?
+
+Individual's responses cannot be linked back.
+
+* What is confidentiality w.r.t research?
+
+Results will only be read by the researchers.
+
+* What is a single-blind study?
+
+Participants do not know the true purpose of the study, or do not know which
+type of treatment they are receiving.
+
+* What is a double-blind study?
+
+Neither participants nor researchers knows the exact treatment for an
+individual.
+
+* When is a hypothesis falsible?
+
+When it is precise enough that it could be proven false.
+
+* What is anecdotal evidence?
+
+An individual story or testimony that is used to make a claim as evidence.
+
+* What is data selection bias?
+
+Choosing only data that fits ones views.
+
+* What is an appeal to authority?
+
+The belief in an expert's claims even with no supporting data.
+
+* What is an appeal to common sense?
+
+A claim that appears to be sound, but lacks supporting scientific evidence.
+
+* What is a case study?
+
+An in-depth report about the details of a specific case.
+
+* What is a naturalistic observation?
+
+Unobtrusively observing and recording behaviour in the subject's natural
+environment.
+
+* What is self-reporting?
+
+A method in which responses are providing by the people being studied.
+
+* What does correlational research involve?
+
+Measuring the degree of association between two or more variables.
+
+* What is the third variable problem?
+
+The possibility that a third variable is actually responsible for a
+correlation.
+
+* What is a random assignment?
+
+A technique for dividing samples into two or more groups in which
+participants are equally likely to be placed in any condition of the experiment.
+
+* What is a confounding variable?
+
+A variable outside of the researcher's control that might affect the results.
+
+* What is a between-subjects design?
+
+Different people get exposed to different experiments.
+
+* What is a within-subjects design?
+
+People get exposed to all experiments.
+
+* What is quasi-experimental research?
+
+Groups compared are selected based on predetermined characteristics.
+
+* What is an research ethics board?
+
+A committee of researchers charged with the protection of human participants.
+
+* What is deception w.r.t research?
+
+Misleading participants of the true topic or hypothesis.
+
+* Why should researchers store their data after they already published?
+
+Because others might want to reproduce or reinterpret their work.
+
+* What is an example of scientific misconduct?
+
+Faking test results.
+
+* What is the ABCs of psychology?
+
+Affect (feelings, emotion, mood)
+Behaviour (actions, responses, performance)
+Cognition (thoughts, decisions, attitudes)
+
+* What is the basic model of psychology?
+
+Environment x Person => Behaviour => Outcomes
+
+* What is psychodynamic psychology?
+
+The investigation of subconscious forces in the person.
+
+* What are the goals of science?
+
+To understand, explain, predict, and control the world.
+
+* What is the theory refinement process?
+
+Develop theory, form hypothesis, carry out observations, analyze results,
+refine theory.
+
+* What are the 3 criterias of science?
+
+1. Empirical
+2. Replicable
+3. Falsifiable
+
+# Developmental Psychology
+
+* What is developmental psychology?
+
+The study of human characteristics across the lifespan.
+
+* What are the two ways to tracking change over time?
+
+Cross-sectional: Different people of different age.
+Longitudinal: Follow people over time.
+
+* What are cohort effects?
+
+Differences due to age periods.
+
+* What the stage theory?
+
+Development happens in a series of stages, transitions are big.
+
+* What is a sensitive period w.r.t development?
+
+A period where exposure to a certain type of stimulation is needed for
+normal development of an ability.
+
+* What are the 3 stages before birth?
+
+Germinal. 0-2wks. The zygote is spliting.
+Embryonic. 2-8wks. Emybro develops organs.
+Fetal. 8-birth. Fetus develops muscles and organs begin to specialize.
+
+* What are 3 reflexes that babies have?
+
+Rooting: To suck.
+Moro: To hatch on when falling.
+Grasping: To hold on with their hands.
+
+* What are the 3 things that happen to a baby's brain after birth?
+
+1. Myelination of axons.
+2. Synaptogensis, lots of connections between neurons are formed
+3. Synaptic pruning, useless connections are pruned.
+
+* What is cognitive development?
+
+The study of changes in memory, thought, and reasoning processes that occur
+throughout the lifespan.
+
+* What is assimilation?
+
+People fit new information into the belief systems they already possess.
+Conservative process.
+
+* What is accommodation?
+
+People modify their belief structures based on experience.
+Creative process.
+
+* What are Piaget's 4 stages of cognitive development?
+
+1. Sensorimotor (0-2 years)
+2. Preoperational (2-7 years)
+3. Concrete operational (7-11 years)
+4. Formal operational (11 years-adult)
+
+* What are the properties of the sensorimotor stage w.r.t cognitive development?
+
+Cognitive experience is based on direct sensory experience.
+Understand that objects exist even when you can't see them.
+
+* What are the properties of the preoperational stage w.r.t cognitive development?
+
+Understanding symbols, language, drawings.
+Trying to understand conservation.
+
+* What are the properties of the concrete operational stage w.r.t cognitive development?
+
+Can perform mental transformations on physically present objects.
+Transitivity of numbers.
+
+* What are the properties of the formal operational stage w.r.t cognitive development?
+
+Can reason abstractly and hypothetically.
+
+* What is conservation?
+
+The concept that the quantity of an object is not the same as the appearance of
+the object.
+
+* What is the concept of the zone of proximal development?
+
+Development is ideal when children attempt skills that are just beyond what
+they can do alone, but they have guidance from adults that are attentive to
+their progress.
+
+Scaffolding uses this idea to teach kids.
+
+* What is attachment?
+
+The enduring emotional bond between individuals.
+
+* What did Harlow's experiment with the cloth monkeys show?
+
+That attachment is based on feeling secure, which is based on physical comfort.
+
+* What are the 4 different attachment styles?
+
+1. Secure attachment : "checking in"
+2. Insecure attachment - Anxious/resistant : "clingy"
+3. Insecure attachment - Avoidant : "doesn't care"
+4. Disorganized : "love/hate"
+
+* What is self-awareness?
+
+The ability to recognize one's individuality.
+
+* What is egocentricism?
+
+Considering only one's own perspective.
+
+* What is theory of mind?
+
+The ability to recognize the thoughts of others, and understand that they can be
+different to one's own.
+
+* What are the two psychobiological behavioural systems?
+
+Attachment behavioural system: Focused on meeting one's own needs for security.
+Caregiving behavioural system: Focused on meeting the needs of others.
+
+* What are some problems with using conditional approaches to get children to do tasks?
+
+- The children won't continually do the task unless you continually reward them.
+- Children associate good feelings with rewards.
+
+* What is introjection?
+
+The internalization of the regard of significant others.
+Caring about what others think about you.
+
+* What is inductive discipline?
+
+Explain the consequences of a child's actions on other people.
