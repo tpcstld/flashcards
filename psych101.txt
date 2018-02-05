@@ -428,11 +428,13 @@ throughout the lifespan.
 
 People fit new information into the belief systems they already possess.
 Conservative process.
+"Still a bow-wow"
 
 * What is accommodation?
 
 People modify their belief structures based on experience.
 Creative process.
+"It's not a bow-wow, it's a cat!"
 
 * What are Piaget's 4 stages of cognitive development?
 
@@ -519,3 +521,249 @@ Caring about what others think about you.
 * What is inductive discipline?
 
 Explain the consequences of a child's actions on other people.
+
+# 6.3
+
+* What is latent learning?
+
+Learning that is not immediately expressed by a response until the organism
+is tested for it.
+
+* What is the difference between S-R and S-O-R theory?
+
+S-R theory thinks that differences in individuals are due to their learning
+histories.
+
+S-O-R theory thinks that differences in individuals are due to their cognitive
+interpretation of the situation.
+
+* What does observational learning involve?
+
+Changes in behaviour and knowledge from watching others.
+
+* What are the 4 processes involved in observational learning?
+
+1. Attention
+2. Memory
+3. Ability to reproduce the task
+4. Motivation
+
+* What is imitation?
+
+Recreating someone else's actions.
+
+* What are mirror neurons?
+
+Neurons that fire both when doing and action, and watching the same action.
+
+# Slides
+
+* What are the two theories of attachment?
+
+1. Psychodynamic
+2. Behaviourist
+
+* What is the principle of monotropy?
+
+Infants are genetically programmed to form an attachment with ONE responsive
+caregiver.
+
+# Memory
+
+## 7.1
+
+* What do stores do w.r.t memory?
+
+Retain memory
+
+* What do control processes do w.r.t memory?
+
+Shift information from one store to another.
+
+* What does attention do w.r.t memory?
+
+Shift information from sensory memory to STM.
+
+* What does recall do w.r.t memory?
+
+Shift information from LTM to STM.
+
+* What does encoding do w.r.t memory?
+
+Shift information from STM to LTM.
+
+* How can we expand our short-term memory capacity?
+
+Via chunking, organizing smaller units of information into a bigger one.
+
+* What are the two ways we organize information in LTM?
+
+1. Semantic categories (e.g. cat, mouse)
+2. Sound or spelling of word.
+
+* What is proactive/retroactive interference?
+
+Things appearing first/last causing problems with memorization.
+
+* What is working memory?
+
+A model of short-term remembering that includes some memory components that can
+temporarily store small amounts of information for a short period of time.
+
+* What is the phonological loop?
+
+A storage component of working memory that relies of rehearsal and stores
+information as sounds.
+
+* What is the visuospatial sketchpad?
+
+A storage component of working memory that maintains visual images and spatial
+layouts in visuospatial code.
+
+* What is the episodic buffer?
+
+A storage component of working memory that combines images and sounds into
+story-like episodes.
+
+* What is the central executive?
+
+The control center of working memory. Coordinates attention and exchange
+of information.
+
+* What are declarative/explicit memories?
+
+Memories we are consciously aware of, and can be verbalized.
+
+* What are nondeclarative/implicit) memories?
+
+Actions that you can perform without awareness.
+
+* What are episodic memories?
+
+Declarative memories that are organized in episodes and use "I".
+"I washed the car."
+
+* What are semantic memories?
+
+Declarative memories that include facts about the world.
+"The capital of Canada is Ottawa."
+
+* What are procedural memories?
+
+Patterns of muscle movements.
+"Muscle memory"
+
+* What is priming?
+
+Previous exposure to a stimulus will affect someone's later responses.
+
+* What is long-term potentiation?
+
+Enduring increase in connectivity and transmission of neural signals between
+nerve cells that fire together.
+
+* What is consolidation?
+
+The process of converting short-term memories into long-term memories in the
+brain. The hippocampus is responsible for consolidation.
+
+* What is anterograde amnesia?
+
+Cannot form new memories (after the incident).
+
+* What is retrograde amnesia?
+
+Cannot remember old memories (before the incident).
+
+* What is storage w.r.t memories?
+
+The time and manner in which information is retained between encoding and
+retrieval.
+
+* What is maintenance rehearsal?
+
+Prolonging exposure to information by repeating it.
+
+* What is elaborative rehearsal?
+
+Prolonging exposure to information by thinking about it's meaning.
+
+* What is shallow processing?
+
+Processing of shallow characteristics such as spelling.
+
+* What is deep processing?
+
+Processing of the meaning of a word.
+
+* What is the self-reference effect?
+
+More likely to remember something if you can relate it to yourself.
+
+* How can context affect memory?
+
+You can forget things when entering a new context (context-dependent forgetting).
+Or you can remember things when going back to the old context (context
+reinstatement effect).
+
+* What is the problem of weapon focus?
+
+People remember the gun much better than the person holding the gun.
+
+* What is a flashbulb memory?
+
+An extremely vivid and detailed memory and its conditions.
+
+* What does the forgetting curve tell us?
+
+Most of the forgetting happens right away, and then not much forgetting
+happens afterwards.
+
+* What is the method of loci?
+
+Using mnemonics to connect words to locations.
+
+* What is a schema?
+
+An organized cluster of memory that constitutes one's knowledge about a thing.
+
+* How do we remember events?
+
+Using constructive memory, first we recalled a generalized schema, and then
+we fill in details.
+
+* What are the two ways the schemas can affect our memory?
+
+1. Organization, things that fit our schemas are easier to recall.
+2. Distinctiveness, if information is weird it is easy to remember, if it does
+not fit our schema but isn't that weird it will be hard to remember.
+
+* What is a false memory?
+
+A memory of something that is incorrect or did not actually occur.
+
+* What is the misinformation effect?
+
+Information occurring after an event becomes part of the event.
+"Asking if something happened could cause people to say yes".
+
+* What is imagination inflation?
+
+Increased confidence in a false memory after repeated imagination of the event.
+
+* What does the DRM procedure say w.r.t memory?
+
+People are very likely to misremember the "critical lure" being there, which is
+a word should obviously be in the list, but isn't.
+
+* What is a recovered memory?
+
+## Slides
+
+* What are the 3 stages of memory?
+
+Encoding, storage, retrieval.
+
+* How many pieces of information can we remember in STM?
+
+7 +/- 2
