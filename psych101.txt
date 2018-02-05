@@ -980,10 +980,162 @@ Planning, processing, and recognition.
 Left is abstract and mathematical.
 Right is visual and emotional.
 
-## Slides
-
-
-
 # Sensation and perception
 
 ## 4.1
+
+* What is sensation?
+
+The process of detecting external events by sense organs, and turning those
+events into neural signals.
+
+* What is perception?
+
+Attending to, organizing, and interpreting stimuli.
+
+* What is tranduction?
+
+Receptors transforming physical energy to neural impulses.
+
+* What is sensory adaptation?
+
+The reduction of activity in sensory receptors following repeated exposure.
+
+* What is an absolute threshold w.r.t sensation and perception?
+
+The minimum amount of energy needed for it to be reliably detected 50% of the
+time.
+
+* What is a difference threshold w.r.t sensation and perception?
+
+The smallest difference between stimuli that can be reliably detected 50% of the
+time.
+
+* What does signal detection theory state?
+
+Whether a stimulus is perceived depends on both sensory experience and the
+subject's judgment.
+
+* What is the figure-ground principle?
+
+Objects tend to stand out against the background.
+
+* What is inattentional blindness?
+
+A failure to notice clearly visible events because attention is elsewhere.
+
+* What's the effect of backwards messages?
+
+We don't notice them unless they are pointed out.
+
+## 4.2
+
+* What is the effect of dark adaptation?
+
+Our rods and cones become more sensitive to low light over time.
+
+* How does the visual cortex process sight information?
+
+Feature detection cells look for simple aspects of the image.
+Features are sent to more specialized regions for things like movement and
+colour.
+
+* How does visual information travel through our brain?
+
+Optic nerve => Optic chiasm => Nerve signal => Visual cortex.
+
+* What is the function of the ventral stream of vision?
+
+Object recognition.
+
+* What do studies around face detection tell us?
+
+We have dedicated systems for, and are very good at, finding faces.
+
+* What is perceptual constancy?
+
+The ability to perceive objects as having constant shape, size, and colour
+despite changes in perspective.
+
+* What is the function of the dorsal stream of vision?
+
+Discovering where, in space, objects are located.
+
+* What are monocular and binocular cues?
+
+Single or double eye cues about where objects are located in space.
+
+## 4.4
+
+* What happens when you have synesthesia?
+
+Senses blur together, so you can hear colour or feel sounds.
+
+* What is the purpose of the sense of touch?
+
+It allows us to actively investigate our environment.
+
+* What is the function of somatosensory cortex?
+
+Sense of touch.
+
+* What are haptics?
+
+The active, exploratory aspect of touch sensation and perception.
+(e.g. roughness)
+
+* What is kinesthesis?
+
+The sense of bodily motion and position.
+
+* What is nociception?
+
+The activity of nerve pathways that respond to uncomfortable situations
+(e.g. pain)
+
+* How does gate-control theory explain pain perception?
+
+Our pain is an interaction between nerves that transmit pain and nerves that
+inhibit pain messages.
+
+* How can emotions affect our physical pain?
+
+Emotional pain or empathy can increase our physical pain.
+
+* What is a phantom limb sensation?
+
+An amputee feels sensations from a limb that no longer exists.
+
+* What is the gustatory system?
+
+The system that functions in the sensation and perception of taste.
+
+* Which receptors replenish themselves?
+
+Taste receptors.
+
+* What does the gustatory cortex do?
+
+Receive taste information.
+
+* What are papillae?
+
+Bumps that line the tongue and house taste buds.
+
+* What is the olfactory system?
+
+The system involved in smell - detection of airborne particles.
+
+* How are smells detected?
+
+In the olfactory epithelium.
+Which sensors are triggered, and the pattern of trigger.
+
+* What is multimodal integration?
+
+The ability to combine our senses into a single integrated perception.
+
+* How smell travel differently in the brain?
+
+Other 4 senses travel to the thalamus first.
+Smell goes directly to the limbic system.
