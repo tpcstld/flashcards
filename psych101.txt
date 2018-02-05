@@ -767,3 +767,223 @@ Encoding, storage, retrieval.
 * How many pieces of information can we remember in STM?
 
 7 +/- 2
+
+# Neuropsychology
+
+* What are genes?
+
+The basic units of heredity.
+
+* What is a genotype?
+
+The genetic makeup of an organism.
+
+* What are chromosomes?
+
+Structures that are lined with all the genes.
+
+* What is behaviour genomics?
+
+The study of DNA and how genes are related to behaviour.
+
+* What is behaviour genetics?
+
+The study of how genes and the environment influence behaviour.
+
+* What is heritability?
+
+A statistic (0-1) representing the degree to which genetic differences
+contribute to individual differences.
+"Having a mouth: 0"
+"Tasting something: >0"
+
+* What the study of epigenetics tell us?
+
+That experiences and events (e.g. grooming) can change gene expression.
+
+* What does homozygous mean?
+
+Person has two of the same (dominant or recessive) versions of the gene.
+
+* What does heterozygous mean?
+
+Person has both dominant and recessive versions of a gene.
+
+* What is intrasexual selection?
+
+Members of the same sex compete to win the opportunity to mate.
+
+* What is intersexual selection?
+
+Members of one sex select a mating partner based on their traits.
+
+* What are the 3 reasons our brains are the most powerful?
+
+1. More folds and groves.
+2. More developed frontal lobe, responsible for planning and etc...
+3. Neotony, brains keep growing after birth.
+
+* What is evolution?
+
+A change in the frequency of genes occurring in a population over time.
+
+## 3.2
+
+* What is the soma?
+
+The cell body that contains the nucleus.
+
+* What are the dendrites?
+
+Small branches from the soma that receive messages from other cells.
+
+* What is the axon?
+
+A long tail that transports information in the form of electrochemical
+reactions.
+
+* What are axon terminals?
+
+Blubs at the end of the axon that contain neurotransmitters.
+
+* What are neurotransmitters?
+
+Chemicals that function as messengers between neurons.
+
+* What are sensory neurons?
+
+Neurons that receive information from the bodily senses.
+
+* What are motor neurons?
+
+Neurons that carry messages from the brain to muscles.
+
+* What is myelin?
+
+A fatty sheath that insulates axons, and allows for increased speed and
+efficiency of neural communication.
+
+* What is the refractory period w.r.t neurons?
+
+The brief period in which a neuron cannot fire.
+
+* What is the synaptic cleft?
+
+The small space separating individual nerve cells.
+
+* How do neurons communicate intensity?
+
+By firing at a higher rate.
+
+* What is reuptake w.r.t neurotransmitters?
+
+A process where neurotransmitters are reabsorbed into the axon terminals from
+the synapse.
+
+* What does gluatamate do?
+
+Excites nervous system; memory and autonomic nervous system reactions
+
+* What does GABA do?
+
+Inhibits brain activity; lowers arousal, anxiety, and excitation; facilitates sleep
+
+* What does actylcholine do?
+
+Movement; attention
+
+* What does dopamine do?
+
+Control of movement; reward-seeking behaviour; cognition and attention
+
+* What does norepinephrine do?
+
+Memory; attention to new or important stimuli; regulation of sleep and mood
+
+* What does serotonin do?
+
+Regulation of sleep, appetite, mood
+
+* What are agnoists and antagonists w.r.t neurotransmitters?
+
+Drugs that enhance or inhibit neurotransmitter activity.
+Either by faking it or blocking things.
+
+* What are hormones?
+
+Chemical secreted by the glands of the endocrine system. They do not work
+immediately and instead travel in the blood.
+
+* What do the adrenal glands do?
+
+Release stress hormones.
+
+* What are endorphines?
+
+Hormones responsible for reducing pain and inducing pleasure.
+
+* What is testosterone?
+
+Hormone that drives physical and sexual development and surges during sex and
+threats.
+
+## 3.3
+
+* What encompasses the central nervous system?
+
+The brain and spinal cord.
+
+* What is the peripheral nervous system?
+
+The nerves that transmit information between the CNS and the rest of the body.
+
+* What encompasses the somatic nervous system?
+
+The nerves that are responsible for voluntary movement, and receiving sensory
+input.
+
+* What encompasses the autonomic nervous system?
+
+The nerves responsible for regulating the activity of organs and glands.
+
+* What encompasses the sympathetic nervous system?
+
+The nerves responsible for the fight-or-flight response.
+
+* What is the parasympathetic nervous system?
+
+The nerves responsible for helping maintaining homostatic balance.
+
+* What is the brain stem?
+
+The top most region of the spinal cord, containing the parts (pons and
+medulla) to keep the body functioning. (e.g. heart rate)
+
+* What is the hindbrain for?
+
+Maintaining the body and interfacing with the outside world.
+
+* What is the midbrain for?
+
+Orienting visual and audio attention.
+
+* What is the forebrain for?
+
+High level basics such as emotion, memory, and motivation.
+
+* What is the cerebal cortex for?
+
+Planning, processing, and recognition.
+
+* What is the different between the left and right hemispheres of the brain?
+
+Left is abstract and mathematical.
+Right is visual and emotional.
+
+## Slides
+
+
+
+# Sensation and perception
+
+## 4.1
