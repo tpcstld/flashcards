@@ -246,6 +246,11 @@ Behaviours sometimes change as a result of being observed.
 Inadvertent cues given off that provide information about how participants are
 expected to behave.
 
+* How does social desirability affect experiments?
+
+People are likely to respond in ways that increase the chances they will be
+viewed favourably.
+
 * What is a placebo effect?
 
 A measurable and experienced improvement in health that cannot be attributed to
@@ -348,6 +353,12 @@ Because others might want to reproduce or reinterpret their work.
 
 Faking test results.
 
+* What is the 3 criteria for an animal study?
+
+1. Behaviours must be close.
+2. Brain structures must be close.
+3. Response must be similar.
+
 * What is the ABCs of psychology?
 
 Affect (feelings, emotion, mood)
@@ -418,6 +429,14 @@ Grasping: To hold on with their hands.
 1. Myelination of axons.
 2. Synaptogensis, lots of connections between neurons are formed
 3. Synaptic pruning, useless connections are pruned.
+
+* How do we help premature babies?
+
+By using NIDCAP. They have improved skills over preterm babies that do not.
+
+* What is the core knowledge hypothesis?
+
+Infants have inborn abilities to understanding some key aspects of their life.
 
 * What is cognitive development?
 
@@ -605,6 +624,10 @@ Via chunking, organizing smaller units of information into a bigger one.
 
 Things appearing first/last causing problems with memorization.
 
+* What is the serial position effect?
+
+People tend to remember things that a first and last in a list.
+
 * What is working memory?
 
 A model of short-term remembering that includes some memory components that can
@@ -705,6 +728,11 @@ More likely to remember something if you can relate it to yourself.
 You can forget things when entering a new context (context-dependent forgetting).
 Or you can remember things when going back to the old context (context
 reinstatement effect).
+
+* How can state affect memory?
+
+State-dependent learning/memory exists. Retrieval is more effective if your
+internal state matches the state you were in during encoding.
 
 * What is the problem of weapon focus?
 
@@ -827,6 +855,12 @@ Members of one sex select a mating partner based on their traits.
 
 A change in the frequency of genes occurring in a population over time.
 
+* What is the relationship between red and sex?
+
+The colour red seems to be associated with sex the most.
+Women wearing red clothes are perceived to be more interested in having sex.
+Culture does not influence this effect.
+
 ## 3.2
 
 * What is the soma?
@@ -914,6 +948,10 @@ Either by faking it or blocking things.
 Chemical secreted by the glands of the endocrine system. They do not work
 immediately and instead travel in the blood.
 
+* What is the endocrine system?
+
+The system that controls hormones.
+
 * What do the adrenal glands do?
 
 Release stress hormones.
@@ -926,6 +964,10 @@ Hormones responsible for reducing pain and inducing pleasure.
 
 Hormone that drives physical and sexual development and surges during sex and
 threats.
+
+* What is substance P?
+
+A neurotransmitter involved in the experience of pain.
 
 ## 3.3
 
@@ -979,6 +1021,17 @@ Planning, processing, and recognition.
 
 Left is abstract and mathematical.
 Right is visual and emotional.
+
+* What is neuroplasticity?
+
+The ability of the brain to change and rewire itself based on individual
+experience.
+
+* How does the human brain exhibit neuroplasticity?
+
+Our brains prevent recovery from brain injury to prevent bad rewiring.
+The area on the opposite hemisphere can take over the original's work.
+Can reorganize neural regions.
 
 # Sensation and perception
 
@@ -1051,6 +1104,19 @@ Object recognition.
 * What do studies around face detection tell us?
 
 We have dedicated systems for, and are very good at, finding faces.
+But it is also dependent on experience.
+
+* What is prosopagnosia?
+
+The inability to recognize faces.
+
+* What is myopia?
+
+Nearsightedness.
+
+* What is hyperopia?
+
+Farsightedness.
 
 * What is perceptual constancy?
 
@@ -1139,3 +1205,21 @@ The ability to combine our senses into a single integrated perception.
 
 Other 4 senses travel to the thalamus first.
 Smell goes directly to the limbic system.
+
+* What is the limbic system?
+
+A system responsible for emotional responses and memory.
+
+* What did we use the habituation-dishabituation response to tell us?
+
+The babies can recognize numbers in some way.
+
+* What is the thalamus?
+
+The sensory-relay system of the brain.
+
+* What is the reticular formation?
+
+The part of the brain that influences alertness and attention.
+
+* What is the lymphatic system?
