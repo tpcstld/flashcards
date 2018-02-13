@@ -421,7 +421,7 @@ Fetal. 8-birth. Fetus develops muscles and organs begin to specialize.
 * What are 3 reflexes that babies have?
 
 Rooting: To suck.
-Moro: To hatch on when falling.
+Moro: To latch on when falling.
 Grasping: To hold on with their hands.
 
 * What are the 3 things that happen to a baby's brain after birth?
@@ -593,7 +593,7 @@ caregiver.
 
 * What do stores do w.r.t memory?
 
-Retain memory
+Retain memory.
 
 * What do control processes do w.r.t memory?
 
@@ -657,7 +657,7 @@ of information.
 
 Memories we are consciously aware of, and can be verbalized.
 
-* What are nondeclarative/implicit) memories?
+* What are nondeclarative/implicit memories?
 
 Actions that you can perform without awareness.
 
@@ -755,10 +755,9 @@ Using mnemonics to connect words to locations.
 
 An organized cluster of memory that constitutes one's knowledge about a thing.
 
-* How do we remember events?
+* How do we use constructive memory to help remember events?
 
-Using constructive memory, first we recalled a generalized schema, and then
-we fill in details.
+First we recall a generalized schema, and then we fill in details.
 
 * What are the two ways the schemas can affect our memory?
 
@@ -916,27 +915,27 @@ the synapse.
 
 * What does gluatamate do?
 
-Excites nervous system; memory and autonomic nervous system reactions
+Excites nervous system; memory and autonomic nervous system reactions.
 
 * What does GABA do?
 
-Inhibits brain activity; lowers arousal, anxiety, and excitation; facilitates sleep
+Inhibits brain activity; lowers arousal, anxiety, and excitation; facilitates sleep.
 
 * What does actylcholine do?
 
-Movement; attention
+Movement; attention.
 
 * What does dopamine do?
 
-Control of movement; reward-seeking behaviour; cognition and attention
+Control of movement; reward-seeking behaviour; cognition and attention.
 
 * What does norepinephrine do?
 
-Memory; attention to new or important stimuli; regulation of sleep and mood
+Memory; attention to new or important stimuli; regulation of sleep and mood.
 
 * What does serotonin do?
 
-Regulation of sleep, appetite, mood
+Regulation of sleep, appetite, mood.
 
 * What are agnoists and antagonists w.r.t neurotransmitters?
 
@@ -1017,7 +1016,7 @@ High level basics such as emotion, memory, and motivation.
 
 Planning, processing, and recognition.
 
-* What is the different between the left and right hemispheres of the brain?
+* What is the difference between the left and right hemispheres of the brain?
 
 Left is abstract and mathematical.
 Right is visual and emotional.
@@ -1178,7 +1177,7 @@ The system that functions in the sensation and perception of taste.
 
 * Which receptors replenish themselves?
 
-Taste receptors.
+Taste and smell receptors.
 
 * What does the gustatory cortex do?
 
@@ -1222,4 +1221,20 @@ The sensory-relay system of the brain.
 
 The part of the brain that influences alertness and attention.
 
-* What is the lymphatic system?
+# Learning
+
+* What kind of behaviour does a fixed ratio reward schedule encourage?
+
+High rate of action, then pause.
+
+* What kind of behaviour does a variable ratio reward schedule encourage?
+
+High rate of action with little pause.
+
+* What kind of behaviour does a fixed interval reward schedule encourage?
+
+Bursts of action as the interval approaches.
+
+* What kind of behaviour does a variable interval reward schedule encourage?
+
+Slow and steady action.
