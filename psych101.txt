@@ -1223,6 +1223,8 @@ The part of the brain that influences alertness and attention.
 
 # Learning
 
+## Slides
+
 * What kind of behaviour does a fixed ratio reward schedule encourage?
 
 High rate of action, then pause.
@@ -1238,3 +1240,133 @@ Bursts of action as the interval approaches.
 * What kind of behaviour does a variable interval reward schedule encourage?
 
 Slow and steady action.
+
+# Intelligence
+
+## Slides
+
+* How is IQ correlated with academic and career achievements?
+
+There is a 0.33 correlation between IQ, and high GPA or wages.
+
+* What is a counter-argument for the IQ correlation?
+
+Might be just due to the perceived importance of IQ and intelligence testing.
+Therefore, this effect might be an artificial creation of our society.
+e.g. Imagine if we stressed the importance of height. Over some time we might
+have height be a predictor of success instead.
+
+* What did Ree and Earles say about IQ?
+
+If an employer were to only use IQ tests and select the highest scoring
+applicant for the job, overall performance of the employees would be
+maximized.
+
+* What are the achievements of Sir Francis Galton?
+
+- First intelligence test
+- Coined "nature vs nurture"
+- Published Heredity Genius
+- First questionnaire
+- Invented word association test
+- Cofounder of statistical concepts such as "normal distribution",
+  "correlation", "linear regression"
+
+* What is intelligence, according to Galton?
+
+A biological, heredity system that exists in the power and efficient brain
+and nervous system.
+
+* What is the principle of eugenics?
+
+You can improve a population through selective breeding.
+
+* Why did Galton create the intelligence test?
+
+To find "good stock" at a young age so that they can be provided with extra
+privileges to nuture them.
+
+* What are some examples of Galton's intelligence questions?
+
+- "When can you feel the difference in weight between two hands?"
+
+* How did Galton get, and use, his data?
+
+He went all "travelling salesman" and put on "shows" to get such data.
+Afterwards, he used his invented linear regression to find correlations in the
+data.
+
+* What was Galton's conclusion on the principle of eugenics?
+
+Galton's eugenics hypothesis was disproved by his data analysis. However people
+still believed in it.
+
+* What did Darwin believe about intelligence?
+
+You cannot measure intelligence in an absolute sense. You need to measure it
+with regards to a specific context. People have specialties and are more
+intelligent in those areas.
+
+* What are the poor laws?
+
+You could be thrown into prison for being poor.
+
+* What were Binet's beliefs about intelligence?
+
+That intelligence was primarily based on nuture, not nature.
+
+* According to Binet's what's the relationship between intelligence and age?
+
+Intelligence is the difference between mental age and chronological age.
+
+* What is retardation, according to Binet?
+
+Being behind in mental age by more than 2 years.
+
+* What is intelligence according to Binet?
+
+- Tendency to take and maintain a definite direction
+- Capacity to adapt to achieve a desired end
+- Power of auto-criticism
+
+* What is the difference between Binet's and Galton's beliefs about intelligence
+
+Binet believed that intelligence is a product of the environment.
+Galton believed that intelligence is a product of the person.
+
+* What are some of Binet's sample questions for intelligence?
+
+2yo:
+
+- Follow lighted match
+- Unwrap and eat candy
+- Shake hands
+
+6yo: TODO
+
+12yo: 
+
+- Make rhymes for words
+- Construct a sentence using 3 given words
+- Mentally reverse the hands of a lock: 3:20 -> 4:15
+
+* How did Binet determine mental age?
+
+Run the Binet-Simon test.
+Base age = level at which they got all questions right
+Final age = base age + 1/5 for each later item correct
+
+* What is Spearman's two factor theory for intelligence?
+
+There are two factors: "s" (specific) and "g" (general).
+
+The "g" factor is general intelligence, an overall mental ability common to
+all intellectual tasks. This is biological, and draws parallel with Galton's
+idea.
+
+The "s" factor is specific intelligence, mental abilities applicable to only
+specific tasks. This is learned, and draws parallel with Binet's theory.
+
+* How is IQ calculated?
+
+Mental age / chronological age * 100
