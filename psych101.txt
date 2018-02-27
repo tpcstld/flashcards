@@ -1370,3 +1370,30 @@ specific tasks. This is learned, and draws parallel with Binet's theory.
 * How is IQ calculated?
 
 Mental age / chronological age * 100
+
+* What was Terman's abuse of IQ testing?
+
+Administering an English IQ test to 4 children (of which English was their
+second language) to conclude that those races had lower intelligence.
+
+Furthermore, he believes that if you have a low intelligence, you should
+"remove yourself from the gene pool".
+
+* How did the English army plan to use IQ testing?
+
+Use IQ testing to see who becomes a foot soldier, and who becomes an officer.
+
+* What did Wechsler believe intelligence came from?
+
+A combination of environment and person. We come into the world with some
+potential, that is enhanced through experience.
+
+* What are some modern uses of IQ testing?
+
+- Estimation of general intelligence.
+- Identify specific assets and liabilities
+- Psychological diagnosis
+
+* How is the IQ test done today?
+
+- Scores are standardized according to the normal distribution with a SD of 15.
