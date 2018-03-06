@@ -1,0 +1,5 @@
+# Week 7
+
+* What is a collage?
+
+A configuration of a solution to a large-scale and ongoing artificial problem.
