@@ -957,6 +957,7 @@ A firm must spend money to overcome these constraints.
 * When is technological efficiency achieved?
 
 When a firm uses the least amount inputs to produce a given quantity of output.
+Does not care about cost.
 
 * When is economic efficiency achieved?
 
@@ -1224,14 +1225,112 @@ average product change as the firm varies the quantity of labour employed.
 
 * What is the total product curve?
 
-Similar to the PPF, separates attainable from unattainable output levels.
+Similar to the PPF, separates attainable from unattainable output levels in the
+short run.
 
 * What is the law of diminishing returns?
 
 As a firm uses more of a variable input with a given quantity of fixed inputs,
 the marginal product of the variable input eventually diminishes.
 
+* What is the relationship between average product and marginal product?
+
+When marginal product exceeds average product, average product increases.
+
+* What is the point of maximum average product?
+
+Where the average product curve intersects with the marginal product curve.
+
+* What is the only way companies can produce more output in the short-run?
+
+Employing more labour.
+
+* What is total cost?
+
+The cost of all resources used.
+
+* What is total fixed cost?
+
+The cost of the firm's fixed inputs. Fixed costs do not change with output.
+
+* What is total variable cost?
+
+The cost of the firm's variable inputs. Variable costs do change with output.
+
+* Where does the total variable cost curve get its shape?
+
+From the total product curve. It's the same curve, just transposed.
+
 * What is marginal cost?
 
 The increase in total cost that results from a one-unit increase in total
 product.
+
+* What is the shape of the average fixed cost curve?
+
+A curve that slowly decreases over time.
+
+* What is the shape of the average variable cost curve?
+
+A u-shape, because AVC falls and then increases.
+
+* What is the shape of the average total cost curve?
+
+A u-shape, because AVC will dominate.
+
+* What is the point of minimum variable cost?
+
+Where the marginal cost intersects with the average variable cost curve.
+
+* What is the point of minimum total cost?
+
+Where the marginal cost intersects with the average variable cost curve.
+
+* Why is the average total cost curve u-shaped?
+
+1. Total fixed cost is spread over a larger output.
+2. Law of diminishing returns eventually dominates.
+
+* What is the relationship between marginal product and marginal cost?
+
+When MC is at it's minimum, MP is at its maximum.
+
+* What is the relationship between average variable cost and average product?
+
+Min(AVC) = Max(AP)
+
+* What are the 2 factors that shift the positions of a firm's average cost curves?
+
+1. Technology; better technology decreases cost and increases product. (shifts up and down)
+2. Prices of factors of production; shifts only costs.
+
+* What is the production function?
+
+The relationship between the maximum output attainable and the quantities of
+both capital and labour.
+
+* What is the marginal product of capital?
+
+The increase in output resulting from a one-unit increase in the amount of
+capital employed, holding constant the amount of labour employed.
+
+* What is the long run average cost curve made up of?
+
+The lowest ATC for each output level.
+
+* What are economics of scale?
+
+Features that lead to falling long-run average cost as output increases.
+
+* What are diseconomics of scale?
+
+Features that lead to rising long-run average cost as output increases.
+
+* What are constant returns to scale?
+
+Features that lead to constant long-run average cost and output increases.
+
+* What is the minimum efficient scale?
+
+The smallest quantity of output at which the long-run average cost reaches its
+lowest level.
