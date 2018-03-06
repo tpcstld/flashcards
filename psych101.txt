@@ -1344,7 +1344,7 @@ Galton believed that intelligence is a product of the person.
 
 6yo: TODO
 
-12yo: 
+12yo:
 
 - Make rhymes for words
 - Construct a sentence using 3 given words
@@ -1397,3 +1397,177 @@ potential, that is enhanced through experience.
 * How is the IQ test done today?
 
 - Scores are standardized according to the normal distribution with a SD of 15.
+
+# Motivation
+
+* What are the 3 ways we measure motivation?
+
+1. Intensity: Energy, enthusiasm, degree of effort exerted.
+2. Direction: Avoidance of alternative activities. Degree of task difficulty selected.
+3. Persistence: Commitment to choices, continued effort following frustration.
+
+* What are instincts?
+
+Fixed, rigid, and predictable patterns of behaviour that is
+
+- Not acquired by learning
+- Common to all members of the species
+- Likely rooted in genes
+
+* Are humans motivated by instincts?
+
+It seems that our behaviour is less prescribed by genetics than other animals.
+We have general patterns explained as emerging through natural selection.
+
+* What is the drive reduction theory w.r.t motivation?
+
+We have a drive to do certain things, like eating, and we do things to fulfill
+that drive.
+
+* What is the psychodynamic theory w.r.t motivation?
+
+We have unconscious instincts, needs, and wishes. This causes intrapsychic
+conflicts.
+
+"If I haven't aggressed in a period of time, the pressure keeps building."
+
+Instead of aggressing, through, you can instead do some aggressive-like
+behaviours to release some of that need and gain catharsis.
+
+* What is the law of effect w.r.t motivation?
+
+If something has a positive outcome, we are more likely to do the behaviour.
+Similarily, we are less likely to do some behaviour which is less desirable.
+
+* What is Maslow's hierarchy of needs?
+
+Humans strive to ensure that basic needs are satisfied before they find
+motivation to pursue goals that are higher on the hierarchy.
+
+* What are some critiques of Maslow's hierarchy of needs?
+
+- There is no empirical support for the hierarchy.
+- Many of the needs "higher up" are just as important as the needs below (e.g. attractment)
+- Many of the self-actualized people turned out to be "arrogant idiots"
+
+* What is Roger's Discrepancy Theory w.r.t motivation?
+
+We have a continuous desire to be our ideal self. We are continuously comparing
+our current self to our ideal self. We want to partake in behaviours to reach
+our ideal self.
+
+If the discrepancy between the ideal and the real got too far apart, then it is
+demotivating. However, if the discrepancy is closer, then we are more motivated
+because self-actualization is more attainable.
+
+This is a never-ending state, because as the person is achieving their goals,
+they move their ideal-self even further. But it is something that we can strive
+to be.
+
+* What is the expectancy approach w.r.t motivation?
+
+We make choices, and our motivation is determined by those choices.
+I have an expected outcome, which includes:
+
+- The desired outcome.
+- The likelihood of achieving that outcome.
+
+Wherever the gain x likely equation comes out the best, that's where people
+are most motivated to do the task.
+
+* What is the criticism of the expectancy approach w.r.t motivation?
+
+People do not always choose the "best" choices. Some choose the most dangerous
+choice, or others choose the easiest choice.
+
+* What is the self-efficacy theory w.r.t motivation?
+
+An improvement on the expectancy approach. It can be equated to a statement
+of confidence. Before judging the expected value, we first check our efficacy.
+
+- "Do I have the skills, experience, and strategy to perform the task?"
+- "Can I execute under the circumstances?"
+
+If the answer to any of these questions is "no", then confidence plummets. And
+then the expected value does not matter.
+
+* What are some sources of self-efficacy?
+
+- Successful past performances.
+  - Long lasting source.
+- Vicarious experiences
+  - Learning from others.
+  - Only influential until own reproduction
+- Social persuasion.
+  - Depends on credibility of source (which can be damaged)
+  - Brief duration.
+- Emotional Arousal
+  - Getting psyched out/psyched up.
+  - Brief duration.
+
+* What is the cognitive valuation theory w.r.t motivation?
+
+A behaviour can be intrinsically rewarding. (play)
+The outcome can also be extrinsically rewarding. (work)
+
+If we increase the intrinsic value of an activity, we can improve the
+motivation of the task, because it's a second source of motivation.
+
+* How does cognitive valuation theory explain burnout?
+
+If you are doing a task that has intrinsic rewards, and then you add
+extrinsic rewards, there is an additive effect.
+
+However, in some cases, this can backfire when the extrinsic interest dominates
+the motivation, it can undermine the intrinsic rewards and cause the intrinsic
+rewards to fade away.
+
+* What were some of the professor's example for burnout?
+
+- Sports players, where the money overtakes them. Recovered by taking a break
+  and playing other sports.
+- A dentist, where the number of patients increased too much. Recovered by
+  volunteering at Doctor's without Borders.
+
+* When is extrinsic motivation additive vs undermining?
+
+Additive:
+  Informative outcomes
+  Feedback about skills, capacities, and quality of performance
+  Motivated to produce maximum performance to test skills and efficacy
+Undermining:
+  Controlling outcomes
+  Controlling freedom and mandatory performance
+  Motivated to produce minimum performance necessary to produce extrinsic rewards.
+
+* What are the two sources of positive self-esteem w.r.t social identity?
+
+1. Personal identity; distinguishes self from others; enhanced by achievements; skills
+2. Social identity; aligns self with others, enhanced by affiliations; groups
+
+* What is the buffering hypothesis w.r.t social identity?
+
+If you have good personal AND social identity, then you're not as impacted by
+damages to a single identity because the other one can provide a buffer for you.
+
+(e.g. Athletes recover better from academic problems.)
+
+* What characterizes a robust esteem w.r.t social identity theory?
+
+When the person has multiple personal and social identities, their self
+esteem is robust to damage.
+
+* What is the self-serving bias?
+
+We align ourselves with success, and distance ourselves from failure. "We won",
+"they lost".
+
+* What is approach avoidance w.r.t esteem strategies?
+
+- When I have good self-esteem, I want to choose the task when a 50% chance
+  of success.
+- However, if I have weak self-esteem, I want to choose the task with the
+  highest chance of success.
+- Also, if I have weak self-esteem, I might also choose the hardest task,
+  taking a defensive esteem challenge. If I fail it doesn't matter since
+  everyone fails.

@@ -1,0 +1,143 @@
+
+# Lecture 12 - Stars
+
+* How are the fundamental distances to stars determined?
+
+From stellar parallax, leveraging the orbit of the Earth throughout the year.
+
+* What is the parsec?
+
+The distance from which one would have a parallax of 1 arcsecond.
+
+* What are the first stars measured using parallax?
+
+61 Cyngni, by Dessel and Vega, by Struve.
+
+* What is a star's brightness proportional to?
+
+1 / distance^2
+
+* What is the difference between brightness and luminosity?
+
+Brightness is the total light energy collected from an object, while luminosity
+is the total light energy emitted.
+
+* What is the magnitude system for measuring brightness?
+
+Invented by Hipparcos and refined by Ptolemy. A log scale for brightness.
+First magnitude stars are 100 brighter than 6th magnitude stars.
+
+* What is the difference between apparent and absolute magnitude?
+
+Apparent: Brightness measured or observed.
+Absolute: Brightness a star would have a distance of 10 parsecs.
+
+* What determines the colour of a star?
+
+Mostly temperature. Red (1000K) is cooler than blue (10000K).
+Dust can also redden starlight.
+The ratio of the brightnesses in two wavelengths.
+
+* What is the standard classification of stars?
+
+The OBAFGKM classification, which was later added to include subtypes (#s) and
+widths of spectral lines (roman #s).
+
+* What were brown dwarf's impact on the spectral classification system?
+
+They didn't fit the classification system, and instead were found to be two
+distinct types of stars.
+
+L dwarfs: cooler than M9 stars, strong lines of metal hydrides, water absorption
+T dwarfs: even cooler, dominated by bands of water and methane.
+
+* What is the differences between stellar spectra and photometry?
+
+Spectra requires bigger telescopes, but gives fine details.
+Photometry gives good estimates, but is easier to do.
+
+* What is the main sequence w.r.t stars?
+
+The line where most stars lie around in the mass/spectra plot.
+The place where stars spend most of their lives, they do not move in the main
+sequence.
+
+* What are binary stars?
+
+Two or more stars in orbit around a common centre of mass.
+
+* What are the 4 kinds of binary stars?
+
+Visual: Can see both stars
+Astrometric: Only one star is visible, which moves around in a loop/wave.
+Spectroscopic: Only one star is visible, shows no visible motion, but we can
+detect with doppler shifts.
+Eclipsing: One star passes in front of the other.
+
+* What determines the lifetime of stars?
+
+1. The amount of fuel (mass); and
+2. The rate at which the star uses up the fuel.
+
+Most massive stars have the shortest lives.
+
+* What is the assumption we make about star clusters?
+
+All stars in a cluster are roughly the same age, because they are form at the
+same time in the same gas cloud.
+
+* What are the 3 types of star clusters?
+
+1. Associations: 100 stars
+2. Open: 1000s stars
+3. Globular: 100000 - 1000000 stars
+
+* What does stellar motion tell us about stars?
+
+Motion tells us about the gravity acting on the stars. More motion means
+stronger gravity.
+
+# Star clusters
+
+* What is an major assumption in stellar astrophysics?
+
+If two stars have identical spectra and are on the Main Sequence, then they
+are identical stars.
+
+* What are pulsations in variations stars?
+
+The star increases and decreases in size, which make also cause the surface
+temperature to also vary.
+
+* What are the 3 types of variable stars?
+
+1. Pulsating stars.
+2. Eruptive variables.
+3. Rotating "spotted".
+
+* What are the 3 common types of pulsating stars?
+
+Cepheid: Period of 3-50 days, 0.2 magnitude variation, -1.5 to -5 absolute.
+RR Lyrae: Period <1day, 1 absolute magnitude.
+Mira: Period 80-600 days, large range in brightness
+
+* What is the instability strip?
+
+The place in the HR diagram that contains pulsating stars. This is caused by the
+fact that heat cannot get out of the star, so it must pulsate instead to
+release the heat.
+
+* What is the period-luminosity law of cepheids?
+
+Knowing L, b, we can find their distance (b = L/4pid^2)
+
+Cepheid's pulsation period is related to its luminosity (and therefore radius).
+
+* What are novae?
+
+Stars that, one in a while, become much brighter (10000x) than before. Some
+stars will repeat this behaviour decades/centuries later.
+
+* How common are stellar collisions?
+
+Very rare, but they can happen in dense clusters of stars.

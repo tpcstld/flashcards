@@ -1171,3 +1171,67 @@ than otherwise possible.
 * What is the concept of economies of team production?
 
 Individuals can specialize in mutually supporting tasks.
+
+# Output and Costs
+
+* What are the two time frames a decision can be placed into?
+
+1. The short run
+2. The long run
+
+* What is the short run time frame?
+
+The time frame in which the quantity of one or more resources used in production
+is fixed.
+
+Short-run decisions can be easily reversed.
+
+* What is the long run time frame?
+
+The time frame in which the quantities of all resources can be varied.
+
+* What is a sunk cost?
+
+A cost incurred by the firm and cannot be changed.
+
+* How can a firm increase output in the short run?
+
+A firm must increase the labour employed.
+
+* What is the total product?
+
+The total output produced in a given period.
+
+* What is the marginal product of labour?
+
+The change in total product that results for a one-unit increase in the
+quantity of labour employed, all other inputs remaining the same.
+
+* What is the average product of labour?
+
+The total product divided by quantity of labour employed.
+
+* What happens as quantity of labour employed increases?
+
+- Total product increases;
+- marginal product increases, but eventually decreases;
+- Average product decreases.
+
+* What is a product curve?
+
+- Something that shows how the firm's total product, marginal product, and
+average product change as the firm varies the quantity of labour employed.
+
+* What is the total product curve?
+
+Similar to the PPF, separates attainable from unattainable output levels.
+
+* What is the law of diminishing returns?
+
+As a firm uses more of a variable input with a given quantity of fixed inputs,
+the marginal product of the variable input eventually diminishes.
+
+* What is marginal cost?
+
+The increase in total cost that results from a one-unit increase in total
+product.
