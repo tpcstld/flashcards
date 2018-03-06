@@ -1,685 +1,685 @@
-# Key concepts in Economics
-
-* What is scarcity?
-
-Our inability to satisfy all our wants.
-
-* What does scarcity cause us to do?
-
-Make choices.
-
-* What is an incentive?
-
-A reward that encourages an action, or a penalty that discourages an action.
-
-* What is economics?
-
-The social science that studies the choices that individuals, businesses,
-governments, and societies make as they cope with scarcity, and the incentives
-that influence and reconcile those choices.
-
-* What is microeconomics?
-
-The study of choices that individuals and businesses make, and how those choices
-interact in markets; and the influence of governments.
-
-* What is macroeconomics?
-
-The study of the performance of the national and global economies.
-
-* What are the two big economic questions?
-
-1. How do choices end up determining what, how, and for whom goods and services
-   are produced?
-2. When do choices made in the pursuit of self-interest also promote the social interest?
-
-* What are goods and services?
-
-Objects that people value and produce to satisfy human wants.
-
-* How does level-of-development affect what goods and services are produced?
-
-Countries with a higher level of development tend to produce less agriculture
-goods, proportionally.
-
-* What is a Factor of production?
-
-Resources that are used to produce goods and services.
-
-* What are the 4 categories of factors of production?
-
-1. Land
-2. Labour
-3. Capital
-4. Entrepreneurship
-
-* What is Land w.r.t factors of production?
-
-"Gifts of Nature" that we use to produce goods and services.
-
-* What is Labour w.r.t factors of production?
-
-The work time and work effort that people devote to producing goods and services.
-
-* What is Human Capital w.r.t factors of production?
-
-The "quality" of labour, i.e. the knowledge and skill that people obtain from
-education, training and experience.
-
-* What is Capital w.r.t factors of production?
-
-The tools, instruments, machines, buildings, and other constructions that
-businesses use to produce goods and services.
-
-* What is Entrepreneurship w.r.t factors of production?
-
-The human resource that organizes land, labour and capital.
-
-* What is self-interest w.r.t choices?
-
-You make choices that are in your self-interest -- choices that you think
-are best for you.
-
-* What is social interest w.r.t choices?
-
-Choices that are best for society as a whole are said to be in social interest.
-
-* What are the two dimensions of social interest?
-
-1. Efficiency
-2. Equity
-
-* When is a choice efficient?
-
-If it is not possible to make someone better off without making someone else
-worse off.
-
-* When is a choice equitable?
-
-Fairness, but economists have a variety of views about what is fair.
-
-* What are the four topics that cause tension between self and social interest?
-
-1. Globalization
-    Economic crises can affect the whole world.
-2. Information-age monopolies
-3. Global warming
-4. Economic instability
-
-* What 6 ideas define the economic way of thinking?
-
-1. A choice is a tradeoff.
-2. People make rational choices by comparing benefits and costs.
-3. A benefit is what your gain from something.
-4. Cost is what you must give up to get something.
-5. Most choices are "how-much" choices made at the margin.
-6. Choices respond to incentives.
-
-* What does "a choice is a tradeoff" mean?
-
-Choices are an exchange between outcomes. Giving something up to get another
-thing. Whatever you choose you could have chosen something else.
-
-* What is a "rational choice"?
-
-A choice that compares costs and benefits and achieves the greatest benefit
-over cost for the person making the choice.
-
-* What is a benefit?
-
-The value that you gain.
-
-* What is opportunity cost?
-
-The cost of something is the highest-valued alternative that must be given up
-to get it.
-
-* What is the margin?
-
-Most choices are not all or nothing, you can decide to dedicate only "half" of
-something.
-
-Costs and benefits change when you have more or less of something, you can
-make your choice at the margin.
-
-* What the "marginal benefit" and "marginal cost"?
-
-MB: The benefit from pursuing an incremental increase in an activity.
-MC: The opportunity cost of pursuing an incremental increase in an activity.
-
-If MB > MC, then you should do more of the activity.
-
-* How do choices respond to incentives?
-
-Changing marginal cost or benefits changes the incentives we face and can lead
-us to change our choice.
-
-Idea: We can predict how choices will change by looking at changes in incentives.
-
-* What can incentives be useful for?
-
-Reconciling self-interests and social interests.
-
-* What is a positive statement?
-
-A statement that can be tested by checking it against facts.
-
-"What is"
-
-* What is a normative statement?
-
-A statement that expresses an opinion and cannot be tested.
-
-"What ought to be"
-
-* What is an economic model?
-
-A description of some aspect of the economic world that includes only those
-features which are needed for the purpose at hand.
-
-* How do economists test economic models?
-
-By comparing predictions with the facts.
-
-* What ways do economists validate their statements?
-
-- Economic models
-- Natural experiments
-- Statistical investigations
-- Economic experiments
-
-* What is the production possibilities frontier?
-
-A graph detailing what is possible for us to produce, given the resources
-available to us.
-
-* When is production efficient w.r.t the PPF graph?
-
-When we are producing on a point that's on the PPF curve.
-
-* When is production inefficient w.r.t the PPF graph?
-
-When we are producing on a point that's inside the PPF curve, but not on the
-curve.
-
-* When is a production level attainable w.r.t the PFF graph?
-
-When it's in the area under the curve.
-
-* How does the PPF curve illustrate tradeoff?
-
-The PPF curve illustrates how much production we need to decrease in one
-product to increase production for another product.
-
-* Why does opportunity cost increase as we produce more of a product?
-
-Because resources are not equally productive in all activities.
-
-* What does the outward bow of the PPF curve illustrate?
-
-Increasing opportunity cost as production increases.
-
-* What is the marginal cost?
-
-The opportunity cost of producing one more unit of a product.
-
-* How is preference measured?
-
-Via marginal benefit and the maginal benefit curve.
-
-* What is marginal benefit?
-
-The benefit that one gains for consuming one more unit of a product. It is also
-people's willingness to pay for one more of a product.
-
-* What does a point on the marginal benefit curve mean?
-
-How much of Y people are willing to give up (or pay) in order to get an X.
-
-* When have we achieved production efficiency?
-
-When we cannot produce more of any one good without giving up some other
-good.
-
-* When have we achieved allocative efficiency?
-
-When we cannot produce more of any good that we value more highly, we have
-achieved allocative efficiency.
-
-* What is the point of allocative efficency on the PPF?
-
-The point at which marginal benefit equals marginal cost.
-
-* What is economic growth?
-
-An expansion of production possibilities, an increase in the standard of living.
-
-* What are the 2 key factors that influence economic growth?
-
-1. Technological change
-2. Capital accumulation
-
-* What is technological change w.r.t economic growth?
-
-The development of new and better ways of producing goods/services.
-
-* What is capital accumulation w.r.t economic growth?
-
-The growth of capital resources, including human capital.
-
-* What is the cost of economic growth?
-
-We must use resources to research and develop new capital, which means that we
-must decrease our current production.
-
-Opportunity cost: Less current consumption.
-
-* What is the effect of economic growth on the PPF curve?
-
-It expands rightwards.
-
-* When does a person have a comparative advantage?
-
-When one can perform an activity with lower opportunity cost than anyone else.
-
-* When does a person have an absolute advantage?
-
-When one is more productive than anyone else.
-
-* Why is trading beneficial?
-
-Because each people almost always have comparative advantages over each other,
-they can specialize and trade with one another to maximize their production.
-
-* What four social institutions have evolved to facilitate trade? Why?
-
-1. Firms
-2. Markets
-3. Property rights
-4. Money
-
-To facilitate coordination between people.
-
-* WHat are the two types of markets?
-
-1. Factor markets
-2. Goods markets
-
-* How does money flow in the economy?
-
-Households -> goods market -> firms -> factor markets -> households
-
-* How do goods and services flow in the economy?
-
-Firms -> goods market -> households -> factor markets -> firms
-
-# Supply and demand
-
-* What is a market?
-
-Any arrangement that enables buyers and sellers to get information and do
-business with each other.
-
-* What is a competitive market?
-
-A market that has many buyers and many sellers so no single buyer can influence
-the price.
-
-* What is the money price of a good?
-
-The amount of money needed to buy it.
-
-* What is the relative price of a good?
-
-The ratio of the good's money price to the money price of the next best
-alternative good.
-
-It's opportunity cost.
-
-* When do we consider that you demand something?
-
-When you want it, can afford it, and have made a definite plan to buy it.
-
-* What is quantity demanded?
-
-The amount that consumers plan to buy during a particular time period and at
-a particular price.
-
-* What is demand?
-
-The goods and services that consumers want.
-
-* What is the law of demand?
-
-Other things remaining the same, the higher the price, the lower the quantity
-demanded.
-
-* What are 2 causes of the law of demand?
-
-1. Substitution effect
-2. Income effect.
-
-* What is the substitution effect?
-
-When the relative price of a good/service rises, people seek substitutes for it,
-decreasing the quantity demanded.
-
-* What is the income effect?
-
-When the price of a good/service rises relative to income, some people cannot
-afford it anymore, decreasing the quantity demanded.
-
-* What is the demand curve?
-
-Price vs quantity demanded curve. Also called "willingness-to-pay-curve".
-
-* What does willingness-to-pay measure?
-
-Marginal benefit.
-
-* What are the six factors that change demand?
-
-1. Prices of related goods
-2. Expected future prices
-3. Income
-4. Expected future income and credit
-5. Population
-6. Preferences
-
-* What happens when demand increases?
-
-The demand curve shifts rightwards.
-
-* What happens when demand decreases?
-
-The demand curve shifts leftwards.
-
-* What is a substitute?
-
-A good that can be used in place of another good.
-
-* What is a complement?
-
-A good that is used in conjunction with another good.
-
-* What happens when the price of a good's substitute rises?
-
-The demand of the good rises.
-
-* What happens when the price of a good's complement rises?
-
-The demand of the good falls.
-
-* How do expected future prices affect demand?
-
-When the price of a good is expected to rise, the current demand for the good
-increases.
-
-* What is a normal good?
-
-A good for which demand increases as income increases.
-
-* What is an inferior good?
-
-A good for which demand decreases as income increases.
-
-* What does an increase in demand do to the demand curve?
-
-Shifts it to the right.
-
-* What does it mean to "move along the demand curve"?
-
-The price and quantity demanded is changing.
-
-* What does it mean for a firm to supply a good or service?
-
-The firm has the resources and technology to produce it, can profit from selling
-it, and has made a definite plan to produce and sell it.
-
-* What is the lowest price that a firm is willing to selling a product?
-
-At the product's marginal cost.
-
-* What is the law of supply?
-
-Other things remaining the same, the higher the price of a good, the greater
-the quantity supplied.
-
-* When are producers willing to supply a good?
-
-If they can at least cover their marginal cost of production.
-
-* What are the 6 factors that change supply?
-
-1. Prices of factors of production
-2. Prices of related goods
-3. Expected future prices
-4. Number of suppliers
-5. Technology
-6. State of nature
-
-* What is a substitute in production?
-
-A good that can be produced with the same resources.
-
-* What is a complement in production?
-
-Goods that must be produced together.
-
-* What does an increase in supply do to the supply curve?
-
-Shifts it to the right.
-
-* What is the equilibrium price and quantity?
-
-The price at which quantity demanded == quantity supplied, and the
-quantity bought and sold at that price.
-
-* What is a shortage?
-
-When quantity demanded > quantity supplied, created when the price is too low.
-
-* What is a surplus?
-
-When quantity demanded < quantity supplied, created when the price is too high.
-
-* What happens to the equilibrium price and quantity when demand increases?
-
-Price rises, quantity rises.
-
-* What happens to the equilibrium price and quantity when demand decreases?
-
-Price lowers, quantity lowers.
-
-* What happens to the equilibrium price and quantity when supply increases?
-
-Price lowers, quantity rises.
-
-* What happens to the equilibrium price and quantity when supply decreases?
-
-Price rises, quantity lowers.
-
-* What happens to the equilibrium price and quantity when both demand and supply increases?
-
-Price is unknown, quantity rises.
-
-* What happens to the equilibrium price and quantity when both demand and supply decreases?
-
-Price is unknown, quantity lowers.
-
-* What happens to the equilibrium price and quantity when demand increases and supply decreases?
-
-Price rises, quantity is unknown.
-
-* What happens to the equilibrium price and quantity when demand decreases and supply increases?
-
-Price lowers, quantity is unknown.
-
-# Elasticity
-
-* What is elasticity?
-
-A unit-independent measurement of the responsiveness of quantity vs price.
-
-* How do we calculate the price elasticity of demand?
-
-Percentage change in quantity demanded / percentage change in price
-
-* How we calculate the percentage changed w.r.t elasticity?
-
-(New - Initial) / ((New + Initial) / 2)
-
-* When does a good have perfectly inelastic demand?
-
-When the price elasticity of demand is 0. (i.e. when the demand curve is
-vertical)
-
-* What is the definite of unit elastic demand?
-
-When the price elasticity of demand is 1.
-When the % change in quantity demanded equals the % change in price.
-
-* When does a good have inelastic demand?
-
-When the price elasticity of demand is less than 1.
-
-* When does a good have elastic demand?
-
-When the price elasticity of demand is greater than 1.
-
-* When does a good have perfectly elastic demand?
-
-When the price elasticity of demand is infinite.
-When the demand curve is horizontal.
-
-* What are the 3 factors that influence the elasticity of demand?
-
-1. Closeness of substitutes
-  Closer the substitutes, more elastic
-2. Proportion of income spent on the good
-  Greater the portion of income, more elastic
-3. Time elapsed since a price change
-  More time consumers have to adjust to a price change, more elastic
-  Unperishable goods are elastic
-
-* How do we calculate the total revenue?
-
-Price of good * quantity sold.
-
-* What should we do if demand is elastic?
-
-Lower the price, because a 1% drop in price means a > 1% increase in sales.
-
-* What should we do if demand is inelastic?
-
-Raise the price, because a 1% raise in price results in a <1% decrease in sales.
-
-* What should we do if demand is unit elastic?
-
-Nothing.
-
-* What is the total revenue test?
-
-A method of estimating the price elasticity of demand
-
-Observe the change in total revenue from a price cut.
-  If down, inelastic
-  If up, elastic
-  If nothing, unit elastic
-
-* At what point do we achieve maximum revenue?
-
-When we produce at the point where the price elasticity of demand is unit elastic.
-
-* How is your expenditure affected by price elasticity of demand?
-
-If your demand is:
-  elastic, then 1% price cut means you'll spend more than 1% more on the item.
-    Expenditure increases
-  inelastic, then 1% price cut means you'll spend less than 1% more on the item
-    Expenditure decreases
-  unit elastic, then 1% price cut means you'll spend 1% more on the item
-    Expenditure does not change
-
-* What is the income elasticity of demand?
-
-Measures how the quantity demanded responses to a change income.
-
-% change in quantity demanded / % change in income.
-
-* When is a good income elastic?
-
-When the income elasticity of demand is greater than 1.
-
-* When is a good income inelastic?
-
-When the income elasticity of demand is less than 1.
-
-* When is a good inferior?
-
-When the income elasticity of demand is less negative.
-When income decreases, quantity demanded increases.
-
-* What is the elasticity of supply?
-
-Measures how the quantity supplied changes in response to price changes.
-
-% changed in quantity supplied / % change in price
-
-* When is supply perfectly inelastic?
-
-When the elasticity of supply is 0.
-When the supply curve is vertical.
-
-* When is supply perfectly elastic?
-
-When the elasticity of supply is infinite.
-When the supply curve is horizontal.
-
-* When is supply unit elastic?
-
-When the supply curve is linear and passes through the origin.
-NOTE THAT SLOPE IS IRRELEVANT.
-
-* What are 2 factors that influence the elasticity of supply?
-
-1. Resource substitution possibilities
-  Easier to substitute among the resources use to produce good => more elastic
-2. Time frame for supply decision
-  More time that passes after price change => more elastic
-
-* What is momentary, short-run, and long-run supply and their elasticity?
-
-Momentary: Perfectly inelastic.
-Short-run: Somewhat elastic.
-Long-run: Most elastic.
-
-* What is cross elasticity of demand?
-
-Comparison of how Product A's quantity demanded changes when Product B's price changes.
-
-% change in quantity demanded of Product A / % change in price of Product B
-
-* When are two goods close substitutes?
-
-When their cross elasticity of demand is high.
-(A small increase in price of A causes quantity demanded for B to shoot up.)
-
-* When are two goods substitutes?
-
-When their cross elasticity of demand is positive.
-(An increase in price of A causes quantity demanded for B to increase.)
-
-* When are two goods unrelated?
-
-When their cross elasticity of demand is 0.
-
-* When are two goods complements?
-
-When their cross elasticity of demand is negative.
-(An increase in price of A causes quantity demanded for B to decrease.)
-
-# Utility
+## Key concepts in Economics
+#
+#* What is scarcity?
+#
+#Our inability to satisfy all our wants.
+#
+#* What does scarcity cause us to do?
+#
+#Make choices.
+#
+#* What is an incentive?
+#
+#A reward that encourages an action, or a penalty that discourages an action.
+#
+#* What is economics?
+#
+#The social science that studies the choices that individuals, businesses,
+#governments, and societies make as they cope with scarcity, and the incentives
+#that influence and reconcile those choices.
+#
+#* What is microeconomics?
+#
+#The study of choices that individuals and businesses make, and how those choices
+#interact in markets; and the influence of governments.
+#
+#* What is macroeconomics?
+#
+#The study of the performance of the national and global economies.
+#
+#* What are the two big economic questions?
+#
+#1. How do choices end up determining what, how, and for whom goods and services
+#   are produced?
+#2. When do choices made in the pursuit of self-interest also promote the social interest?
+#
+#* What are goods and services?
+#
+#Objects that people value and produce to satisfy human wants.
+#
+#* How does level-of-development affect what goods and services are produced?
+#
+#Countries with a higher level of development tend to produce less agriculture
+#goods, proportionally.
+#
+#* What is a Factor of production?
+#
+#Resources that are used to produce goods and services.
+#
+#* What are the 4 categories of factors of production?
+#
+#1. Land
+#2. Labour
+#3. Capital
+#4. Entrepreneurship
+#
+#* What is Land w.r.t factors of production?
+#
+#"Gifts of Nature" that we use to produce goods and services.
+#
+#* What is Labour w.r.t factors of production?
+#
+#The work time and work effort that people devote to producing goods and services.
+#
+#* What is Human Capital w.r.t factors of production?
+#
+#The "quality" of labour, i.e. the knowledge and skill that people obtain from
+#education, training and experience.
+#
+#* What is Capital w.r.t factors of production?
+#
+#The tools, instruments, machines, buildings, and other constructions that
+#businesses use to produce goods and services.
+#
+#* What is Entrepreneurship w.r.t factors of production?
+#
+#The human resource that organizes land, labour and capital.
+#
+#* What is self-interest w.r.t choices?
+#
+#You make choices that are in your self-interest -- choices that you think
+#are best for you.
+#
+#* What is social interest w.r.t choices?
+#
+#Choices that are best for society as a whole are said to be in social interest.
+#
+#* What are the two dimensions of social interest?
+#
+#1. Efficiency
+#2. Equity
+#
+#* When is a choice efficient?
+#
+#If it is not possible to make someone better off without making someone else
+#worse off.
+#
+#* When is a choice equitable?
+#
+#Fairness, but economists have a variety of views about what is fair.
+#
+#* What are the four topics that cause tension between self and social interest?
+#
+#1. Globalization
+#    Economic crises can affect the whole world.
+#2. Information-age monopolies
+#3. Global warming
+#4. Economic instability
+#
+#* What 6 ideas define the economic way of thinking?
+#
+#1. A choice is a tradeoff.
+#2. People make rational choices by comparing benefits and costs.
+#3. A benefit is what your gain from something.
+#4. Cost is what you must give up to get something.
+#5. Most choices are "how-much" choices made at the margin.
+#6. Choices respond to incentives.
+#
+#* What does "a choice is a tradeoff" mean?
+#
+#Choices are an exchange between outcomes. Giving something up to get another
+#thing. Whatever you choose you could have chosen something else.
+#
+#* What is a "rational choice"?
+#
+#A choice that compares costs and benefits and achieves the greatest benefit
+#over cost for the person making the choice.
+#
+#* What is a benefit?
+#
+#The value that you gain.
+#
+#* What is opportunity cost?
+#
+#The cost of something is the highest-valued alternative that must be given up
+#to get it.
+#
+#* What is the margin?
+#
+#Most choices are not all or nothing, you can decide to dedicate only "half" of
+#something.
+#
+#Costs and benefits change when you have more or less of something, you can
+#make your choice at the margin.
+#
+#* What the "marginal benefit" and "marginal cost"?
+#
+#MB: The benefit from pursuing an incremental increase in an activity.
+#MC: The opportunity cost of pursuing an incremental increase in an activity.
+#
+#If MB > MC, then you should do more of the activity.
+#
+#* How do choices respond to incentives?
+#
+#Changing marginal cost or benefits changes the incentives we face and can lead
+#us to change our choice.
+#
+#Idea: We can predict how choices will change by looking at changes in incentives.
+#
+#* What can incentives be useful for?
+#
+#Reconciling self-interests and social interests.
+#
+#* What is a positive statement?
+#
+#A statement that can be tested by checking it against facts.
+#
+#"What is"
+#
+#* What is a normative statement?
+#
+#A statement that expresses an opinion and cannot be tested.
+#
+#"What ought to be"
+#
+#* What is an economic model?
+#
+#A description of some aspect of the economic world that includes only those
+#features which are needed for the purpose at hand.
+#
+#* How do economists test economic models?
+#
+#By comparing predictions with the facts.
+#
+#* What ways do economists validate their statements?
+#
+#- Economic models
+#- Natural experiments
+#- Statistical investigations
+#- Economic experiments
+#
+#* What is the production possibilities frontier?
+#
+#A graph detailing what is possible for us to produce, given the resources
+#available to us.
+#
+#* When is production efficient w.r.t the PPF graph?
+#
+#When we are producing on a point that's on the PPF curve.
+#
+#* When is production inefficient w.r.t the PPF graph?
+#
+#When we are producing on a point that's inside the PPF curve, but not on the
+#curve.
+#
+#* When is a production level attainable w.r.t the PFF graph?
+#
+#When it's in the area under the curve.
+#
+#* How does the PPF curve illustrate tradeoff?
+#
+#The PPF curve illustrates how much production we need to decrease in one
+#product to increase production for another product.
+#
+#* Why does opportunity cost increase as we produce more of a product?
+#
+#Because resources are not equally productive in all activities.
+#
+#* What does the outward bow of the PPF curve illustrate?
+#
+#Increasing opportunity cost as production increases.
+#
+#* What is the marginal cost?
+#
+#The opportunity cost of producing one more unit of a product.
+#
+#* How is preference measured?
+#
+#Via marginal benefit and the maginal benefit curve.
+#
+#* What is marginal benefit?
+#
+#The benefit that one gains for consuming one more unit of a product. It is also
+#people's willingness to pay for one more of a product.
+#
+#* What does a point on the marginal benefit curve mean?
+#
+#How much of Y people are willing to give up (or pay) in order to get an X.
+#
+#* When have we achieved production efficiency?
+#
+#When we cannot produce more of any one good without giving up some other
+#good.
+#
+#* When have we achieved allocative efficiency?
+#
+#When we cannot produce more of any good that we value more highly, we have
+#achieved allocative efficiency.
+#
+#* What is the point of allocative efficency on the PPF?
+#
+#The point at which marginal benefit equals marginal cost.
+#
+#* What is economic growth?
+#
+#An expansion of production possibilities, an increase in the standard of living.
+#
+#* What are the 2 key factors that influence economic growth?
+#
+#1. Technological change
+#2. Capital accumulation
+#
+#* What is technological change w.r.t economic growth?
+#
+#The development of new and better ways of producing goods/services.
+#
+#* What is capital accumulation w.r.t economic growth?
+#
+#The growth of capital resources, including human capital.
+#
+#* What is the cost of economic growth?
+#
+#We must use resources to research and develop new capital, which means that we
+#must decrease our current production.
+#
+#Opportunity cost: Less current consumption.
+#
+#* What is the effect of economic growth on the PPF curve?
+#
+#It expands rightwards.
+#
+#* When does a person have a comparative advantage?
+#
+#When one can perform an activity with lower opportunity cost than anyone else.
+#
+#* When does a person have an absolute advantage?
+#
+#When one is more productive than anyone else.
+#
+#* Why is trading beneficial?
+#
+#Because each people almost always have comparative advantages over each other,
+#they can specialize and trade with one another to maximize their production.
+#
+#* What four social institutions have evolved to facilitate trade? Why?
+#
+#1. Firms
+#2. Markets
+#3. Property rights
+#4. Money
+#
+#To facilitate coordination between people.
+#
+#* WHat are the two types of markets?
+#
+#1. Factor markets
+#2. Goods markets
+#
+#* How does money flow in the economy?
+#
+#Households -> goods market -> firms -> factor markets -> households
+#
+#* How do goods and services flow in the economy?
+#
+#Firms -> goods market -> households -> factor markets -> firms
+#
+## Supply and demand
+#
+#* What is a market?
+#
+#Any arrangement that enables buyers and sellers to get information and do
+#business with each other.
+#
+#* What is a competitive market?
+#
+#A market that has many buyers and many sellers so no single buyer can influence
+#the price.
+#
+#* What is the money price of a good?
+#
+#The amount of money needed to buy it.
+#
+#* What is the relative price of a good?
+#
+#The ratio of the good's money price to the money price of the next best
+#alternative good.
+#
+#It's opportunity cost.
+#
+#* When do we consider that you demand something?
+#
+#When you want it, can afford it, and have made a definite plan to buy it.
+#
+#* What is quantity demanded?
+#
+#The amount that consumers plan to buy during a particular time period and at
+#a particular price.
+#
+#* What is demand?
+#
+#The goods and services that consumers want.
+#
+#* What is the law of demand?
+#
+#Other things remaining the same, the higher the price, the lower the quantity
+#demanded.
+#
+#* What are 2 causes of the law of demand?
+#
+#1. Substitution effect
+#2. Income effect.
+#
+#* What is the substitution effect?
+#
+#When the relative price of a good/service rises, people seek substitutes for it,
+#decreasing the quantity demanded.
+#
+#* What is the income effect?
+#
+#When the price of a good/service rises relative to income, some people cannot
+#afford it anymore, decreasing the quantity demanded.
+#
+#* What is the demand curve?
+#
+#Price vs quantity demanded curve. Also called "willingness-to-pay-curve".
+#
+#* What does willingness-to-pay measure?
+#
+#Marginal benefit.
+#
+#* What are the six factors that change demand?
+#
+#1. Prices of related goods
+#2. Expected future prices
+#3. Income
+#4. Expected future income and credit
+#5. Population
+#6. Preferences
+#
+#* What happens when demand increases?
+#
+#The demand curve shifts rightwards.
+#
+#* What happens when demand decreases?
+#
+#The demand curve shifts leftwards.
+#
+#* What is a substitute?
+#
+#A good that can be used in place of another good.
+#
+#* What is a complement?
+#
+#A good that is used in conjunction with another good.
+#
+#* What happens when the price of a good's substitute rises?
+#
+#The demand of the good rises.
+#
+#* What happens when the price of a good's complement rises?
+#
+#The demand of the good falls.
+#
+#* How do expected future prices affect demand?
+#
+#When the price of a good is expected to rise, the current demand for the good
+#increases.
+#
+#* What is a normal good?
+#
+#A good for which demand increases as income increases.
+#
+#* What is an inferior good?
+#
+#A good for which demand decreases as income increases.
+#
+#* What does an increase in demand do to the demand curve?
+#
+#Shifts it to the right.
+#
+#* What does it mean to "move along the demand curve"?
+#
+#The price and quantity demanded is changing.
+#
+#* What does it mean for a firm to supply a good or service?
+#
+#The firm has the resources and technology to produce it, can profit from selling
+#it, and has made a definite plan to produce and sell it.
+#
+#* What is the lowest price that a firm is willing to selling a product?
+#
+#At the product's marginal cost.
+#
+#* What is the law of supply?
+#
+#Other things remaining the same, the higher the price of a good, the greater
+#the quantity supplied.
+#
+#* When are producers willing to supply a good?
+#
+#If they can at least cover their marginal cost of production.
+#
+#* What are the 6 factors that change supply?
+#
+#1. Prices of factors of production
+#2. Prices of related goods
+#3. Expected future prices
+#4. Number of suppliers
+#5. Technology
+#6. State of nature
+#
+#* What is a substitute in production?
+#
+#A good that can be produced with the same resources.
+#
+#* What is a complement in production?
+#
+#Goods that must be produced together.
+#
+#* What does an increase in supply do to the supply curve?
+#
+#Shifts it to the right.
+#
+#* What is the equilibrium price and quantity?
+#
+#The price at which quantity demanded == quantity supplied, and the
+#quantity bought and sold at that price.
+#
+#* What is a shortage?
+#
+#When quantity demanded > quantity supplied, created when the price is too low.
+#
+#* What is a surplus?
+#
+#When quantity demanded < quantity supplied, created when the price is too high.
+#
+#* What happens to the equilibrium price and quantity when demand increases?
+#
+#Price rises, quantity rises.
+#
+#* What happens to the equilibrium price and quantity when demand decreases?
+#
+#Price lowers, quantity lowers.
+#
+#* What happens to the equilibrium price and quantity when supply increases?
+#
+#Price lowers, quantity rises.
+#
+#* What happens to the equilibrium price and quantity when supply decreases?
+#
+#Price rises, quantity lowers.
+#
+#* What happens to the equilibrium price and quantity when both demand and supply increases?
+#
+#Price is unknown, quantity rises.
+#
+#* What happens to the equilibrium price and quantity when both demand and supply decreases?
+#
+#Price is unknown, quantity lowers.
+#
+#* What happens to the equilibrium price and quantity when demand increases and supply decreases?
+#
+#Price rises, quantity is unknown.
+#
+#* What happens to the equilibrium price and quantity when demand decreases and supply increases?
+#
+#Price lowers, quantity is unknown.
+#
+## Elasticity
+#
+#* What is elasticity?
+#
+#A unit-independent measurement of the responsiveness of quantity vs price.
+#
+#* How do we calculate the price elasticity of demand?
+#
+#Percentage change in quantity demanded / percentage change in price
+#
+#* How we calculate the percentage changed w.r.t elasticity?
+#
+#(New - Initial) / ((New + Initial) / 2)
+#
+#* When does a good have perfectly inelastic demand?
+#
+#When the price elasticity of demand is 0. (i.e. when the demand curve is
+#vertical)
+#
+#* What is the definite of unit elastic demand?
+#
+#When the price elasticity of demand is 1.
+#When the % change in quantity demanded equals the % change in price.
+#
+#* When does a good have inelastic demand?
+#
+#When the price elasticity of demand is less than 1.
+#
+#* When does a good have elastic demand?
+#
+#When the price elasticity of demand is greater than 1.
+#
+#* When does a good have perfectly elastic demand?
+#
+#When the price elasticity of demand is infinite.
+#When the demand curve is horizontal.
+#
+#* What are the 3 factors that influence the elasticity of demand?
+#
+#1. Closeness of substitutes
+#  Closer the substitutes, more elastic
+#2. Proportion of income spent on the good
+#  Greater the portion of income, more elastic
+#3. Time elapsed since a price change
+#  More time consumers have to adjust to a price change, more elastic
+#  Unperishable goods are elastic
+#
+#* How do we calculate the total revenue?
+#
+#Price of good * quantity sold.
+#
+#* What should we do if demand is elastic?
+#
+#Lower the price, because a 1% drop in price means a > 1% increase in sales.
+#
+#* What should we do if demand is inelastic?
+#
+#Raise the price, because a 1% raise in price results in a <1% decrease in sales.
+#
+#* What should we do if demand is unit elastic?
+#
+#Nothing.
+#
+#* What is the total revenue test?
+#
+#A method of estimating the price elasticity of demand
+#
+#Observe the change in total revenue from a price cut.
+#  If down, inelastic
+#  If up, elastic
+#  If nothing, unit elastic
+#
+#* At what point do we achieve maximum revenue?
+#
+#When we produce at the point where the price elasticity of demand is unit elastic.
+#
+#* How is your expenditure affected by price elasticity of demand?
+#
+#If your demand is:
+#  elastic, then 1% price cut means you'll spend more than 1% more on the item.
+#    Expenditure increases
+#  inelastic, then 1% price cut means you'll spend less than 1% more on the item
+#    Expenditure decreases
+#  unit elastic, then 1% price cut means you'll spend 1% more on the item
+#    Expenditure does not change
+#
+#* What is the income elasticity of demand?
+#
+#Measures how the quantity demanded responses to a change income.
+#
+#% change in quantity demanded / % change in income.
+#
+#* When is a good income elastic?
+#
+#When the income elasticity of demand is greater than 1.
+#
+#* When is a good income inelastic?
+#
+#When the income elasticity of demand is less than 1.
+#
+#* When is a good inferior?
+#
+#When the income elasticity of demand is less negative.
+#When income decreases, quantity demanded increases.
+#
+#* What is the elasticity of supply?
+#
+#Measures how the quantity supplied changes in response to price changes.
+#
+#% changed in quantity supplied / % change in price
+#
+#* When is supply perfectly inelastic?
+#
+#When the elasticity of supply is 0.
+#When the supply curve is vertical.
+#
+#* When is supply perfectly elastic?
+#
+#When the elasticity of supply is infinite.
+#When the supply curve is horizontal.
+#
+#* When is supply unit elastic?
+#
+#When the supply curve is linear and passes through the origin.
+#NOTE THAT SLOPE IS IRRELEVANT.
+#
+#* What are 2 factors that influence the elasticity of supply?
+#
+#1. Resource substitution possibilities
+#  Easier to substitute among the resources use to produce good => more elastic
+#2. Time frame for supply decision
+#  More time that passes after price change => more elastic
+#
+#* What is momentary, short-run, and long-run supply and their elasticity?
+#
+#Momentary: Perfectly inelastic.
+#Short-run: Somewhat elastic.
+#Long-run: Most elastic.
+#
+#* What is cross elasticity of demand?
+#
+#Comparison of how Product A's quantity demanded changes when Product B's price changes.
+#
+#% change in quantity demanded of Product A / % change in price of Product B
+#
+#* When are two goods close substitutes?
+#
+#When their cross elasticity of demand is high.
+#(A small increase in price of A causes quantity demanded for B to shoot up.)
+#
+#* When are two goods substitutes?
+#
+#When their cross elasticity of demand is positive.
+#(An increase in price of A causes quantity demanded for B to increase.)
+#
+#* When are two goods unrelated?
+#
+#When their cross elasticity of demand is 0.
+#
+#* When are two goods complements?
+#
+#When their cross elasticity of demand is negative.
+#(An increase in price of A causes quantity demanded for B to decrease.)
+#
+## Utility
 
 * What are comsumption possibilities?
 
