@@ -1571,3 +1571,103 @@ We align ourselves with success, and distance ourselves from failure. "We won",
 - Also, if I have weak self-esteem, I might also choose the hardest task,
   taking a defensive esteem challenge. If I fail it doesn't matter since
   everyone fails.
+
+# Freud
+
+* Who created the "classic psychiatry" scenario?
+
+Sigmund Freud. Who first did the couch and table behind thing.
+
+* Who wrote "The Interpretation of Dreams"?
+
+Sigmund Freud.
+
+* What is the "Id"?
+
+Something that only exists in the unconscious.
+Operates on the pleasure principle.
+Contains inborn biological instincts, consisting of
+  Eros (the life force)
+  Thanatos (the death force)
+
+* What did Freud think the Eros was?
+
+A reflection of natural selection, the force that makes our species evolve and
+become greater.
+
+* What did Freud think the Thanatos was?
+
+The counter-evolutionary force that is trying to drag our species back into the
+past.
+
+* What is the "ego"?
+
+Something that exists in the conscious and preconscious levels.
+Operates on the reality principle.
+Realistic regulation of thoughts and actions.
+
+* What is the "superego"?
+
+TODO
+
+* What was Freud's view of the human mind?
+
+The mind is a mental iceberg.
+You have a conscious level that contains your thoughts and perceptions.
+Followed by your subconscious level that contains your memories and knowledge.
+Lastly, the majority, is your unconscious level that contains your fears,
+violent thoughts, immoral urges, etc...
+
+* What are some routes to the unconscious?
+
+1. Free associations. Which is why Freud had the couch.
+2. Mistakes. "Freudian slips" forgetting words, names, etc.
+3. Dreams. Latent content, "royal road to the unconsciousness".
+4. Projective tests. Standardized set of ambiguous prompts designed to reveal something.
+
+* What are some analysises that Freud made from dreams?
+
+Broken arm => Broken (e.g. marriage) vows
+King or Queen => Parents; Authority figures
+Elongated Objects => Male genitalia
+Opening Umbrella => Penile erection
+Hollow objects, rooms => Female genitalia
+Entrances and exits => sexual acts.
+
+* What is the oral psychosexual stage according to Freud?
+
+Between 0-1.5 years.
+Erogenous zone: Mouth.
+Key healthy development is weaning.
+
+* What are the two personalities that can emerge from oral psychosexual stage?
+
+Oral Dependent:
+  Comes from excessive gratification.
+  Makes you passive, dependent, gullible
+Oral Aggressive:
+  Comes from excessive frustration (not enough stimulation)
+  Argumentative, cynical, exploitative.
+
+* What are some expressions of the oral psychosexual stage?
+
+Gum-chewing, nail-biting, smoking, kissing, eating disorders, alcoholism.
+
+* What is the anal psychosexual stage according to Freud?
+
+Between 1.3-3 years.
+Erogenous zone: Anus.
+Key Task: Toilet training.
+
+* What are the two personalities that can emerge from the anal psychosexual stage?
+
+Anal Expulsive:
+  Excessive gratification
+  Sloppy, careless, messy, disorderly
+Anal Retentive:
+  Excessive frustration.
+  Compulsive cleanliness, orderly, rigid, stubborn.
+
+* What are some expression of the anal psychosexual stage?
+
+Neil Simon's "The Odd Couple".
