@@ -1475,6 +1475,177 @@ Drugs that depress activity of the nervous system
 
 # Learning
 
+## 6.1
+
+* What is learning?
+
+A process by which behaviour of knowledge changes as a result of experience.
+
+* What is cognitive learning?
+
+Reading, listening, taking tests to acquire new information.
+
+* What is associative learning?
+
+Classical conditioning and operant conditioning.
+
+* What is classical conditioning?
+
+Learning that occurs when a neutral stimulus elicits a response that was
+caused by another stimulus.
+
+* What is a stimulus?
+
+An external event or cue that elicits a response.
+
+* What is an unconditioned stimulus?
+
+A stimulus that elicits a reflex response without learning.
+
+* What is an unconditioned response?
+
+An unlearned reaction to an unconditioned stimulus.
+
+* What is a conditioned stimulus?
+
+A once-neutral stimulus that later elicits a conditioned response, because it
+has a history of being paired with an unconditioned stimulus.
+
+* What is a condition response?
+
+The learned response that occurs to the conditioned stimulus.
+
+* How does the brain change in response to classical conditioning?
+
+Weak synapses (for CS) fires at the same time as strong synapses (for US).
+
+* What is acquisition?
+
+The initial phase of learning in which a response is established.
+
+* What is extinction?
+
+The loss or weakening of a conditioned response which a conditioned stimulus
+and unconditioned stimulus no longer occur together.
+
+* What is spontaneous recovery?
+
+The reoccurrence of a previously extinguished conditioned response, after some
+time has passed since extinction.
+
+* What is stimulus generalization?
+
+A process in which a response that originally occurs to a specific stimulus also
+occurs to different, though similar, stimuli.
+
+* What is discrimination?
+
+An organism learns to respond to one original stimulus but not to new stimuli
+that may be similar to the original stimulus.
+
+* What is preparedness?
+
+The biological predisposition to rapidly learn a response to a particular class
+of stimuli.
+
+* What is conditioned taste aversion?
+
+The acquired dislike or disgust of a food or drink because it was paired with
+illness.
+
+* What is latent inhibition?
+
+Frequent experience with the CS before the US makes classical conditioning
+less likely to occur.
+
+## 6.2
+
+* What is operant conditioning?
+
+A type of learning in which behaviour is influenced by consequences.
+
+* What is contingency?
+
+The fact that an action has consequences.
+
+* What is reinforcement?
+
+A process in which an event or reward that follows a response increase the
+likelihood of that response occurring again.
+
+* What is the law of effect?
+
+The idea that responses followed by satisfaction will occur again
+(and those that are not will not).
+
+* What is reinforcer?
+
+A stimulus that is contingent upon a response, that increases the probability
+of that response occurring again.
+
+* What is punishment?
+
+A process that decreases the future probability of a response.
+
+* What is negative reinforcement?
+
+The strengthening of a behaviour by removing a stimulus.
+
+* What is avoidance learning?
+
+A specific type of negative reinforcement that removes the possibility that
+a stimulus will occur.
+
+* What is escape learning?
+
+Learning that occurs if a response removes a stimulus that is already
+present.
+
+* What is positive punishment?
+
+A process in which a behaviour decreases in frequency because it was followed
+by a particular, usually unpleasant, stimulus.
+
+* What is negative punishment?
+
+A process that occurs when a behaviour decreases because it removes a
+particular stimulus.
+
+* What are primary reinforcers?
+
+Reinforcing stimuli that satisfy basic motivational needs.
+
+* What is secondary reinforcers?
+
+Stimuli that acquire their reinforcing effects only after we learn that they
+have value.
+
+* What is a discriminative stimulus?
+
+A cue or event that indicates that a response will be reinforced.
+
+* What is shaping?
+
+A procedure in which a specific operant response is created by reinforcing
+successive approximations of that response.
+
+* What are schedules of reinforcement?
+
+Rules that determine when reinforcement is available.
+
+* What is continous reinforcement?
+
+Every response made results in reinforcement.
+
+* What is partial reinforcement?
+
+Only a certain number of responses are rewarded.
+
+* What is the partial reinforcement effect?
+
+Organisms that have been conditioned under partial reinforcement resist
+extinction longer than those conditioned under continuous reinforcement.
+
 ## Slides
 
 * What kind of behaviour does a fixed ratio reward schedule encourage?
@@ -1494,6 +1665,99 @@ Bursts of action as the interval approaches.
 Slow and steady action.
 
 # Intelligence
+
+## 9.1
+
+* What is anthropometrics?
+
+Methods of measuring physical and mental variation in humans.
+
+* What is intelligence?
+
+The ability to think, understand, and reason to overcome obstacles.
+
+* What is the mental age?
+
+The average intellectual ability score for children of a specific age.
+
+* What is the Stanford-Binet test?
+
+A test intended to measure innate levels of intelligence.
+
+* What is IQ?
+
+Intelligence quotient.
+
+* What is the Wechsler Adult Intelligence Scale?
+
+The most common intelligence test today for adolescents and adults.
+
+* What is Raven's Progressive Matrices?
+
+An intelligence test that is based on pictures, not words, making it
+relatively unaffected by language or cultural background.
+
+* What is a stereotype threat?
+
+Negative stereotypes about a group cause that group to underperform on
+ability tests.
+
+* What is entity theory?
+
+The belief that intelligence is a fixed characteristic and is hard to change.
+
+* What is incremental theory?
+
+The belief that intelligence can be shaped by experiences and effort.
+
+## 9.2
+
+* What is a savant?
+
+An individual with low mental capacity in most domains, but extraordinary
+abilities in other specific areas.
+
+* What is factor analysis?
+
+A statistical technical that examines correlations between variables to find
+clusters of related variables.
+
+* What is the general intelligence factor?
+
+Coined by Spearman, it represented a person's mental energy. Some people had
+more of it, which made them smarter.
+
+* What are primary mental abilties?
+
+Coined by Thurstone, seven factors that contributed to a person's overall
+mental ability.
+
+* What is fluid intelligence?
+
+A type of intelligence used in learning new information and solving new
+problems not based on knowledge the person already possesses.
+
+* What is crystallized intelligence?
+
+A type of intelligence that draws upon past learning and experience.
+
+* What is the triarchic theory of intelligence?
+
+Coined by Gardner, intelligence is divided into 3 parts:
+
+- Analytical, book smarts
+- Practical, street smarts
+- Creative, new ideas
+
+* What is the theory of multiple intelligences?
+
+A model claiming that there are eight (or nine now) different forms of
+intelligence, each independent from the others.
+
+* What are some differences between male and female intelligence?
+
+Males are better at spatial reasoning.
+Females are better at verbal reasoning.
 
 ## Slides
 
@@ -1651,6 +1915,137 @@ potential, that is enhanced through experience.
 - Scores are standardized according to the normal distribution with a SD of 15.
 
 # Motivation
+
+## 11.1
+
+* What is motivation?
+
+The initiation of behaviours that direct organisms toward certain goals.
+
+* What is a drive?
+
+A biological trigger that tells us we may be deprived of something we need, and
+to seek it out.
+
+* What is homeostasis?
+
+The physiological processes that allow our body to maintain consistent
+internal states.
+
+* What is allostasis?
+
+The anticipation of future needs.
+
+* What is glucose?
+
+A sugar that serves as a primary energy source for the brain.
+
+* What is satiation?
+
+The point in a meal when we are no longer motivated to eat.
+
+* What is the lateral hypothalamus responsible for?
+
+Starting hunger.
+
+* What is the ventromedial region of the hypothalamus responsible for?
+
+Ending hunger.
+
+* Why do we crave fats?
+
+We have specialized receptors on our tongues that like fat.
+
+* What is ghrelin?
+
+A hormone secreted in the stomach that increases appetite.
+
+* What is the unit bias?
+
+The unit of sale or portioning is an appropriate amount to consume.
+
+* What is social facilitation?
+
+Being encouraged to eat more for social reasons.
+
+* What is impression management?
+
+Eating less in order to have people see them in a different way.
+
+* What is modelling?
+
+Eating whatever others eat.
+
+* What is obesity?
+
+A disorder of positive energy balance.
+
+* What is anorexia nervosa?
+
+A eating disorder that involves starvation and intense fear of gaining weight.
+And a denial of the serious consequences of severely low weight.
+
+* What is bulimia nervosa?
+
+An eating disorder that is characterized by periods of food deprivation,
+binge-eating, and purging.
+
+## 11.2
+
+* What is libido?
+
+The motivation for sexual activity and pleasure.
+
+* What is the sexual response cycle?
+
+The phases of physiological change during sexual activity.
+- Excitement
+- Plateau
+- Orgasm
+- Resolution
+
+* What is the refractory period?
+
+A time period during which erection and orgasm are physically possible.
+
+* What is the difference between men and women w.r.t sexual response cycles?
+
+Men typically have one and only one orgasm.
+Women typically can have 0-many orgasms.
+
+* What is sexual orientation?
+
+The consistent preference for sexual relations with members of some sex.
+
+* What are gender roles?
+
+The accepted attitudes and behaviours of males and females in a given
+society.
+
+* What are sexual scripts?
+
+The set of rules and assumptions about the sexual behaviours of males and
+females.
+
+* What is testosterone?
+
+A hormone that is involved in the development of sex characteristics and the
+motivation of sexual behaviour.
+
+* What are 3 important events that changed sexual scripts?
+
+1. Women's Right movements
+2. Increasing presence of women in the workforce.
+3. The birth-control pill.
+
+* What is sex guilt?
+
+Negative emotional feelings for having violated culturally accepted
+standards of appropriate sexual behaviour.
+
+## 11.3
+
+## Slides
 
 * What are the 3 ways we measure motivation?
 
@@ -1824,174 +2219,176 @@ We align ourselves with success, and distance ourselves from failure. "We won",
   taking a defensive esteem challenge. If I fail it doesn't matter since
   everyone fails.
 
-# Freud
-
-* Who created the "classic psychiatry" scenario?
-
-Sigmund Freud. Who first did the couch and table behind thing.
-
-* Who wrote "The Interpretation of Dreams"?
-
-Sigmund Freud.
-
-* What is the "Id"?
-
-Something that only exists in the unconscious.
-Operates on the pleasure principle.
-Contains inborn biological instincts, consisting of
-  Eros (the life force)
-  Thanatos (the death force)
-
-* What did Freud think the Eros was?
-
-A reflection of natural selection, the force that makes our species evolve and
-become greater.
-
-* What did Freud think the Thanatos was?
-
-The counter-evolutionary force that is trying to drag our species back into the
-past.
-
-* What is the "ego"?
-
-Something that exists in the conscious and preconscious levels.
-Operates on the reality principle.
-Realistic regulation of thoughts and actions.
-
-* What is the "superego"?
-
-TODO
-
-* What was Freud's view of the human mind?
-
-The mind is a mental iceberg.
-You have a conscious level that contains your thoughts and perceptions.
-Followed by your subconscious level that contains your memories and knowledge.
-Lastly, the majority, is your unconscious level that contains your fears,
-violent thoughts, immoral urges, etc...
-
-* What are some routes to the unconscious?
-
-1. Free associations. Which is why Freud had the couch.
-2. Mistakes. "Freudian slips" forgetting words, names, etc.
-3. Dreams. Latent content, "royal road to the unconsciousness".
-4. Projective tests. Standardized set of ambiguous prompts designed to reveal something.
-
-* What are some analysises that Freud made from dreams?
-
-Broken arm => Broken (e.g. marriage) vows
-King or Queen => Parents; Authority figures
-Elongated Objects => Male genitalia
-Opening Umbrella => Penile erection
-Hollow objects, rooms => Female genitalia
-Entrances and exits => sexual acts.
-
-* What is the oral psychosexual stage according to Freud?
-
-Between 0-1.5 years.
-Erogenous zone: Mouth.
-Key healthy development is weaning.
-
-* What are the two personalities that can emerge from oral psychosexual stage?
-
-Oral Dependent:
-  Comes from excessive gratification.
-  Makes you passive, dependent, gullible
-Oral Aggressive:
-  Comes from excessive frustration (not enough stimulation)
-  Argumentative, cynical, exploitative.
-
-* What are some expressions of the oral psychosexual stage?
-
-Gum-chewing, nail-biting, smoking, kissing, eating disorders, alcoholism.
-
-* What is the anal psychosexual stage according to Freud?
-
-Between 1.3-3 years.
-Erogenous zone: Anus.
-Key Task: Toilet training.
-
-* What are the two personalities that can emerge from the anal psychosexual stage?
-
-Anal Expulsive:
-  Excessive gratification
-  Sloppy, careless, messy, disorderly
-Anal Retentive:
-  Excessive frustration.
-  Compulsive cleanliness, orderly, rigid, stubborn.
-
-* What are some expression of the anal psychosexual stage?
-
-Neil Simon's "The Odd Couple".
-
-* What is the phallic psychosexual stage according to Freud?
-
-Between 3-6 years.
-Erogenous zone: Genitals
-Key Task: Sexual identity
-
-* What are the two personalities that can emerge from the phallic psychosexual stage?
-
-Boy's Oedipal Complex:
-  Incestuous attraction to mother.
-  Castration anxiety.
-Girl's Electra Complex:
-  Incestuous attraction to father.
-  Penis envy.
-
-* What are some expressions of the phallic psychosexual stage?
-
-Males: "macho" expression.
-Females: Flirting "girly" or overly dominant.
-
-* What is the genital stage according to Freud?
-
-From puberty onwards.
-Erogenous zone: Genitals.
-Key Task: Intimacy and procreation.
-
-* What was the medical conflict against Freud?
-
-- There was evidence of biological determinants.
-- AMA abandons psychoanalysis for pharmacology.
-
-* What was the economic conflict against Freud?
-
-- Psychoanalysis had an exorbitant cost.
-- Insurers abandon psychoanalysis for cheaper treatments.
-
-* What was the legal conflict against Freud?
-
-- There were some indefensible claims of repressed sexual abuse.
-  - Some people, during psychoanalysis, said that someone sexually abused them.
-  - And there was no ability to prove their innocence.
-- Defenders abandon psychoanalysis for scientific evidence.
-  - To avoid people going to prison for such claims, people had to
-    attack the validity of psychoanalysis.
-
-* What are some flaws in Freud's scientific method?
-
-- Some of his theories (e.g. id) are hard to prove or disprove.
-- He did not build his theories on a broad sample of people, only with people
-  who had specific psychological problems.
-- He was motivated to see his patents as unwell, because they would be paying them.
-
-* How does Freud's work persist today?
-
-In literature: Conflict, sex, and aggression.
-
-# Personality
-
-* What is state shyness?
-
-A phenomenon where you're shy in certain situations only. There are usually only
-minimal negative consequences.
-
-* What is trait shyness?
-
-15-25% of the population. Pervasive shyness across situations and time.
-There are severe consequences because they
-- Avoid social events.
-- Make others uncomfortable.
-- Inhibits communication and assertiveness.
-- Prone to low self-esteem.
+## End of midterm2
+#
+## Freud
+#
+#* Who created the "classic psychiatry" scenario?
+#
+#Sigmund Freud. Who first did the couch and table behind thing.
+#
+#* Who wrote "The Interpretation of Dreams"?
+#
+#Sigmund Freud.
+#
+#* What is the "Id"?
+#
+#Something that only exists in the unconscious.
+#Operates on the pleasure principle.
+#Contains inborn biological instincts, consisting of
+#  Eros (the life force)
+#  Thanatos (the death force)
+#
+#* What did Freud think the Eros was?
+#
+#A reflection of natural selection, the force that makes our species evolve and
+#become greater.
+#
+#* What did Freud think the Thanatos was?
+#
+#The counter-evolutionary force that is trying to drag our species back into the
+#past.
+#
+#* What is the "ego"?
+#
+#Something that exists in the conscious and preconscious levels.
+#Operates on the reality principle.
+#Realistic regulation of thoughts and actions.
+#
+#* What is the "superego"?
+#
+#TODO
+#
+#* What was Freud's view of the human mind?
+#
+#The mind is a mental iceberg.
+#You have a conscious level that contains your thoughts and perceptions.
+#Followed by your subconscious level that contains your memories and knowledge.
+#Lastly, the majority, is your unconscious level that contains your fears,
+#violent thoughts, immoral urges, etc...
+#
+#* What are some routes to the unconscious?
+#
+#1. Free associations. Which is why Freud had the couch.
+#2. Mistakes. "Freudian slips" forgetting words, names, etc.
+#3. Dreams. Latent content, "royal road to the unconsciousness".
+#4. Projective tests. Standardized set of ambiguous prompts designed to reveal something.
+#
+#* What are some analysises that Freud made from dreams?
+#
+#Broken arm => Broken (e.g. marriage) vows
+#King or Queen => Parents; Authority figures
+#Elongated Objects => Male genitalia
+#Opening Umbrella => Penile erection
+#Hollow objects, rooms => Female genitalia
+#Entrances and exits => sexual acts.
+#
+#* What is the oral psychosexual stage according to Freud?
+#
+#Between 0-1.5 years.
+#Erogenous zone: Mouth.
+#Key healthy development is weaning.
+#
+#* What are the two personalities that can emerge from oral psychosexual stage?
+#
+#Oral Dependent:
+#  Comes from excessive gratification.
+#  Makes you passive, dependent, gullible
+#Oral Aggressive:
+#  Comes from excessive frustration (not enough stimulation)
+#  Argumentative, cynical, exploitative.
+#
+#* What are some expressions of the oral psychosexual stage?
+#
+#Gum-chewing, nail-biting, smoking, kissing, eating disorders, alcoholism.
+#
+#* What is the anal psychosexual stage according to Freud?
+#
+#Between 1.3-3 years.
+#Erogenous zone: Anus.
+#Key Task: Toilet training.
+#
+#* What are the two personalities that can emerge from the anal psychosexual stage?
+#
+#Anal Expulsive:
+#  Excessive gratification
+#  Sloppy, careless, messy, disorderly
+#Anal Retentive:
+#  Excessive frustration.
+#  Compulsive cleanliness, orderly, rigid, stubborn.
+#
+#* What are some expression of the anal psychosexual stage?
+#
+#Neil Simon's "The Odd Couple".
+#
+#* What is the phallic psychosexual stage according to Freud?
+#
+#Between 3-6 years.
+#Erogenous zone: Genitals
+#Key Task: Sexual identity
+#
+#* What are the two personalities that can emerge from the phallic psychosexual stage?
+#
+#Boy's Oedipal Complex:
+#  Incestuous attraction to mother.
+#  Castration anxiety.
+#Girl's Electra Complex:
+#  Incestuous attraction to father.
+#  Penis envy.
+#
+#* What are some expressions of the phallic psychosexual stage?
+#
+#Males: "macho" expression.
+#Females: Flirting "girly" or overly dominant.
+#
+#* What is the genital stage according to Freud?
+#
+#From puberty onwards.
+#Erogenous zone: Genitals.
+#Key Task: Intimacy and procreation.
+#
+#* What was the medical conflict against Freud?
+#
+#- There was evidence of biological determinants.
+#- AMA abandons psychoanalysis for pharmacology.
+#
+#* What was the economic conflict against Freud?
+#
+#- Psychoanalysis had an exorbitant cost.
+#- Insurers abandon psychoanalysis for cheaper treatments.
+#
+#* What was the legal conflict against Freud?
+#
+#- There were some indefensible claims of repressed sexual abuse.
+#  - Some people, during psychoanalysis, said that someone sexually abused them.
+#  - And there was no ability to prove their innocence.
+#- Defenders abandon psychoanalysis for scientific evidence.
+#  - To avoid people going to prison for such claims, people had to
+#    attack the validity of psychoanalysis.
+#
+#* What are some flaws in Freud's scientific method?
+#
+#- Some of his theories (e.g. id) are hard to prove or disprove.
+#- He did not build his theories on a broad sample of people, only with people
+#  who had specific psychological problems.
+#- He was motivated to see his patents as unwell, because they would be paying them.
+#
+#* How does Freud's work persist today?
+#
+#In literature: Conflict, sex, and aggression.
+#
+## Personality
+#
+#* What is state shyness?
+#
+#A phenomenon where you're shy in certain situations only. There are usually only
+#minimal negative consequences.
+#
+#* What is trait shyness?
+#
+#15-25% of the population. Pervasive shyness across situations and time.
+#There are severe consequences because they
+#- Avoid social events.
+#- Make others uncomfortable.
+#- Inhibits communication and assertiveness.
+#- Prone to low self-esteem.
