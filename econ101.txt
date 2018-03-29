@@ -1413,3 +1413,5 @@ The area below the demand curve up to the equilibrium point.
 * What is producer surplus?
 
 The area above the supply curve up to the equilibrium point.
+
+# Monopolies TODO

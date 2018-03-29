@@ -1,1227 +1,1227 @@
-## Intro to the Science of Psychology
-#
-#* What is the study of cyber emotional intelligence?
-#
-#The study of the assumptions we make about people based on their online
-#personality.
-#
-#* What are two unifying concepts for psychological science?
-#
-#1. Studying behaviour.
-#2. Employs scientific method
-#
-#* What is the scientific method?
-#
-#A way of learning about the world through collecting observations, developing
-#theories to explain them, and using theories to make predictions.
-#
-#* What is a hypothesis?
-#
-#A testable prediction about processes that can be observed and measured.
-#
-#* What is a pseudoscience?
-#
-#An idea that is present as science but does not actually utilize basic
-#principles of scientific thinking of procedure.
-#
-#* What is a theory?
-#
-#An explanation for a broad range of observations that also generates new
-#hypotheses and integrates numerous findings into a coherent whole.
-#
-#* What is the biopsychosocial model?
-#
-#A means of explaining behaviour as a product of biological, psychological, and
-#sociocultural factors.
-#
-#* What are some biological influences?
-#
-#Brain structures, drugs.
-#
-#* What are some psychological influences?
-#
-#Memories, emotions, personalities.
-#
-#* What are some socialcultural influences?
-#
-#Family, peers, culture.
-#
-#* What is scientific literacy?
-#
-#The ability to understand, analyze, and apply scientific information.
-#
-#* What are the 6 ways to develop critical thinking?
-#
-#1. Be curious.
-#2. Examine the nature and source of the evidence.
-#3. Examine assumptions and biases.
-#4. Avoid overly emotional thinking.
-#5. Tolerate ambiguity.
-#6. Consider alternative viewpoints and interpretations.
-#
-#* What is the principle of parsimony?
-#
-#The simplest of all competing explanations should be the one we accept.
-#
-#* What is empricism?
-#
-#A philosophical tenet that knowledge comes through experience.
-#
-#* What is determinism?
-#
-#The belief that all events are governed by lawful, cause-and-effect
-#relationships.
-#
-#* What were the Greek's four temperaments:
-#
-#Sanguine (blood): Impulsive, pleasure-seeking, charismatic
-#Choleric (yellow bile): Ambitious, energetic, aggressive
-#Melancholic (black bile): Independent, perfectionistic, introverted
-#Phlegmatic (phlegm): Quiet, relaxed, content with life
-#
-#* What does zeitgeist refer to?
-#
-#A general set of beliefs of a particular culture at a specific time in history.
-#
-#* What is materialism?
-#
-#The belief that humans are composed exclusively of physical matter.
-#
-#* What is dualism?
-#
-#The belief that there are properties of humans that are not material.
-#
-#* What is psychophysics?
-#
-#The study of the relationship between the physical world and the mental
-#representation of that world.
-#
-#* What is clinical psychology?
-#
-#The field that concentrates on the diagnosis and treatment of psychological
-#disorders.
-#
-#* What is the idea of brain localization?
-#
-#That certain parts of the brain control specific mental abilities and
-#personalities.
-#
-#* What is psychoanalysis?
-#
-#The approach that attempts to explain how behaviour and personality and
-#influenced by unconscious processes.
-#
-#* What is the nature/nurture relationship?
-#
-#The inquiry into how heredity and environment influence behaviour and mental
-#processes
-#
-#* What is empiricism?
-#
-#The belief that all knowledge is based on experience derived from the senses.
-#
-#* What is functionalism?
-#
-#The study of the purpose and function of behaviour and conscious experience.
-#
-#* What is evolutionary psychology?
-#
-#The approach that interprets and explains modern human behaviour in terms of
-#forces acting upon our distant ancestors.
-#
-#* What is structualism?
-#
-#The attempt to analyize conscious experience by breaking it down to basic
-#elements, and understand how those elements work together.
-#
-#* What is behaviourism?
-#
-#The approach that studied only observable behaviour, with little reference to
-#mental events or instincts.
-#
-#* What is humanistic psychology?
-#
-#The approach that focuses on each person's freedom to act and rational thought.
-#
-#* What is Hebb's Law?
-#
-#The idea that memory is related to cellular activity.
-#
-#* What is gestalt psychology?
-#
-#The approach where psychologists need to focus on the whole of perception and
-#experience, rather than its parts.
-#
-#* What is cognitive psychology?
-#
-#An approach that focuses on memory, thinking, and language.
-#
-#* What is social psychology?
-#
-#The study of the influence of other people on our behaviour.
-#
-#* What is personality psychology?
-#
-#The study of how different personality characteristics can influence how we
-#think and act.
-#
-#* What is cross-cultural psychology?
-#
-#The field that draws comparisons about individual and group behaviour among
-#cultures.
-#
-#* What are the 5 characteristics of quality scientific research?
-#
-#1. It is based on measurements that are objective, valid, and reliable.
-#2. It can be generalized
-#3. It tried to reduce bias.
-#4. It is made public.
-#5. It can be replicated.
-#
-#* When is a measurement objective?
-#
-#When it is the same across instruments and observers.
-#
-#* What is a variable?
-#
-#An objective, concept, or event being measured.
-#
-#* What is an operational definition?
-#
-#A statement that describes the procedures and specific measures used to record
-#observations.
-#
-#* What does validity refer to w.r.t measurements?
-#
-#The degree to which an instrument or procedure actually measures what it claims
-#to measure.
-#
-#* When is a measurement reliable?
-#
-#When it provides consistent and stable answers across multiple observations
-#and points in time.
-#
-#* What is test-retest reliability?
-#
-#Whether scores are consistent between test sessions.
-#
-#* What is alternate-forms reliability?
-#
-#Whether different forms of the same test produce the same results.
-#
-#* What is inter-rater reliability?
-#
-#Whether different raters agree on the measurements.
-#
-#* What is generalizability?
-#
-#The degree to which one set of results can be applied to other situations.
-#
-#* What is the population w.r.t research?
-#
-#The group that researchers want to generalize about.
-#
-#* What is a sample w.r.t research?
-#
-#A select group of population members.
-#
-#* What is a random sample?
-#
-#Every individual in the population has an equal chance of being included.
-#
-#* What is a convenience sample?
-#
-#Samples of individuals who are the most readily available.
-#
-#* What is ecological validity?
-#
-#Results of a study can be applied to/repeated in the natural environment.
-#
-#* What is the Hawthorne effect?
-#
-#Behaviours sometimes change as a result of being observed.
-#
-#* What are demand characteristics?
-#
-#Inadvertent cues given off that provide information about how participants are
-#expected to behave.
-#
-#* How does social desirability affect experiments?
-#
-#People are likely to respond in ways that increase the chances they will be
-#viewed favourably.
-#
-#* What is a placebo effect?
-#
-#A measurable and experienced improvement in health that cannot be attributed to
-#medication or treatment.
-#
-#* What is anonymity w.r.t research?
-#
-#Individual's responses cannot be linked back.
-#
-#* What is confidentiality w.r.t research?
-#
-#Results will only be read by the researchers.
-#
-#* What is a single-blind study?
-#
-#Participants do not know the true purpose of the study, or do not know which
-#type of treatment they are receiving.
-#
-#* What is a double-blind study?
-#
-#Neither participants nor researchers knows the exact treatment for an
-#individual.
-#
-#* When is a hypothesis falsible?
-#
-#When it is precise enough that it could be proven false.
-#
-#* What is anecdotal evidence?
-#
-#An individual story or testimony that is used to make a claim as evidence.
-#
-#* What is data selection bias?
-#
-#Choosing only data that fits ones views.
-#
-#* What is an appeal to authority?
-#
-#The belief in an expert's claims even with no supporting data.
-#
-#* What is an appeal to common sense?
-#
-#A claim that appears to be sound, but lacks supporting scientific evidence.
-#
-#* What is a case study?
-#
-#An in-depth report about the details of a specific case.
-#
-#* What is a naturalistic observation?
-#
-#Unobtrusively observing and recording behaviour in the subject's natural
-#environment.
-#
-#* What is self-reporting?
-#
-#A method in which responses are providing by the people being studied.
-#
-#* What does correlational research involve?
-#
-#Measuring the degree of association between two or more variables.
-#
-#* What is the third variable problem?
-#
-#The possibility that a third variable is actually responsible for a
-#correlation.
-#
-#* What is a random assignment?
-#
-#A technique for dividing samples into two or more groups in which
-#participants are equally likely to be placed in any condition of the experiment.
-#
-#* What is a confounding variable?
-#
-#A variable outside of the researcher's control that might affect the results.
-#
-#* What is a between-subjects design?
-#
-#Different people get exposed to different experiments.
-#
-#* What is a within-subjects design?
-#
-#People get exposed to all experiments.
-#
-#* What is quasi-experimental research?
-#
-#Groups compared are selected based on predetermined characteristics.
-#
-#* What is an research ethics board?
-#
-#A committee of researchers charged with the protection of human participants.
-#
-#* What is deception w.r.t research?
-#
-#Misleading participants of the true topic or hypothesis.
-#
-#* Why should researchers store their data after they already published?
-#
-#Because others might want to reproduce or reinterpret their work.
-#
-#* What is an example of scientific misconduct?
-#
-#Faking test results.
-#
-#* What is the 3 criteria for an animal study?
-#
-#1. Behaviours must be close.
-#2. Brain structures must be close.
-#3. Response must be similar.
-#
-#* What is the ABCs of psychology?
-#
-#Affect (feelings, emotion, mood)
-#Behaviour (actions, responses, performance)
-#Cognition (thoughts, decisions, attitudes)
-#
-#* What is the basic model of psychology?
-#
-#Environment x Person => Behaviour => Outcomes
-#
-#* What is psychodynamic psychology?
-#
-#The investigation of subconscious forces in the person.
-#
-#* What are the goals of science?
-#
-#To understand, explain, predict, and control the world.
-#
-#* What is the theory refinement process?
-#
-#Develop theory, form hypothesis, carry out observations, analyze results,
-#refine theory.
-#
-#* What are the 3 criterias of science?
-#
-#1. Empirical
-#2. Replicable
-#3. Falsifiable
-#
-## Developmental Psychology
-#
-#* What is developmental psychology?
-#
-#The study of human characteristics across the lifespan.
-#
-#* What are the two ways to tracking change over time?
-#
-#Cross-sectional: Different people of different age.
-#Longitudinal: Follow people over time.
-#
-#* What are cohort effects?
-#
-#Differences due to age periods.
-#
-#* What the stage theory?
-#
-#Development happens in a series of stages, transitions are big.
-#
-#* What is a sensitive period w.r.t development?
-#
-#A period where exposure to a certain type of stimulation is needed for
-#normal development of an ability.
-#
-#* What are the 3 stages before birth?
-#
-#Germinal. 0-2wks. The zygote is spliting.
-#Embryonic. 2-8wks. Emybro develops organs.
-#Fetal. 8-birth. Fetus develops muscles and organs begin to specialize.
-#
-#* What are 3 reflexes that babies have?
-#
-#Rooting: To suck.
-#Moro: To latch on when falling.
-#Grasping: To hold on with their hands.
-#
-#* What are the 3 things that happen to a baby's brain after birth?
-#
-#1. Myelination of axons.
-#2. Synaptogensis, lots of connections between neurons are formed
-#3. Synaptic pruning, useless connections are pruned.
-#
-#* How do we help premature babies?
-#
-#By using NIDCAP. They have improved skills over preterm babies that do not.
-#
-#* What is the core knowledge hypothesis?
-#
-#Infants have inborn abilities to understanding some key aspects of their life.
-#
-#* What is cognitive development?
-#
-#The study of changes in memory, thought, and reasoning processes that occur
-#throughout the lifespan.
-#
-#* What is assimilation?
-#
-#People fit new information into the belief systems they already possess.
-#Conservative process.
-#"Still a bow-wow"
-#
-#* What is accommodation?
-#
-#People modify their belief structures based on experience.
-#Creative process.
-#"It's not a bow-wow, it's a cat!"
-#
-#* What are Piaget's 4 stages of cognitive development?
-#
-#1. Sensorimotor (0-2 years)
-#2. Preoperational (2-7 years)
-#3. Concrete operational (7-11 years)
-#4. Formal operational (11 years-adult)
-#
-#* What are the properties of the sensorimotor stage w.r.t cognitive development?
-#
-#Cognitive experience is based on direct sensory experience.
-#Understand that objects exist even when you can't see them.
-#
-#* What are the properties of the preoperational stage w.r.t cognitive development?
-#
-#Understanding symbols, language, drawings.
-#Trying to understand conservation.
-#
-#* What are the properties of the concrete operational stage w.r.t cognitive development?
-#
-#Can perform mental transformations on physically present objects.
-#Transitivity of numbers.
-#
-#* What are the properties of the formal operational stage w.r.t cognitive development?
-#
-#Can reason abstractly and hypothetically.
-#
-#* What is conservation?
-#
-#The concept that the quantity of an object is not the same as the appearance of
-#the object.
-#
-#* What is the concept of the zone of proximal development?
-#
-#Development is ideal when children attempt skills that are just beyond what
-#they can do alone, but they have guidance from adults that are attentive to
-#their progress.
-#
-#Scaffolding uses this idea to teach kids.
-#
-#* What is attachment?
-#
-#The enduring emotional bond between individuals.
-#
-#* What did Harlow's experiment with the cloth monkeys show?
-#
-#That attachment is based on feeling secure, which is based on physical comfort.
-#
-#* What are the 4 different attachment styles?
-#
-#1. Secure attachment : "checking in"
-#2. Insecure attachment - Anxious/resistant : "clingy"
-#3. Insecure attachment - Avoidant : "doesn't care"
-#4. Disorganized : "love/hate"
-#
-#* What is self-awareness?
-#
-#The ability to recognize one's individuality.
-#
-#* What is egocentricism?
-#
-#Considering only one's own perspective.
-#
-#* What is theory of mind?
-#
-#The ability to recognize the thoughts of others, and understand that they can be
-#different to one's own.
-#
-#* What are the two psychobiological behavioural systems?
-#
-#Attachment behavioural system: Focused on meeting one's own needs for security.
-#Caregiving behavioural system: Focused on meeting the needs of others.
-#
-#* What are some problems with using conditional approaches to get children to do tasks?
-#
-#- The children won't continually do the task unless you continually reward them.
-#- Children associate good feelings with rewards.
-#
-#* What is introjection?
-#
-#The internalization of the regard of significant others.
-#Caring about what others think about you.
-#
-#* What is inductive discipline?
-#
-#Explain the consequences of a child's actions on other people.
-#
-## 6.3
-#
-#* What is latent learning?
-#
-#Learning that is not immediately expressed by a response until the organism
-#is tested for it.
-#
-#* What is the difference between S-R and S-O-R theory?
-#
-#S-R theory thinks that differences in individuals are due to their learning
-#histories.
-#
-#S-O-R theory thinks that differences in individuals are due to their cognitive
-#interpretation of the situation.
-#
-#* What does observational learning involve?
-#
-#Changes in behaviour and knowledge from watching others.
-#
-#* What are the 4 processes involved in observational learning?
-#
-#1. Attention
-#2. Memory
-#3. Ability to reproduce the task
-#4. Motivation
-#
-#* What is imitation?
-#
-#Recreating someone else's actions.
-#
-#* What are mirror neurons?
-#
-#Neurons that fire both when doing and action, and watching the same action.
-#
+# Intro to the Science of Psychology
+
+* What is the study of cyber emotional intelligence?
+
+The study of the assumptions we make about people based on their online
+personality.
+
+* What are two unifying concepts for psychological science?
+
+1. Studying behaviour.
+2. Employs scientific method
+
+* What is the scientific method?
+
+A way of learning about the world through collecting observations, developing
+theories to explain them, and using theories to make predictions.
+
+* What is a hypothesis?
+
+A testable prediction about processes that can be observed and measured.
+
+* What is a pseudoscience?
+
+An idea that is present as science but does not actually utilize basic
+principles of scientific thinking of procedure.
+
+* What is a theory?
+
+An explanation for a broad range of observations that also generates new
+hypotheses and integrates numerous findings into a coherent whole.
+
+* What is the biopsychosocial model?
+
+A means of explaining behaviour as a product of biological, psychological, and
+sociocultural factors.
+
+* What are some biological influences?
+
+Brain structures, drugs.
+
+* What are some psychological influences?
+
+Memories, emotions, personalities.
+
+* What are some socialcultural influences?
+
+Family, peers, culture.
+
+* What is scientific literacy?
+
+The ability to understand, analyze, and apply scientific information.
+
+* What are the 6 ways to develop critical thinking?
+
+1. Be curious.
+2. Examine the nature and source of the evidence.
+3. Examine assumptions and biases.
+4. Avoid overly emotional thinking.
+5. Tolerate ambiguity.
+6. Consider alternative viewpoints and interpretations.
+
+* What is the principle of parsimony?
+
+The simplest of all competing explanations should be the one we accept.
+
+* What is empricism?
+
+A philosophical tenet that knowledge comes through experience.
+
+* What is determinism?
+
+The belief that all events are governed by lawful, cause-and-effect
+relationships.
+
+* What were the Greek's four temperaments:
+
+Sanguine (blood): Impulsive, pleasure-seeking, charismatic
+Choleric (yellow bile): Ambitious, energetic, aggressive
+Melancholic (black bile): Independent, perfectionistic, introverted
+Phlegmatic (phlegm): Quiet, relaxed, content with life
+
+* What does zeitgeist refer to?
+
+A general set of beliefs of a particular culture at a specific time in history.
+
+* What is materialism?
+
+The belief that humans are composed exclusively of physical matter.
+
+* What is dualism?
+
+The belief that there are properties of humans that are not material.
+
+* What is psychophysics?
+
+The study of the relationship between the physical world and the mental
+representation of that world.
+
+* What is clinical psychology?
+
+The field that concentrates on the diagnosis and treatment of psychological
+disorders.
+
+* What is the idea of brain localization?
+
+That certain parts of the brain control specific mental abilities and
+personalities.
+
+* What is psychoanalysis?
+
+The approach that attempts to explain how behaviour and personality and
+influenced by unconscious processes.
+
+* What is the nature/nurture relationship?
+
+The inquiry into how heredity and environment influence behaviour and mental
+processes
+
+* What is empiricism?
+
+The belief that all knowledge is based on experience derived from the senses.
+
+* What is functionalism?
+
+The study of the purpose and function of behaviour and conscious experience.
+
+* What is evolutionary psychology?
+
+The approach that interprets and explains modern human behaviour in terms of
+forces acting upon our distant ancestors.
+
+* What is structualism?
+
+The attempt to analyize conscious experience by breaking it down to basic
+elements, and understand how those elements work together.
+
+* What is behaviourism?
+
+The approach that studied only observable behaviour, with little reference to
+mental events or instincts.
+
+* What is humanistic psychology?
+
+The approach that focuses on each person's freedom to act and rational thought.
+
+* What is Hebb's Law?
+
+The idea that memory is related to cellular activity.
+
+* What is gestalt psychology?
+
+The approach where psychologists need to focus on the whole of perception and
+experience, rather than its parts.
+
+* What is cognitive psychology?
+
+An approach that focuses on memory, thinking, and language.
+
+* What is social psychology?
+
+The study of the influence of other people on our behaviour.
+
+* What is personality psychology?
+
+The study of how different personality characteristics can influence how we
+think and act.
+
+* What is cross-cultural psychology?
+
+The field that draws comparisons about individual and group behaviour among
+cultures.
+
+* What are the 5 characteristics of quality scientific research?
+
+1. It is based on measurements that are objective, valid, and reliable.
+2. It can be generalized
+3. It tried to reduce bias.
+4. It is made public.
+5. It can be replicated.
+
+* When is a measurement objective?
+
+When it is the same across instruments and observers.
+
+* What is a variable?
+
+An objective, concept, or event being measured.
+
+* What is an operational definition?
+
+A statement that describes the procedures and specific measures used to record
+observations.
+
+* What does validity refer to w.r.t measurements?
+
+The degree to which an instrument or procedure actually measures what it claims
+to measure.
+
+* When is a measurement reliable?
+
+When it provides consistent and stable answers across multiple observations
+and points in time.
+
+* What is test-retest reliability?
+
+Whether scores are consistent between test sessions.
+
+* What is alternate-forms reliability?
+
+Whether different forms of the same test produce the same results.
+
+* What is inter-rater reliability?
+
+Whether different raters agree on the measurements.
+
+* What is generalizability?
+
+The degree to which one set of results can be applied to other situations.
+
+* What is the population w.r.t research?
+
+The group that researchers want to generalize about.
+
+* What is a sample w.r.t research?
+
+A select group of population members.
+
+* What is a random sample?
+
+Every individual in the population has an equal chance of being included.
+
+* What is a convenience sample?
+
+Samples of individuals who are the most readily available.
+
+* What is ecological validity?
+
+Results of a study can be applied to/repeated in the natural environment.
+
+* What is the Hawthorne effect?
+
+Behaviours sometimes change as a result of being observed.
+
+* What are demand characteristics?
+
+Inadvertent cues given off that provide information about how participants are
+expected to behave.
+
+* How does social desirability affect experiments?
+
+People are likely to respond in ways that increase the chances they will be
+viewed favourably.
+
+* What is a placebo effect?
+
+A measurable and experienced improvement in health that cannot be attributed to
+medication or treatment.
+
+* What is anonymity w.r.t research?
+
+Individual's responses cannot be linked back.
+
+* What is confidentiality w.r.t research?
+
+Results will only be read by the researchers.
+
+* What is a single-blind study?
+
+Participants do not know the true purpose of the study, or do not know which
+type of treatment they are receiving.
+
+* What is a double-blind study?
+
+Neither participants nor researchers knows the exact treatment for an
+individual.
+
+* When is a hypothesis falsible?
+
+When it is precise enough that it could be proven false.
+
+* What is anecdotal evidence?
+
+An individual story or testimony that is used to make a claim as evidence.
+
+* What is data selection bias?
+
+Choosing only data that fits ones views.
+
+* What is an appeal to authority?
+
+The belief in an expert's claims even with no supporting data.
+
+* What is an appeal to common sense?
+
+A claim that appears to be sound, but lacks supporting scientific evidence.
+
+* What is a case study?
+
+An in-depth report about the details of a specific case.
+
+* What is a naturalistic observation?
+
+Unobtrusively observing and recording behaviour in the subject's natural
+environment.
+
+* What is self-reporting?
+
+A method in which responses are providing by the people being studied.
+
+* What does correlational research involve?
+
+Measuring the degree of association between two or more variables.
+
+* What is the third variable problem?
+
+The possibility that a third variable is actually responsible for a
+correlation.
+
+* What is a random assignment?
+
+A technique for dividing samples into two or more groups in which
+participants are equally likely to be placed in any condition of the experiment.
+
+* What is a confounding variable?
+
+A variable outside of the researcher's control that might affect the results.
+
+* What is a between-subjects design?
+
+Different people get exposed to different experiments.
+
+* What is a within-subjects design?
+
+People get exposed to all experiments.
+
+* What is quasi-experimental research?
+
+Groups compared are selected based on predetermined characteristics.
+
+* What is an research ethics board?
+
+A committee of researchers charged with the protection of human participants.
+
+* What is deception w.r.t research?
+
+Misleading participants of the true topic or hypothesis.
+
+* Why should researchers store their data after they already published?
+
+Because others might want to reproduce or reinterpret their work.
+
+* What is an example of scientific misconduct?
+
+Faking test results.
+
+* What is the 3 criteria for an animal study?
+
+1. Behaviours must be close.
+2. Brain structures must be close.
+3. Response must be similar.
+
+* What is the ABCs of psychology?
+
+Affect (feelings, emotion, mood)
+Behaviour (actions, responses, performance)
+Cognition (thoughts, decisions, attitudes)
+
+* What is the basic model of psychology?
+
+Environment x Person => Behaviour => Outcomes
+
+* What is psychodynamic psychology?
+
+The investigation of subconscious forces in the person.
+
+* What are the goals of science?
+
+To understand, explain, predict, and control the world.
+
+* What is the theory refinement process?
+
+Develop theory, form hypothesis, carry out observations, analyze results,
+refine theory.
+
+* What are the 3 criterias of science?
+
+1. Empirical
+2. Replicable
+3. Falsifiable
+
+# Developmental Psychology
+
+* What is developmental psychology?
+
+The study of human characteristics across the lifespan.
+
+* What are the two ways to tracking change over time?
+
+Cross-sectional: Different people of different age.
+Longitudinal: Follow people over time.
+
+* What are cohort effects?
+
+Differences due to age periods.
+
+* What the stage theory?
+
+Development happens in a series of stages, transitions are big.
+
+* What is a sensitive period w.r.t development?
+
+A period where exposure to a certain type of stimulation is needed for
+normal development of an ability.
+
+* What are the 3 stages before birth?
+
+Germinal. 0-2wks. The zygote is spliting.
+Embryonic. 2-8wks. Emybro develops organs.
+Fetal. 8-birth. Fetus develops muscles and organs begin to specialize.
+
+* What are 3 reflexes that babies have?
+
+Rooting: To suck.
+Moro: To latch on when falling.
+Grasping: To hold on with their hands.
+
+* What are the 3 things that happen to a baby's brain after birth?
+
+1. Myelination of axons.
+2. Synaptogensis, lots of connections between neurons are formed
+3. Synaptic pruning, useless connections are pruned.
+
+* How do we help premature babies?
+
+By using NIDCAP. They have improved skills over preterm babies that do not.
+
+* What is the core knowledge hypothesis?
+
+Infants have inborn abilities to understanding some key aspects of their life.
+
+* What is cognitive development?
+
+The study of changes in memory, thought, and reasoning processes that occur
+throughout the lifespan.
+
+* What is assimilation?
+
+People fit new information into the belief systems they already possess.
+Conservative process.
+"Still a bow-wow"
+
+* What is accommodation?
+
+People modify their belief structures based on experience.
+Creative process.
+"It's not a bow-wow, it's a cat!"
+
+* What are Piaget's 4 stages of cognitive development?
+
+1. Sensorimotor (0-2 years)
+2. Preoperational (2-7 years)
+3. Concrete operational (7-11 years)
+4. Formal operational (11 years-adult)
+
+* What are the properties of the sensorimotor stage w.r.t cognitive development?
+
+Cognitive experience is based on direct sensory experience.
+Understand that objects exist even when you can't see them.
+
+* What are the properties of the preoperational stage w.r.t cognitive development?
+
+Understanding symbols, language, drawings.
+Trying to understand conservation.
+
+* What are the properties of the concrete operational stage w.r.t cognitive development?
+
+Can perform mental transformations on physically present objects.
+Transitivity of numbers.
+
+* What are the properties of the formal operational stage w.r.t cognitive development?
+
+Can reason abstractly and hypothetically.
+
+* What is conservation?
+
+The concept that the quantity of an object is not the same as the appearance of
+the object.
+
+* What is the concept of the zone of proximal development?
+
+Development is ideal when children attempt skills that are just beyond what
+they can do alone, but they have guidance from adults that are attentive to
+their progress.
+
+Scaffolding uses this idea to teach kids.
+
+* What is attachment?
+
+The enduring emotional bond between individuals.
+
+* What did Harlow's experiment with the cloth monkeys show?
+
+That attachment is based on feeling secure, which is based on physical comfort.
+
+* What are the 4 different attachment styles?
+
+1. Secure attachment : "checking in"
+2. Insecure attachment - Anxious/resistant : "clingy"
+3. Insecure attachment - Avoidant : "doesn't care"
+4. Disorganized : "love/hate"
+
+* What is self-awareness?
+
+The ability to recognize one's individuality.
+
+* What is egocentricism?
+
+Considering only one's own perspective.
+
+* What is theory of mind?
+
+The ability to recognize the thoughts of others, and understand that they can be
+different to one's own.
+
+* What are the two psychobiological behavioural systems?
+
+Attachment behavioural system: Focused on meeting one's own needs for security.
+Caregiving behavioural system: Focused on meeting the needs of others.
+
+* What are some problems with using conditional approaches to get children to do tasks?
+
+- The children won't continually do the task unless you continually reward them.
+- Children associate good feelings with rewards.
+
+* What is introjection?
+
+The internalization of the regard of significant others.
+Caring about what others think about you.
+
+* What is inductive discipline?
+
+Explain the consequences of a child's actions on other people.
+
+# 6.3
+
+* What is latent learning?
+
+Learning that is not immediately expressed by a response until the organism
+is tested for it.
+
+* What is the difference between S-R and S-O-R theory?
+
+S-R theory thinks that differences in individuals are due to their learning
+histories.
+
+S-O-R theory thinks that differences in individuals are due to their cognitive
+interpretation of the situation.
+
+* What does observational learning involve?
+
+Changes in behaviour and knowledge from watching others.
+
+* What are the 4 processes involved in observational learning?
+
+1. Attention
+2. Memory
+3. Ability to reproduce the task
+4. Motivation
+
+* What is imitation?
+
+Recreating someone else's actions.
+
+* What are mirror neurons?
+
+Neurons that fire both when doing and action, and watching the same action.
+
+# Slides
+
+* What are the two theories of attachment?
+
+1. Psychodynamic
+2. Behaviourist
+
+* What is the principle of monotropy?
+
+Infants are genetically programmed to form an attachment with ONE responsive
+caregiver.
+
+# Memory
+
+## 7.1
+
+* What do stores do w.r.t memory?
+
+Retain memory.
+
+* What do control processes do w.r.t memory?
+
+Shift information from one store to another.
+
+* What does attention do w.r.t memory?
+
+Shift information from sensory memory to STM.
+
+* What does recall do w.r.t memory?
+
+Shift information from LTM to STM.
+
+* What does encoding do w.r.t memory?
+
+Shift information from STM to LTM.
+
+* How can we expand our short-term memory capacity?
+
+Via chunking, organizing smaller units of information into a bigger one.
+
+* What are the two ways we organize information in LTM?
+
+1. Semantic categories (e.g. cat, mouse)
+2. Sound or spelling of word.
+
+* What is proactive/retroactive interference?
+
+Things appearing first/last causing problems with memorization.
+
+* What is the serial position effect?
+
+People tend to remember things that a first and last in a list.
+
+* What is working memory?
+
+A model of short-term remembering that includes some memory components that can
+temporarily store small amounts of information for a short period of time.
+
+* What is the phonological loop?
+
+A storage component of working memory that relies of rehearsal and stores
+information as sounds.
+
+* What is the visuospatial sketchpad?
+
+A storage component of working memory that maintains visual images and spatial
+layouts in visuospatial code.
+
+* What is the episodic buffer?
+
+A storage component of working memory that combines images and sounds into
+story-like episodes.
+
+* What is the central executive?
+
+The control center of working memory. Coordinates attention and exchange
+of information.
+
+* What are declarative/explicit memories?
+
+Memories we are consciously aware of, and can be verbalized.
+
+* What are nondeclarative/implicit memories?
+
+Actions that you can perform without awareness.
+
+* What are episodic memories?
+
+Declarative memories that are organized in episodes and use "I".
+"I washed the car."
+
+* What are semantic memories?
+
+Declarative memories that include facts about the world.
+"The capital of Canada is Ottawa."
+
+* What are procedural memories?
+
+Patterns of muscle movements.
+"Muscle memory"
+
+* What is priming?
+
+Previous exposure to a stimulus will affect someone's later responses.
+
+* What is long-term potentiation?
+
+Enduring increase in connectivity and transmission of neural signals between
+nerve cells that fire together.
+
+* What is consolidation?
+
+The process of converting short-term memories into long-term memories in the
+brain. The hippocampus is responsible for consolidation.
+
+* What is anterograde amnesia?
+
+Cannot form new memories (after the incident).
+
+* What is retrograde amnesia?
+
+Cannot remember old memories (before the incident).
+
+* What is storage w.r.t memories?
+
+The time and manner in which information is retained between encoding and
+retrieval.
+
+* What is maintenance rehearsal?
+
+Prolonging exposure to information by repeating it.
+
+* What is elaborative rehearsal?
+
+Prolonging exposure to information by thinking about it's meaning.
+
+* What is shallow processing?
+
+Processing of shallow characteristics such as spelling.
+
+* What is deep processing?
+
+Processing of the meaning of a word.
+
+* What is the self-reference effect?
+
+More likely to remember something if you can relate it to yourself.
+
+* How can context affect memory?
+
+You can forget things when entering a new context (context-dependent forgetting).
+Or you can remember things when going back to the old context (context
+reinstatement effect).
+
+* How can state affect memory?
+
+State-dependent learning/memory exists. Retrieval is more effective if your
+internal state matches the state you were in during encoding.
+
+* What is the problem of weapon focus?
+
+People remember the gun much better than the person holding the gun.
+
+* What is a flashbulb memory?
+
+An extremely vivid and detailed memory and its conditions.
+
+* What does the forgetting curve tell us?
+
+Most of the forgetting happens right away, and then not much forgetting
+happens afterwards.
+
+* What is the method of loci?
+
+Using mnemonics to connect words to locations.
+
+* What is a schema?
+
+An organized cluster of memory that constitutes one's knowledge about a thing.
+
+* How do we use constructive memory to help remember events?
+
+First we recall a generalized schema, and then we fill in details.
+
+* What are the two ways the schemas can affect our memory?
+
+1. Organization, things that fit our schemas are easier to recall.
+2. Distinctiveness, if information is weird it is easy to remember, if it does
+not fit our schema but isn't that weird it will be hard to remember.
+
+* What is a false memory?
+
+A memory of something that is incorrect or did not actually occur.
+
+* What is the misinformation effect?
+
+Information occurring after an event becomes part of the event.
+"Asking if something happened could cause people to say yes".
+
+* What is imagination inflation?
+
+Increased confidence in a false memory after repeated imagination of the event.
+
+* What does the DRM procedure say w.r.t memory?
+
+People are very likely to misremember the "critical lure" being there, which is
+a word should obviously be in the list, but isn't.
+
+* What is a recovered memory?
+
 ## Slides
-#
-#* What are the two theories of attachment?
-#
-#1. Psychodynamic
-#2. Behaviourist
-#
-#* What is the principle of monotropy?
-#
-#Infants are genetically programmed to form an attachment with ONE responsive
-#caregiver.
-#
-## Memory
-#
-### 7.1
-#
-#* What do stores do w.r.t memory?
-#
-#Retain memory.
-#
-#* What do control processes do w.r.t memory?
-#
-#Shift information from one store to another.
-#
-#* What does attention do w.r.t memory?
-#
-#Shift information from sensory memory to STM.
-#
-#* What does recall do w.r.t memory?
-#
-#Shift information from LTM to STM.
-#
-#* What does encoding do w.r.t memory?
-#
-#Shift information from STM to LTM.
-#
-#* How can we expand our short-term memory capacity?
-#
-#Via chunking, organizing smaller units of information into a bigger one.
-#
-#* What are the two ways we organize information in LTM?
-#
-#1. Semantic categories (e.g. cat, mouse)
-#2. Sound or spelling of word.
-#
-#* What is proactive/retroactive interference?
-#
-#Things appearing first/last causing problems with memorization.
-#
-#* What is the serial position effect?
-#
-#People tend to remember things that a first and last in a list.
-#
-#* What is working memory?
-#
-#A model of short-term remembering that includes some memory components that can
-#temporarily store small amounts of information for a short period of time.
-#
-#* What is the phonological loop?
-#
-#A storage component of working memory that relies of rehearsal and stores
-#information as sounds.
-#
-#* What is the visuospatial sketchpad?
-#
-#A storage component of working memory that maintains visual images and spatial
-#layouts in visuospatial code.
-#
-#* What is the episodic buffer?
-#
-#A storage component of working memory that combines images and sounds into
-#story-like episodes.
-#
-#* What is the central executive?
-#
-#The control center of working memory. Coordinates attention and exchange
-#of information.
-#
-#* What are declarative/explicit memories?
-#
-#Memories we are consciously aware of, and can be verbalized.
-#
-#* What are nondeclarative/implicit memories?
-#
-#Actions that you can perform without awareness.
-#
-#* What are episodic memories?
-#
-#Declarative memories that are organized in episodes and use "I".
-#"I washed the car."
-#
-#* What are semantic memories?
-#
-#Declarative memories that include facts about the world.
-#"The capital of Canada is Ottawa."
-#
-#* What are procedural memories?
-#
-#Patterns of muscle movements.
-#"Muscle memory"
-#
-#* What is priming?
-#
-#Previous exposure to a stimulus will affect someone's later responses.
-#
-#* What is long-term potentiation?
-#
-#Enduring increase in connectivity and transmission of neural signals between
-#nerve cells that fire together.
-#
-#* What is consolidation?
-#
-#The process of converting short-term memories into long-term memories in the
-#brain. The hippocampus is responsible for consolidation.
-#
-#* What is anterograde amnesia?
-#
-#Cannot form new memories (after the incident).
-#
-#* What is retrograde amnesia?
-#
-#Cannot remember old memories (before the incident).
-#
-#* What is storage w.r.t memories?
-#
-#The time and manner in which information is retained between encoding and
-#retrieval.
-#
-#* What is maintenance rehearsal?
-#
-#Prolonging exposure to information by repeating it.
-#
-#* What is elaborative rehearsal?
-#
-#Prolonging exposure to information by thinking about it's meaning.
-#
-#* What is shallow processing?
-#
-#Processing of shallow characteristics such as spelling.
-#
-#* What is deep processing?
-#
-#Processing of the meaning of a word.
-#
-#* What is the self-reference effect?
-#
-#More likely to remember something if you can relate it to yourself.
-#
-#* How can context affect memory?
-#
-#You can forget things when entering a new context (context-dependent forgetting).
-#Or you can remember things when going back to the old context (context
-#reinstatement effect).
-#
-#* How can state affect memory?
-#
-#State-dependent learning/memory exists. Retrieval is more effective if your
-#internal state matches the state you were in during encoding.
-#
-#* What is the problem of weapon focus?
-#
-#People remember the gun much better than the person holding the gun.
-#
-#* What is a flashbulb memory?
-#
-#An extremely vivid and detailed memory and its conditions.
-#
-#* What does the forgetting curve tell us?
-#
-#Most of the forgetting happens right away, and then not much forgetting
-#happens afterwards.
-#
-#* What is the method of loci?
-#
-#Using mnemonics to connect words to locations.
-#
-#* What is a schema?
-#
-#An organized cluster of memory that constitutes one's knowledge about a thing.
-#
-#* How do we use constructive memory to help remember events?
-#
-#First we recall a generalized schema, and then we fill in details.
-#
-#* What are the two ways the schemas can affect our memory?
-#
-#1. Organization, things that fit our schemas are easier to recall.
-#2. Distinctiveness, if information is weird it is easy to remember, if it does
-#not fit our schema but isn't that weird it will be hard to remember.
-#
-#* What is a false memory?
-#
-#A memory of something that is incorrect or did not actually occur.
-#
-#* What is the misinformation effect?
-#
-#Information occurring after an event becomes part of the event.
-#"Asking if something happened could cause people to say yes".
-#
-#* What is imagination inflation?
-#
-#Increased confidence in a false memory after repeated imagination of the event.
-#
-#* What does the DRM procedure say w.r.t memory?
-#
-#People are very likely to misremember the "critical lure" being there, which is
-#a word should obviously be in the list, but isn't.
-#
-#* What is a recovered memory?
-#
-### Slides
-#
-#* What are the 3 stages of memory?
-#
-#Encoding, storage, retrieval.
-#
-#* How many pieces of information can we remember in STM?
-#
-#7 +/- 2
-#
-## Neuropsychology
-#
-#* What are genes?
-#
-#The basic units of heredity.
-#
-#* What is a genotype?
-#
-#The genetic makeup of an organism.
-#
-#* What are chromosomes?
-#
-#Structures that are lined with all the genes.
-#
-#* What is behaviour genomics?
-#
-#The study of DNA and how genes are related to behaviour.
-#
-#* What is behaviour genetics?
-#
-#The study of how genes and the environment influence behaviour.
-#
-#* What is heritability?
-#
-#A statistic (0-1) representing the degree to which genetic differences
-#contribute to individual differences.
-#"Having a mouth: 0"
-#"Tasting something: >0"
-#
-#* What the study of epigenetics tell us?
-#
-#That experiences and events (e.g. grooming) can change gene expression.
-#
-#* What does homozygous mean?
-#
-#Person has two of the same (dominant or recessive) versions of the gene.
-#
-#* What does heterozygous mean?
-#
-#Person has both dominant and recessive versions of a gene.
-#
-#* What is intrasexual selection?
-#
-#Members of the same sex compete to win the opportunity to mate.
-#
-#* What is intersexual selection?
-#
-#Members of one sex select a mating partner based on their traits.
-#
-#* What are the 3 reasons our brains are the most powerful?
-#
-#1. More folds and groves.
-#2. More developed frontal lobe, responsible for planning and etc...
-#3. Neotony, brains keep growing after birth.
-#
-#* What is evolution?
-#
-#A change in the frequency of genes occurring in a population over time.
-#
-#* What is the relationship between red and sex?
-#
-#The colour red seems to be associated with sex the most.
-#Women wearing red clothes are perceived to be more interested in having sex.
-#Culture does not influence this effect.
-#
-### 3.2
-#
-#* What is the soma?
-#
-#The cell body that contains the nucleus.
-#
-#* What are the dendrites?
-#
-#Small branches from the soma that receive messages from other cells.
-#
-#* What is the axon?
-#
-#A long tail that transports information in the form of electrochemical
-#reactions.
-#
-#* What are axon terminals?
-#
-#Blubs at the end of the axon that contain neurotransmitters.
-#
-#* What are neurotransmitters?
-#
-#Chemicals that function as messengers between neurons.
-#
-#* What are sensory neurons?
-#
-#Neurons that receive information from the bodily senses.
-#
-#* What are motor neurons?
-#
-#Neurons that carry messages from the brain to muscles.
-#
-#* What is myelin?
-#
-#A fatty sheath that insulates axons, and allows for increased speed and
-#efficiency of neural communication.
-#
-#* What is the refractory period w.r.t neurons?
-#
-#The brief period in which a neuron cannot fire.
-#
-#* What is the synaptic cleft?
-#
-#The small space separating individual nerve cells.
-#
-#* How do neurons communicate intensity?
-#
-#By firing at a higher rate.
-#
-#* What is reuptake w.r.t neurotransmitters?
-#
-#A process where neurotransmitters are reabsorbed into the axon terminals from
-#the synapse.
-#
-#* What does gluatamate do?
-#
-#Excites nervous system; memory and autonomic nervous system reactions.
-#
-#* What does GABA do?
-#
-#Inhibits brain activity; lowers arousal, anxiety, and excitation; facilitates sleep.
-#
-#* What does actylcholine do?
-#
-#Movement; attention.
-#
-#* What does dopamine do?
-#
-#Control of movement; reward-seeking behaviour; cognition and attention.
-#
-#* What does norepinephrine do?
-#
-#Memory; attention to new or important stimuli; regulation of sleep and mood.
-#
-#* What does serotonin do?
-#
-#Regulation of sleep, appetite, mood.
-#
-#* What are agnoists and antagonists w.r.t neurotransmitters?
-#
-#Drugs that enhance or inhibit neurotransmitter activity.
-#Either by faking it or blocking things.
-#
-#* What are hormones?
-#
-#Chemical secreted by the glands of the endocrine system. They do not work
-#immediately and instead travel in the blood.
-#
-#* What is the endocrine system?
-#
-#The system that controls hormones.
-#
-#* What do the adrenal glands do?
-#
-#Release stress hormones.
-#
-#* What are endorphines?
-#
-#Hormones responsible for reducing pain and inducing pleasure.
-#
-#* What is testosterone?
-#
-#Hormone that drives physical and sexual development and surges during sex and
-#threats.
-#
-#* What is substance P?
-#
-#A neurotransmitter involved in the experience of pain.
-#
-### 3.3
-#
-#* What encompasses the central nervous system?
-#
-#The brain and spinal cord.
-#
-#* What is the peripheral nervous system?
-#
-#The nerves that transmit information between the CNS and the rest of the body.
-#
-#* What encompasses the somatic nervous system?
-#
-#The nerves that are responsible for voluntary movement, and receiving sensory
-#input.
-#
-#* What encompasses the autonomic nervous system?
-#
-#The nerves responsible for regulating the activity of organs and glands.
-#
-#* What encompasses the sympathetic nervous system?
-#
-#The nerves responsible for the fight-or-flight response.
-#
-#* What is the parasympathetic nervous system?
-#
-#The nerves responsible for helping maintaining homostatic balance.
-#
-#* What is the brain stem?
-#
-#The top most region of the spinal cord, containing the parts (pons and
-#medulla) to keep the body functioning. (e.g. heart rate)
-#
-#* What is the hindbrain for?
-#
-#Maintaining the body and interfacing with the outside world.
-#
-#* What is the midbrain for?
-#
-#Orienting visual and audio attention.
-#
-#* What is the forebrain for?
-#
-#High level basics such as emotion, memory, and motivation.
-#
-#* What is the cerebal cortex for?
-#
-#Planning, processing, and recognition.
-#
-#* What is the difference between the left and right hemispheres of the brain?
-#
-#Left is abstract and mathematical.
-#Right is visual and emotional.
-#
-#* What is neuroplasticity?
-#
-#The ability of the brain to change and rewire itself based on individual
-#experience.
-#
-#* How does the human brain exhibit neuroplasticity?
-#
-#Our brains prevent recovery from brain injury to prevent bad rewiring.
-#The area on the opposite hemisphere can take over the original's work.
-#Can reorganize neural regions.
-#
-## Sensation and perception
-#
-### 4.1
-#
-#* What is sensation?
-#
-#The process of detecting external events by sense organs, and turning those
-#events into neural signals.
-#
-#* What is perception?
-#
-#Attending to, organizing, and interpreting stimuli.
-#
-#* What is tranduction?
-#
-#Receptors transforming physical energy to neural impulses.
-#
-#* What is sensory adaptation?
-#
-#The reduction of activity in sensory receptors following repeated exposure.
-#
-#* What is an absolute threshold w.r.t sensation and perception?
-#
-#The minimum amount of energy needed for it to be reliably detected 50% of the
-#time.
-#
-#* What is a difference threshold w.r.t sensation and perception?
-#
-#The smallest difference between stimuli that can be reliably detected 50% of the
-#time.
-#
-#* What does signal detection theory state?
-#
-#Whether a stimulus is perceived depends on both sensory experience and the
-#subject's judgment.
-#
-#* What is the figure-ground principle?
-#
-#Objects tend to stand out against the background.
-#
-#* What is inattentional blindness?
-#
-#A failure to notice clearly visible events because attention is elsewhere.
-#
-#* What's the effect of backwards messages?
-#
-#We don't notice them unless they are pointed out.
-#
-### 4.2
-#
-#* What is the effect of dark adaptation?
-#
-#Our rods and cones become more sensitive to low light over time.
-#
-#* How does the visual cortex process sight information?
-#
-#Feature detection cells look for simple aspects of the image.
-#Features are sent to more specialized regions for things like movement and
-#colour.
-#
-#* How does visual information travel through our brain?
-#
-#Optic nerve => Optic chiasm => Nerve signal => Visual cortex.
-#
-#* What is the function of the ventral stream of vision?
-#
-#Object recognition.
-#
-#* What do studies around face detection tell us?
-#
-#We have dedicated systems for, and are very good at, finding faces.
-#But it is also dependent on experience.
-#
-#* What is prosopagnosia?
-#
-#The inability to recognize faces.
-#
-#* What is myopia?
-#
-#Nearsightedness.
-#
-#* What is hyperopia?
-#
-#Farsightedness.
-#
-#* What is perceptual constancy?
-#
-#The ability to perceive objects as having constant shape, size, and colour
-#despite changes in perspective.
-#
-#* What is the function of the dorsal stream of vision?
-#
-#Discovering where, in space, objects are located.
-#
-#* What are monocular and binocular cues?
-#
-#Single or double eye cues about where objects are located in space.
-#
-### 4.4
-#
-#* What happens when you have synesthesia?
-#
-#Senses blur together, so you can hear colour or feel sounds.
-#
-#* What is the purpose of the sense of touch?
-#
-#It allows us to actively investigate our environment.
-#
-#* What is the function of somatosensory cortex?
-#
-#Sense of touch.
-#
-#* What are haptics?
-#
-#The active, exploratory aspect of touch sensation and perception.
-#(e.g. roughness)
-#
-#* What is kinesthesis?
-#
-#The sense of bodily motion and position.
-#
-#* What is nociception?
-#
-#The activity of nerve pathways that respond to uncomfortable situations
-#(e.g. pain)
-#
-#* How does gate-control theory explain pain perception?
-#
-#Our pain is an interaction between nerves that transmit pain and nerves that
-#inhibit pain messages.
-#
-#* How can emotions affect our physical pain?
-#
-#Emotional pain or empathy can increase our physical pain.
-#
-#* What is a phantom limb sensation?
-#
-#An amputee feels sensations from a limb that no longer exists.
-#
-#* What is the gustatory system?
-#
-#The system that functions in the sensation and perception of taste.
-#
-#* Which receptors replenish themselves?
-#
-#Taste and smell receptors.
-#
-#* What does the gustatory cortex do?
-#
-#Receive taste information.
-#
-#* What are papillae?
-#
-#Bumps that line the tongue and house taste buds.
-#
-#* What is the olfactory system?
-#
-#The system involved in smell - detection of airborne particles.
-#
-#* How are smells detected?
-#
-#In the olfactory epithelium.
-#Which sensors are triggered, and the pattern of trigger.
-#
-#* What is multimodal integration?
-#
-#The ability to combine our senses into a single integrated perception.
-#
-#* How smell travel differently in the brain?
-#
-#Other 4 senses travel to the thalamus first.
-#Smell goes directly to the limbic system.
-#
-#* What is the limbic system?
-#
-#A system responsible for emotional responses and memory.
-#
-#* What did we use the habituation-dishabituation response to tell us?
-#
-#The babies can recognize numbers in some way.
-#
-#* What is the thalamus?
-#
-#The sensory-relay system of the brain.
-#
-#* What is the reticular formation?
-#
-#The part of the brain that influences alertness and attention.
-#
-### Up to midterm1
+
+* What are the 3 stages of memory?
+
+Encoding, storage, retrieval.
+
+* How many pieces of information can we remember in STM?
+
+7 +/- 2
+
+# Neuropsychology
+
+* What are genes?
+
+The basic units of heredity.
+
+* What is a genotype?
+
+The genetic makeup of an organism.
+
+* What are chromosomes?
+
+Structures that are lined with all the genes.
+
+* What is behaviour genomics?
+
+The study of DNA and how genes are related to behaviour.
+
+* What is behaviour genetics?
+
+The study of how genes and the environment influence behaviour.
+
+* What is heritability?
+
+A statistic (0-1) representing the degree to which genetic differences
+contribute to individual differences.
+"Having a mouth: 0"
+"Tasting something: >0"
+
+* What the study of epigenetics tell us?
+
+That experiences and events (e.g. grooming) can change gene expression.
+
+* What does homozygous mean?
+
+Person has two of the same (dominant or recessive) versions of the gene.
+
+* What does heterozygous mean?
+
+Person has both dominant and recessive versions of a gene.
+
+* What is intrasexual selection?
+
+Members of the same sex compete to win the opportunity to mate.
+
+* What is intersexual selection?
+
+Members of one sex select a mating partner based on their traits.
+
+* What are the 3 reasons our brains are the most powerful?
+
+1. More folds and groves.
+2. More developed frontal lobe, responsible for planning and etc...
+3. Neotony, brains keep growing after birth.
+
+* What is evolution?
+
+A change in the frequency of genes occurring in a population over time.
+
+* What is the relationship between red and sex?
+
+The colour red seems to be associated with sex the most.
+Women wearing red clothes are perceived to be more interested in having sex.
+Culture does not influence this effect.
+
+## 3.2
+
+* What is the soma?
+
+The cell body that contains the nucleus.
+
+* What are the dendrites?
+
+Small branches from the soma that receive messages from other cells.
+
+* What is the axon?
+
+A long tail that transports information in the form of electrochemical
+reactions.
+
+* What are axon terminals?
+
+Blubs at the end of the axon that contain neurotransmitters.
+
+* What are neurotransmitters?
+
+Chemicals that function as messengers between neurons.
+
+* What are sensory neurons?
+
+Neurons that receive information from the bodily senses.
+
+* What are motor neurons?
+
+Neurons that carry messages from the brain to muscles.
+
+* What is myelin?
+
+A fatty sheath that insulates axons, and allows for increased speed and
+efficiency of neural communication.
+
+* What is the refractory period w.r.t neurons?
+
+The brief period in which a neuron cannot fire.
+
+* What is the synaptic cleft?
+
+The small space separating individual nerve cells.
+
+* How do neurons communicate intensity?
+
+By firing at a higher rate.
+
+* What is reuptake w.r.t neurotransmitters?
+
+A process where neurotransmitters are reabsorbed into the axon terminals from
+the synapse.
+
+* What does gluatamate do?
+
+Excites nervous system; memory and autonomic nervous system reactions.
+
+* What does GABA do?
+
+Inhibits brain activity; lowers arousal, anxiety, and excitation; facilitates sleep.
+
+* What does actylcholine do?
+
+Movement; attention.
+
+* What does dopamine do?
+
+Control of movement; reward-seeking behaviour; cognition and attention.
+
+* What does norepinephrine do?
+
+Memory; attention to new or important stimuli; regulation of sleep and mood.
+
+* What does serotonin do?
+
+Regulation of sleep, appetite, mood.
+
+* What are agnoists and antagonists w.r.t neurotransmitters?
+
+Drugs that enhance or inhibit neurotransmitter activity.
+Either by faking it or blocking things.
+
+* What are hormones?
+
+Chemical secreted by the glands of the endocrine system. They do not work
+immediately and instead travel in the blood.
+
+* What is the endocrine system?
+
+The system that controls hormones.
+
+* What do the adrenal glands do?
+
+Release stress hormones.
+
+* What are endorphines?
+
+Hormones responsible for reducing pain and inducing pleasure.
+
+* What is testosterone?
+
+Hormone that drives physical and sexual development and surges during sex and
+threats.
+
+* What is substance P?
+
+A neurotransmitter involved in the experience of pain.
+
+## 3.3
+
+* What encompasses the central nervous system?
+
+The brain and spinal cord.
+
+* What is the peripheral nervous system?
+
+The nerves that transmit information between the CNS and the rest of the body.
+
+* What encompasses the somatic nervous system?
+
+The nerves that are responsible for voluntary movement, and receiving sensory
+input.
+
+* What encompasses the autonomic nervous system?
+
+The nerves responsible for regulating the activity of organs and glands.
+
+* What encompasses the sympathetic nervous system?
+
+The nerves responsible for the fight-or-flight response.
+
+* What is the parasympathetic nervous system?
+
+The nerves responsible for helping maintaining homostatic balance.
+
+* What is the brain stem?
+
+The top most region of the spinal cord, containing the parts (pons and
+medulla) to keep the body functioning. (e.g. heart rate)
+
+* What is the hindbrain for?
+
+Maintaining the body and interfacing with the outside world.
+
+* What is the midbrain for?
+
+Orienting visual and audio attention.
+
+* What is the forebrain for?
+
+High level basics such as emotion, memory, and motivation.
+
+* What is the cerebal cortex for?
+
+Planning, processing, and recognition.
+
+* What is the difference between the left and right hemispheres of the brain?
+
+Left is abstract and mathematical.
+Right is visual and emotional.
+
+* What is neuroplasticity?
+
+The ability of the brain to change and rewire itself based on individual
+experience.
+
+* How does the human brain exhibit neuroplasticity?
+
+Our brains prevent recovery from brain injury to prevent bad rewiring.
+The area on the opposite hemisphere can take over the original's work.
+Can reorganize neural regions.
+
+# Sensation and perception
+
+## 4.1
+
+* What is sensation?
+
+The process of detecting external events by sense organs, and turning those
+events into neural signals.
+
+* What is perception?
+
+Attending to, organizing, and interpreting stimuli.
+
+* What is tranduction?
+
+Receptors transforming physical energy to neural impulses.
+
+* What is sensory adaptation?
+
+The reduction of activity in sensory receptors following repeated exposure.
+
+* What is an absolute threshold w.r.t sensation and perception?
+
+The minimum amount of energy needed for it to be reliably detected 50% of the
+time.
+
+* What is a difference threshold w.r.t sensation and perception?
+
+The smallest difference between stimuli that can be reliably detected 50% of the
+time.
+
+* What does signal detection theory state?
+
+Whether a stimulus is perceived depends on both sensory experience and the
+subject's judgment.
+
+* What is the figure-ground principle?
+
+Objects tend to stand out against the background.
+
+* What is inattentional blindness?
+
+A failure to notice clearly visible events because attention is elsewhere.
+
+* What's the effect of backwards messages?
+
+We don't notice them unless they are pointed out.
+
+## 4.2
+
+* What is the effect of dark adaptation?
+
+Our rods and cones become more sensitive to low light over time.
+
+* How does the visual cortex process sight information?
+
+Feature detection cells look for simple aspects of the image.
+Features are sent to more specialized regions for things like movement and
+colour.
+
+* How does visual information travel through our brain?
+
+Optic nerve => Optic chiasm => Nerve signal => Visual cortex.
+
+* What is the function of the ventral stream of vision?
+
+Object recognition.
+
+* What do studies around face detection tell us?
+
+We have dedicated systems for, and are very good at, finding faces.
+But it is also dependent on experience.
+
+* What is prosopagnosia?
+
+The inability to recognize faces.
+
+* What is myopia?
+
+Nearsightedness.
+
+* What is hyperopia?
+
+Farsightedness.
+
+* What is perceptual constancy?
+
+The ability to perceive objects as having constant shape, size, and colour
+despite changes in perspective.
+
+* What is the function of the dorsal stream of vision?
+
+Discovering where, in space, objects are located.
+
+* What are monocular and binocular cues?
+
+Single or double eye cues about where objects are located in space.
+
+## 4.4
+
+* What happens when you have synesthesia?
+
+Senses blur together, so you can hear colour or feel sounds.
+
+* What is the purpose of the sense of touch?
+
+It allows us to actively investigate our environment.
+
+* What is the function of somatosensory cortex?
+
+Sense of touch.
+
+* What are haptics?
+
+The active, exploratory aspect of touch sensation and perception.
+(e.g. roughness)
+
+* What is kinesthesis?
+
+The sense of bodily motion and position.
+
+* What is nociception?
+
+The activity of nerve pathways that respond to uncomfortable situations
+(e.g. pain)
+
+* How does gate-control theory explain pain perception?
+
+Our pain is an interaction between nerves that transmit pain and nerves that
+inhibit pain messages.
+
+* How can emotions affect our physical pain?
+
+Emotional pain or empathy can increase our physical pain.
+
+* What is a phantom limb sensation?
+
+An amputee feels sensations from a limb that no longer exists.
+
+* What is the gustatory system?
+
+The system that functions in the sensation and perception of taste.
+
+* Which receptors replenish themselves?
+
+Taste and smell receptors.
+
+* What does the gustatory cortex do?
+
+Receive taste information.
+
+* What are papillae?
+
+Bumps that line the tongue and house taste buds.
+
+* What is the olfactory system?
+
+The system involved in smell - detection of airborne particles.
+
+* How are smells detected?
+
+In the olfactory epithelium.
+Which sensors are triggered, and the pattern of trigger.
+
+* What is multimodal integration?
+
+The ability to combine our senses into a single integrated perception.
+
+* How smell travel differently in the brain?
+
+Other 4 senses travel to the thalamus first.
+Smell goes directly to the limbic system.
+
+* What is the limbic system?
+
+A system responsible for emotional responses and memory.
+
+* What did we use the habituation-dishabituation response to tell us?
+
+The babies can recognize numbers in some way.
+
+* What is the thalamus?
+
+The sensory-relay system of the brain.
+
+* What is the reticular formation?
+
+The part of the brain that influences alertness and attention.
+
+## Up to midterm1
 
 # Consciousness
 
@@ -1441,15 +1441,15 @@ Inconsistently showing consciousness.
 
 Person is awake and aware, but cannot move body.
 
-* What is tolerance?
+* What is tolerance w.r.t addiction?
 
 Need higher dose to achieve same high.
 
-* What is physical dependence?
+* What is physical dependence w.r.t addiction?
 
 The need to use drug to avoid physical symptoms.
 
-* What is psychological dependence?
+* What is psychological dependence w.r.t addiction?
 
 Addiction without any physical symptoms.
 
@@ -1883,7 +1883,7 @@ idea.
 The "s" factor is specific intelligence, mental abilities applicable to only
 specific tasks. This is learned, and draws parallel with Binet's theory.
 
-* How is IQ calculated?
+* How is IQ originally calculated?
 
 Mental age / chronological age * 100
 
@@ -1910,7 +1910,7 @@ potential, that is enhanced through experience.
 - Identify specific assets and liabilities
 - Psychological diagnosis
 
-* How is the IQ test done today?
+* How is the IQ score determined today?
 
 - Scores are standardized according to the normal distribution with a SD of 15.
 
@@ -1962,7 +1962,8 @@ A hormone secreted in the stomach that increases appetite.
 
 * What is the unit bias?
 
-The unit of sale or portioning is an appropriate amount to consume.
+The belief that the unit of sale or portioning is an appropriate amount to
+consume.
 
 * What is social facilitation?
 
@@ -2277,176 +2278,274 @@ We align ourselves with success, and distance ourselves from failure. "We won",
   taking a defensive esteem challenge. If I fail it doesn't matter since
   everyone fails.
 
-## End of midterm2
-#
-## Freud
-#
-#* Who created the "classic psychiatry" scenario?
-#
-#Sigmund Freud. Who first did the couch and table behind thing.
-#
-#* Who wrote "The Interpretation of Dreams"?
-#
-#Sigmund Freud.
-#
-#* What is the "Id"?
-#
-#Something that only exists in the unconscious.
-#Operates on the pleasure principle.
-#Contains inborn biological instincts, consisting of
-#  Eros (the life force)
-#  Thanatos (the death force)
-#
-#* What did Freud think the Eros was?
-#
-#A reflection of natural selection, the force that makes our species evolve and
-#become greater.
-#
-#* What did Freud think the Thanatos was?
-#
-#The counter-evolutionary force that is trying to drag our species back into the
-#past.
-#
-#* What is the "ego"?
-#
-#Something that exists in the conscious and preconscious levels.
-#Operates on the reality principle.
-#Realistic regulation of thoughts and actions.
-#
-#* What is the "superego"?
-#
-#TODO
-#
-#* What was Freud's view of the human mind?
-#
-#The mind is a mental iceberg.
-#You have a conscious level that contains your thoughts and perceptions.
-#Followed by your subconscious level that contains your memories and knowledge.
-#Lastly, the majority, is your unconscious level that contains your fears,
-#violent thoughts, immoral urges, etc...
-#
-#* What are some routes to the unconscious?
-#
-#1. Free associations. Which is why Freud had the couch.
-#2. Mistakes. "Freudian slips" forgetting words, names, etc.
-#3. Dreams. Latent content, "royal road to the unconsciousness".
-#4. Projective tests. Standardized set of ambiguous prompts designed to reveal something.
-#
-#* What are some analysises that Freud made from dreams?
-#
-#Broken arm => Broken (e.g. marriage) vows
-#King or Queen => Parents; Authority figures
-#Elongated Objects => Male genitalia
-#Opening Umbrella => Penile erection
-#Hollow objects, rooms => Female genitalia
-#Entrances and exits => sexual acts.
-#
-#* What is the oral psychosexual stage according to Freud?
-#
-#Between 0-1.5 years.
-#Erogenous zone: Mouth.
-#Key healthy development is weaning.
-#
-#* What are the two personalities that can emerge from oral psychosexual stage?
-#
-#Oral Dependent:
-#  Comes from excessive gratification.
-#  Makes you passive, dependent, gullible
-#Oral Aggressive:
-#  Comes from excessive frustration (not enough stimulation)
-#  Argumentative, cynical, exploitative.
-#
-#* What are some expressions of the oral psychosexual stage?
-#
-#Gum-chewing, nail-biting, smoking, kissing, eating disorders, alcoholism.
-#
-#* What is the anal psychosexual stage according to Freud?
-#
-#Between 1.3-3 years.
-#Erogenous zone: Anus.
-#Key Task: Toilet training.
-#
-#* What are the two personalities that can emerge from the anal psychosexual stage?
-#
-#Anal Expulsive:
-#  Excessive gratification
-#  Sloppy, careless, messy, disorderly
-#Anal Retentive:
-#  Excessive frustration.
-#  Compulsive cleanliness, orderly, rigid, stubborn.
-#
-#* What are some expression of the anal psychosexual stage?
-#
-#Neil Simon's "The Odd Couple".
-#
-#* What is the phallic psychosexual stage according to Freud?
-#
-#Between 3-6 years.
-#Erogenous zone: Genitals
-#Key Task: Sexual identity
-#
-#* What are the two personalities that can emerge from the phallic psychosexual stage?
-#
-#Boy's Oedipal Complex:
-#  Incestuous attraction to mother.
-#  Castration anxiety.
-#Girl's Electra Complex:
-#  Incestuous attraction to father.
-#  Penis envy.
-#
-#* What are some expressions of the phallic psychosexual stage?
-#
-#Males: "macho" expression.
-#Females: Flirting "girly" or overly dominant.
-#
-#* What is the genital stage according to Freud?
-#
-#From puberty onwards.
-#Erogenous zone: Genitals.
-#Key Task: Intimacy and procreation.
-#
-#* What was the medical conflict against Freud?
-#
-#- There was evidence of biological determinants.
-#- AMA abandons psychoanalysis for pharmacology.
-#
-#* What was the economic conflict against Freud?
-#
-#- Psychoanalysis had an exorbitant cost.
-#- Insurers abandon psychoanalysis for cheaper treatments.
-#
-#* What was the legal conflict against Freud?
-#
-#- There were some indefensible claims of repressed sexual abuse.
-#  - Some people, during psychoanalysis, said that someone sexually abused them.
-#  - And there was no ability to prove their innocence.
-#- Defenders abandon psychoanalysis for scientific evidence.
-#  - To avoid people going to prison for such claims, people had to
-#    attack the validity of psychoanalysis.
-#
-#* What are some flaws in Freud's scientific method?
-#
-#- Some of his theories (e.g. id) are hard to prove or disprove.
-#- He did not build his theories on a broad sample of people, only with people
-#  who had specific psychological problems.
-#- He was motivated to see his patents as unwell, because they would be paying them.
-#
-#* How does Freud's work persist today?
-#
-#In literature: Conflict, sex, and aggression.
-#
-## Personality
-#
-#* What is state shyness?
-#
-#A phenomenon where you're shy in certain situations only. There are usually only
-#minimal negative consequences.
-#
-#* What is trait shyness?
-#
-#15-25% of the population. Pervasive shyness across situations and time.
-#There are severe consequences because they
-#- Avoid social events.
-#- Make others uncomfortable.
-#- Inhibits communication and assertiveness.
-#- Prone to low self-esteem.
+# End of midterm2
+
+# Freud
+
+* Who created the "classic psychiatry" scenario?
+
+Sigmund Freud. Who first did the couch and table behind thing.
+
+* Who wrote "The Interpretation of Dreams"?
+
+Sigmund Freud.
+
+* What is the "Id"?
+
+Something that only exists in the unconscious.
+Operates on the pleasure principle.
+Contains inborn biological instincts, consisting of
+  Eros (the life force)
+  Thanatos (the death force)
+
+* What did Freud think the Eros was?
+
+A reflection of natural selection, the force that makes our species evolve and
+become greater.
+
+* What did Freud think the Thanatos was?
+
+The counter-evolutionary force that is trying to drag our species back into the
+past.
+
+* What is the "ego"?
+
+Something that exists in the conscious and preconscious levels.
+Operates on the reality principle.
+Realistic regulation of thoughts and actions.
+
+* What is the "superego"?
+
+TODO
+
+* What was Freud's view of the human mind?
+
+The mind is a mental iceberg.
+You have a conscious level that contains your thoughts and perceptions.
+Followed by your subconscious level that contains your memories and knowledge.
+Lastly, the majority, is your unconscious level that contains your fears,
+violent thoughts, immoral urges, etc...
+
+* What are some routes to the unconscious?
+
+1. Free associations. Which is why Freud had the couch.
+2. Mistakes. "Freudian slips" forgetting words, names, etc.
+3. Dreams. Latent content, "royal road to the unconsciousness".
+4. Projective tests. Standardized set of ambiguous prompts designed to reveal something.
+
+* What are some analysises that Freud made from dreams?
+
+Broken arm => Broken (e.g. marriage) vows
+King or Queen => Parents; Authority figures
+Elongated Objects => Male genitalia
+Opening Umbrella => Penile erection
+Hollow objects, rooms => Female genitalia
+Entrances and exits => sexual acts.
+
+* What is the oral psychosexual stage according to Freud?
+
+Between 0-1.5 years.
+Erogenous zone: Mouth.
+Key healthy development is weaning.
+
+* What are the two personalities that can emerge from oral psychosexual stage?
+
+Oral Dependent:
+  Comes from excessive gratification.
+  Makes you passive, dependent, gullible
+Oral Aggressive:
+  Comes from excessive frustration (not enough stimulation)
+  Argumentative, cynical, exploitative.
+
+* What are some expressions of the oral psychosexual stage?
+
+Gum-chewing, nail-biting, smoking, kissing, eating disorders, alcoholism.
+
+* What is the anal psychosexual stage according to Freud?
+
+Between 1.3-3 years.
+Erogenous zone: Anus.
+Key Task: Toilet training.
+
+* What are the two personalities that can emerge from the anal psychosexual stage?
+
+Anal Expulsive:
+  Excessive gratification
+  Sloppy, careless, messy, disorderly
+Anal Retentive:
+  Excessive frustration.
+  Compulsive cleanliness, orderly, rigid, stubborn.
+
+* What are some expression of the anal psychosexual stage?
+
+Neil Simon's "The Odd Couple".
+
+* What is the phallic psychosexual stage according to Freud?
+
+Between 3-6 years.
+Erogenous zone: Genitals
+Key Task: Sexual identity
+
+* What are the two personalities that can emerge from the phallic psychosexual stage?
+
+Boy's Oedipal Complex:
+  Incestuous attraction to mother.
+  Castration anxiety.
+Girl's Electra Complex:
+  Incestuous attraction to father.
+  Penis envy.
+
+* What are some expressions of the phallic psychosexual stage?
+
+Males: "macho" expression.
+Females: Flirting "girly" or overly dominant.
+
+* What is the genital stage according to Freud?
+
+From puberty onwards.
+Erogenous zone: Genitals.
+Key Task: Intimacy and procreation.
+
+* What was the medical conflict against Freud?
+
+- There was evidence of biological determinants.
+- AMA abandons psychoanalysis for pharmacology.
+
+* What was the economic conflict against Freud?
+
+- Psychoanalysis had an exorbitant cost.
+- Insurers abandon psychoanalysis for cheaper treatments.
+
+* What was the legal conflict against Freud?
+
+- There were some indefensible claims of repressed sexual abuse.
+  - Some people, during psychoanalysis, said that someone sexually abused them.
+  - And there was no ability to prove their innocence.
+- Defenders abandon psychoanalysis for scientific evidence.
+  - To avoid people going to prison for such claims, people had to
+    attack the validity of psychoanalysis.
+
+* What are some flaws in Freud's scientific method?
+
+- Some of his theories (e.g. id) are hard to prove or disprove.
+- He did not build his theories on a broad sample of people, only with people
+  who had specific psychological problems.
+- He was motivated to see his patents as unwell, because they would be paying them.
+
+* How does Freud's work persist today?
+
+In literature: Conflict, sex, and aggression.
+
+# Personality
+
+* What is state shyness?
+
+A phenomenon where you're shy in certain situations only. There are usually only
+minimal negative consequences.
+
+* What is trait shyness?
+
+15-25% of the population. Pervasive shyness across situations and time.
+There are severe consequences because they
+- Avoid social events.
+- Make others uncomfortable.
+- Inhibits communication and assertiveness.
+- Prone to low self-esteem.
+
+* What is the trait view of personality?
+
+We are made up of traits that differ from person to person.
+
+* How do researchers determine your social desirability score?
+
+- Ask the same question multiple times.
+- Ask the opposite question.
+- Ask the same question with different wording.
+
+# Disorders
+
+## Slides
+
+* What are some cognitive symptoms of depression?
+
+Negative cognitions/attitude about self, world, and future.
+
+* What is the influence of genetics on mental illness?
+
+There is a risk factor for mental illnesses that is genetically rooted. But
+there is also a lot of room for nuture too!
+
+* What is the 5-HTT short gene?
+
+A serotonin-transporter gene. Mutation of this gene increases serotonin
+movement, reducing the amount of it in the synaptic cleft.
+
+* What are SSRIs used for?
+
+Selective Serotonin Reuptake Inhibitors. Increases the amount of active
+serotonin to treat depression.
+
+* What is the depressive attribution style?
+
+Take credit for failure, distance self from success.
+
+* Do schizophrenic people have a split personality?
+
+No. That's people with Dissociative Identity Disorder.
+
+* Are schizophrenic people dangerous?
+
+Statistically no. They just have a bizarre nature of behaviour.
+
+* Can you be cured of schizophrenia?
+
+Many enjoy a full recovery, but there are people who have it forever.
+
+* Are schizophrenic people more creative?
+
+Small positive correlation (except the Paranoid type).
+May be product of "divergent" thinking.
+
+* What is the DSM-V Criteria for schizophrenia?
+
+A: Two (or more) of the following symptoms:
+- Delusions
+- Hallucinations
+- Disorganized speech
+- Grossly disorganized or catatonic behaviour
+- Negative emotions
+B: One or more major areas of function such as work, interpersonal relations,
+   or self-care are markedly below previous level
+C: Continuous signs of the disturbance persist for at least 6 months.
+
+* What are some positive symptoms of schizophrenia?
+
+- Hallucinations, especially auditory
+- Delusions, especially persecutory
+- Disorganized thought and nonsensical speech
+- Bizarre behaviours
+
+* What is the pharmacological treatment of schizophrenia?
+
+- Antipsychotics
+- Chlorpromazine developed in France as an antihistamine
+
+* What are the effects of chlorpromazine?
+
+- Binds of dopamine receptors.
+- Alleviates positive symptoms of schizophrenia.
+- Side-effects include Parkinson's-like effects.
+
+* What is the revolving-door phenomenon with schizophrenia?
+
+There is a 70-80% recidivism rate.
+Causes:
+1. Inability to care for self
+2. Return to dysfunctional environment
+3. Lack of social or work skills
+4. Stop taking medications
+
+* What is Milieu Therapy?
+
+Living in a supportive therapeutic environment.
+Removed from dysfunctional environment.

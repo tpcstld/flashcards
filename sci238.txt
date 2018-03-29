@@ -141,3 +141,30 @@ stars will repeat this behaviour decades/centuries later.
 * How common are stellar collisions?
 
 Very rare, but they can happen in dense clusters of stars.
+
+# Big Bang
+
+* Why is the Era of Atoms called the cosmic dark ages?
+
+Because hydrogen doesn't really emit protons, so little information can be
+obtained.
+
+* What is the current era of the universe?
+
+Era of Galaxies.
+
+* What are the problems with the theory of the Big Bang?
+
+1. Why is there an imbalance in anti-matter?
+2. Where does the structure come from?
+3. Why is the large-scale universe so smooth?
+4. Why is the density of matter almost exactly the critical density?
+
+* What would have happened if the universe was not at the critical density?
+
+If matter was 10% more dense, the universe would have collapsed by now.
+If matter was 10% less dense, galaxies would not have formed.
+
+* How old is the universe?
+
+About 14 billion years old.
