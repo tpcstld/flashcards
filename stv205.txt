@@ -1,5 +1,195 @@
 # Week 7
 
+* Who is Heinz von Foerster?
+
+- A physicist and philosopher.
+- Worked in biology and ethics.
+- Founding Biological Computing Laboratory in 1958.
+- Called for the first major conference on self-organizing systems (i.e. biology side)
+
+* What are the soft and hard sides of cybernetics?
+
+Soft: Biology
+Hard: Computation
+
+* What is the constructivist approach to philosophy?
+
+We actively make our understanding of the world.
+
+* What is second-order cybernetics?
+
+The cybernetics of observing systems.
+
+* What is sousveillance?
+
+The recording of people via small wearable recorders. It is not considered
+second-order because people are not really empowered to do anything with the
+recordings.
+
+* What is technological determinism?
+
+The belief that technological development is a first-order system.
+It cannot be controlled, and is autonomous, self-organizing, directionless, and
+inevitable.
+Technological development drives social structures and cultural values. (e.g.
+unintended consequences.
+
+* What is technological constructivism?
+
+The belief that technological development is a second-order system.
+It is not autonomous, we can direct it.
+Our values drive technological development.
+
+* What did Weiner use his "imaginative forward glance" to see?
+
+- Antibiotics would cause super-viruses.
+- Synthetic foods would cause carcinogens.
+- Automation would cause unemployment.
+
+* What did Weiner feel about moral responsibility of professions?
+
+Scientists and engineers had a moral responsibility to control their
+innovations. They could decide if something was to be developed.
+
+* Who was John von Neumann?
+
+Founded game theory as mathematical discipline. Credited with the
+minimax theorem (can minimize maximum losses), and mutual assured destruction.
+
+* What is the problem with programming machines for war?
+
+AI might do things that are against human goals, like national survival.
+
+* What is the technological singularity?
+
+The point at which machines can improve themselves.
+
+* What were McLuhan's thoughts about the world?
+
+In the past, things became more fragmented (e.g. during the renaissance.). But
+now things are becoming more and more connected.
+
+* What's the deal with integration and networks?
+
+A network needs non-technical feedback for it to be holistically integrated into
+society.
+
+# Week 8
+
+* Who is Gregory Bateson?
+
+- Married to Margaret Mead.
+- Schismogenesis (positive feedback loops breaking relationships)
+- Double bind (behaving in two incompatible ways simultaneously)
+
+* What is behavioural sciences?
+
+- Information calculus: Modeling human judgements and language.
+- Using cybernetic feedback to model human decision making.
+
+* How was information calculus used?
+
+Measuring how we responded to a stimulus (e.g. reaction time)
+Measuring our ability to transmit information.
+
+* According to schismogensis, how are schisms generated between groups?
+
+1. Boasting. (I'm better, no I'm better...)
+2. Submissive behaviour.
+
+* Who is Stafford Beer?
+
+- Need to figure out how to remain stable but adaptive.
+
+* What is a system?
+
+The configuration of a solution to a large-scale practical problem.
+Holsitic, demands compromise and judgement.
+
+* What is a network?
+
+The configuration of a solution to a large-scale technical problem.
+Mechanistic, demands compliance.
+
+* What is a web?
+
+The configuration of a solution to a large-scale natural problem.
+Organic, demands commitment.
+
 * What is a collage?
 
-A configuration of a solution to a large-scale and ongoing artificial problem.
+The configuration of a solution to a large-scale artificial problem.
+Synthetic, demand engagement.
+
+* What is the cultural body?
+
+Discovers meaning in a web of relationships.
+Health is being affective, illness is injury that needs healing.
+Health care is a web of ideals, care is being compassionate.
+
+* What is the social body?
+
+Negotiates meaning with other social bodies.
+Health is effective performance, illness is a breakdown that needs repair.
+Health care is a system of goals.
+
+* What is the functional body?
+
+A device that is defined by a network of operations.
+Health is efficient operation, illness is a malfunction that needs fixing.
+Health care is a network of objectives.
+
+* What is the virtual body?
+
+Mirror, photograph, MRI...
+Defined by a collage of statistics.
+Health is a desirable self-image, illness is exposure to reality that needs
+spinning.
+Health care is a collage of desires.
+
+* What is the quantified self movement?
+
+A movement to incorporate technology and data into one's daily life.
+Self-tracking through technology.
+
+* What is big data?
+
+Data that is so voluminous that traditional data processing is inadequate.
+
+# Week 9
+
+* What is technology?
+
+An ensemble of machineries and procedures.
+
+* What is the deterministic view of technology?
+
+Encompassing and irresistable force.
+Optimistic: Welcome the problems and blessings.
+Pessimistic: Technology is culturally destructive.
+
+* What are pessimistic deterministics rejected as?
+
+Luddites, dystopian, romantics.
+
+* What is the instrumentalist view of technology?
+
+It is neither good nor bad.
+Depends on our values.
+
+* What is the problem with the deterministic view of technology?
+
+People and society have a lot of discretion in adopting new devices.
+
+* What is the problem with the instrumentalist view of technology?
+
+Ignores the fact that technology has shaped society.
+
+* What is the paradigmatic view of technology?
+
+It is a pattern or paradigm we have agreed to follow in dealing with
+reality.
+
+* What is third-order cybernetics?
+
+Culture and art in the feedback loop.

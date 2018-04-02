@@ -2549,3 +2549,40 @@ Causes:
 
 Living in a supportive therapeutic environment.
 Removed from dysfunctional environment.
+
+# Social Persuasion
+
+* What are the two cognitive pathways to affect attitudes?
+
+1. Central Route Persuasion; reasoning, rationality.
+2. Peripheral Route Persuasion; emotional association, classical conditioning.
+
+* What is informational conformity?
+
+- Invented by Muzafer Sherif.
+- We want to be right.
+
+* What is normative conformity?
+
+- Invented by Soloman Asch.
+- We want to be liked, and we are willing to be wrong to be liked.
+
+* What are the 6 persuasion principles for compliance?
+
+1. Authority. People defer to credible experts.
+2. Liking. People respond more affirmatively to people they like.
+3. Social proof. Use examples of others.
+4. Reciprocity. People feel obliged to repay in kind what they received.
+5. Consistency. People tend to honour their public commitments.
+6. Scarcity. People prize what is scarce.
+
+* What is the foot-in-the-door technique?
+
+If you have a large request you want of somebody, get them to say yes to a
+small request. It will be harder for them to save no an extension of the
+small request.
+
+* What is the low-ball technique?
+
+Initially giving you a small deal. And then giving you a bigger deal afterwards
+that you might have not been as likely to accept initially.
