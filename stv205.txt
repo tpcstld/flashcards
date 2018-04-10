@@ -245,3 +245,12 @@ An attempt to represent the perspectives of women on technological development.
 * What is technofeminism?
 
 Technology is both a source and consequence of gender relations.
+
+* What is the problem and advantage of autonomous weapons?
+
+Problem: Humans are no longer in control of decisions on life and death.
+Advantage: Less lives may be lost due to less emotions.
+
+* What is the ping body?
+
+People can look up information about you
