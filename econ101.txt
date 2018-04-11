@@ -1414,4 +1414,239 @@ The area below the demand curve up to the equilibrium point.
 
 The area above the supply curve up to the equilibrium point.
 
-# Monopolies TODO
+# Monopolies
+
+* What is a monopoly?
+
+A market that produces a good with no close substitute.
+There is one supplier with high barriers to entry.
+
+* What are the 3 barriers to entry?
+
+Natural: Economics of scale.
+Ownership: Key resource is owned by one place.
+Legal: Laws. (e.g. Public Franchise)
+
+* What is a single-price monopoly?
+
+A firm that must sell each unit of output for the same price.
+
+* What is price discrimination?
+
+The practice of selling different units of goods at different prices.
+
+* How MR tell you at which point demand turns inelastic?
+
+When MR is negative.
+
+* In monopoly, why is demand always elastic?
+
+Monopolies will never produce at an output which demand is inelastic, since
+MR is negative.
+
+* How is economic profit calculated?
+
+Total revenue - Total costs.
+
+OR
+
+Producer surplus - Total fixed cost.
+
+* What is deadweight loss?
+
+The loss in consumer and producer surplus due to monopoly behaviour.
+
+* What is economic rent?
+
+Any consumer/producer surplus and economic profit.
+
+* What is rent seeking behaviour?
+
+The pursuit of wealth by capturing economic rent.
+Buy a monopoly or create a monopoly.
+
+* When can a monopoly price discriminate?
+
+When they can:
+1. Identify and separate different buyer types.
+2. Sell a product that cannot be resold.
+
+* What are the two ways to price discriminate?
+
+1. Among groups of buyers.
+2. Among units of a good.
+
+* When does perfect price discrimination occur?
+
+When a firm is able to sell each unit for the highest price someone is willing
+to pay.
+
+* What are regulations?
+
+Rules by the government to influence economic activity.
+
+* What is social interest theory?
+
+The processes that regulates to eliminate deadweight loss.
+
+* What is capture theory?
+
+The regulation that serves the self-interest of the producer.
+
+* What is the marginal cost pricing rule?
+
+A regulation that makes the monopoly set the price equal to marginal cost.
+
+* What is the average cost pricing rule?
+
+A regulation that makes the monopoly set the price equal to average cost.
+
+* Why is it hard to implement average cost pricing?
+
+Because regulators don't always know firm's costs.
+
+* What is rate of return regulation?
+
+A firm must justify its price by showing that its return on capital does not
+exceed a limit.
+
+* What is a price cap regulation?
+
+A price ceiling.
+
+# Monopolistic competition
+
+* What is monopolistic competition?
+
+A market structure where:
+- Many firms compete
+- Each firm has a differentiated product.
+- Compete on quality, price and marketing
+- Free to enter and exit industry.
+
+* What do the large number of firms in monopolistic competition imply?
+
+- Each firm as a small market share.
+- Each firm is sensitive to average market price, but pays no attention to
+other firms' actions.
+- Collusion is impossible.
+
+* What is product differentiation?
+
+Making a slightly different product than other firms.
+
+* What are the two main forms of marketing?
+
+Advertising and packaging.
+
+* What are the two key differences between perfect and monopolistic competition?
+
+Excess capacity: Produces less than the minimum ATC.
+Markup: Price exceeds marginal cost.
+
+* How does advertising affect ATC?
+
+ATC shifts upwards, but increased demand means you can produce at a lower
+place.
+
+* What is a signal?
+
+An action taken by an informed person to send a message to uninformed people.
+
+# Oligopoly
+
+* What is an oligopoly?
+
+A market structure where:
+- Natural or legal barriers to entry exit
+- Small number of firms compete.
+
+* What are the consequence of having a small number of firms in an oligopoly?
+
+Interdependence: Firm's profit depends on every firm's actions
+Temptation to Cooperate: Form a cartel.
+
+* What is game theory?
+
+A tool to study strategic behaviour.
+
+* What are the four components of a game?
+
+Rules: The setting of the game.
+Strategies: All possible actions of each player.
+Payoff: Consequence of each action.
+Outcome: The result of game.
+
+* What is the Nash equilibrium?
+
+The equilibrium action assume all players are rational.
+
+* What is a collusive agreement?
+
+An agreement to restrict output, raise prices, and increase profits.
+
+* What is a cooperative equilibrium?
+
+A situation where firms share the monopoly profit.
+
+* What is a tit-for-tat strategy?
+
+Cooperates/cheats each round depending on the action of opponent last round.
+
+* What is a trigger strategy?
+
+Cheats every round if opponent cheats once.
+
+* What is a contestable market?
+
+A market where firms can enter and leave very easily.
+
+* What is price limiting?
+
+Setting the price at the highest level that can keep the potential entrant out.
+
+# Government actions
+
+* What is search activity?
+
+The time spent looking for someone to do business with.
+
+* What is a black market?
+
+An illegal market that operates without the legal market's regulations.
+
+* What is tax incidence?
+
+The division of the burden of tax between buyers and sellers.
+
+* What is the effect of taxes?
+
+Shifts the supply curve.
+
+# Global markets
+
+* What are imports and exports?
+
+Imports: Goods we buy from other countries
+Exports: Goods we sell to other countries.
+
+* What is the fundamental force that generates trade?
+
+(National) Comparative advantage.
+
+* What is the benefit of trade?
+
+Buyers get imported goods cheaper.
+Sells can sell their goods international for more money.
+
+* What is a tariff?
+
+Tax on an imported good.
+
+* What is dumping?
+
+A foreign firm sells its exports at a lower price than its cost of production.
+
+* Why are there trade restrictions?
+
+Because companies are angry that their producer surplus is lower.
