@@ -2438,6 +2438,132 @@ In literature: Conflict, sex, and aggression.
 
 # Personality
 
+## 12.1
+
+* What is personality?
+
+A characteristic pattern of thinking, feeling, and behaving that is unique to
+each individual, and remains consistent over time.
+
+* What is the difference between the idiographic and nomothetic approach to personality measurement?
+
+Idiographic: Creating detailed descriptions of a specific person's personality.
+Nomothetic: Examine personality between many people.
+
+* What is a personality trait?
+
+A description of a person's habitual patterns of behaviour.
+
+* What is the Barnum effect?
+
+It's easy to make people think that you're measuring their personality.
+
+* What is the Five Factor Model?
+
+A trait-based theory of personality based on 5 major dimensions:
+Openness: Open or closed to new ideas/experiences.
+Conscientiousness: Efficient and disciplined or not.
+Extraversion: Socializers and sensation seekers.
+Agreeableness: Easy to like.
+Neuroticism: Mental and emotional stability.
+
+* What is honesty-humility?
+
+An addition to the Five Factor Model to measure of how honest people are.
+
+* What is the dark triad?
+
+Machiavellianism: Tendency to manipulate
+Psychopath: Shallow emotional responses
+Narcissism: Focusing on the self.
+
+Describes people that are likely to cause harm.
+
+* What is Right-Wing Authoritarianism?
+
+1. Obeying orders
+2. Supporting aggression against "others".
+3. Strongly believe in maintaining the existing social order.
+
+"Highly problematic set of personality characteristics".
+
+* What are temperaments?
+
+Personalities for babies. Not fully developed.
+Well-adjusted, under-controlled, inhibited.
+
+* How do personalities develop?
+
+They tend to reinforce themselves over time.
+"Neurons that wire together fire together."
+The 5 traits get better scores over time.
+
+* What is a personality state?
+
+A temporary engagement that influences behaviour.
+Locations, Associations, Activites, Subjective states.
+
+* What is the theory of reciprocal determinism?
+
+Behaviour, internal and external factors interact with each other to form a
+personality.
+
+## 12.2
+
+* What is WEIRD and why is it a problem?
+
+Western, educated, industrialized, rich, democratic. Most studies are done in
+WEIRD countries but they only contain 12% of the world's population.
+
+* Why are twins used to determine genetic personality influences?
+
+Because twins have the same nature but different nuture.
+
+* How does personality differ between genders?
+
+The mean is different (women are higher), but the difference is small.
+
+* What is humorism?
+
+Personality disorders explained by imbalances in key fluids.
+
+* What is phrenology?
+
+Personality can be measured by looking at outer skull.
+
+* What is the arousal theory of extraversion?
+
+Extraverted people have a higher threshold for arousal. Introverted people want
+to be alone to avoid overstimulus. This is controlled by the ARAS, ascending
+reticular activating system.
+
+* What is the BAS and BIS?
+
+Behaviour activation/inhibition system. Activation system arouses the person
+to do things. Inhibition system warns person to avoid things.
+
+## 12.3
+
+* What are defense mechanisms?
+
+Things we do unconsciously to avoid stress.
+Repression, Denial, Rationalization.
+
+* What is analytical psychology?
+
+Focusing on the role of unconscious archetypes in personality development.
+
+* What the personal and collective unconscious?
+
+Personal: Repository of experiences and patterns.
+Collective: Memories of humankind.
+
+* What is the person-centered perspective?
+
+People are basically good.
+
+## Slides
+
 * What is state shyness?
 
 A phenomenon where you're shy in certain situations only. There are usually only
@@ -2463,6 +2589,50 @@ We are made up of traits that differ from person to person.
 - Ask the same question with different wording.
 
 # Disorders
+
+## 15.1
+
+* What are asylums?
+
+Facilities for the mentally ill.
+
+* What is borderline personality disorder?
+
+Intense extremes between positive and negative emotions.
+
+* What is narcissistic personality disorder?
+
+Inflated self-importance and need for attention.
+
+* What is histrionic personality disorder?
+
+Excessive attention seeking behaviour.
+
+## 15.3
+
+* What is generalized anxiety disorder?
+
+Frequently elevated levels of anxiety.
+
+* What is panic disorder?
+
+Occasional episodes of sudden, very intense fear.
+
+* What is agoraphobia?
+
+Isolating themselves to avoid public panic attacks.
+
+## 15.4
+
+* What is schizophrenia?
+
+Significant breaks in reality.
+
+* What are the 3 phases of schizophrenia?
+
+Prodromal: Becomes confused
+Active: Halluciations and bad thoughts.
+Residual: Lessened symptoms.
 
 ## Slides
 
@@ -2549,6 +2719,12 @@ Causes:
 
 Living in a supportive therapeutic environment.
 Removed from dysfunctional environment.
+
+## 16.2
+
+* What are insight therapies?
+
+Involves dialogue between client and therapist.
 
 # Social Persuasion
 
@@ -2688,3 +2864,187 @@ Beautiful people is correlated with:
 8. Effort to spent time.
 9. Stylish clothes
 10. Offers to help
+
+# Social psychology
+
+## 13.1
+
+* What is mimicry?
+
+Doing things that others do.
+
+* What is the chameleon effect?
+
+We consciously copy what other people do.
+
+* What are social norms?
+
+Guidelines for how to behave.
+
+* What is social loafing?
+
+When an individual puts less effort into working on a task with others.
+Caused by:
+- Low efficacy beliefs
+- Believing that one's contributions are not important
+- Not caring about group's outcome
+- Feeling like others are not trying very hard.
+
+* What is social facilitation?
+
+When a person tries harder due to the presence of others.
+
+* What is groupthink?
+
+When people cannot express their view, and must conform to the group.
+
+* What is the Asch experiment?
+
+The group gave the wrong answer, see what the person does.
+
+* What is normative and informational influence?
+
+Normative: Pressure to be accepted.
+Informational: Pressure to be right.
+
+* What is the bystander effect?
+
+The presence of other people actually reduces the likelihood of helping.
+
+* What is the diffusion of responsibility?
+
+The responsibility for one action is spread across more than one person, making
+no person feel responsible.
+
+* What is pluralistic ignorance?
+
+A disjunction between private beliefs and public behaviour.
+
+# 13.2
+
+* What are explicit and implicit processes?
+
+Explicit: Conscious thought.
+Implicit: Unconscious thought.
+
+* What are dual-process models?
+
+Models that account for both explicit and implicit processes.
+
+* What is person perception?
+
+The processes by which we judge and categorize others.
+
+* What are self-fulfilling prophecies?
+
+When our expectation creates the outcome.
+
+* What is the false consensus effect?
+
+The tendency to project our self-concept onto the social world.
+
+* What is naive realism?
+
+We believe what we see is what they are.
+
+* What are self-serving biases?
+
+Bias towards making ourselves be better.
+
+* What are internal and external attributions?
+
+Internal: Behaviour is explained as an internal characteristic.
+External: Behaviour is explained as an consequence of the situation.
+
+* What is the fundamental attribution error?
+
+We judge others internally, ourselves externally.
+
+* What is ingroup bias?
+
+Seeing ingroups as superior to outgroups.
+
+* What is the minimal group paradigm?
+
+We will do anything to form and reinforce groups.
+
+* What is a stereotype?
+
+A set of beliefs about a group.
+
+* What is prejudice?
+
+Negative attitudes toward other groups.
+
+* What is discrimination?
+
+Disfavouring other groups.
+
+* What is the contact hypothesis?
+
+Social contact between members of different groups is extremely important to
+overcoming prejudice.
+
+## 13.3
+
+* What is the elaboration likelihood model?
+
+When people care, they will be persuaded by the argument.
+When people don't care, they will be persuaded by other things.
+
+* What is the central and peripheral route to persuasion?
+
+Central: Information
+Peripheral: Style
+
+* What are some ways to use the central route effectively?
+
+- Make it personal.
+- Acknowledge the other side.
+- Use some emotions.
+
+* What is construal-level theory?
+
+Information affects us differently depending on our psychological distance.
+
+* What is the identifiable victim effect?
+
+People care more when there's a single person suffering than many.
+
+* What are the experiental and analytic systems?
+
+Experiental: Emotional quick responses.
+Analytic: Logical and slow thinking.
+
+* What are some value frames?
+
+Biospheric: Save the polar bears
+Social-altruistic: The poor will be hurt.
+Egoistic: Self-enhancement
+
+* What is attitude inoculation?
+
+Exposing people to a weak counter-argument and then refuting the argument.
+This makes them more resistant to change.
+
+* What is processing fluency?
+
+The ease at which information is processed.
+
+* What are some ways to use the peripheral route effectively?
+
+- Use authority figures.
+- Social validation.
+- Reciprocity.
+
+* What is the door-in-the-face technique?
+
+Big request that gets denied, more likely to accept small request.
+
+* What is the foot-in-the-door technique?
+
+Making a simple request followed by a more substantial request.
+
+* What is cognitive dissonance theory?
+
+When we hold inconsistent beliefs, we want to make them consistent.
