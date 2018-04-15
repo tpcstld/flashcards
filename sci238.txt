@@ -1,3 +1,244 @@
+# L3 - Astronomy as a science
+
+* What is the astronomical unit?
+
+The average distance of the Sun from the Earth.
+
+* What are a Parsec?
+
+The arcseconds in which a star shifts in the course of a year.
+
+* How do we measure the distances of very far stars?
+
+By comparing the apparently brightness of the stars. Since we can assume that
+similar stars have the same intrinsic brightness.
+
+# Earth
+
+* How is the Earth heated?
+
+- Leftover heat from formation
+- Gravitational compression
+- Radioactive decay
+- Heavy elements sinking creates friction
+
+* How are Earth's magnetic fields generated?
+
+From the convection of metals in the Earth's core.
+
+* What is the Earth's magnetic field do?
+
+- Protects the Earth from Sun's solar winds (protects atmosphere).
+
+* What is the line between Earth's atmosphere and space?
+
+100 km.
+
+* Where is the Earth's atmosphere warmest?
+
+The surface.
+
+* What is Ozone used for?
+
+Protects against UV radiation.
+
+* How are the northern lights formed?
+
+Solar wind particles interacting with the atmosphere.
+
+* What are the two types of Earth's crust?
+
+Continental and oceanic.
+
+* What does CO2 do in Earth's atmosphere?
+
+Traps Infrared radiation, heating up the Earth.
+
+# Moon
+
+* How many moons are in the solar system?
+
+Around 160.
+
+* What is the rank of the moon's size?
+
+5th.
+
+* What is the internal core of the Moon?
+
+Molten, hot core, much like the Earth.
+
+* What are the highlands, and the marias?
+
+Highlands: Cratered. Older rocks.
+Maria: Smooth. No craters, younger rocks. Formed from lava overflow.
+
+* What is the surface like on the far side of the Earth?
+
+There are no maria. Thicker crust.
+This is caused because during the formation of the Moon, the Earth was hot,
+which caused the maria.
+
+* What is the Giant Impact Hypothesis?
+
+During the formation of the Moon, there were lots of large orbiting objects.
+There was a big grazing collision from another "planet" and Earth.
+The material ejected from this collision formed the Moon (from both Earth and
+the other planet).
+
+Evidence: Composition of some rocks on the Moon seem to be from the other
+planet.
+
+* What is the Late Heavy Bombardment?
+
+A bombardment of comets from the outer solar system.
+Caused the highland craters.
+
+* What is Tycho?
+
+A big, very visible crater on the moon.
+
+* What are skylights?
+
+Holes leading to the underground lava tunnels of the Moon.
+
+* Where does water exist on the moon?
+
+Near the poles, where in craters where there is no sunlight. Exists as ice.
+
+# L7 - Terrestrial Planets
+
+## Mercury
+
+* What are some quirks about Mercury's orbit?
+
+- Ellipetical
+- Tidally locked at 2 years/3 days.
+
+* What are the features of Mercury's surface?
+
+- No atmosphere
+- Lots of craters
+
+# Lecture 9 - Small solar system bodies
+
+## Asteroids
+
+* What is the section that exists between Mars and Jupiter?
+
+The asteroid belt. ("The Main Belt")
+
+* What is the makeup of asteroids?
+
+Usually carbon or silicon.
+
+* What are Kirkwood Gaps?
+
+Ring gaps in the asteroid belt due to Jupiter's orbital influence.
+
+* What is the size of all the asteroids combined?
+
+Smaller than the moon.
+
+* What are some names of asteroids?
+
+Ida, Ceres, Vesta.
+
+* What is Ceres? What is its makeup?
+
+- One of the larger asteroids in the asteroid belt.
+- Has water in its core
+- Has craters in the surface.
+
+* How did the main asteroid belt form?
+
+During the formation of the solar system, Jupiter ate a lot of the mass, but
+there were still some left over. This leftover mass formed into smaller spheres
+that were then influenced by Jupiter's mass.
+
+## Comets
+
+* What are comets usually made of?
+
+Ice and dust.
+
+* What are the two parts of comets?
+
+The coma (the tails) and the nucleus (the core).
+
+* What are the two tails of comets?
+
+The dust tail, which glows white.
+The ion tail, which glows in a color related to the Gas.
+
+* How are comets classified?
+
+By their orbits:
+- Short-period comets (<200 years). Usually near the ecliptic
+- Long-term comets (>200 years). Can appear anywhere
+
+* What is outgassing?
+
+The release of gas in comets due to the Sun heating the comet up. The gases
+usually come from discreet places in the comet. There are "gas vents".
+
+* Where do comets come from?
+
+The Oort cloud.
+
+* What did we find from comet samples?
+
+Carbon molecules, including amino acids.
+
+## Oort Cloud
+
+* What is the Kuiper Belt?
+
+A region just outside of Neptune where things there have stable orbits.
+Pluto is part of the Kuiper Belt.
+100000 objects, >100 km wide.
+Source of short-period comets.
+
+* What is the Oort Cloud?
+
+The origin of long-period comets. A sphere of material around the solar system,
+that extends very far away.
+
+* What are some Kuiper Belt objects?
+
+Krus, Charon, Pluto.
+
+## Meteors
+
+* What makes meteors hot?
+
+The compression of the material in the meteor as it falls.
+
+* Where do meteor showers come from?
+
+Comets create a cloud of debris as they travel around the Sun. When the Earth
+runs into this cloud, we get meteor showers.
+
+* How do we date meterorites?
+
+Carbon dating, or radioactive decay.
+
+# Lecture 10 - Extrasolar planets.
+
+* How are exoplanets first detected?
+
+The star's orbit is also shifted by the planet. We can detect that shift as a
+Doppler shift in the star's light.
+
+* What are hot Jupiters?
+
+Short-period, big planets. These were the first exoplanets that were discovered.
+
+* What is a transit?
+
+The exoplanet traveling in front of the star from the perspective of the Earth.
+We can measure the drop in brightness caused by transits, and the amount the
+sun dims by also tells us how large the planet is.
 
 # Lecture 12 - Stars
 
@@ -43,6 +284,11 @@ The ratio of the brightnesses in two wavelengths.
 The OBAFGKM classification, which was later added to include subtypes (#s) and
 widths of spectral lines (roman #s).
 
+* What are brown dwarfs?
+
+Objects that formed like stars, but didn't have the mass necessary for hydrogen
+fusion. However, they can fuse Lithium or deuterium.
+
 * What were brown dwarf's impact on the spectral classification system?
 
 They didn't fit the classification system, and instead were found to be two
@@ -55,6 +301,10 @@ T dwarfs: even cooler, dominated by bands of water and methane.
 
 Spectra requires bigger telescopes, but gives fine details.
 Photometry gives good estimates, but is easier to do.
+
+* What is the HR diagram?
+
+Named after the people who invented it, it is a mass/spectra plot of stars.
 
 * What is the main sequence w.r.t stars?
 
@@ -99,6 +349,23 @@ stronger gravity.
 
 # Star clusters
 
+* What are open clusters?
+
+Loosely bound clusters of stars. Just formed by mutual gravity.
+All stars orbit their collective center of mass, but might not be all in the
+same plane.
+
+* What are globular clusters?
+
+Clusters of 100000s of stars in a spherical shape. These clusters are usually
+very old. We assume they were the first stars to form.
+
+* What is an assumption with star clusters?
+
+All stars in the cluster are approximately the same age. This means that you can
+determine the age of the cluster by measuring which stars are still on the
+main sequence.
+
 * What is an major assumption in stellar astrophysics?
 
 If two stars have identical spectra and are on the Main Sequence, then they
@@ -141,6 +408,105 @@ stars will repeat this behaviour decades/centuries later.
 * How common are stellar collisions?
 
 Very rare, but they can happen in dense clusters of stars.
+
+## Nebulae
+
+* What is a nebula?
+
+Clouds of dust and gas in space.
+
+* What is the difference between emission and reflection nebulae?
+
+Emission: Illuminated by their own light.
+Reflection: Illuminated by nearby stars' light. (More dusty)
+
+# Stellar Evolution
+
+* What is a helium flash?
+
+Because low mass (<2Msum) stars struggle to fusion helium, the core becomes
+degenerate and sudden ignition causes the core to expand and then shrink
+suddenly.
+
+* What happens after Helium is burned?
+
+If the star is above 8Msun, it can still burn Carbon and Oxygen, but otherwise
+that's about it.
+
+* What are red giants?
+
+Stars near the end of its lifetime, where it as expanded and cooled down.
+
+* What is a white dwarf?
+
+A star near the very end of its lifetime, it has blown off all of its
+surrounding layers, and a carbon-based core remains.
+
+Properties:
+- Very dense
+- Lots of radiation
+- Glowing gas
+
+Created when a stellar core less than 1.4Msun dies.
+
+* What is a planetary nebula?
+
+Glowing gas due to energy imparted by a white dwarf.
+
+* What is the problem with fusing Iron?
+
+Iron absorbs energy when fused, unlike the elements before it. This causes
+the star to collapse.
+
+* What is a supernova?
+
+An exploding star. It has a supernova remnant, which is the gas and material
+expelled by the star.
+
+* Why are supernovas important for our existence?
+
+Heavier elements are created by supernova, and these get distributed throughout
+the universe.
+
+## Neutron stars
+
+* What are neutron stars?
+
+A star made up almost entirely out of neutrons. They are supported by
+neutron degeneracy pressure. It is also spinning super-fast due to the
+conservation of angular momentum.
+
+Created when a stellar core less than 2.8Msun dies.
+
+It also has a crust with just "normal" matter, that has been squeezed
+
+* What is a pulsar?
+
+Neutron stars that have two "polar" beams of energy. Neutron stars spin
+really fast so that the pulses will wash over the Earth periodically.
+
+* What are magnetars?
+
+Neutron stars with unusually strong magnetic fields. They are the most
+magnetic objects in the universe.
+
+* What is a star quake?
+
+Conflict in force between the neutron's core and crust can cause an "earthquake".
+This creates a "solar flare" that is insanely powerful.
+
+A star quake once blinded an x-ray satellite, compressed Earth's magnetic field,
+ionize upper atmosphere.
+
+## Black holes
+
+* What are black holes?
+
+Created when a stellar core more than 2.8Msun dies.
+
+* What is the event horizon?
+
+The surface of the black hole where the escape velocity is the speed of light.
 
 # Big Bang
 
