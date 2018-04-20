@@ -347,7 +347,7 @@ same time in the same gas cloud.
 Motion tells us about the gravity acting on the stars. More motion means
 stronger gravity.
 
-# Star clusters
+# Lecture 13 - Star clusters
 
 * What are open clusters?
 
@@ -420,11 +420,93 @@ Clouds of dust and gas in space.
 Emission: Illuminated by their own light.
 Reflection: Illuminated by nearby stars' light. (More dusty)
 
-# Stellar Evolution
+# Lecture 14 - Star Formation
+
+* What is the Interstellar Medium (ISM)?
+
+Gas and dust between the stars.
+
+* What are molecular clouds?
+
+Higher density interstellar clouds. They have enough dust to block visible light
+from stars. Stars are born in molecular clouds.
+
+* When do interstellar clouds collapse?
+
+When gravity and pressure become unbalanced.
+
+* What is the Jeans Mass?
+
+The maximum mass at which an interstellar cloud is stable. (Won't collapse.)
+
+* What are the 3 main stages of early star formation?
+
+1. Collapse begins; Caused by a shockwave
+2. Fragmentation; Many cores formed from a single core
+3. Core to protostar; Gas falls to central core
+
+* How do cloud cores collapse?
+
+Into a disk, with a bipolar outflow along the disk rotation axis.
+
+* What is a protostar?
+
+A central star with an accertion disk. Luminosity of star is dominated by
+accretion.
+
+* What is a pre-main sequence star?
+
+The early stages of a star, where the surface cools allowing for further
+collapse. Luminosity is dominated by contraction of star.
+
+* What factors can inhibit star formation?
+
+Magnetic fields; which inhibits the cloud from contracting.
+Radiation from nearby stars; which changes the flow of the cloud.
+
+* How does a pre-main sequence star form into a main sequence star?
+
+Thermal energy escapes from the star, causing the star to contract, causing
+even higher pressure and temperature inside the star. At some point, the core
+is so hot that hydrogen can fuse into helium.
+
+* How do stars join the main sequence?
+
+Temperature increases. They join in from the "right" of the HR diagram. The more
+luminous the star the faster they join the main sequence.
+
+* What does the Stellar Initial Mass Function tell us?
+
+It appears that far more low mass stars are produced than higher mass stars.
+
+* What is the CNO cycle?
+
+In massive stars (with hot enough cores), stars can use Carbon as a catalyst
+for H -> He fusion.
+
+* How does energy get out of a star?
+
+High mass: Convective core, radiative envelope.
+Intermediate mass: Radiation, outer convection zone.
+Low mass: Convective "to the core".
+
+# Lecture 15 - Stellar Evolution
+
+* What happens when there is not enough hydrogen in the stars' core?
+
+Core contraction accelerates.
+
+* What are a star's death fusion cycles?
+
+Successive fusion cycles until core temperature/pressure cannot be reached for
+the next reactions to occur. Each cycle is shorter than the last, and more
+temperature sensitive.
+
+Eventually, the envelope is shed, leaving just the core behind.
 
 * What is a helium flash?
 
-Because low mass (<2Msum) stars struggle to fusion helium, the core becomes
+Because low mass (<2.5Msum) stars struggle to fusion helium, the core becomes
 degenerate and sudden ignition causes the core to expand and then shrink
 suddenly.
 
@@ -446,17 +528,27 @@ Properties:
 - Very dense
 - Lots of radiation
 - Glowing gas
+- More massive the star, smaller the white dwarf.
+- Supported by electron degeneracy pressure.
 
 Created when a stellar core less than 1.4Msun dies.
 
 * What is a planetary nebula?
 
-Glowing gas due to energy imparted by a white dwarf.
+Glowing gas due to energy imparted by a white dwarf shedding its envelope.
 
 * What is the problem with fusing Iron?
 
 Iron absorbs energy when fused, unlike the elements before it. This causes
 the star to collapse.
+
+* What is the structure of a high-mass star just before the end?
+
+It has multiple layers, fusing different elements together.
+
+* How does a dying high-mass star move on the HR diagram?
+
+To the straight right, and then maybe back left a bit.
 
 * What is a supernova?
 
@@ -476,7 +568,7 @@ A star made up almost entirely out of neutrons. They are supported by
 neutron degeneracy pressure. It is also spinning super-fast due to the
 conservation of angular momentum.
 
-Created when a stellar core less than 2.8Msun dies.
+Created when a stellar core less than 3Msun dies.
 
 It also has a crust with just "normal" matter, that has been squeezed
 
@@ -510,6 +602,24 @@ The surface of the black hole where the escape velocity is the speed of light.
 
 # Big Bang
 
+* What was the status of our 4 forces in the very beginning of the universe?
+
+The 4 forces were combined into a single unified force.
+
+* What is the timeline of the beginnings of the universe?
+
+0.0...1s: 4 forces were split up.
+3m: Subatomics could form
+3-20m: Atoms could form, forming H, He, Li and deuterium
+20m: Fusion stopped due to cooling.
+380000yrs: Electrons could combine with nuclei.
+
+* What is inflation?
+
+At some point, space suddenly expanded sharply. This "smoothed" out the
+cosmic microwave background as lumps had no time to form before they were
+separated and flattened out.
+
 * Why is the Era of Atoms called the cosmic dark ages?
 
 Because hydrogen doesn't really emit protons, so little information can be
@@ -534,3 +644,407 @@ If matter was 10% less dense, galaxies would not have formed.
 * How old is the universe?
 
 About 14 billion years old.
+
+# Lecture 16 - The Milky Way
+
+* What is the interstellar medium made of?
+
+Hydrogen, in many forms
+Some other common molecules, like water and carbon monoxide.
+Cosmic rays, Magnetic fields, dust.
+
+* How does the interstellar medium affect light?
+
+Dust obscures visible light, and reddens visible light by scattering the
+bluer photons more.
+
+* What is the cosmic cycle of the elements?
+
+Interstellar gas forms stars. Stars convert elements into heavier elements.
+When stars die they put the enriched elements back into the cloud. Therefore
+the metallicity of the universe is constantly increasing.
+
+* What is the rotation curve of the milky way?
+
+It is almost fast, which means that there is some other form of matter that is
+causing further away objects to orbit faster.
+
+* What is the visible mass of the milky way?
+
+1 x 10^11 Msun
+
+* What is the estimate mass of the milky way?
+
+2 x 10^12 Msun, 20 times the mass of all visible matter.
+
+* What does the Milky Way consist of?
+
+A halo containing most of the dark matter.
+A disk containing most of the visible matter
+A small bulge in the center.
+
+* What is the Milky Way?
+
+A flat, spiral galaxy.
+There are two major spiral arms, two minor arms.
+
+* How far are from the center of the Milky Way?
+
+24000 light years or 8kpc.
+
+* What are the spiral arms of the Milky Way?
+
+They are like "traffic" jams, material is piling up in the arms. The objects
+in the spiral arms are transient, the arm is like a wave.
+
+Collisions in the spiral arms also help new stars form.
+
+* What is the bulge?
+
+A cylindrical cluster of very old stars. There is a central bulge, where all
+stars (no matter how close) orbit with the same period.
+
+# Lecture 17 - Galaxies
+
+* What was the first other galaxy we discovered?
+
+Andromeda.
+
+* What are the four types of galaxy?
+
+1. Spiral; like the Milky Way
+2. Elliptical; Large rounded balls of stars; little gas; no disks
+3. Lenticular; Disks with no spiral arms; small amounts of gas/dust
+4. Barred spiral; Spiral galaxies with a bar in the middle.
+
+* How are elliptical galaxies defined?
+
+By their ellipticity, as a number.
+
+* What is hubble's constant?
+
+The relationship between galaxies velocity (away from us) and their distance.
+
+* How are tidal tails caused?
+
+By dynamical interaction with another galaxy?
+
+* What is a starburst galaxy?
+
+Star formation that is triggered by a merger between two galaxies.
+
+* At what speed does the plasma in an energetic galactic center move at?
+
+Nearly the speed of light.
+
+* What are the properties of spiral galaxies?
+
+- Grand design: Long spirals.
+- Usually have a bar.
+
+* What are the properties of elliptical galaxies?
+
+- Have little gas.
+- Probably formed from galactic collisions
+
+* How do we think large galaxies exist?
+
+They cannibalize smaller galaxies around them.
+
+* How do we think ring galaxies exist?
+
+A small galaxy collides with the direct center a big galaxy, flinging out
+the stars away from the core.
+
+* What are active galaxies?
+
+Galaxies outputting unusually large amounts of energy. (Gamma rays.)
+They are (mainly) caused by the central black holes absorbing material.
+
+* What is a quasar?
+
+Quasi-stellar radio source. Galaxies far away that appears like a single store.
+
+* What is in the center of galaxies?
+
+A huge black hole. We believe that these form at the same time that the
+galaxies do.
+
+* What is an accretion disk?
+
+A disk outside of the black hole. Collisions and other stuff heats up the
+material inside the disk, making them glow.
+
+* What are jets?
+
+Magnetic fields along the poles of the accretion disk, spiting out material.
+We believe that active galaxies are just galaxies with the jets pointed at us.
+
+* What is the local group?
+
+A few dozen galaxies around the Milky Way (and Andromeda).
+
+* What is a galaxy cluster?
+
+10s of millions lightyears across.
+Virgo Cluster is one of them.
+
+* What are super clusters?
+
+100s of millions lightyears across.
+The milky way is part of the Virgo super-cluster.
+
+* What is the Hubble Deep Field?
+
+The "darkest" part of the sky, and even that has billions of stars and thousands
+of galaxies.
+
+# Gamma Ray Bursts
+
+* What were the Vela satellites?
+
+Satellites that scanned for gamma-rays to detect nuclear explosions.
+It actually detected gamma-ray bursts from deep space.
+
+* What is the distribution of gamma-ray bursts?
+
+Random positions in the sky, which meant that they were not from the Milky Way
+galaxy.
+
+* What is the supernova cause of gamma-ray bursts?
+
+A concentrated supernova burst. It comes from the jets emitted from the poles
+of the accretion disks.
+
+* What is the neutron star cause of gamma-ray bursts?
+
+Two neutron stars collide with each other. If their combined mass is > 2.8Msun
+then a black hole is formed, and the neutrons form into an accretion disk with
+the same jets.
+
+# Dark Matter
+
+* What was Rubin's surprising discovery about gas cloud velocities?
+
+The further away a gas cloud is, the faster they were moving. At best, the
+velocities were flatten. This meant that the gravity in the galaxy was
+smooth, not concentrated in the middle.
+
+* How much dark matter is there?
+
+6-7 times visible matter.
+
+* What is an axion?
+
+A particle with mass, but does not emit much light. They also don't interact
+with normal matter.
+
+* What is gravitational lensing?
+
+Since gravity bends light, it is possible for heavy objects (i.e. black holes)
+to bend light, so you can see behind the black hole.
+
+* How did gravitational lensing let us "see" dark matter?
+
+We were able to use gravitational lensing to see that dark matter passed through
+each other when two galaxies collided.
+
+* Why was dark matter important in history?
+
+Without dark matter, it wouldn't be possible for large structures to form in the
+early beginnings of the universe, since big structures (i.e. galaxies) could not
+form with all the energy emitted by stars.
+
+# Lecture 18 - Expanding universe
+
+* How do we determine galaxy masses?
+
+Rotation curve: Works well for nearby, edge-on spiral galaxies.
+Velocity dispersion
+Motions of galaxies around each other.
+
+* How do we measure the mass of a galaxy cluster?
+
+- Measure the speeds and positions of galaxies in the cluster.
+- Measure the temperature and distribution of hot gas between the galaxies.
+- Observe how clusters bend light as gravitational lenses.
+
+* What is the mass/light ratio?
+
+The ratio between a galaxy's mass and luminosity, in terms of solar masses.
+The Milky Way is 6Msun/Lsun.
+
+* What is the critical density?
+
+The total mass density of the universe required to keep the entire universe
+from expanding.
+
+* What is dark energy?
+
+The energy that is causing the universe to accelerate its expansion.
+
+# Lecture 19 - The Big Bang
+
+* What are the two predictions the big bang model makes?
+
+The existence of the Cosmic Microwave Background.
+The expected Helium abundance in the universe.
+
+* What was Slipher's observation about the universe?
+
+Slipher determined that the galaxies were all moving away from each other (
+because they were all red-shifted).
+
+* What is the velocity of galaxies vs their distance?
+
+The further a galaxy is, the faster they are moving away from us.
+
+* What is the lookback time?
+
+Since light has a finite velocity, the further away a light source is, the
+more "in the past" the object is.
+
+* What is the microwave background radiation?
+
+The redshifted light from the early stages of the universe. It was caused by the
+emission of photons from the recombination of electrons binding with the
+nucleus in the early stages of the universe.
+
+* Why is the Cosmic Microwave Background not from the beginning of the universe?
+
+Because the universe was opaque, since it was filled with particles that could
+absorb photons.
+
+* What was the purpose of the Planck Satellite?
+
+To get a higher resolution picture of the Cosmic Microwave Background.
+
+* What is the measured age of the universe?
+
+13.8 billion years.
+
+* What is the rate of the rate of expansion in the universe?
+
+Accelerating.
+
+* What is the observable universe?
+
+The distance at which if light is emitted, it will never reach us. This distance
+is "decreasing" everyday as the universe is expanding.
+
+* What is the Planck Era?
+
+The "first instant" of the universe. Our current models are unable to describe
+what happened in this era.
+
+* What is the GUT Era?
+
+10^-42 to 10^-38 seconds.
+The Universe contained two natural forces: Gravity and The Grand Unified Theory.
+Electromagnetic + strong + weak were just all one force.
+
+* What happened when the universe cooled out of the GUT Era?
+
+When the strong force "froze out" of the GUT force, the energy released caused
+a sudden and dramatic inflation of the universe.
+
+* What was the Electroweak Era?
+
+10^-38 to 10^-10 seconds.
+3 Forces: Gravity, Strong, Electroweak.
+
+* What is the Particle Era?
+
+10^-10 to 10^-3 seconds.
+All 4 forces were distinct.
+Quarks combined to form protons, neutrons, and their anti-particles.
+
+* What is the Era of Nucleosynthesis?
+
+10^-3 seconds to 3 minutes.
+Protons and neutrons fused into hydrogen and helium, among other atoms.
+
+* What is the Era of Nuclei?
+
+3 minutes to 3.8 x 10^5 years
+Universe was a plasma of nuclei and electrons.
+
+* What is the Era of Atoms?
+
+3.8 x 10^5 to 10^9 years.
+Universe was filled with atomic gas, as atoms formed.
+
+* What is the Era of Galaxies?
+
+10^9 years to now.
+First galaxies came into existence.
+
+* Why is the large-scale Universe so smooth?
+
+Because when the strong force froze out of the GUT force, the release of
+energy caused sudden inflation.
+
+* Why is the density of matter almost critical?
+
+Because if it wasn't we would not have been able to live in this universe.
+
+# Lecture 20 - Structure formation
+
+* How are galaxies distributed in the sky?
+
+They seem to be clumpy. Long strings to galaxies and galaxy clusters surrounding
+"voids". This implies that there is some large scale structure to the universe,
+and that the Universe is "foamy".
+
+* How does a galaxy's birth determine its type?
+
+- Initial angular momentum determines how fast the cloud will form a disk.
+- Initial density determines how fast the cloud can form stars before it
+collapses into a disk.
+
+* How do galaxy interactions determine their type?
+
+When galaxies collide, tidal forces randomize the orbits of stars, allowing
+elliptical galaxies to form.
+
+* How is black hole mass correlated with galaxy mass?
+
+The large the central black hole, the more massive the galaxy.
+
+* How do very big galaxies form?
+
+By merging and absorbing smaller galaxies.
+
+# Lecture 21 - Extraterrestrial Life
+
+* Why is there renewed interest in searching for extraterrestrial life?
+
+- We discovered extrasolar planets.
+- We found that liquid water can exist on other worlds.
+- We found organic molecules throughout the solar system and galaxy.
+- We discovered that life existed on Earth as soon as it was possible.
+- Organisms can survived in extreme conditions.
+
+* What is astrobiology?
+
+The study of life in the universe.
+
+* Why are we searching for oxygen in atmospheres?
+
+It is hard to replenish oxygen, and the best mechanism we know of is biology.
+
+* Why do we think getting life to form is easy?
+
+Because the time life existed on Earth was close the earliest moment when
+liquid water existed on Earth, which kind of implied that life could exist
+in very harsh conditions.
+
+* What is SETI?
+
+"If aliens are out there, we can communicate with them via radio."
+
+* What are some solutions to the Fermi Paradox?
+
+- We are alone, the first life to attain self-awareness.
+- No one has colonize the galaxy.
+- There is a Galactic civilization that has concealed itself from us.
